@@ -7,6 +7,15 @@
 	<artifactId>openflexo-production</artifactId>
 	<name>Openflexo-Production</name>
 	<packaging>pom</packaging>
+	<scm>
+		<connection>scm:git:ssh://git@github.com:openflexo-team/openflexo-production.git</connection>
+		<url>https://github.com/openflexo-team/openflexo-production</url>
+	</scm>
+	<ciManagement>
+		<system>Jenkins</system>
+		<url>https://jenkins.openflexo.org/</url>
+	</ciManagement>
+	<url>http://www.openflexo.org</url>
 	<properties>
 		<ant.version>1.9.0</ant.version>
 		<compiler.source>1.6</compiler.source>
@@ -26,6 +35,31 @@
 		<swingx.version>1.6.3</swingx.version>
 		<javahelp.version>2.0.05</javahelp.version>
 	</properties>
+	<repositories>
+		<repository>
+			<id>openflexo</id>
+			<url>https://maven.openflexo.org/artifactory/openflexo-deps/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+			</snapshots>
+		</repository>
+	</repositories>
+	<distributionManagement>
+		<repository>
+			<id>openflexo-release</id>
+			<name>Open Flexo Releases</name>
+			<url>https://maven.openflexo.org/artifactory/openflexo-release/</url>
+		</repository>
+		<snapshotRepository>
+			<id>openflexo-snapshot</id>
+			<name>Open Flexo Snapshots</name>
+			<url>https://maven.openflexo.org/artifactory/openflexo-snapshot/</url>
+		</snapshotRepository>
+	</distributionManagement>
 	<build>
 		<pluginManagement>
 			<plugins>
