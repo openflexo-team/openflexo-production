@@ -205,5 +205,9 @@
 			</plugins>
 		</pluginManagement>
 	</build>
+	<modules>
+		<module>openflexo-component</module>
+    </modules>
+	<description>This pom aims at capitalizing production configuration items for all openflexo production</description>
 </project>
 
