@@ -6,11 +6,10 @@
 		<artifactId>openflexo-production</artifactId>
         <version>0.1-SNAPSHOT</version>
 	</parent>
-	<groupId>org.openflexo</groupId>
 	<version>0.1-SNAPSHOT</version>
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>openflexo-component</artifactId>
-	<name>Openflexo-Production</name>
+	<name>Openflexo-Component</name>
 	<packaging>pom</packaging>
 	<build>
 		<resources>
