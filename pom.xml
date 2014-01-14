@@ -130,6 +130,7 @@
 					<version>2.7.1</version>
 					<configuration>
 						<!--  <forkMode>always</forkMode> --> <!-- SGU: why this ? i remove it ? Was it necessary ? -->
+						<forkCount>0</forkCount>
 						<argLine>-Xmx512M -XX:MaxPermSize=128M</argLine>
 					</configuration>
 				</plugin>

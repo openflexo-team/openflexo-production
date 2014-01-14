@@ -84,6 +84,7 @@
 					    <include>**/*Test.java</include>
  						<include>**/*TestCase.java</include>
 					</includes>
+					<forkCount>0</forkCount>
 				</configuration>
 			</plugin>
 			</plugins>
