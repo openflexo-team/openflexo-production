@@ -85,6 +85,7 @@
  						<include>**/*TestCase.java</include>
 					</includes>
 					<forkCount>0</forkCount>
+      			    <runOrder>alphabetical</runOrder>
 				</configuration>
 			</plugin>
 			</plugins>
