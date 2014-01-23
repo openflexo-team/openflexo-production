@@ -91,6 +91,19 @@
 			</plugins>
 		</pluginManagement>
 	</build>
+<repositories>
+		<repository>
+			<id>openflexo</id>
+			<url>http://maven.openflexo.org/artifactory/openflexo-deps/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+			</snapshots>
+		</repository>
+	</repositories>
 
 	<description>Parent pom for any component defined in Openflexo Infrastructure</description>
 </project>
