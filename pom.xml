@@ -49,7 +49,7 @@
 	<repositories>
 		<repository>
 			<id>openflexo</id>
-			<url>http://maven.openflexo.org/artifactory/openflexo-deps/</url>
+			<url>https://maven.openflexo.org/artifactory/openflexo-deps/</url>
 			<releases>
 				<enabled>true</enabled>
 			</releases>
@@ -63,12 +63,12 @@
 		<repository>
 			<id>openflexo-release</id>
 			<name>Open Flexo Releases</name>
-			<url>http://maven.openflexo.org/artifactory/openflexo-release/</url>
+			<url>https://maven.openflexo.org/artifactory/openflexo-release/</url>
 		</repository>
 		<snapshotRepository>
 			<id>openflexo-snapshot</id>
 			<name>Open Flexo Snapshots</name>
-			<url>http://maven.openflexo.org/artifactory/openflexo-snapshot/</url>
+			<url>https://maven.openflexo.org/artifactory/openflexo-snapshot/</url>
 		</snapshotRepository>
 		<site>
       <id/>
