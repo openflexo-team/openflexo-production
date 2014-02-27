@@ -7,10 +7,9 @@
   <name>Openflexo-Production</name>
   <packaging>pom</packaging>
   <scm>
-    <!--connection>scm:git:ssh://git@github.com:openflexo-team/openflexo-production.git</connection-->
-    <connection>https://github.com/openflexo-team/openflexo-production.git</connection>
-    <!--developerConnection>scm:git:git@github.com:openflexo-team/openflexo-production</developerConnection-->
-    <developerConnection>https://github.com/openflexo-team/openflexo-production.git</developerConnection>
+    <connection>scm:git:git@github.com:openflexo-team/openflexo-production.git</connection>
+    <url>scm:git:git@github.com:openflexo-team/openflexo-production.git</url>
+    <developerConnection>scm:git:git@github.com:openflexo-team/openflexo-production.git</developerConnection>
     <url>https://github.com/openflexo-team/openflexo-production</url>
     <tag>1.0</tag>
   </scm>
