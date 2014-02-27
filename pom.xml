@@ -9,7 +9,7 @@
   <scm>
     <!--connection>scm:git:ssh://git@github.com:openflexo-team/openflexo-production.git</connection-->
     <connection>https://github.com/openflexo-team/openflexo-production.git</connection>
-    <developerConnection>scm:git:ssh://git@github.com:openflexo-team/openflexo-production.git</developerConnection>
+    <developerConnection>scm:git:git@github.com:openflexo-team/openflexo-production</developerConnection>
     <url>https://github.com/openflexo-team/openflexo-production</url>
     <tag>1.0</tag>
   </scm>
