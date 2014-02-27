@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <groupId>org.openflexo</groupId>
-  <version>0.1-SNAPSHOT</version>
+  <version>0.1</version>
   <modelVersion>4.0.0</modelVersion>
   <artifactId>openflexo-production</artifactId>
   <name>Openflexo-Production</name>
@@ -100,7 +100,7 @@
       <email>xtof@openflexo.org</email>
       <organization>Openflexo</organization>
       <organizationUrl>http://www.openflexo.org</organizationUrl>
-      <timezone/>
+      <timezone />
       <roles>
         <role>developper</role>
       </roles>
@@ -111,7 +111,7 @@
       <email>sylvain@openflexo.org</email>
       <organization>Openflexo</organization>
       <organizationUrl>http://www.openflexo.org</organizationUrl>
-      <timezone/>
+      <timezone />
       <roles>
         <role>developper</role>
       </roles>
@@ -122,7 +122,7 @@
       <email>vincent@openflexo.org</email>
       <organization>Openflexo</organization>
       <organizationUrl>http://www.openflexo.org</organizationUrl>
-      <timezone/>
+      <timezone />
       <roles>
         <role>developper</role>
       </roles>
@@ -130,13 +130,13 @@
   </developers>
   <contributors>
     <contributor>
-      <name/>
-      <email/>
-      <url/>
-      <organization/>
-      <organizationUrl/>
-      <roles/>
-      <timezone/>
+      <name />
+      <email />
+      <url />
+      <organization />
+      <organizationUrl />
+      <roles />
+      <timezone />
       <properties>
         <key>value</key>
       </properties>
@@ -147,32 +147,32 @@
       <name>openflexo-users@openflexo.org</name>
       <subscribe>openflexo-users-subscribe@openflexo.org</subscribe>
       <unsubscribe> openflexo-users-unsubscribe@openflexo.org</unsubscribe>
-      <post/>
-      <archive/>
-      <otherArchives/>
+      <post />
+      <archive />
+      <otherArchives />
     </mailingList>
     <mailingList>
       <name>openflexo-info@openflexo.org</name>
       <subscribe>openflexo-info-subscribe@openflexo.org</subscribe>
       <unsubscribe> openflexo-info-unsubscribe@openflexo.org</unsubscribe>
-      <post/>
-      <archive/>
-      <otherArchives/>
+      <post />
+      <archive />
+      <otherArchives />
     </mailingList>
     <mailingList>
       <name>openflexo-commits@openflexo.org</name>
       <subscribe>openflexo-commits-subscribe@openflexo.org</subscribe>
       <unsubscribe> openflexo-commits-unsubscribe@openflexo.org</unsubscribe>
-      <post/>
-      <otherArchives/>
+      <post />
+      <otherArchives />
     </mailingList>
     <mailingList>
       <name>openflexo-developers@openflexo.org</name>
       <subscribe>openflexo-developers-subscribe@openflexo.org</subscribe>
       <unsubscribe> openflexo-developers-unsubscribe@openflexo.org</unsubscribe>
-      <post/>
+      <post />
       <archive>http://openflexo-developers-mailing-list.2060.n6.nabble.com/</archive>
-      <otherArchives/>
+      <otherArchives />
     </mailingList>
   </mailingLists>
   <prerequisites>
@@ -298,7 +298,7 @@
                     </goals>
                   </pluginExecutionFilter>
                   <action>
-                    <ignore/>
+                    <ignore />
                   </action>
                 </pluginExecution>
               </pluginExecutions>
