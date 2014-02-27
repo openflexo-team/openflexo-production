@@ -1,104 +1,131 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	<groupId>org.openflexo</groupId>
-	<version>0.1-SNAPSHOT</version>
-	<modelVersion>4.0.0</modelVersion>
-	<artifactId>openflexo-production</artifactId>
-	<name>Openflexo-Production</name>
-	<packaging>pom</packaging>
-	<scm>
-		<connection>scm:git:ssh://git@github.com:openflexo-team/openflexo-production.git</connection>
-		<url>https://github.com/openflexo-team/openflexo-production</url>
-	</scm>
-	<issueManagement>
-		<system>jira</system>
-		<url>https://bugs.openflexo.org</url>
-    </issueManagement>
-	
-	<ciManagement>
-		<system>Jenkins</system>
-		<url>https://jenkins.openflexo.org/</url>
-	</ciManagement>
-	<url>http://www.openflexo.org</url>
-	<properties>
-		<ant.version>1.9.0</ant.version>
-		<compiler.source>1.6</compiler.source>
-		<compiler.target>1.6</compiler.target>
-		<hibernate.version>4.2.3.Final</hibernate.version>
-		<jersey.version>1.17.1</jersey.version>
-		<organization.name>Openflexo</organization.name>
-		<organization.url>http://www.openflexo.org</organization.url>
-		<organization.logo>https://media.openflexo.org/images/OpenFlexo_Logo.png</organization.logo>
-		<!-- need this so that sonar run properly. don't know what the difference 
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <groupId>org.openflexo</groupId>
+  <version>0.1-SNAPSHOT</version>
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>openflexo-production</artifactId>
+  <name>Openflexo-Production</name>
+  <packaging>pom</packaging>
+  <scm>
+    <connection>scm:git:ssh://git@github.com:openflexo-team/openflexo-production.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com:openflexo-team/openflexo-production.git</developerConnection>
+    <url>https://github.com/openflexo-team/openflexo-production</url>
+    <tag>1.0</tag>
+  </scm>
+  <issueManagement>
+    <system>jira</system>
+    <url>https://bugs.openflexo.org</url>
+  </issueManagement>
+  <ciManagement>
+    <system>Jenkins</system>
+    <url>https://jenkins.openflexo.org/</url>
+    <!--notifiers>
+      <notifier>
+        <type>mail</type>
+        <sendOnError>true</sendOnError>
+        <sendOnFailure>true</sendOnFailure>
+        <sendOnSuccess>false</sendOnSuccess>
+        <sendOnWarning>false</sendOnWarning>
+        <configuration><address>continuum@127.0.0.1</address></configuration>
+      </notifier>
+    </notifiers-->
+  </ciManagement>
+  <url>http://www.openflexo.org</url>
+  <properties>
+    <ant.version>1.9.0</ant.version>
+    <compiler.source>1.6</compiler.source>
+    <compiler.target>1.6</compiler.target>
+    <hibernate.version>4.2.3.Final</hibernate.version>
+    <jersey.version>1.17.1</jersey.version>
+    <organization.name>Openflexo</organization.name>
+    <organization.url>http://www.openflexo.org</organization.url>
+    <organization.logo>https://media.openflexo.org/images/OpenFlexo_Logo.png</organization.logo>
+    <!-- need this so that sonar run properly. don't know what the difference 
 			with source.encoding. todo : investigate difference between source.encoding 
 			and project.build.sourceEncoding -->
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<product.name>OpenFlexo</product.name>
-		<resource.encoding>UTF-8</resource.encoding>
-		<source.encoding>UTF-8</source.encoding>
-		<swingx.version>1.6.3</swingx.version>
-		<javahelp.version>2.0.05</javahelp.version>
-		
-		<!-- reporting tools -->
-		<findbugs.version>2.5.2</findbugs.version>
-	    <checkstyle.version>2.9.1</checkstyle.version>
-	    <surefire.reportplugin.version>2.12.4</surefire.reportplugin.version>
-	    <cobertura.version>2.5.2</cobertura.version>
-	</properties>
-	<repositories>
-		<repository>
-			<id>openflexo</id>
-			<url>https://maven.openflexo.org/artifactory/openflexo-deps/</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-				<updatePolicy>always</updatePolicy>
-			</snapshots>
-		</repository>
-	</repositories>
-	<distributionManagement>
-		<repository>
-			<id>openflexo-release</id>
-			<name>Open Flexo Releases</name>
-			<url>https://maven.openflexo.org/artifactory/openflexo-release/</url>
-		</repository>
-		<snapshotRepository>
-			<id>openflexo-snapshot</id>
-			<name>Open Flexo Snapshots</name>
-			<url>https://maven.openflexo.org/artifactory/openflexo-snapshot/</url>
-		</snapshotRepository>
-		<site>
-      <id/>
-      <name/>
-      <url/>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <product.name>OpenFlexo</product.name>
+    <resource.encoding>UTF-8</resource.encoding>
+    <source.encoding>UTF-8</source.encoding>
+    <swingx.version>1.6.3</swingx.version>
+    <javahelp.version>2.0.05</javahelp.version>
+    <!-- reporting tools -->
+    <findbugs.version>2.5.2</findbugs.version>
+    <checkstyle.version>2.9.1</checkstyle.version>
+    <surefire.reportplugin.version>2.12.4</surefire.reportplugin.version>
+    <cobertura.version>2.5.2</cobertura.version>
+  </properties>
+  <repositories>
+    <repository>
+      <id>openflexo</id>
+      <url>http://maven.openflexo.org/artifactory/openflexo-deps/</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+        <updatePolicy>always</updatePolicy>
+      </snapshots>
+    </repository>
+  </repositories>
+  <distributionManagement>
+    <repository>
+      <id>openflexo-release</id>
+      <name>Open Flexo Releases</name>
+      <url>https://maven.openflexo.org/artifactory/openflexo-release/</url>
+    </repository>
+    <snapshotRepository>
+      <id>openflexo-snapshot</id>
+      <name>Open Flexo Snapshots</name>
+      <url>https://maven.openflexo.org/artifactory/openflexo-snapshot/</url>
+    </snapshotRepository>
+    <site>
+      <!-- Use mvn site:stage to get a working local copy of site AFTER building it normally -->
+      <id>local-viewing</id>
+      <!--url>file://${project.baseDir}/target/staging/</url-->
+      <url>file:///home/gilles/git/openflexo/site</url>
     </site>
-    <downloadUrl/>
-	</distributionManagement>
-	 <licenses>
+    <downloadUrl>https://openflexo.org/tiki/Download+Openflexo</downloadUrl>
+  </distributionManagement>
+  <licenses>
     <license>
-      <name/>
-      <url/>
-      <distribution/>
-      <comments/>
+      <name>GNU General Public License (GPL) v3</name>
+      <url>http://www.gnu.org/licenses/gpl.txt</url>
     </license>
   </licenses>
-
   <developers>
     <developer>
-      <id/>
-      <name/>
-      <email/>
-      <url/>
-      <organization/>
-      <organizationUrl/>
-      <roles/>
+      <id>christophe.guychard</id>
+      <name>Christophe Guychard</name>
+      <email>xtof@openflexo.org</email>
+      <organization>Openflexo</organization>
+      <organizationUrl>http://www.openflexo.org</organizationUrl>
       <timezone/>
-      <properties>
-        <key>value</key>
-      </properties>
+      <roles>
+        <role>developper</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>sylvain.guerin</id>
+      <name>Sylvain Guerin</name>
+      <email>sylvain@openflexo.org</email>
+      <organization>Openflexo</organization>
+      <organizationUrl>http://www.openflexo.org</organizationUrl>
+      <timezone/>
+      <roles>
+        <role>developper</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>vincent.leilde</id>
+      <name>Vincent Leilde</name>
+      <email>vincent@openflexo.org</email>
+      <organization>Openflexo</organization>
+      <organizationUrl>http://www.openflexo.org</organizationUrl>
+      <timezone/>
+      <roles>
+        <role>developper</role>
+      </roles>
     </developer>
   </developers>
   <contributors>
@@ -115,273 +142,376 @@
       </properties>
     </contributor>
   </contributors>
-
   <mailingLists>
     <mailingList>
-      <name/>
-      <subscribe/>
-      <unsubscribe/>
+      <name>openflexo-users@openflexo.org</name>
+      <subscribe>openflexo-users-subscribe@openflexo.org</subscribe>
+      <unsubscribe> openflexo-users-unsubscribe@openflexo.org</unsubscribe>
       <post/>
       <archive/>
       <otherArchives/>
     </mailingList>
+    <mailingList>
+      <name>openflexo-info@openflexo.org</name>
+      <subscribe>openflexo-info-subscribe@openflexo.org</subscribe>
+      <unsubscribe> openflexo-info-unsubscribe@openflexo.org</unsubscribe>
+      <post/>
+      <archive/>
+      <otherArchives/>
+    </mailingList>
+    <mailingList>
+      <name>openflexo-commits@openflexo.org</name>
+      <subscribe>openflexo-commits-subscribe@openflexo.org</subscribe>
+      <unsubscribe> openflexo-commits-unsubscribe@openflexo.org</unsubscribe>
+      <post/>
+      <otherArchives/>
+    </mailingList>
+    <mailingList>
+      <name>openflexo-developers@openflexo.org</name>
+      <subscribe>openflexo-developers-subscribe@openflexo.org</subscribe>
+      <unsubscribe> openflexo-developers-unsubscribe@openflexo.org</unsubscribe>
+      <post/>
+      <archive>http://openflexo-developers-mailing-list.2060.n6.nabble.com/</archive>
+      <otherArchives/>
+    </mailingList>
   </mailingLists>
-
   <prerequisites>
-    <maven/>
+    <maven>3.0.3</maven>
   </prerequisites>
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-clean-plugin</artifactId>
+          <version>2.4.1</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-install-plugin</artifactId>
+          <version>2.3.1</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>2.7</version>
+          <configuration>
+            <retryFailedDeploymentCount>3</retryFailedDeploymentCount>
+          </configuration>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-antrun-plugin</artifactId>
+          <version>1.7</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-assembly-plugin</artifactId>
+          <version>2.4</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-dependency-plugin</artifactId>
+          <version>2.7</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-release-plugin</artifactId>
+          <version>2.0</version>
+        </plugin>
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>exec-maven-plugin</artifactId>
+          <version>1.2</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <configuration>
+            <source>${compiler.source}</source>
+            <target>${compiler.target}</target>
+            <encoding>${source.encoding}</encoding>
+            <fork>false</fork>
+            <compilerId>jdt</compilerId>
+          </configuration>
+          <dependencies>
+            <dependency>
+              <groupId>org.eclipse.tycho</groupId>
+              <artifactId>tycho-compiler-jdt</artifactId>
+              <version>0.13.0</version>
+            </dependency>
+          </dependencies>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>2.7.1</version>
+          <configuration>
+            <!--  <forkMode>always</forkMode> -->
+            <!-- SGU: why this ? i remove it ? Was it necessary ? -->
+            <runOrder>alphabetical</runOrder>
+            <forkCount>0</forkCount>
+            <argLine>-Xmx512M -XX:MaxPermSize=128M</argLine>
+          </configuration>
+        </plugin>
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>sonar-maven-plugin</artifactId>
+          <version>2.0</version>
+          <configuration>
+            <sonarHostURL>https://sonar.openflexo.com</sonarHostURL>
+          </configuration>
+        </plugin>
+        <plugin>
+          <groupId>org.eclipse.m2e</groupId>
+          <artifactId>lifecycle-mapping</artifactId>
+          <version>1.0.0</version>
+          <configuration>
+            <lifecycleMappingMetadata>
+              <pluginExecutions>
+                <pluginExecution>
+                  <pluginExecutionFilter>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <versionRange>[2.0,)</versionRange>
+                    <goals>
+                      <goal>compile</goal>
+                      <goal>testCompile</goal>
+                    </goals>
+                    <parameters>
+                      <compilerId>jdt</compilerId>
+                    </parameters>
+                  </pluginExecutionFilter>
+                  <action>
+                    <configurator>
+                      <id>org.eclipse.m2e.jdt.javaConfigurator</id>
+                    </configurator>
+                  </action>
+                </pluginExecution>
+                <pluginExecution>
+                  <pluginExecutionFilter>
+                    <groupId>org.jvnet.ws.wadl</groupId>
+                    <artifactId>wadl-client-plugin</artifactId>
+                    <versionRange>[1.0,)</versionRange>
+                    <goals>
+                      <goal>generate</goal>
+                    </goals>
+                  </pluginExecutionFilter>
+                  <action>
+                    <ignore/>
+                  </action>
+                </pluginExecution>
+              </pluginExecutions>
+            </lifecycleMappingMetadata>
+          </configuration>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>2.4</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-resources-plugin</artifactId>
+          <version>2.5</version>
+          <configuration>
+            <encoding>${resource.encoding}</encoding>
+          </configuration>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-site-plugin</artifactId>
+          <version>3.3</version>
+          <configuration>
+            <locales>en</locales>
+            <inputEncoding>utf-8</inputEncoding>
+            <outputEncoding>utf-8</outputEncoding>
+            <!--locales>fr_FR.UTF-8</locales-->
+            <!--templateFile>${basedir}/maven-site.vm</templateFile-->
+          </configuration>
+        </plugin>
+     <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>dashboard-maven-plugin</artifactId>
+          <version>1.0.0-beta-1</version>
+<configuration>
+					<configLocation>myDashboardConfig.xml</configLocation>
+					
+				</configuration>
+        </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>2.9</version>
+<configuration>
+				<source>1.6</source>
+				<doclet>org.umlgraph.doclet.UmlGraphDoc</doclet>
+				<docletArtifact>
+					<groupId>org.umlgraph</groupId>
+					<artifactId>doclet</artifactId>
+					<version>5.1</version>
+				</docletArtifact>
+				<additionalparam>
+					-operations -visibility
+				</additionalparam>
+      			<useStandardDocletOptions>true</useStandardDocletOptions>
+			</configuration>
+          <dependencies>
+	 <dependency>
+      <groupId>org.umlgraph</groupId>
+      <artifactId>doclet</artifactId>
+      <version>5.1</version>
+    </dependency>
+          </dependencies>
 
-	<build>
-		<pluginManagement>
-			<plugins>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-clean-plugin</artifactId>
-					<version>2.4.1</version>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-install-plugin</artifactId>
-					<version>2.3.1</version>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-deploy-plugin</artifactId>
-					<version>2.7</version>
-					<configuration>
-						<retryFailedDeploymentCount>3</retryFailedDeploymentCount>
-					</configuration>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-antrun-plugin</artifactId>
-					<version>1.7</version>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-assembly-plugin</artifactId>
-					<version>2.4</version>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-dependency-plugin</artifactId>
-					<version>2.7</version>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-release-plugin</artifactId>
-					<version>2.0</version>
-				</plugin>
-				<plugin>
-					<groupId>org.codehaus.mojo</groupId>
-					<artifactId>exec-maven-plugin</artifactId>
-					<version>1.2</version>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-compiler-plugin</artifactId>
-					<configuration>
-						<source>${compiler.source}</source>
-						<target>${compiler.target}</target>
-						<encoding>${source.encoding}</encoding>
-						<fork>false</fork>
-						<compilerId>jdt</compilerId>
-					</configuration>
-					<dependencies>
-						<dependency>
-							<groupId>org.eclipse.tycho</groupId>
-							<artifactId>tycho-compiler-jdt</artifactId>
-							<version>0.13.0</version>
-						</dependency>
-					</dependencies>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-surefire-plugin</artifactId>
-					<version>2.7.1</version>
-					<configuration>
-						<!--  <forkMode>always</forkMode> --> <!-- SGU: why this ? i remove it ? Was it necessary ? -->
-      				    <runOrder>alphabetical</runOrder>
-						<forkCount>0</forkCount>
-						<argLine>-Xmx512M -XX:MaxPermSize=128M</argLine>
-					</configuration>
-				</plugin>
-				<plugin>
-					<groupId>org.codehaus.mojo</groupId>
-					<artifactId>sonar-maven-plugin</artifactId>
-					<version>2.0</version>
-					<configuration>
-						<sonarHostURL>https://sonar.openflexo.com</sonarHostURL>
-					</configuration>
-				</plugin>
-				<plugin>
-					<groupId>org.eclipse.m2e</groupId>
-					<artifactId>lifecycle-mapping</artifactId>
-					<version>1.0.0</version>
-					<configuration>
-						<lifecycleMappingMetadata>
-							<pluginExecutions>
-								<pluginExecution>
-									<pluginExecutionFilter>
-										<groupId>org.apache.maven.plugins</groupId>
-										<artifactId>maven-compiler-plugin</artifactId>
-										<versionRange>[2.0,)</versionRange>
-										<goals>
-											<goal>compile</goal>
-											<goal>testCompile</goal>
-										</goals>
-										<parameters>
-											<compilerId>jdt</compilerId>
-										</parameters>
-									</pluginExecutionFilter>
-									<action>
-										<configurator>
-											<id>org.eclipse.m2e.jdt.javaConfigurator</id>
-										</configurator>
-									</action>
-								</pluginExecution>
-								<pluginExecution>
-									<pluginExecutionFilter>
-										<groupId>org.jvnet.ws.wadl</groupId>
-										<artifactId>wadl-client-plugin</artifactId>
-										<versionRange>[1.0,)</versionRange>
-										<goals>
-											<goal>generate</goal>
-										</goals>
-									</pluginExecutionFilter>
-									<action>
-										<ignore />
-									</action>
-								</pluginExecution>
-							</pluginExecutions>
-						</lifecycleMappingMetadata>
-					</configuration>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-jar-plugin</artifactId>
-					<version>2.4</version>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-resources-plugin</artifactId>
-					<version>2.5</version>
-					<configuration>
-						<encoding>${resource.encoding}</encoding>
-					</configuration>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-site-plugin</artifactId>
-					<version>3.3</version>
-					<configuration>
-						<locales>en,fr</locales>
-						<inputEncoding>utf-8</inputEncoding>
-						<outputEncoding>utf-8</outputEncoding>
-						<!--locales>fr_FR.UTF-8</locales-->
-						<!--templateFile>${basedir}/maven-site.vm</templateFile-->
-					</configuration>
-				</plugin>
-			</plugins>
-		</pluginManagement>
-		<!-- audit -->
-		<plugins>
-			<plugin>
-			   <groupId>org.codehaus.mojo</groupId>
-			   <artifactId>findbugs-maven-plugin</artifactId>
-			   <version>${findbugs.version}</version>
-			</plugin>
-			<plugin>
-			   <groupId>org.codehaus.mojo</groupId>
-			   <artifactId>cobertura-maven-plugin</artifactId>
-			   <version>${cobertura.version}</version>
-			   <configuration>
-				   <formats>
-					   <format>xml</format>
-				   </formats>
-			   </configuration>
-			   <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>cobertura</goal>
-                        </goals>
-                    </execution>
-                </executions>
-			</plugin>
-		 </plugins>
-	</build>
-	<modules>
-		<module>openflexo-component</module>
-    </modules>
-	<description>This pom aims at capitalizing production configuration items for all openflexo production</description>
-	<reporting>
-     <plugins>
-        <plugin>
-           <groupId>org.codehaus.mojo</groupId>
-           <artifactId>findbugs-maven-plugin</artifactId>
-           <version>${findbugs.version}</version>
-        </plugin>
-        <plugin>
-           <groupId>org.apache.maven.plugins</groupId>
-           <artifactId>maven-checkstyle-plugin</artifactId>
-           <version>${checkstyle.version}</version>
-        </plugin>
-        <plugin>
-           <groupId>org.apache.maven.plugins</groupId>
-           <artifactId>maven-surefire-report-plugin</artifactId>
-           <version>${surefire.reportplugin.version}</version>
-        </plugin>
-        <plugin>
-           <groupId>org.codehaus.mojo</groupId>
-           <artifactId>cobertura-maven-plugin</artifactId>
-           <version>${cobertura.version}</version>
-           <configuration>
-               <formats>
-                   <format>xml</format>
-               </formats>
-           </configuration>
-        </plugin>
-		<plugin>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-jxr-plugin</artifactId>
-			<version>2.3</version>
-			<reportSets>
-			  <reportSet>
-				<id>aggregate</id>
-				<inherited>false</inherited>
-				<reports>
-				  <report>aggregate</report>
-				</reports>
-			  </reportSet>
-			</reportSets>
-		</plugin>
-		<plugin>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-project-info-reports-plugin</artifactId>
-			<version>2.7</version>
-			<inherited>true</inherited>
-			<configuration>
-                <dependencyDetailsEnabled>true</dependencyDetailsEnabled>
-                <dependencyLocationsEnabled>true</dependencyLocationsEnabled>
-            </configuration>
-			<reportSets>
-			  <reportSet>
-				<reports>
-				  <report>summary</report>
-				  <report>dependencies</report>
-				  <report>dependency-convergence</report>
-				  <report>dependency-info</report>
-				  <report>dependency-management</report>
-				  <report>distribution-management</report>
-				  <report>issue-tracking</report>
-				  <report>project-team</report>
-				  <report>mailing-list</report>
-				  <report>cim</report>
-				  <report>issue-tracking</report>
-				  <report>license</report>
-				  <report>scm</report>
-				  <!--
+   <!--configuration>
+                    <source>1.5</source>
+                    <doclet>
+                        gr.spinellis.umlgraph.doclet.UmlGraphDoc
+                    </doclet>
+                    <docletArtifact>
+                        <groupId>gr.spinellis</groupId>
+                        <artifactId>UmlGraph</artifactId>
+                        <version>4.4</version>
+                    </docletArtifact>
+                    <additionalparam>
+                        -inferrel -inferdep -quiet -hide java.*
+                        -collpackages java.util.* -qualify
+                        -postfixpackage -nodefontsize 9
+                        -nodefontpackagesize 7 -attributes -operations
+                        -enumerations -enumconstants -visibility 
+                        -link "http://java.sun.com/j2se/1.5/docs/api/" 
+                        -link "http://static.springframework.org/spring/docs/2.0.x/api/"
+                        -link "http://www.hibernate.org/hib_docs/v3/api/"
+                    </additionalparam>
+                </configuration-->
+		    <!-- http://www.umlgraph.org/ -->
+      </plugin>
+      </plugins>
+    </pluginManagement>
+    <!-- audit -->
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>findbugs-maven-plugin</artifactId>
+        <version>${findbugs.version}</version>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>cobertura-maven-plugin</artifactId>
+        <version>${cobertura.version}</version>
+        <configuration>
+          <formats>
+            <format>xml</format>
+            <format>html</format>
+          </formats>
+        </configuration>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>cobertura</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+ <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>jdepend-maven-plugin</artifactId>
+        <version>2.0-beta-2</version>
+      </plugin>
+    </plugins>
+  </build>
+  <modules>
+    <module>openflexo-component</module>
+  </modules>
+  <description>This pom aims at capitalizing production configuration items for all openflexo production</description>
+  <reporting>
+    <plugins>
+  <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>jdepend-maven-plugin</artifactId>
+        <version>2.0-beta-2</version>
+      </plugin>
+    <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>dashboard-maven-plugin</artifactId>
+        <version>1.0.0-beta-1</version>
+      </plugin>	
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>findbugs-maven-plugin</artifactId>
+        <version>${findbugs.version}</version>
+<configuration>
+				<xmlOutput>true</xmlOutput>
+				<effort>Max</effort>
+			</configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-checkstyle-plugin</artifactId>
+        <version>${checkstyle.version}</version>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-report-plugin</artifactId>
+        <version>${surefire.reportplugin.version}</version>
+        <configuration>
+          <aggregate>true</aggregate>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>cobertura-maven-plugin</artifactId>
+        <version>${cobertura.version}</version>
+        <configuration>
+          <aggregate>true</aggregate>
+          <formats>
+            <format>xml</format>
+            <format>html</format>
+          </formats>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jxr-plugin</artifactId>
+        <version>2.3</version>
+        <reportSets>
+          <reportSet>
+            <id>aggregate</id>
+            <inherited>false</inherited>
+            <reports>
+              <report>aggregate</report>
+            </reports>
+          </reportSet>
+        </reportSets>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-project-info-reports-plugin</artifactId>
+        <version>2.7</version>
+        <inherited>true</inherited>
+        <configuration>
+          <dependencyDetailsEnabled>true</dependencyDetailsEnabled>
+          <dependencyLocationsEnabled>true</dependencyLocationsEnabled>
+        </configuration>
+        <reportSets>
+          <reportSet>
+            <reports>
+              <report>summary</report>
+              <report>dependencies</report>
+              <report>dependency-convergence</report>
+              <report>dependency-info</report>
+              <report>dependency-management</report>
+              <report>distribution-management</report>
+              <report>issue-tracking</report>
+              <report>project-team</report>
+              <report>mailing-list</report>
+              <report>cim</report>
+              <report>issue-tracking</report>
+              <report>license</report>
+              <report>scm</report>
+              <!--
 				      project-info-reports:cim is used to generate the Project Continuous Integration System report.
     project-info-reports:dependencies is used to generate the Project Dependencies report.
     project-info-reports:dependency-convergence is used to generate the Project Dependency Convergence report for reactor builds.
@@ -400,36 +530,55 @@
     project-info-reports:scm is used to generate the Project Source Code Management report.
     project-info-reports:summary is used to generate the Project information reports summary.
 				  -->
-				</reports>
-			  </reportSet>
-			</reportSets>
-		</plugin>
-		<plugin>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-dependency-plugin</artifactId>
-			<version>2.7</version>
-		</plugin>
-	    <plugin>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-javadoc-plugin</artifactId>
-			<version>2.9</version>
-			<reportSets>
-			  <reportSet><!-- by default, id = "default" -->
-				<reports><!-- select non-aggregate reports -->
-				  <report>javadoc</report>
-				  <report>test-javadoc</report>
-				</reports>
-			  </reportSet>
-			  <reportSet><!-- aggregate reportSet, to define in poms having modules -->
-				<id>aggregate</id>
-				<inherited>false</inherited><!-- don't run aggregate in child modules -->
-				<reports>
-				  <report>aggregate</report>
-				</reports>
-			  </reportSet>
-			</reportSets>
-		  </plugin>
-      </plugins>
-   </reporting>
+            </reports>
+          </reportSet>
+        </reportSets>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <version>2.7</version>
+        <reportSets>
+          <reportSet>
+            <id>analyze-report</id>
+            <inherited>false</inherited>
+            <reports>
+              <report>analyze-report</report>
+            </reports>
+          </reportSet>
+        </reportSets>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>2.9</version>
+            <inherited>true</inherited>
+        <reportSets>
+          <reportSet>
+            <!-- by default, id = "default" -->
+            <reports>
+              <!-- select non-aggregate reports -->
+              <report>javadoc</report>
+              <report>test-javadoc</report>
+            </reports>
+          </reportSet>
+          <reportSet>
+            <!-- aggregate reportSet, to define in poms having modules -->
+            <id>aggregate</id>
+            <inherited>true</inherited>
+            <!-- don't run aggregate in child modules -->
+            <reports>
+              <report>aggregate</report>
+            </reports>
+          </reportSet>
+        </reportSets>
+      </plugin>
+    </plugins>
+  </reporting>
 </project>
-
+<!-- http://arodrigues.developpez.com/tutoriels/java/maven2/qualite/#LIII-F  
+pmd : http://wiki.netbeans.org/ActionPMD
+sonar : http://linsolas.developpez.com/articles/java/qualite/sonar/?page=page_1
+check style : javadoc
+   http://checkstyle.sourceforge.net/config_javadoc.htmlhttp://checkstyle.sourceforge.net/config_javadoc.html
+-->
