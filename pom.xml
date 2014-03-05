@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <groupId>org.openflexo</groupId>
-  <version>0.2</version>
+  <version>0.3-SNAPSHOT</version>
   <modelVersion>4.0.0</modelVersion>
   <artifactId>openflexo-production</artifactId>
   <name>Openflexo-Production</name>
   <packaging>pom</packaging>
   <scm>
-    <connection>scm:git:git@github.com:openflexo-team/openflexo-production.git</connection>
-    <url>scm:git:git@github.com:openflexo-team/openflexo-production.git</url>
-    <developerConnection>scm:git:git@github.com:openflexo-team/openflexo-production.git</developerConnection>
-    <!--url>https://github.com/openflexo-team/openflexo-production</url-->
+    <connection>scm:git:git@github.com:openflexo-team/${project.artifactId}.git</connection>
+    <developerConnection>scm:git:git@github.com:openflexo-team/${project.artifactId}.git</developerConnection>
+    <url>https://github.com/openflexo-team/${project.artifactId}</url>
   </scm>
   <issueManagement>
     <system>jira</system>
-    <url>https://bugs.openflexo.org</url>
+    <url>https://bugs.openflexo.org/browse/${jira.cle}</url>
   </issueManagement>
   <ciManagement>
     <system>Jenkins</system>
@@ -54,6 +53,8 @@
     <checkstyle.version>2.9.1</checkstyle.version>
     <surefire.reportplugin.version>2.12.4</surefire.reportplugin.version>
     <cobertura.version>2.5.2</cobertura.version>
+    <mavensite.version>3.2</mavensite.version>
+    <jira.cle>PRODUCTION</jira.cle>
   </properties>
   <repositories>
     <repository>
@@ -100,7 +101,7 @@
       <email>xtof@openflexo.org</email>
       <organization>Openflexo</organization>
       <organizationUrl>http://www.openflexo.org</organizationUrl>
-      <timezone />
+      <timezone/>
       <roles>
         <role>developper</role>
       </roles>
@@ -111,7 +112,7 @@
       <email>sylvain@openflexo.org</email>
       <organization>Openflexo</organization>
       <organizationUrl>http://www.openflexo.org</organizationUrl>
-      <timezone />
+      <timezone/>
       <roles>
         <role>developper</role>
       </roles>
@@ -122,7 +123,7 @@
       <email>vincent@openflexo.org</email>
       <organization>Openflexo</organization>
       <organizationUrl>http://www.openflexo.org</organizationUrl>
-      <timezone />
+      <timezone/>
       <roles>
         <role>developper</role>
       </roles>
@@ -130,13 +131,13 @@
   </developers>
   <contributors>
     <contributor>
-      <name />
-      <email />
-      <url />
-      <organization />
-      <organizationUrl />
-      <roles />
-      <timezone />
+      <name/>
+      <email/>
+      <url/>
+      <organization/>
+      <organizationUrl/>
+      <roles/>
+      <timezone/>
       <properties>
         <key>value</key>
       </properties>
@@ -147,32 +148,32 @@
       <name>openflexo-users@openflexo.org</name>
       <subscribe>openflexo-users-subscribe@openflexo.org</subscribe>
       <unsubscribe> openflexo-users-unsubscribe@openflexo.org</unsubscribe>
-      <post />
-      <archive />
-      <otherArchives />
+      <post/>
+      <archive/>
+      <otherArchives/>
     </mailingList>
     <mailingList>
       <name>openflexo-info@openflexo.org</name>
       <subscribe>openflexo-info-subscribe@openflexo.org</subscribe>
       <unsubscribe> openflexo-info-unsubscribe@openflexo.org</unsubscribe>
-      <post />
-      <archive />
-      <otherArchives />
+      <post/>
+      <archive/>
+      <otherArchives/>
     </mailingList>
     <mailingList>
       <name>openflexo-commits@openflexo.org</name>
       <subscribe>openflexo-commits-subscribe@openflexo.org</subscribe>
       <unsubscribe> openflexo-commits-unsubscribe@openflexo.org</unsubscribe>
-      <post />
-      <otherArchives />
+      <post/>
+      <otherArchives/>
     </mailingList>
     <mailingList>
       <name>openflexo-developers@openflexo.org</name>
       <subscribe>openflexo-developers-subscribe@openflexo.org</subscribe>
       <unsubscribe> openflexo-developers-unsubscribe@openflexo.org</unsubscribe>
-      <post />
+      <post/>
       <archive>http://openflexo-developers-mailing-list.2060.n6.nabble.com/</archive>
-      <otherArchives />
+      <otherArchives/>
     </mailingList>
   </mailingLists>
   <prerequisites>
@@ -217,7 +218,12 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-release-plugin</artifactId>
-          <version>2.0</version>
+          <version>2.4.2</version>
+          <configuration>
+            <localCheckout>true</localCheckout>
+            <pushChanges>false</pushChanges>
+            <tagNameFormat>v@{project.version}</tagNameFormat>
+          </configuration>
         </plugin>
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
@@ -298,7 +304,7 @@
                     </goals>
                   </pluginExecutionFilter>
                   <action>
-                    <ignore />
+                    <ignore/>
                   </action>
                 </pluginExecution>
               </pluginExecutions>
@@ -322,8 +328,8 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-site-plugin</artifactId>
           <!--version>3.2</version-->
-	  <!-- use maven-site-plugin 2.4 due to bug : https://jira.codehaus.org/browse/MSITE-604 -->
-          <version>2.4</version>
+          <!-- use maven-site-plugin 2.4 due to bug : https://jira.codehaus.org/browse/MSITE-604 -->
+          <version>${mavensite.version}</version>
           <configuration>
             <locales>en</locales>
             <inputEncoding>utf-8</inputEncoding>
@@ -332,41 +338,39 @@
             <!--templateFile>${basedir}/maven-site.vm</templateFile-->
           </configuration>
         </plugin>
-     <plugin>
+        <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>dashboard-maven-plugin</artifactId>
           <version>1.0.0-beta-1</version>
-<configuration>
-					<configLocation>myDashboardConfig.xml</configLocation>
-					
-				</configuration>
+          <configuration>
+            <configLocation>myDashboardConfig.xml</configLocation>
+          </configuration>
         </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-javadoc-plugin</artifactId>
-        <version>2.9</version>
-<configuration>
-				<source>1.6</source>
-				<doclet>org.umlgraph.doclet.UmlGraphDoc</doclet>
-				<docletArtifact>
-					<groupId>org.umlgraph</groupId>
-					<artifactId>doclet</artifactId>
-					<version>5.1</version>
-				</docletArtifact>
-				<additionalparam>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-javadoc-plugin</artifactId>
+          <version>2.9</version>
+          <configuration>
+            <source>1.6</source>
+            <doclet>org.umlgraph.doclet.UmlGraphDoc</doclet>
+            <docletArtifact>
+              <groupId>org.umlgraph</groupId>
+              <artifactId>doclet</artifactId>
+              <version>5.1</version>
+            </docletArtifact>
+            <additionalparam>
 					-operations -visibility
 				</additionalparam>
-      			<useStandardDocletOptions>true</useStandardDocletOptions>
-			</configuration>
+            <useStandardDocletOptions>true</useStandardDocletOptions>
+          </configuration>
           <dependencies>
-	 <dependency>
-      <groupId>org.umlgraph</groupId>
-      <artifactId>doclet</artifactId>
-      <version>5.1</version>
-    </dependency>
+            <dependency>
+              <groupId>org.umlgraph</groupId>
+              <artifactId>doclet</artifactId>
+              <version>5.1</version>
+            </dependency>
           </dependencies>
-
-   <!--configuration>
+          <!--configuration>
                     <source>1.5</source>
                     <doclet>
                         gr.spinellis.umlgraph.doclet.UmlGraphDoc
@@ -387,8 +391,8 @@
                         -link "http://www.hibernate.org/hib_docs/v3/api/"
                     </additionalparam>
                 </configuration-->
-		    <!-- http://www.umlgraph.org/ -->
-      </plugin>
+          <!-- http://www.umlgraph.org/ -->
+        </plugin>
       </plugins>
     </pluginManagement>
     <!-- audit -->
@@ -417,7 +421,7 @@
           </execution>
         </executions>
       </plugin>
- <plugin>
+      <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>jdepend-maven-plugin</artifactId>
         <version>2.0-beta-2</version>
@@ -430,24 +434,24 @@
   <description>This pom aims at capitalizing production configuration items for all openflexo production</description>
   <reporting>
     <plugins>
-  <plugin>
+      <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>jdepend-maven-plugin</artifactId>
         <version>2.0-beta-2</version>
       </plugin>
-    <plugin>
+      <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>dashboard-maven-plugin</artifactId>
         <version>1.0.0-beta-1</version>
-      </plugin>	
+      </plugin>
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>findbugs-maven-plugin</artifactId>
         <version>${findbugs.version}</version>
-<configuration>
-				<xmlOutput>true</xmlOutput>
-				<effort>Max</effort>
-			</configuration>
+        <configuration>
+          <xmlOutput>true</xmlOutput>
+          <effort>Max</effort>
+        </configuration>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -554,7 +558,7 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-javadoc-plugin</artifactId>
         <version>2.9</version>
-            <inherited>true</inherited>
+        <inherited>true</inherited>
         <reportSets>
           <reportSet>
             <!-- by default, id = "default" -->
