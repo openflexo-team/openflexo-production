@@ -20,12 +20,11 @@
 		<system>Jenkins</system>
 		<url>https://jenkins.openflexo.org/</url>
 	</ciManagement>
-	<url>http://www.openflexo.org</url>
+	<url>https://www.openflexo.org</url>
 	<properties>
 		<ant.version>1.9.0</ant.version>
 		<compiler.source>1.6</compiler.source>
 		<compiler.target>1.6</compiler.target>
-		<hibernate.version>4.2.3.Final</hibernate.version>
 		<jersey.version>1.17.1</jersey.version>
 		<organization.name>Openflexo</organization.name>
 		<organization.url>http://www.openflexo.org</organization.url>
@@ -101,6 +100,7 @@
       </properties>
     </developer>
   </developers>
+  
   <contributors>
     <contributor>
       <name/>
@@ -240,19 +240,6 @@
 										</configurator>
 									</action>
 								</pluginExecution>
-								<pluginExecution>
-									<pluginExecutionFilter>
-										<groupId>org.jvnet.ws.wadl</groupId>
-										<artifactId>wadl-client-plugin</artifactId>
-										<versionRange>[1.0,)</versionRange>
-										<goals>
-											<goal>generate</goal>
-										</goals>
-									</pluginExecutionFilter>
-									<action>
-										<ignore />
-									</action>
-								</pluginExecution>
 							</pluginExecutions>
 						</lifecycleMappingMetadata>
 					</configuration>
@@ -313,7 +300,8 @@
 	</build>
 	<modules>
 		<module>openflexo-component</module>
-    </modules>
+		<module>openflexo-archetypes</module>
+	</modules>
 	<description>This pom aims at capitalizing production configuration items for all openflexo production</description>
 	<reporting>
      <plugins>
@@ -431,5 +419,9 @@
 		  </plugin>
       </plugins>
    </reporting>
+	<organization>
+		<name>Openflexo</name>
+		<url>https://www.openflexo.org</url>
+	</organization>
 </project>
 
