@@ -87,10 +87,6 @@
 	</repositories>
 
 	<groupId>org.openflexo</groupId>
-	<modules>
-		<module>openflexo-technologyadapter-archetype</module>
-		<module>openflexo-module-archetype</module>
-	</modules>
 	<description>Those are the Maven Archetypes one can use to create new components for Openflexo infrastructure</description>
 	<url>https://www.openflexo.org</url>
 </project>
