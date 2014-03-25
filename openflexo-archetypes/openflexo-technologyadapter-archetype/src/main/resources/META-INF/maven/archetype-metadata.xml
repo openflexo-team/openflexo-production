@@ -7,8 +7,12 @@
 	<requiredProperties>
 		<requiredProperty key="artifactId">
 		</requiredProperty>
+		<requiredProperty key="flexoCoreVersion">
+			<defaultValue>1.7</defaultValue>
+		</requiredProperty>
+		
 		<requiredProperty key="technologyadapterApiVersion">
-			<defaultValue>1.0</defaultValue>
+			<defaultValue>${flexoCoreVersion}</defaultValue>
 		</requiredProperty>
 		<requiredProperty key="technologyPrefix">
 			<defaultValue>${artifactId.toUpperCase()}</defaultValue>

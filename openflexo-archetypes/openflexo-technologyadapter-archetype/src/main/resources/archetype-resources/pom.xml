@@ -9,6 +9,30 @@
   <groupId>org.openflexo.technologyadapter</groupId>
   <artifactId>${technologyExtension}</artifactId>
   <version>${version}</version>
-  <name>Technology Adapters</name>
+  <name>${technologyExtension} Technology Adapter</name>
   <packaging>pom</packaging>
+  <dependencyManagement>
+  	<dependencies>
+  		<dependency>
+  			<groupId>org.openflexo</groupId>
+  			<artifactId>flexo-foundation</artifactId>
+  			<version>${flexoCoreVersion}</version>
+  		</dependency>
+  		<dependency>
+  			<groupId>org.openflexo</groupId>
+  			<artifactId>flexo-ui</artifactId>
+  			<version>${flexoCoreVersion}</version>
+  		</dependency>
+    <dependency>
+      <groupId>org.openflexo</groupId>
+      <artifactId>csvconnector</artifactId>
+  			<version>${version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.openflexo</groupId>
+      <artifactId>csvconnector-ui</artifactId>
+  			<version>${version}</version>
+    </dependency>
+  	</dependencies>
+  </dependencyManagement>
 </project>

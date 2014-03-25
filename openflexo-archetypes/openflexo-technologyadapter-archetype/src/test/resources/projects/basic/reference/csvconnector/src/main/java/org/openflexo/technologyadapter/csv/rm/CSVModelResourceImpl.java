@@ -36,10 +36,9 @@ import org.apache.commons.io.IOUtils;
 import org.openflexo.foundation.FlexoException;
 import org.openflexo.foundation.resource.FlexoFileResourceImpl;
 import org.openflexo.foundation.resource.ResourceLoadingCancelledException;
-import org.openflexo.foundation.rm.FlexoFileResource;
-import org.openflexo.foundation.rm.ResourceDependencyLoopException;
-import org.openflexo.foundation.rm.SaveResourceException;
-import org.openflexo.foundation.rm.SaveResourcePermissionDeniedException;
+import org.openflexo.foundation.resource.FlexoFileResource;
+import org.openflexo.foundation.resource.SaveResourceException;
+import org.openflexo.foundation.resource.SaveResourcePermissionDeniedException;
 import org.openflexo.model.exceptions.ModelDefinitionException;
 import org.openflexo.model.factory.ModelFactory;
 import org.openflexo.technologyadapter.csv.CSVTechnologyAdapter;
@@ -89,7 +88,7 @@ public abstract class CSVModelResourceImpl extends FlexoFileResourceImpl<CSVMode
 	}
 
 	@Override
-	public CSVModel loadResourceData(IProgress progress) throws ResourceLoadingCancelledException, ResourceDependencyLoopException,
+	public CSVModel loadResourceData(IProgress progress) throws ResourceLoadingCancelledException,
 			FileNotFoundException, FlexoException {
 		CSVModel returned = new CSVModel(getURI(), getFile(), (CSVTechnologyAdapter) getTechnologyAdapter());
 		returned.loadWhenUnloaded();
@@ -107,9 +106,6 @@ public abstract class CSVModelResourceImpl extends FlexoFileResourceImpl<CSVMode
 		} catch (ResourceLoadingCancelledException e) {
 			e.printStackTrace();
 			throw new SaveResourceException(this);
-		} catch (ResourceDependencyLoopException e) {
-			e.printStackTrace();
-			throw new SaveResourceException(this);
 		} catch (FlexoException e) {
 			e.printStackTrace();
 			throw new SaveResourceException(this);
@@ -123,7 +119,7 @@ public abstract class CSVModelResourceImpl extends FlexoFileResourceImpl<CSVMode
 			throw new SaveResourcePermissionDeniedException(this);
 		}
 		if (resourceData != null) {
-			FlexoFileResource.FileWritingLock lock = willWriteOnDisk();
+			FlexoFileResourceImpl.FileWritingLock lock = willWriteOnDisk();
 			writeToFile();
 			hasWrittenOnDisk(lock);
 			notifyResourceStatusChanged();
@@ -142,9 +138,6 @@ public abstract class CSVModelResourceImpl extends FlexoFileResourceImpl<CSVMode
 			e.printStackTrace();
 			return null;
 		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-			return null;
-		} catch (ResourceDependencyLoopException e) {
 			e.printStackTrace();
 			return null;
 		} catch (FlexoException e) {

@@ -6,13 +6,14 @@ import org.openflexo.model.annotations.Getter;
 import org.openflexo.model.annotations.ImplementationClass;
 import org.openflexo.model.annotations.ModelEntity;
 import org.openflexo.model.annotations.Setter;
+import org.openflexo.technologyadapter.csv.CSVTechnologyAdapter;
 import org.openflexo.technologyadapter.csv.CSVTechnologyContextManager;
 import org.openflexo.technologyadapter.csv.model.CSVMetaModel;
 import org.openflexo.technologyadapter.csv.model.CSVModel;
 
 @ModelEntity
 @ImplementationClass(CSVModelResourceImpl.class)
-public abstract interface CSVModelResource extends FlexoFileResource<CSVModel>, FlexoModelResource<CSVModel, CSVMetaModel>
+public abstract interface CSVModelResource extends FlexoFileResource<CSVModel>, FlexoModelResource<CSVModel, CSVMetaModel, CSVTechnologyAdapter>
 {
   public static final String TECHNOLOGY_CONTEXT_MANAGER = "technologyContextManager";
 

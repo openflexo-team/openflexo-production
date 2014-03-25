@@ -83,11 +83,4 @@ public class ${technologyPrefix}TechnologyAdapter extends TechnologyAdapter {
 		// TODO Auto-generated method stub
 
 	}
-
-	@Override
-	public <MS extends ModelSlot<?>> MS makeModelSlot(Class<MS> modelSlotClass, VirtualModel<?> virtualModel) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
 }
