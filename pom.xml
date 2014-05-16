@@ -19,7 +19,6 @@
         <system>Jenkins</system>
         <url>https://jenkins.openflexo.org/</url>
     </ciManagement>
-    <url>https://www.openflexo.org</url>
     <properties>
         <ant.version>1.9.0</ant.version>
         <compiler.source>1.6</compiler.source>
@@ -68,9 +67,8 @@
             <url>https://maven.openflexo.org/artifactory/openflexo-snapshot/</url>
         </snapshotRepository>
         <site>
-            <id/>
-            <name/>
-            <url/>
+            <id>openflexo.website</id>
+	    <url>scp://server-one.openflexo.org/home/www/sites/openflexo-production/</url>
         </site>
         <downloadUrl/>
     </distributionManagement>

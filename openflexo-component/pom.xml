@@ -93,12 +93,6 @@
         <system>Jenkins</system>
         <url>https://jenkins.openflexo.com/</url>
     </ciManagement>
-    <distributionManagement>
-        <site>
-            <id>openflexo.website</id>
-	<url>scp://server-one.openflexo.org/home/www/sites/</url>
-        </site>
-    </distributionManagement>
     <issueManagement>
         <system>jira</system>
         <url>https://bugs.openflexo.org/</url>
