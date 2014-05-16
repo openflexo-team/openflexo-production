@@ -63,6 +63,14 @@
                         <runOrder>alphabetical</runOrder>
                     </configuration>
                 </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-site-plugin</artifactId>
+                    <version>3.3</version>
+                    <configuration>
+                        <topSiteURL>https://www.openflexo.org/sites</topSiteURL>
+                    </configuration>
+                </plugin>
             </plugins>
         </pluginManagement>
     </build>
