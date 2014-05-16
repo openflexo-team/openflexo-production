@@ -10,6 +10,7 @@
     <artifactId>openflexo-component</artifactId>
     <name>Openflexo-Component</name>
     <packaging>pom</packaging>
+    <url>https://www.openflexo.org/sites/openflexo-production/openflexo-component</url>
     <build>
         <resources>
             <resource>
@@ -95,7 +96,7 @@
     <distributionManagement>
         <site>
             <id>openflexo.website</id>
-	<url>scp:server-one.openflexo.org/home/www/sites/</url>
+	<url>scp://server-one.openflexo.org/home/www/sites/</url>
         </site>
     </distributionManagement>
     <issueManagement>
