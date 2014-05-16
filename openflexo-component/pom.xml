@@ -95,7 +95,7 @@
     <distributionManagement>
         <site>
             <id>openflexo.website</id>
-            <url>scp://server-one.openflexo.org/home/www/sites/${project.name}</url>
+            <url>scp://server-one.openflexo.org/home/www/sites/</url>
         </site>
     </distributionManagement>
     <issueManagement>
