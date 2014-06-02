@@ -53,7 +53,7 @@ Checkstyle configuration that checks the Openflexo coding conventions.
     <module name="NeedBraces"/>
     <module name="RightCurly">
       <property name="option" value="alone"/>
-      <property name="tokens" value="LITERAL_FINALLY,LITERAL_IF,LITERAL_ELSE"/>
+      <property name="tokens" value="LITERAL_IF,LITERAL_ELSE"/>
     </module>
     <module name="AvoidInlineConditionals"/>
     <module name="EmptyStatement"/>
@@ -78,7 +78,7 @@ Checkstyle configuration that checks the Openflexo coding conventions.
     <module name="TodoComment"/>
     <module name="UpperEll"/>
     <module name="RightCurly">
-      <property name="tokens" value="LITERAL_TRY,LITERAL_CATCH"/>
+      <property name="tokens" value="LITERAL_TRY,LITERAL_CATCH,LITERAL_FINALLY"/>
     </module>
   </module>
   <module name="NewlineAtEndOfFile"/>
@@ -86,7 +86,9 @@ Checkstyle configuration that checks the Openflexo coding conventions.
   <module name="FileLength"/>
   <module name="FileTabCharacter"/>
   <module name="RegexpSingleline">
+    <property name="severity" value="ignore"/>
     <property name="format" value="\s+$"/>
     <property name="message" value="Line has trailing spaces."/>
+    <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
   </module>
 </module>
