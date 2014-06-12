@@ -170,18 +170,22 @@
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-release-plugin</artifactId>
 					<version>2.5</version>
-					<configuration>
+					<configuration><configuration>
 						<tagNameFormat>${project.name}-@{project.version}</tagNameFormat>
-						<!-- temp parameters to be removed when tests are done -->
-						<pushChanges>false</pushChanges>
-						<localCheckout>true</localCheckout>
+						<addSchema>true</addSchema>
 						<!-- permanent configuration -->
 						<!-- update the versions in the branches -->
 						<updateBranchVersions>true</updateBranchVersions>
-						<updateWorkingCopyVersions>true</updateWorkingCopyVersions>
+						<updateWorkingCopyVersions>false</updateWorkingCopyVersions>
 						<updateVersionsToSnapshot>true</updateVersionsToSnapshot>
+						<!-- do not update dependencies automatically -->
+						<updateDependencies>false</updateDependencies>
 						<!-- automatically assign parent version so modules -->
 						<autoVersionSubmodules>true</autoVersionSubmodules>
+						<!-- temp parameters to be removed when tests are done -->
+						<pushChanges>false</pushChanges>
+						<localCheckout>true</localCheckout>
+					</configuration>
 					</configuration>
 				</plugin>
 				<plugin>
