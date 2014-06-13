@@ -9,7 +9,7 @@
 	<packaging>pom</packaging>
 	<url>https://www.openflexo.org/sites/openflexo-production/</url>
 	<scm>
-		<connection>scm:git:ssh://git@github.com:openflexo-team/openflexo-production.git</connection>
+		<connection>scm:git:ssh://git@github.com/openflexo-team/openflexo-production.git</connection>
 		<url>https://github.com/openflexo-team/openflexo-production</url>
 		<tag>master</tag>
 	</scm>
