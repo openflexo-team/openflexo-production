@@ -187,7 +187,7 @@
 						<autoVersionSubmodules>true</autoVersionSubmodules>
 						<!-- temp parameters to be removed when tests are done -->
 						<pushChanges>true</pushChanges>
-						<!-- <localCheckout>true</localCheckout> -->
+						<localCheckout>true</localCheckout>
 					</configuration>
 				</plugin>
 				<plugin>
