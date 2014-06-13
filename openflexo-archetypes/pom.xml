@@ -3,7 +3,7 @@
 	<parent>
 		<groupId>org.openflexo</groupId>
 		<artifactId>openflexo-production</artifactId>
-		<version>0.2-SNAPSHOT</version>
+		<version>0.1-SNAPSHOT</version>
 	</parent>
 	<version>0.1</version>
 	<modelVersion>4.0.0</modelVersion>
@@ -88,9 +88,5 @@
 	<groupId>org.openflexo</groupId>
 	<description>Those are the Maven Archetypes one can use to create new components for Openflexo infrastructure</description>
 	<url>https://www.openflexo.org</url>
-
-  <scm>
-    <tag>0.2</tag>
-  </scm>
 </project>
 
