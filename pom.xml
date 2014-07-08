@@ -148,7 +148,7 @@
 						<dependency>
 							<groupId>org.openflexo</groupId>
 							<artifactId>tools-configuration</artifactId>
-							<version>${version}</version>
+							<version>${project.version}</version>
 						</dependency>
 					</dependencies>
 					<version>${checkstyle.version}</version>
