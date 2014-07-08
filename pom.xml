@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<groupId>org.openflexo</groupId>
 	<version>0.2-SNAPSHOT</version>
 	<modelVersion>4.0.0</modelVersion>
@@ -10,8 +11,8 @@
 	<scm>
 		<connection>scm:git:ssh://git@github.com/openflexo-team/openflexo-production.git</connection>
 		<url>https://github.com/openflexo-team/openflexo-production</url>
-    <tag>0.2</tag>
-  </scm>
+		<tag>0.2</tag>
+	</scm>
 	<issueManagement>
 		<system>jira</system>
 		<url>https://bugs.openflexo.org</url>
@@ -75,8 +76,14 @@
 	</distributionManagement>
 	<licenses>
 		<license>
-			<name />
-			<url />
+			<name>GPL V3</name>
+			<url>http://www.gnu.org/copyleft/gpl.html</url>
+			<distribution />
+			<comments />
+		</license>
+		<license>
+			<name>EUPL</name>
+			<url>https://joinup.ec.europa.eu/software/page/eupl</url>
 			<distribution />
 			<comments />
 		</license>
@@ -133,6 +140,22 @@
 		</extensions>
 		<pluginManagement>
 			<plugins>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-checkstyle-plugin</artifactId>
+					<dependencies>
+						<dependency>
+							<groupId>org.openflexo</groupId>
+							<artifactId>tools-configuration</artifactId>
+							<version>${version}</version>
+						</dependency>
+					</dependencies>
+					<version>${checkstyle.version}</version>
+					<configuration>
+						<configLocation>OpenflexoCheckStyle.xml</configLocation>
+					</configuration>
+				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-clean-plugin</artifactId>
@@ -350,22 +373,19 @@
 	<modules>
 		<module>openflexo-component</module>
 		<module>openflexo-archetypes</module>
+		<module>tools-configuration</module>
 	</modules>
 	<description>This pom aims at capitalizing production configuration items for all openflexo production</description>
 	<reporting>
 		<plugins>
 			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-checkstyle-plugin</artifactId>
+			</plugin>
+			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>findbugs-maven-plugin</artifactId>
 				<version>${findbugs.version}</version>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-checkstyle-plugin</artifactId>
-				<version>${checkstyle.version}</version>
-				<configuration>
-					<configLocation>OpenflexoCheckStyle.xml</configLocation>
-				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
