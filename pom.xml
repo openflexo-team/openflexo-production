@@ -381,6 +381,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-checkstyle-plugin</artifactId>
+				<version>${checkstyle.version}</version>
 			</plugin>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
