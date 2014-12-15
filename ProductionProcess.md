@@ -1,0 +1,37 @@
+# Production Process for Openflexo Infrastructure
+=========================================
+
+## Versioning scheme and components lifecycle
+
+We use the following versioning schemes:
+*	*major.minor.revision-qualifier*
+*     *major.minor-qualification*
+
+qualifier might be:
+* -SNAPSHOT for everyday development releases
+* -RCx for release candidates built at the beginning of a QA cycle.
+
+Releases are built at the end of the QA cycle, when version is considered stable enough 
+
+## Jobs in jenkins
+
+There are 3 kinds of jobs, mirroring the 3 kind of releases:
+* -SNAPSHOT, continuous build, triggered on VersionControl change
+* -RCx, manual jobs
+* releases, manual jobs
+
+## How to do a 'release candidate' build
+
+
+
+1. select the project and **check that all dependencies point to official or RCs**
+2. launch the job, giving the relevant arguments:
+
+
+## How to do a 'release' build
+
+After a Release build, you must:
+1. update the jobs in Jenkins so that continuous build points at the right branch on Github (next release version) and that default parameters
+for **Release Candidate** and **Release** jobs are pointing at the next production version by default
+2. update Github to point by default on the new Github branch
+
