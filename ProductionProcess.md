@@ -36,6 +36,17 @@ Plus, Openflexo-TechnologyAdapters is released with *-DignoreSnapshots=true* as 
 
 ## How to do a 'release' build
 
+Prepare the Release
+1. Check that you have the latest version pulled from the branch to release, and no checkout remaining on the branch
+2. check the dependencies, there should not remain any *-SNAPSHOT* version in dependencies (DO  NOT UPDATE THE VERSION OF THE PROJECT YOU ARE BUILDING)
+3.  Go to Jenkins, select the job corresponding to the component your are building in the *Releases* view
+4. Click on *Build with parameters* update the releaseVersion and nextVersion parameters and build.
+5. Check that everything went ok: you should have a new release version (releaseVersion, current branch) & new branch (nextVersion, branch to come)
+6. Update the continuous/release candidate/release build  job in jenkins to checkout the new development version
+7. Update the default branch in github so that future developers get the new development version by default
+8. Merge the branch that is been released with *master* branch
+
+
 After a Release build, you must:
 1. update the jobs in Jenkins so that continuous build points at the right branch on Github (next release version) and that default parameters
 for **Release Candidate** and **Release** jobs are pointing at the next production version by default
