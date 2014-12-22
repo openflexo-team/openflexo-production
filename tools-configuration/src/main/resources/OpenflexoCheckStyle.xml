@@ -5,9 +5,8 @@
     This configuration file was written by the eclipse-cs plugin configuration editor
 -->
 <!--
-    Checkstyle-Configuration: OpenflexoChecks
-    Description: 
-Checkstyle configuration that checks the Openflexo coding conventions.
+    Checkstyle-Configuration: Openflexo-CheckStyle
+    Description: none
 -->
 <module name="Checker">
   <property name="severity" value="warning"/>
@@ -84,7 +83,10 @@ Checkstyle configuration that checks the Openflexo coding conventions.
   <module name="NewlineAtEndOfFile"/>
   <module name="Translation"/>
   <module name="FileLength"/>
-  <module name="FileTabCharacter"/>
+  <module name="FileTabCharacter">
+    <property name="severity" value="ignore"/>
+    <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
+  </module>
   <module name="RegexpSingleline">
     <property name="severity" value="ignore"/>
     <property name="format" value="\s+$"/>

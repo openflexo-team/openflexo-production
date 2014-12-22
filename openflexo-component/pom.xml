@@ -5,7 +5,6 @@
         <artifactId>openflexo-production</artifactId>
         <version>0.1</version>
     </parent>
-    <version>0.1</version>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>openflexo-component</artifactId>
     <name>Openflexo-Component</name>
@@ -106,4 +105,8 @@
         <name>Openflexo</name>
         <url>https://www.openflexo.org</url>
     </organization>
+  <scm>
+    <tag>Openflexo-Production-0.2</tag>
+  </scm>
+  <groupId>org.openflexo</groupId>
 </project>
