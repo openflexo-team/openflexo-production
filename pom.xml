@@ -68,8 +68,8 @@
 			<url>https://maven.openflexo.org/artifactory/openflexo-snapshot/</url>
 		</snapshotRepository>
 		<site>
-			<id>openflexo-production.website</id>
-			<url>scp://server-one.openflexo.org/home/www/sites/openflexo-production/${project.version}/</url>
+			<id>${project.artifactId}.website</id>
+			<url>scp://server-one.openflexo.org/home/www/sites/${project.artifactId}/${project.version}/</url>
 		</site>
 		<downloadUrl />
 	</distributionManagement>
