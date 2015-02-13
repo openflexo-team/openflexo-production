@@ -48,7 +48,7 @@ Plus, Openflexo-TechnologyAdapters is released with *-DignoreSnapshots=true* as 
 
 
 ###After a Release build, you must:
-1. Update the continuous/release candidate/release build  job in Jenkins,so that continuous build points at the right branch on Github (next release version) and that default parameters for **Release Candidate** and **Release** jobs are pointing at the next production version by default (parameters are releaseVersion and nextDevelopmentVersion or releaseCandidateRevision)
+1. Update the continuous/Sites and Documentation/release candidate/release build  job in Jenkins,so that continuous build points at the right branch on Github (next release version) and that default parameters for **Release Candidate** and **Release** jobs are pointing at the next production version by default (parameters are releaseVersion and nextDevelopmentVersion or releaseCandidateRevision)
 2. Update the default branch in github so that future developers get the new development version by default
 3. Merge the branch that is been released with *master* branch
 4. update Github to point by default on the new Github branch
