@@ -270,11 +270,12 @@ LICENSE INFO COMMON TO ALL COMPONENTS
                               </dependency>
                          </dependencies>
                          <configuration>
-                              <locales>en,fr</locales>
+                              <locales>en</locales>
                               <inputEncoding>utf-8</inputEncoding>
                               <outputEncoding>utf-8</outputEncoding>
                               <!--locales>fr_FR.UTF-8</locales -->
                               <!--templateFile>${basedir}/maven-site.vm</templateFile -->
+                              <topSiteURL>scp://server-one.openflexo.org/home/www/sites/</topSiteURL>
                          </configuration>
                     </plugin>
                     <plugin>
@@ -371,7 +372,7 @@ LICENSE INFO COMMON TO ALL COMPONENTS
                <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-project-info-reports-plugin</artifactId>
-                    <version>2.7</version>
+                    <version>2.8</version>
                     <inherited>true</inherited>
                     <configuration>
                          <dependencyDetailsEnabled>true</dependencyDetailsEnabled>
