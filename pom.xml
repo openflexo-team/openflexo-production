@@ -40,9 +40,7 @@
           <profile>
                <id>snapshot-profile</id>
                <activation>
-                    <property>
-                         <name>performSnapshot</name>
-                    </property>
+	            <activeByDefault>true</activeByDefault>
                </activation>
                <!-- ************
    		Places where to upload files for component Maven site
