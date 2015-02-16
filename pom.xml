@@ -306,6 +306,7 @@ LICENSE INFO COMMON TO ALL COMPONENTS
                   <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-checkstyle-plugin</artifactId>
+                        <version>${checkstyle.version}</version>
 			<inherited>true</inherited>
                     </plugin>
                   <plugin>
