@@ -52,7 +52,6 @@
                          <id>${project.artifactId}.website</id>
                          <url>scp://server-one.openflexo.org/home/www/sites/${project.artifactId}/SNAPSHOT/</url>
                     </site>
-                    <downloadUrl/>
                </distributionManagement>
           </profile>
           <profile>
@@ -70,7 +69,6 @@
                          <id>${project.artifactId}.website</id>
                          <url>scp://server-one.openflexo.org/home/www/sites/${project.artifactId}/SNAPSHOT/</url>
                     </site>
-                    <downloadUrl/>
                </distributionManagement>
           </profile>
           <profile>
@@ -88,7 +86,6 @@
                          <id>${project.artifactId}.website</id>
                          <url>scp://server-one.openflexo.org/home/www/sites/${project.artifactId}/${project.version}/</url>
                     </site>
-                    <downloadUrl/>
                </distributionManagement>
           </profile>
      </profiles>
@@ -381,8 +378,20 @@ LICENSE INFO COMMON TO ALL COMPONENTS
           </plugins>
      </build>
      <!--*******************
-  MAVEN SITE configuration
--->
+	Repositories used to publish versions
+	-->
+	<distributionManagement>
+		   <snapshotRepository>
+                    	<id>openflexo-snapshot</id>
+                    	<name>openflexo Snapshot repository</name>
+                    	<url>https://maven.openflexo.org/artifactory/openflexo-snapshot/</url>
+		   </snapshotRepository>
+		   <repository>
+                    	<id>openflexo-release</id>
+                    	<name>openflexo Release repository</name>
+                    	<url>https://maven.openflexo.org/artifactory/openflexo-release/</url>
+		   </repository>
+         </distributionManagement>
      <reporting>
           <plugins>
                <plugin>
