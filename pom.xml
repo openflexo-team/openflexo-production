@@ -390,7 +390,6 @@ LICENSE INFO COMMON TO ALL COMPONENTS
                                    <report>project-team</report>
                                    <report>mailing-list</report>
                                    <report>cim</report>
-                                   <report>issue-tracking</report>
                                    <report>license</report>
                                    <report>scm</report>
                                    <!-- project-info-reports:cim is used to generate the Project Continuous 
