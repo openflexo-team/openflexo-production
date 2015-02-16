@@ -38,6 +38,7 @@
    Global Properties common to all files
    -->
      <properties>
+	  <toolsconfig.version>0.3-SNAPSHOT</toolsconfig.version>
           <ant.version>1.9.0</ant.version>
           <compiler.source>1.6</compiler.source>
           <compiler.target>1.6</compiler.target>
@@ -100,7 +101,7 @@ LICENSE INFO COMMON TO ALL COMPONENTS
                               <dependency>
                                    <groupId>org.openflexo</groupId>
                                    <artifactId>tools-configuration</artifactId>
-                                   <version>${project.version}</version>
+                                   <version>${toolsconfig.version}</version>
                               </dependency>
                          </dependencies>
                          <version>${checkstyle.version}</version>
@@ -271,7 +272,7 @@ LICENSE INFO COMMON TO ALL COMPONENTS
                               <dependency>
                                    <groupId>org.openflexo</groupId>
                                    <artifactId>tools-configuration</artifactId>
-                                   <version>${project.version}</version>
+                                   <version>${toolsconfig.version}</version>
                               </dependency>
                          </dependencies>
                          <configuration>
