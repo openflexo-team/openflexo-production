@@ -95,21 +95,6 @@ LICENSE INFO COMMON TO ALL COMPONENTS
                   <plugins>
                         <plugin>
                               <groupId>org.apache.maven.plugins</groupId>
-                              <artifactId>maven-checkstyle-plugin</artifactId>
-                              <dependencies>
-                                    <dependency>
-                                          <groupId>org.openflexo</groupId>
-                                          <artifactId>tools-configuration</artifactId>
-                                          <version>${toolsconfig.version}</version>
-                                    </dependency>
-                              </dependencies>
-                              <version>${checkstyle.version}</version>
-                              <configuration>
-                                    <configLocation>OpenflexoCheckStyle.xml</configLocation>
-                              </configuration>
-                        </plugin>
-                        <plugin>
-                              <groupId>org.apache.maven.plugins</groupId>
                               <artifactId>maven-clean-plugin</artifactId>
                               <version>2.4.1</version>
                         </plugin>
@@ -225,11 +210,6 @@ LICENSE INFO COMMON TO ALL COMPONENTS
                                           <artifactId>wagon-ssh</artifactId>
                                           <version>2.8</version>
                                     </dependency> 
-                                    <dependency>
-                                          <groupId>org.openflexo</groupId>
-                                          <artifactId>tools-configuration</artifactId>
-                                          <version>${toolsconfig.version}</version>
-                                    </dependency>
                               </dependencies>
                               <configuration>
                                     <locales>en</locales>
@@ -285,6 +265,9 @@ LICENSE INFO COMMON TO ALL COMPONENTS
                   </plugin>
             </plugins>
       </build>
+     <!--*******************
+		Global dependencies
+	-->
       <!--*******************
     Repositories used to publish versions
     -->
@@ -306,9 +289,6 @@ LICENSE INFO COMMON TO ALL COMPONENTS
                               <groupId>org.apache.maven.plugins</groupId>
                               <artifactId>maven-checkstyle-plugin</artifactId>
                               <version>${checkstyle.version}</version>
-                              <configuration>
-                                    <configLocation>OpenflexoCheckStyle.xml</configLocation>
-                              </configuration>
                   </plugin>
                   <plugin>
                         <groupId>org.codehaus.mojo</groupId>
@@ -412,6 +392,7 @@ LICENSE INFO COMMON TO ALL COMPONENTS
                   </plugin>
             </plugins>
       </reporting>
+
       <!-- *****************
   	Profiles
   	 -->

@@ -38,6 +38,21 @@
           </resources>
           <pluginManagement>
                <plugins>
+                        <plugin>
+                              <groupId>org.apache.maven.plugins</groupId>
+                              <artifactId>maven-checkstyle-plugin</artifactId>
+                              <dependencies>
+                                    <dependency>
+                                          <groupId>org.openflexo</groupId>
+                                          <artifactId>tools-configuration</artifactId>
+                                          <version>${toolsconfig.version}</version>
+                                    </dependency>
+                              </dependencies>
+                              <version>${checkstyle.version}</version>
+                              <configuration>
+                                    <configLocation>OpenflexoCheckStyle.xml</configLocation>
+                              </configuration>
+                        </plugin>
                     <plugin>
                          <groupId>org.apache.maven.plugins</groupId>
                          <artifactId>maven-jar-plugin</artifactId>
