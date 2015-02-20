@@ -121,12 +121,14 @@
    -->
 
     <dependencyManagement>
+	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<scope>test</scope>
 			<version>${junit.version}</version>
-		</dependency> 
+		</dependency>
+	</dependencies> 
     </dependencyManagement>
 
      <!-- ************
