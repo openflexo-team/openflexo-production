@@ -48,6 +48,17 @@
                     </snapshots>
                 </repository>
             </repositories>
+   <mirrors>
+        <!-- mirror
+	maven.openflexo.org mirrors all other site
+	-->
+    <mirror>
+      <mirrorOf>*</mirrorOf>
+      <name>remote-repos</name>
+      <url>https://maven.openflexo.org/artifactory/openflexo-deps/</url>
+      <id>remote-repos</id>
+    </mirror>
+    </mirrors>
         </profile>
     </profiles>
     <activeProfiles>
