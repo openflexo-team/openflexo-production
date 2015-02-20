@@ -48,6 +48,12 @@
                     </snapshots>
                 </repository>
             </repositories>
+
+        </profile>
+    </profiles>
+    <activeProfiles>
+        <activeProfile>openflexo-infra</activeProfile>
+    </activeProfiles>
    <mirrors>
         <!-- mirror
 	maven.openflexo.org mirrors all other site
@@ -59,9 +65,4 @@
       <id>remote-repos</id>
     </mirror>
     </mirrors>
-        </profile>
-    </profiles>
-    <activeProfiles>
-        <activeProfile>openflexo-infra</activeProfile>
-    </activeProfiles>
 </settings>
