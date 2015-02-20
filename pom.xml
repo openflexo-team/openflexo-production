@@ -22,8 +22,8 @@
             <tag>0.3</tag>
       </scm>
       <issueManagement>
-            <system>jira</system>
-            <url>https://bugs.openflexo.org</url>
+            <system>JIRA</system>
+            <url>https://bugs.openflexo.org/browse/Openflexo_Production</url>
       </issueManagement>
       <ciManagement>
             <system>Jenkins</system>
@@ -42,6 +42,7 @@
             <compiler.source>1.6</compiler.source>
             <compiler.target>1.6</compiler.target>
             <jersey.version>1.17.1</jersey.version>
+	   <junit.version>4.10</junit.version>
             <organization.name>Openflexo</organization.name>
             <organization.url>http://www.openflexo.org</organization.url>
             <organization.logo>https://media.openflexo.org/images/OpenFlexo_Logo.png</organization.logo>
@@ -52,13 +53,17 @@
             <product.name>OpenFlexo</product.name>
             <resource.encoding>UTF-8</resource.encoding>
             <source.encoding>UTF-8</source.encoding>
-            <swingx.version>1.6.3</swingx.version>
             <javahelp.version>2.0.05</javahelp.version>
             <!-- reporting tools -->
+	   <mavensite.version>3.4</mavensite.version>
             <findbugs.version>2.5.2</findbugs.version>
-            <checkstyle.version>2.12</checkstyle.version>
-            <surefire.reportplugin.version>2.12.4</surefire.reportplugin.version>
+            <checkstyle.version>2.14</checkstyle.version>
+            <changes.version>2.11</changes.version>
+            <surefire.reportplugin.version>2.18.1</surefire.reportplugin.version>
             <jacoco.version>0.7.1.201405082137</jacoco.version>
+	    <project.info.version>2.8</project.info.version>
+	    <jxr.report.version>2.5</jxr.report.version>
+	    <javadoc.version>2.10.1</javadoc.version>
       </properties>
       <!--*******************
 LICENSE INFO COMMON TO ALL COMPONENTS
@@ -203,7 +208,7 @@ LICENSE INFO COMMON TO ALL COMPONENTS
                         <plugin>
                               <groupId>org.apache.maven.plugins</groupId>
                               <artifactId>maven-site-plugin</artifactId>
-                              <version>3.4</version>
+                              <version>${mavensite.version}</version>
                               <dependencies>
                                     <dependency>
                                           <groupId>org.apache.maven.wagon</groupId>
@@ -290,6 +295,26 @@ LICENSE INFO COMMON TO ALL COMPONENTS
                               <artifactId>maven-checkstyle-plugin</artifactId>
                               <version>${checkstyle.version}</version>
                   </plugin>
+		 <plugin>
+			  <groupId>org.apache.maven.plugins</groupId>
+			  <artifactId>maven-changes-plugin</artifactId>
+			  <version>${changes.version}</version>
+		        <configuration>
+			            <resolutionIds>Fixed</resolutionIds>
+        	  		    <statusIds>Resolved,Closed</statusIds>
+				     <component>${project.artifactId}</component>
+				    <useJql>true</useJql>
+			            <onlyCurrentVersion>true</onlyCurrentVersion>
+          			    <filter>status in (5,6) AND resolution=1 AND sorter/field=issuetype AND sorter/order=ASC</filter>
+       			</configuration>
+        		<reportSets>
+		         	<reportSet>
+            				<reports>
+              					<report>jira-report</report>
+            				</reports>
+          			</reportSet>
+        		</reportSets>
+		 </plugin>
                   <plugin>
                         <groupId>org.codehaus.mojo</groupId>
                         <artifactId>findbugs-maven-plugin</artifactId>
@@ -303,7 +328,7 @@ LICENSE INFO COMMON TO ALL COMPONENTS
                   <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-jxr-plugin</artifactId>
-                        <version>2.3</version>
+                        <version>${jxr.report.version}</version>
                         <reportSets>
                               <reportSet>
                                     <id>aggregate</id>
@@ -317,7 +342,7 @@ LICENSE INFO COMMON TO ALL COMPONENTS
                   <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-project-info-reports-plugin</artifactId>
-                        <version>2.8</version>
+                        <version>${project.info.version}</version>
                         <inherited>true</inherited>
                         <configuration>
                               <dependencyDetailsEnabled>true</dependencyDetailsEnabled>
@@ -327,7 +352,7 @@ LICENSE INFO COMMON TO ALL COMPONENTS
                               <reportSet>
                                     <reports>
                                           <report>summary</report>
-                                          <report>dependencies</report>
+					<!--                                          <report>dependencies</report> -->
                                           <report>dependency-convergence</report>
                                           <report>dependency-info</report>
                                           <report>dependency-management</report>
@@ -369,7 +394,7 @@ LICENSE INFO COMMON TO ALL COMPONENTS
                   <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-javadoc-plugin</artifactId>
-                        <version>2.9</version>
+                        <version>${javadoc.version}</version>
                         <reportSets>
                               <reportSet>
                                     <!-- by default, id = "default" -->
