@@ -50,7 +50,8 @@
                     </includes>
                </resource>
           </resources>
-     <!-- ************
+
+<!-- ************
    Plugin management
    -->
           <pluginManagement>
@@ -115,6 +116,20 @@
           </pluginManagement>
      </build>
 </project>
+
+<!-- ************
+   Dependency management
+   -->
+
+    <dependencyManagement>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+			<version>${junit.version}</version>
+		</dependency> 
+    </dependencyManagement>
+
      <!-- ************
    Build Configuration
    -->
