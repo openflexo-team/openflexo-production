@@ -115,7 +115,6 @@
                </plugins>
           </pluginManagement>
      </build>
-</project>
 
 <!-- ************
    Dependency management
@@ -133,3 +132,5 @@
      <!-- ************
    Build Configuration
    -->
+</project>
+
