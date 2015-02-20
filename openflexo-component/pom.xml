@@ -17,11 +17,25 @@
      </scm>
      <groupId>org.openflexo</groupId>
      <packaging>pom</packaging>
-     <url>https://$(project.parent.artifactId}.openflexo.org/${project.version}/${project.artifactId}</url>
-     <!-- ************
-   Build Configuration
-   -->
+     <url>https://$(project.parent.artifactId}.openflexo.org/</url>
      <build>
+	<plugins>
+                        <plugin>
+                              <groupId>org.apache.maven.plugins</groupId>
+                              <artifactId>maven-checkstyle-plugin</artifactId>
+                              <dependencies>
+                                    <dependency>
+                                          <groupId>org.openflexo</groupId>
+                                          <artifactId>tools-configuration</artifactId>
+                                          <version>${toolsconfig.version}</version>
+                                    </dependency>
+                              </dependencies>
+                              <version>${checkstyle.version}</version>
+                              <configuration>
+                                    <configLocation>OpenflexoCheckStyle.xml</configLocation>
+                              </configuration>
+                        </plugin>
+	</plugins>
           <resources>
                <resource>
                     <directory>src/main/java</directory>
@@ -36,6 +50,9 @@
                     </includes>
                </resource>
           </resources>
+     <!-- ************
+   Plugin management
+   -->
           <pluginManagement>
                <plugins>
                         <plugin>
@@ -98,3 +115,6 @@
           </pluginManagement>
      </build>
 </project>
+     <!-- ************
+   Build Configuration
+   -->
