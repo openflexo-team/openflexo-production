@@ -37,7 +37,7 @@
    Global Properties common to all files
    -->
       <properties>
-            <toolsconfig.version>0.2-RC1</toolsconfig.version>
+            <toolsconfig.version>0.3-SNAPSHOT</toolsconfig.version>
             <ant.version>1.9.0</ant.version>
             <compiler.source>1.6</compiler.source>
             <compiler.target>1.6</compiler.target>
