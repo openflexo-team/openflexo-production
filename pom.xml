@@ -57,7 +57,7 @@
             <!-- reporting tools -->
 	   <mavensite.version>3.4</mavensite.version>
             <findbugs.version>2.5.2</findbugs.version>
-            <checkstyle.version>2.14</checkstyle.version>
+            <checkstyle.version>2.12</checkstyle.version>
             <changes.version>2.11</changes.version>
             <surefire.reportplugin.version>2.18.1</surefire.reportplugin.version>
             <jacoco.version>0.7.1.201405082137</jacoco.version>
@@ -215,6 +215,11 @@ LICENSE INFO COMMON TO ALL COMPONENTS
                                           <artifactId>wagon-ssh</artifactId>
                                           <version>2.8</version>
                                     </dependency> 
+                                    <dependency>
+                                          <groupId>org.openflexo</groupId>
+                                          <artifactId>tools-configuration</artifactId>
+                                          <version>${toolsconfig.version}</version>
+                                    </dependency>
                               </dependencies>
                               <configuration>
                                     <locales>en</locales>
