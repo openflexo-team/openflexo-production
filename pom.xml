@@ -37,6 +37,7 @@
    Global Properties common to all files
    -->
       <properties>
+   	    <changes.componentfilter>AND component=${project.artifactId}</changes.componentfilter>
             <toolsconfig.version>0.3-SNAPSHOT</toolsconfig.version>
             <ant.version>1.9.0</ant.version>
             <compiler.source>1.6</compiler.source>
@@ -273,6 +274,18 @@ LICENSE INFO COMMON TO ALL COMPONENTS
                               </execution>
                         </executions>
                   </plugin>
+	<!-- jira report config for autonomous generation of jira report
+		-->
+		 <plugin>
+			  <groupId>org.apache.maven.plugins</groupId>
+			  <artifactId>maven-changes-plugin</artifactId>
+			  <version>${changes.version}</version>
+		        <configuration>
+			            <resolutionIds>Fixed</resolutionIds>
+        	  		    <statusIds>Resolved,Closed</statusIds>
+          			    <filter>status in (5,6) AND resolution=1 AND sorter/field=issuetype AND sorter/order=ASC ${changes.componentfilter}</filter>
+       			</configuration>
+		 </plugin>
             </plugins>
       </build>
      <!--*******************
@@ -310,10 +323,7 @@ LICENSE INFO COMMON TO ALL COMPONENTS
 		        <configuration>
 			            <resolutionIds>Fixed</resolutionIds>
         	  		    <statusIds>Resolved,Closed</statusIds>
-				     <component>${project.artifactId}</component>
-				    <useJql>true</useJql>
-			            <onlyCurrentVersion>true</onlyCurrentVersion>
-          			    <filter>status in (5,6) AND resolution=1 AND sorter/field=issuetype AND sorter/order=ASC</filter>
+          			    <filter>status in (5,6) AND resolution=1 AND sorter/field=issuetype AND sorter/order=ASC ${changes.componentfilter}</filter>
        			</configuration>
         		<reportSets>
 		         	<reportSet>
