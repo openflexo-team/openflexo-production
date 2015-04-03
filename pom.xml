@@ -69,7 +69,7 @@
             <checkstyle.version>2.12</checkstyle.version>
             <changes.version>2.11</changes.version>
             <surefire.reportplugin.version>2.18.1</surefire.reportplugin.version>
-            <jacoco.version>0.7.1.201405082137</jacoco.version>
+            <jacoco.version>0.7.4.201502262128</jacoco.version>
 	    <project.info.version>2.8</project.info.version>
 	    <jxr.report.version>2.5</jxr.report.version>
 	    <javadoc.version>2.10.1</javadoc.version>
