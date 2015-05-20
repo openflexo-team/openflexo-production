@@ -1,9 +1,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <parent>
+<!-- Component identification 
+-->
     <groupId>org.openflexo</groupId>
-    <artifactId>openflexo-production</artifactId>
-    <version>0.2-SNAPSHOT</version>
-  </parent>
-  <artifactId>tools-configuration</artifactId>
+    <artifactId>tools-configuration</artifactId>
+    <version>0.4-SNAPSHOT</version>
+
+      <description>This pom aims at providing tools configuration file for Openflexo Production Process</description>
+
+    <scm>
+          <tag>0.4</tag>
+     </scm>
 </project>
