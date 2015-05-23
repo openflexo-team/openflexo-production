@@ -193,14 +193,6 @@ LICENSE INFO COMMON TO ALL COMPONENTS
                               </configuration>
                         </plugin>
                         <plugin>
-                              <groupId>org.codehaus.sonar</groupId>
-                              <artifactId>sonar-maven-plugin</artifactId>
-                              <version>4.5</version>
-                              <configuration>
-                                    <sonarHostURL>https://sonar.openflexo.org:9300</sonarHostURL>
-                              </configuration>
-                        </plugin>
-                        <plugin>
                               <groupId>org.apache.maven.plugins</groupId>
                               <artifactId>maven-jar-plugin</artifactId>
                               <version>2.4</version>
