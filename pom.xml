@@ -54,6 +54,21 @@ LICENSE INFO COMMON TO ALL COMPONENTS
                   <comments />
             </license>
       </licenses>
+      <!--*******************
+    Repositories used to publish versions
+    -->
+      <distributionManagement>
+            <snapshotRepository>
+                  <id>openflexo-snapshot</id>
+                  <name>openflexo Snapshot repository</name>
+                  <url>https://maven.openflexo.org/artifactory/openflexo-snapshot/</url>
+            </snapshotRepository>
+            <repository>
+                  <id>openflexo-release</id>
+                  <name>openflexo Release repository</name>
+                  <url>https://maven.openflexo.org/artifactory/openflexo-release/</url>
+            </repository>
+      </distributionManagement>
           <!-- *****************
   	Profiles
   	 -->
