@@ -36,6 +36,7 @@
    Global Properties common to all files
    -->
        <properties>
+		<openflexo-production.logo>https://media.openflexo.org/images/openflexo-production_logo64x64.png</openflexo-production.logo>
               <!--maven plugins versions -->
               <wagonssh.version>2.8</wagonssh.version>
               <!-- reporting tools -->
