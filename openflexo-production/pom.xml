@@ -382,6 +382,7 @@ LICENSE INFO COMMON TO ALL COMPONENTS
                                           <report>cim</report>
                                           <report>license</report>
                                           <report>scm</report>
+                                          <report>index</report>
                                           <!-- project-info-reports:cim is used to generate the Project Continuous 
                                 Integration System report. project-info-reports:dependencies is used to generate 
                                 the Project Dependencies report. project-info-reports:dependency-convergence 
@@ -511,7 +512,7 @@ LICENSE INFO COMMON TO ALL COMPONENTS
             <distributionManagement>
                 <site>
                     <id>openflexo-production.website</id>
-                    <url>scp://server-one.openflexo.org/home/www/sites/openflexo-production/openflexo-production/SNAPSHOT/</url>
+                    <url>scp://server-one.openflexo.org/home/www/sites/openflexo-production/SNAPSHOT/openflexo-production/</url>
                 </site>
             </distributionManagement>
         </profile>
@@ -528,7 +529,7 @@ LICENSE INFO COMMON TO ALL COMPONENTS
             <distributionManagement>
                 <site>
                     <id>openflexo-production.website</id>
-                    <url>scp://server-one.openflexo.org/home/www/sites/openflexo-production/openflexo-production/SNAPSHOT/</url>
+                    <url>scp://server-one.openflexo.org/home/www/sites/openflexo-production/openflexo-production/SNAPSHOT/openflexo-production/</url>
                 </site>
             </distributionManagement>
         </profile>
