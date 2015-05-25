@@ -1,123 +1,144 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-      <!-- ************
+       <!-- ************
    Component identity and specific information
    -->
-      <groupId>org.openflexo</groupId>
-      <version>0.4-SNAPSHOT</version>
-      <modelVersion>4.0.0</modelVersion>
-      <artifactId>openflexo-root-pom</artifactId>
-      <name>Openflexo-Root-Pom</name>
-
-      <packaging>pom</packaging>
-          <modules>
-            <module>openflexo-production</module>
-            <module>tools-configuration</module>
-      </modules>
-      <description>This pom is used to drive production of openflexo-production and tools-configuration, and is not root 
+       <groupId>org.openflexo</groupId>
+       <version>0.4-SNAPSHOT</version>
+       <modelVersion>4.0.0</modelVersion>
+       <artifactId>openflexo-root-pom</artifactId>
+       <name>Openflexo-Root-Pom</name>
+       <packaging>pom</packaging>
+       <modules>
+              <module>openflexo-production</module>
+              <module>tools-configuration</module>
+       </modules>
+       <description>This pom is used to drive production of openflexo-production and tools-configuration, and is not root 
 			         of any other pom.xml in the OpenFlexo infrastructure</description>
-
-      <scm>
-            <connection>scm:git:ssh://git@github.com/openflexo-team/openflexo-production.git</connection>
-            <url>https://github.com/openflexo-team/openflexo-production</url>
-            <tag>0.4</tag>
-      </scm>
-
-      <issueManagement>
-            <system>JIRA</system>
-            <url>https://bugs.openflexo.org/browse/Openflexo_Production</url>
-      </issueManagement>
-
-      <ciManagement>
-            <system>Jenkins</system>
-            <url>https://jenkins.openflexo.org/</url>
-      </ciManagement>
-
-      <organization>
-            <name>Openflexo</name>
-            <url>https://www.openflexo.org</url>
-      </organization>
-    
-      <!--*******************
+       <scm>
+              <connection>scm:git:ssh://git@github.com/openflexo-team/openflexo-production.git</connection>
+              <url>https://github.com/openflexo-team/openflexo-production</url>
+              <tag>0.4</tag>
+       </scm>
+       <issueManagement>
+              <system>JIRA</system>
+              <url>https://bugs.openflexo.org/browse/Openflexo_Production</url>
+       </issueManagement>
+       <ciManagement>
+              <system>Jenkins</system>
+              <url>https://jenkins.openflexo.org/</url>
+       </ciManagement>
+       <organization>
+              <name>Openflexo</name>
+              <url>https://www.openflexo.org</url>
+       </organization>
+       <!-- ************
+   Global Properties common to all files
+   -->
+       <properties>
+              <!--maven plugins versions -->
+              <wagonssh.version>2.8</wagonssh.version>
+              <!-- reporting tools -->
+              <mavensite.version>3.4</mavensite.version>
+              <project.info.version>2.8</project.info.version>
+       </properties>
+       <!--*******************
 LICENSE INFO COMMON TO ALL COMPONENTS
 -->
-      <licenses>
-            <license>
-                  <name>GPL V3</name>
-                  <url>http://www.gnu.org/copyleft/gpl.html</url>
-                  <distribution />
-                  <comments />
-            </license>
-            <license>
-                  <name>EUPL</name>
-                  <url>https://joinup.ec.europa.eu/software/page/eupl</url>
-                  <distribution />
-                  <comments />
-            </license>
-      </licenses>
-      <!--*******************
+       <licenses>
+              <license>
+                     <name>GPL V3</name>
+                     <url>http://www.gnu.org/copyleft/gpl.html</url>
+                     <distribution/>
+                     <comments/>
+              </license>
+              <license>
+                     <name>EUPL</name>
+                     <url>https://joinup.ec.europa.eu/software/page/eupl</url>
+                     <distribution/>
+                     <comments/>
+              </license>
+       </licenses>
+       <!--*******************
     Repositories used to publish versions
     -->
-      <distributionManagement>
-            <snapshotRepository>
-                  <id>openflexo-snapshot</id>
-                  <name>openflexo Snapshot repository</name>
-                  <url>https://maven.openflexo.org/artifactory/openflexo-snapshot/</url>
-            </snapshotRepository>
-            <repository>
-                  <id>openflexo-release</id>
-                  <name>openflexo Release repository</name>
-                  <url>https://maven.openflexo.org/artifactory/openflexo-release/</url>
-            </repository>
-      </distributionManagement>
-
-
-      <!--*******************
+       <distributionManagement>
+              <snapshotRepository>
+                     <id>openflexo-snapshot</id>
+                     <name>openflexo Snapshot repository</name>
+                     <url>https://maven.openflexo.org/artifactory/openflexo-snapshot/</url>
+              </snapshotRepository>
+              <repository>
+                     <id>openflexo-release</id>
+                     <name>openflexo Release repository</name>
+                     <url>https://maven.openflexo.org/artifactory/openflexo-release/</url>
+              </repository>
+       </distributionManagement>
+       <!-- ************
+   Build Configuration
+   -->
+       <build>
+              <plugins>
+                     <plugin>
+                            <groupId>org.apache.maven.plugins</groupId>
+                            <artifactId>maven-site-plugin</artifactId>
+                            <version>${mavensite.version}</version>
+                            <dependencies>
+                                   <dependency>
+                                          <groupId>org.apache.maven.wagon</groupId>
+                                          <artifactId>wagon-ssh</artifactId>
+                                          <version>${wagonssh.version}</version>
+                                   </dependency>
+                            </dependencies>
+                     </plugin>
+              </plugins>
+       </build>
+       <!--*******************
     Reporting Configuration
     -->
-      <reporting>
-            <plugins>
-		 <plugin>
-			  <groupId>org.apache.maven.plugins</groupId>
-			  <artifactId>maven-changes-plugin</artifactId>
-			  <version>${changes.version}</version>
-		        <configuration>
-			            <resolutionIds>Fixed</resolutionIds>
-        	  		    <statusIds>Resolved,Closed</statusIds>
-          			    <filter>status in (5,6) AND resolution=1 AND sorter/field=issuetype AND sorter/order=ASC ${changes.componentfilter}</filter>
-       			</configuration>
-        		<reportSets>
-		         	<reportSet>
-            				<reports>
-              					<report>jira-report</report>
-            				</reports>
-          			</reportSet>
-        		</reportSets>
-		 </plugin>
-                  <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-project-info-reports-plugin</artifactId>
-                        <version>${project.info.version}</version>
-                        <inherited>true</inherited>
-                        <configuration>
-                              <dependencyDetailsEnabled>true</dependencyDetailsEnabled>
-                              <dependencyLocationsEnabled>true</dependencyLocationsEnabled>
-                        </configuration>
-                        <reportSets>
-                              <reportSet>
-                                    <reports>
-                                          <report>summary</report>
-					<!--                                          <report>dependencies</report> -->
-                                          <report>dependency-convergence</report>
-                                          <report>dependency-info</report>
-                                          <report>distribution-management</report>
-                                          <report>issue-tracking</report>
-                                          <report>project-team</report>
-                                          <report>mailing-list</report>
-                                          <report>cim</report>
-                                          <report>license</report>
-                                          <report>scm</report>
-                                          <!-- project-info-reports:cim is used to generate the Project Continuous 
+       <reporting>
+              <plugins>
+                     <plugin>
+                            <groupId>org.apache.maven.plugins</groupId>
+                            <artifactId>maven-changes-plugin</artifactId>
+                            <version>${changes.version}</version>
+                            <configuration>
+                                   <resolutionIds>Fixed</resolutionIds>
+                                   <statusIds>Resolved,Closed</statusIds>
+                                   <filter>status in (5,6) AND resolution=1 AND sorter/field=issuetype AND sorter/order=ASC ${changes.componentfilter}</filter>
+                            </configuration>
+                            <reportSets>
+                                   <reportSet>
+                                          <reports>
+                                                 <report>jira-report</report>
+                                          </reports>
+                                   </reportSet>
+                            </reportSets>
+                     </plugin>
+                     <plugin>
+                            <groupId>org.apache.maven.plugins</groupId>
+                            <artifactId>maven-project-info-reports-plugin</artifactId>
+                            <version>${project.info.version}</version>
+                            <inherited>true</inherited>
+                            <configuration>
+                                   <dependencyDetailsEnabled>true</dependencyDetailsEnabled>
+                                   <dependencyLocationsEnabled>true</dependencyLocationsEnabled>
+                            </configuration>
+                            <reportSets>
+                                   <reportSet>
+                                          <reports>
+                                                 <report>summary</report>
+                                                 <!--                                          <report>dependencies</report> -->
+                                                 <report>dependency-convergence</report>
+                                                 <report>dependency-info</report>
+                                                 <report>distribution-management</report>
+                                                 <report>issue-tracking</report>
+                                                 <report>project-team</report>
+                                                 <report>mailing-list</report>
+                                                 <report>cim</report>
+                                                 <report>license</report>
+                                                 <report>scm</report>
+                                                 <!-- project-info-reports:cim is used to generate the Project Continuous 
                                 Integration System report. project-info-reports:dependencies is used to generate 
                                 the Project Dependencies report. project-info-reports:dependency-convergence 
                                 is used to generate the Project Dependency Convergence report for reactor 
@@ -136,69 +157,69 @@ LICENSE INFO COMMON TO ALL COMPONENTS
                                 is used to generate the Project Team report. project-info-reports:scm is 
                                 used to generate the Project Source Code Management report. project-info-reports:summary 
                                 is used to generate the Project information reports summary. -->
-                                    </reports>
-                              </reportSet>
-                        </reportSets>
-                  </plugin>
-                  <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-dependency-plugin</artifactId>
-                        <version>2.7</version>
-                  </plugin>
-            </plugins>
-      </reporting>
-          <!-- *****************
+                                          </reports>
+                                   </reportSet>
+                            </reportSets>
+                     </plugin>
+                     <plugin>
+                            <groupId>org.apache.maven.plugins</groupId>
+                            <artifactId>maven-dependency-plugin</artifactId>
+                            <version>2.7</version>
+                     </plugin>
+              </plugins>
+       </reporting>
+       <!-- *****************
   	Profiles
   	 -->
-      <profiles>
-        <profile>
-            <id>snapshot-profile</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <!-- ************
+       <profiles>
+              <profile>
+                     <id>snapshot-profile</id>
+                     <activation>
+                            <activeByDefault>true</activeByDefault>
+                     </activation>
+                     <!-- ************
    		Places where to upload files for component Maven site
    		-->
-            <distributionManagement>
-                <site>
-                    <id>openflexo-production.website</id>
-                    <url>scp://server-one.openflexo.org/home/www/sites/openflexo-production/SNAPSHOT/</url>
-                </site>
-            </distributionManagement>
-        </profile>
-        <profile>
-            <id>RC-profile</id>
-            <activation>
-                <property>
-                    <name>performRC</name>
-                </property>
-            </activation>
-            <!-- ************
+                     <distributionManagement>
+                            <site>
+                                   <id>openflexo-production.website</id>
+                                   <url>scp://server-one.openflexo.org/home/www/sites/openflexo-production/SNAPSHOT/</url>
+                            </site>
+                     </distributionManagement>
+              </profile>
+              <profile>
+                     <id>RC-profile</id>
+                     <activation>
+                            <property>
+                                   <name>performRC</name>
+                            </property>
+                     </activation>
+                     <!-- ************
    		Places where to upload files for component Maven site
 		   -->
-            <distributionManagement>
-                <site>
-                    <id>openflexo-production.website</id>
-                    <url>scp://server-one.openflexo.org/home/www/sites/openflexo-production/SNAPSHOT/</url>
-                </site>
-            </distributionManagement>
-        </profile>
-        <profile>
-            <id>release-profile</id>
-            <activation>
-                <property>
-                    <name>performRelease</name>
-                </property>
-            </activation>
-            <!-- ************
+                     <distributionManagement>
+                            <site>
+                                   <id>openflexo-production.website</id>
+                                   <url>scp://server-one.openflexo.org/home/www/sites/openflexo-production/SNAPSHOT/</url>
+                            </site>
+                     </distributionManagement>
+              </profile>
+              <profile>
+                     <id>release-profile</id>
+                     <activation>
+                            <property>
+                                   <name>performRelease</name>
+                            </property>
+                     </activation>
+                     <!-- ************
    		Places where to upload files for component Maven site
 		   -->
-            <distributionManagement>
-                <site>
-                    <id>openflexo-production.website</id>
-                    <url>scp://server-one.openflexo.org/home/www/sites/openflexo-production/${project.version}/</url>
-                </site>
-            </distributionManagement>
-        </profile>
-      </profiles>
+                     <distributionManagement>
+                            <site>
+                                   <id>openflexo-production.website</id>
+                                   <url>scp://server-one.openflexo.org/home/www/sites/openflexo-production/${project.version}/</url>
+                            </site>
+                     </distributionManagement>
+              </profile>
+       </profiles>
 </project>
