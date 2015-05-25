@@ -70,6 +70,83 @@ LICENSE INFO COMMON TO ALL COMPONENTS
                   <url>https://maven.openflexo.org/artifactory/openflexo-release/</url>
             </repository>
       </distributionManagement>
+
+
+      <!--*******************
+    Reporting Configuration
+    -->
+      <reporting>
+            <plugins>
+		 <plugin>
+			  <groupId>org.apache.maven.plugins</groupId>
+			  <artifactId>maven-changes-plugin</artifactId>
+			  <version>${changes.version}</version>
+		        <configuration>
+			            <resolutionIds>Fixed</resolutionIds>
+        	  		    <statusIds>Resolved,Closed</statusIds>
+          			    <filter>status in (5,6) AND resolution=1 AND sorter/field=issuetype AND sorter/order=ASC ${changes.componentfilter}</filter>
+       			</configuration>
+        		<reportSets>
+		         	<reportSet>
+            				<reports>
+              					<report>jira-report</report>
+            				</reports>
+          			</reportSet>
+        		</reportSets>
+		 </plugin>
+                  <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-project-info-reports-plugin</artifactId>
+                        <version>${project.info.version}</version>
+                        <inherited>true</inherited>
+                        <configuration>
+                              <dependencyDetailsEnabled>true</dependencyDetailsEnabled>
+                              <dependencyLocationsEnabled>true</dependencyLocationsEnabled>
+                        </configuration>
+                        <reportSets>
+                              <reportSet>
+                                    <reports>
+                                          <report>summary</report>
+					<!--                                          <report>dependencies</report> -->
+                                          <report>dependency-convergence</report>
+                                          <report>dependency-info</report>
+                                          <report>distribution-management</report>
+                                          <report>issue-tracking</report>
+                                          <report>project-team</report>
+                                          <report>mailing-list</report>
+                                          <report>cim</report>
+                                          <report>license</report>
+                                          <report>scm</report>
+                                          <!-- project-info-reports:cim is used to generate the Project Continuous 
+                                Integration System report. project-info-reports:dependencies is used to generate 
+                                the Project Dependencies report. project-info-reports:dependency-convergence 
+                                is used to generate the Project Dependency Convergence report for reactor 
+                                builds. project-info-reports:dependency-info (new in 2.5) is used to generate 
+                                code snippets to be added to build tools. project-info-reports:dependency-management 
+                                is used to generate the Project DependencyManagement report. project-info-reports:distribution-management 
+                                is used to generate the Project Distribution Management report. project-info-reports:help 
+                                is used to display help information on the Project Info Reports Plugin. project-info-reports:index 
+                                is used to generate the Project index page. project-info-reports:issue-tracking 
+                                is used to generate the Project Issue Tracking report. project-info-reports:license 
+                                is used to generate the Project License report. project-info-reports:mailing-list 
+                                is used to generate the Project Mailing List report. project-info-reports:modules 
+                                is used to generate the Project Modules report. project-info-reports:plugin-management 
+                                is used to generate the Project PluginManagement report. project-info-reports:plugins 
+                                is used to generate the Project Plugins report. project-info-reports:project-team 
+                                is used to generate the Project Team report. project-info-reports:scm is 
+                                used to generate the Project Source Code Management report. project-info-reports:summary 
+                                is used to generate the Project information reports summary. -->
+                                    </reports>
+                              </reportSet>
+                        </reportSets>
+                  </plugin>
+                  <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-dependency-plugin</artifactId>
+                        <version>2.7</version>
+                  </plugin>
+            </plugins>
+      </reporting>
           <!-- *****************
   	Profiles
   	 -->

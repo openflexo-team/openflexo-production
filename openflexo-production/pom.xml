@@ -305,6 +305,9 @@ LICENSE INFO COMMON TO ALL COMPONENTS
                   <url>https://maven.openflexo.org/artifactory/openflexo-release/</url>
             </repository>
       </distributionManagement>
+      <!--*******************
+    Reporting Configuration
+    -->
       <reporting>
             <plugins>
                   <plugin>
@@ -508,7 +511,7 @@ LICENSE INFO COMMON TO ALL COMPONENTS
             <distributionManagement>
                 <site>
                     <id>openflexo-production.website</id>
-                    <url>scp://server-one.openflexo.org/home/www/sites/openflexo-production/SNAPSHOT/</url>
+                    <url>scp://server-one.openflexo.org/home/www/sites/openflexo-production/openflexo-production/SNAPSHOT/</url>
                 </site>
             </distributionManagement>
         </profile>
@@ -525,7 +528,7 @@ LICENSE INFO COMMON TO ALL COMPONENTS
             <distributionManagement>
                 <site>
                     <id>openflexo-production.website</id>
-                    <url>scp://server-one.openflexo.org/home/www/sites/openflexo-production/SNAPSHOT/</url>
+                    <url>scp://server-one.openflexo.org/home/www/sites/openflexo-production/openflexo-production/SNAPSHOT/</url>
                 </site>
             </distributionManagement>
         </profile>
@@ -542,7 +545,7 @@ LICENSE INFO COMMON TO ALL COMPONENTS
             <distributionManagement>
                 <site>
                     <id>openflexo-production.website</id>
-                    <url>scp://server-one.openflexo.org/home/www/sites/openflexo-production/${project.version}/</url>
+                    <url>scp://server-one.openflexo.org/home/www/sites/openflexo-production/openflexo-production/${project.version}/</url>
                 </site>
             </distributionManagement>
         </profile>
