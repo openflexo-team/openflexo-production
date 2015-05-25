@@ -213,7 +213,7 @@ LICENSE INFO COMMON TO ALL COMPONENTS
                                     <dependency>
                                           <groupId>org.apache.maven.wagon</groupId>
                                           <artifactId>wagon-ssh</artifactId>
-                                          <version>2.8</version>
+                                          <version>${wagonssh.version}</version>
                                     </dependency> 
                                     <dependency>
                                           <groupId>org.openflexo</groupId>

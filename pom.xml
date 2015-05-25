@@ -6,15 +6,16 @@
       <groupId>org.openflexo</groupId>
       <version>0.4-SNAPSHOT</version>
       <modelVersion>4.0.0</modelVersion>
-      <artifactId>openflexo-production-parent</artifactId>
-      <name>Openflexo-Production-Parent</name>
+      <artifactId>openflexo-root-pom</artifactId>
+      <name>Openflexo-Root-Pom</name>
 
       <packaging>pom</packaging>
           <modules>
             <module>openflexo-production</module>
             <module>tools-configuration</module>
       </modules>
-      <description>This pom is used to drive production of openflexo-production and tools-configuration</description>
+      <description>This pom is used to drive production of openflexo-production and tools-configuration, and is not root 
+			         of any other pom.xml in the OpenFlexo infrastructure</description>
 
       <scm>
             <connection>scm:git:ssh://git@github.com/openflexo-team/openflexo-production.git</connection>
@@ -73,66 +74,6 @@ LICENSE INFO COMMON TO ALL COMPONENTS
   	Profiles
   	 -->
       <profiles>
-            <!-- *****************
-  	    A Profile only used in Eclipse
- 	      -->
-            <profile>
-                  <id>only-eclipse</id>
-                  <activation>
-                        <property>
-                              <name>m2e.version</name>
-                        </property>
-                  </activation>
-                  <build>
-                        <pluginManagement>
-                              <plugins>
-                                    <plugin>
-                                          <groupId>org.eclipse.m2e</groupId>
-                                          <artifactId>lifecycle-mapping</artifactId>
-                                          <version>1.0.0</version>
-                                          <configuration>
-                                                <lifecycleMappingMetadata>
-                                                      <pluginExecutions>
-                                                            <pluginExecution>
-                                                                  <pluginExecutionFilter>
-                                                                        <groupId>org.apache.maven.plugins</groupId>
-                                                                        <artifactId>maven-compiler-plugin</artifactId>
-                                                                        <versionRange>[2.0,)</versionRange>
-                                                                        <goals>
-                                                                              <goal>compile</goal>
-                                                                              <goal>testCompile</goal>
-                                                                        </goals>
-                                                                        <parameters>
-                                                                              <compilerId>jdt</compilerId>
-                                                                        </parameters>
-                                                                  </pluginExecutionFilter>
-                                                                  <action>
-                                                                        <configurator>
-                                                                              <id>org.eclipse.m2e.jdt.javaConfigurator</id>
-                                                                        </configurator>
-                                                                  </action>
-                                                            </pluginExecution>
-                                                            <pluginExecution>
-                                                                  <pluginExecutionFilter>
-                                                                        <groupId>org.jacoco</groupId>
-                                                                        <artifactId>jacoco-maven-plugin</artifactId>
-                                                                        <versionRange>[0.6,)</versionRange>
-                                                                        <goals>
-                                                                              <goal>prepare-agent</goal>
-                                                                        </goals>
-                                                                  </pluginExecutionFilter>
-                                                                  <action>
-                                                                        <ignore />
-                                                                  </action>
-                                                            </pluginExecution>
-                                                      </pluginExecutions>
-                                                </lifecycleMappingMetadata>
-                                          </configuration>
-                                    </plugin>
-                              </plugins>
-                        </pluginManagement>
-                  </build>
-            </profile>
         <profile>
             <id>snapshot-profile</id>
             <activation>
