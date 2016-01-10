@@ -12,6 +12,7 @@
        <modules>
               <module>openflexo-production</module>
               <module>tools-configuration</module>
+              <module>packaging-tools</module>
        </modules>
        <description>This pom is used to drive production of openflexo-production and tools-configuration, and is not root 
 			         of any other pom.xml in the OpenFlexo infrastructure</description>
