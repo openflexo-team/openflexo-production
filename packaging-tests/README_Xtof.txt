@@ -1,0 +1,1 @@
+Command Line: mvn  -s /F/MAVEN_REPO/settings.xml   package
