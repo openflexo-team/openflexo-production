@@ -530,7 +530,7 @@
 			</distributionManagement>
 		</profile>
 		<profile>
-			<id>installer</id>
+			<id>build-installers</id>
 			<activation>
 				<property>
 					<name>createPackage</name>
