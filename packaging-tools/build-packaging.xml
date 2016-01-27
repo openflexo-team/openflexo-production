@@ -1,4 +1,4 @@
-<project name="project" default="package" basedir="." xmlns:artifact="antlib:org.apache.maven.artifact.ant">
+<project name="project"  basedir="." xmlns:artifact="antlib:org.apache.maven.artifact.ant">
 
 	<taskdef resource="net/sf/antcontrib/antcontrib.properties"/>
 	<typedef resource="org/apache/maven/artifact/ant/antlib.xml" uri="antlib:org.apache.maven.artifact.ant" />
@@ -44,59 +44,13 @@
 		<antcall target="copyPackagesOnServer" />
 	</target>
 
-	<target name="package" depends="defineProperties">
-		<delete dir="${mac.app.dir}" failonerror="false" />
-		<mkdir dir="${mac.app.dir}" />
-		<!--<antcall target="packageLite" />
-		<antcall target="packageCustomer" />-->
-		<antcall target="packageSemantics" />
-		<antcall target="packageSemanticsPlus" />
-		<antcall target="packageMaintainer" />
-		<antcall target="packageFreemodelling" />
-		<!--<antcall target="packageAnalyst" />
-		<antcall target="packageDeveloper" />-->
-	</target>
-
-	<!--<target name="packageLite">
-		<loadproperties srcfile="lite.properties" />
-		<antcall target="createPackage" />
-	</target>-->
-
-	<target name="packageSemantics">
-		<loadproperties srcfile="semantics.properties" />
-		<antcall target="createPackage" />
-	</target>
-
-	<target name="packageSemanticsPlus">
-		<loadproperties srcfile="semanticsplus.properties" />
-		<antcall target="createPackage" />
-	</target>
-	
-	<target name="packageMaintainer">
-		<loadproperties srcfile="maintainer.properties" />
-		<antcall target="createPackage" />
-	</target>
-
+	<!--
 	<target name="packageFreemodelling">
 		<loadproperties srcfile="freemodelling.properties" />
 		<antcall target="createPackage" />
 	</target>
-
-	<!--<target name="packageCustomer">
-		<loadproperties srcfile="customer.properties" />
-		<antcall target="createPackage" />
-	</target>
-
-	<target name="packageAnalyst">
-		<loadproperties srcfile="analyst.properties" />
-		<antcall target="createPackage" />
-	</target>
-
-	<target name="packageDeveloper">
-		<loadproperties srcfile="developer.properties" />
-		<antcall target="createPackage" />
-	</target>-->
-
+	-->
+	
 	<target name="createPackage">
 		<antcall target="cleanTempDir" />
 		<property name="qualified_app_name" value="${product.name} ${productSuffix}" />
