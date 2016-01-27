@@ -14,10 +14,6 @@
 		<!-- Set a 3 digit version in normalized_version -->
 		<propertyregex property="normalized_version" input="${flexo_version}"
 			regexp="([0-9]+)\.([0-9]+)\.([0-9]+)" select="\0" defaultvalue="${flexo_version}.0" />
-		<!-- ./target/../Icons -->
-		<property name="icons.dir" value="${project.build.directory}/../Icons" />
-		<!-- ./target/../License -->
-		<property name="license.dir" value="${project.build.directory}/../License" />
 		<!-- ./target -->
 		<property name="flexobuild.work.dir" value="${project.build.directory}/flexobuild" />
 		<!-- ./target/flexobuild -->
@@ -129,12 +125,20 @@
 	</target>
 
 	<target name="generateFlexoProperties">
-		<copy file="Flexo.properties.tpl" tofile="${dist.dir}/Config/Flexo.properties"
-			filtering="true" overwrite="true">
-			<filterset>
-				<filtersfile file="${build.properties}" />
-			</filterset>
+		<copy tofile="${dist.dir}/Config/Flexo.properties" filtering="true"
+			overwrite="true">
+			<resources>
+				<javaresource name="Flexo.properties.tpl">
+					<classpath>
+						<pathelement location="${org.openflexo:packaging-tools:jar}"></pathelement>
+					</classpath>
+				</javaresource>
+			</resources>
 		</copy>
+
+		<filterset>
+			<filtersfile file="${build.properties}" />
+		</filterset>
 	</target>
 
 	<target name="generateHelp">
@@ -169,8 +173,15 @@
 	</target>
 
 	<target name="generateInstallerScript">
-		<copy file="Windows/flexoinstaller.nsi.tpl" tofile="${flexobuild.work.dir}/flexoinstaller.nsi"
+		<copy tofile="${flexobuild.work.dir}/flexoinstaller.nsi"
 			filtering="true" overwrite="true">
+			<resources>
+				<javaresource name="Windows/flexoinstaller.nsi.tpl">
+					<classpath>
+						<pathelement location="${org.openflexo:packaging-tools:jar}"></pathelement>
+					</classpath>
+				</javaresource>
+			</resources>
 			<filterset>
 				<filtersfile file="${build.properties}" />
 			</filterset>
@@ -178,8 +189,16 @@
 	</target>
 
 	<target name="generateFlexoLauncher">
-		<copy file="Windows/flexolauncher.nsi.tpl" tofile="${flexobuild.work.dir}/flexolauncher.nsi"
+		<copy tofile="${flexobuild.work.dir}/flexolauncher.nsi"
 			filtering="true" overwrite="true">
+			<resources>
+				<javaresource name="Windows/flexolauncher.nsi.tpl">
+					<classpath>
+						<pathelement location="${org.openflexo:packaging-tools:jar}"></pathelement>
+					</classpath>
+				</javaresource>
+			</resources>
+
 			<filterset>
 				<filtersfile file="${build.properties}" />
 			</filterset>
@@ -191,13 +210,26 @@
 	</target>
 
 	<target name="packageMacOSX">
-		<property name="java.stubfile" value="MacOS/JavaApplicationStub" />
+		<copy tofile="${flexobuild.work.dir}/JavaApplicationStub"
+			filtering="false" overwrite="true">
+			<resources>
+				<javaresource name="MacOS/JavaApplicationStub">
+					<classpath>
+						<pathelement location="${org.openflexo:packaging-tools:jar}"></pathelement>
+					</classpath>
+				</javaresource>
+			</resources>
+		</copy>
+		<property name="java.stubfile" value="${flexobuild.work.dir}/JavaApplicationStub" />
 		<chmod perm="a+x" file="${java.stubfile}" />
 		<property name="relative_res_path"
 			value="${qualified_and_versioned_app_name}.app/Contents/Resources" />
 		<!-- jarbundler is no more compatible with Java 1.7, we use bundleapp instead -->
-		<taskdef name="bundleapp" classpath="lib/appbundler-1.0.jar"
-			classname="com.oracle.appbundler.AppBundlerTask" />
+		<taskdef name="bundleapp" classname="com.oracle.appbundler.AppBundlerTask">
+			<classpath>
+				<url url="jar:file:${org.openflexo:packaging-tools:jar}!/lib/appbundler-1.0.jar" />
+			</classpath>
+		</taskdef>
 		<!--<taskdef name="jarbundler" classpath="lib/jarbundler-1.9.jar" classname="net.sourceforge.jarbundler.JarBundler" 
 			/> -->
 		<mkdir dir="${mac.app.dir.versioned}" />

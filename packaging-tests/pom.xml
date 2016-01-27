@@ -17,7 +17,8 @@
 		<dependency>
 			<groupId>org.openflexo</groupId>
 			<artifactId>packaging-tools</artifactId>
-			<version>${project.version}</version>
+			<version>0.4-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
+	<version>0.0.1-SNAPSHOT</version>
 </project>

@@ -15,7 +15,6 @@
      <scm>
           <tag>0.4</tag>
      </scm>
-     <groupId>org.openflexo</groupId>
      <packaging>pom</packaging>
      <url>https://$(project.parent.artifactId}.openflexo.org/</url>
      <build>

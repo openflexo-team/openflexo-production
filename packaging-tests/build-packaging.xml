@@ -7,6 +7,14 @@
 	<typedef resource="org/apache/maven/artifact/ant/antlib.xml"
 		uri="antlib:org.apache.maven.artifact.ant" />
 
+	<propertyregex property="resources.dir" input="${project.build.sourceDirectory}"
+			regexp="(.*)(java)" replace="\1resources" />
+    
+	<!-- ./target/../Icons -->
+	<property name="icons.dir" value="${resources.dir}/Icons" />
+	<!-- ./target/../License -->
+	<property name="license.dir" value="${resources.dir}/License" />
+
 	<import>
 		<javaresource name="build-packaging.xml">
 			<classpath>

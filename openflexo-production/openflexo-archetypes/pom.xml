@@ -84,7 +84,6 @@
 		</repository>
 	</repositories>
 
-	<groupId>org.openflexo</groupId>
 	<description>Those are the Maven Archetypes one can use to create new components for Openflexo infrastructure</description>
 	<url>https://www.openflexo.org</url>
   <scm>
