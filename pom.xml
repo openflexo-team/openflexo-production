@@ -207,51 +207,5 @@
 				</site>
 			</distributionManagement>
 		</profile>
-		<profile>
-			<id>installer</id>
-			<activation>
-				<property>
-					<name>createPackage</name>
-					<value>true</value>
-				</property>
-			</activation>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-antrun-plugin</artifactId>
-						<executions>
-							<execution>
-								<id>create-package</id>
-								<phase>package</phase>
-								<configuration>
-									<target>
-										<ant inheritRefs="true" inheritall="true" antfile="${basedir}/build.xml"
-											target="package" />
-									</target>
-								</configuration>
-								<goals>
-									<goal>run</goal>
-								</goals>
-							</execution>
-							<execution>
-								<id>deploy-package</id>
-								<phase>deploy</phase>
-								<configuration>
-									<target>
-										<property name="compile_classpath" refid="maven.compile.classpath" />
-										<ant inheritRefs="true" inheritall="true" antfile="${basedir}build.xml"
-											target="deploy" />
-									</target>
-								</configuration>
-								<goals>
-									<goal>run</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
 	</profiles>
 </project>

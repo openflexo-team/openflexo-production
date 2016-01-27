@@ -13,48 +13,6 @@
 	<artifactId>packaging-tests</artifactId>
 	<packaging>pom</packaging>
 	<name>Packaging :: Build Test Installers</name>
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-antrun-plugin</artifactId>
-				<configuration>
-				</configuration>
-				<executions>
-					<execution>
-						<id>create-package</id>
-						<phase>package</phase>
-						<configuration>
-							<target>
-								<property name="compile_classpath" refid="maven.compile.classpath" />
-								<property name="runtime_classpath" refid="maven.runtime.classpath" />
-								<property name="test_classpath" refid="maven.test.classpath" />
-								<property name="plugin_classpath" refid="maven.plugin.classpath" />
-								<ant inheritRefs="true" antfile="build-packaging.xml"
-									inheritall="true" target="package" />
-							</target>
-						</configuration>
-						<goals>
-							<goal>run</goal>
-						</goals>
-					</execution>
-					<execution>
-						<id>deploy-package</id>
-						<phase>deploy</phase>
-						<configuration>
-							<target>
-								<ant inheritRefs="true" inheritall="true" antfile="build-packaging.xml"
-									target="deploy" />
-							</target>
-						</configuration>
-						<goals>
-							<goal>run</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
-	</build>
 	<dependencies>
 		<dependency>
 			<groupId>org.openflexo</groupId>

@@ -3,6 +3,19 @@
 	<taskdef resource="net/sf/antcontrib/antcontrib.properties"/>
 	<typedef resource="org/apache/maven/artifact/ant/antlib.xml" uri="antlib:org.apache.maven.artifact.ant" />
 
+	<import>
+		<javaresource name="pom.xml.tpl">
+			<classpath>
+				<pathelement location="${org.openflexo:packaging-tools:jar}"></pathelement>
+			</classpath>
+		</javaresource>
+		<javaresource name="Flexo.properties.tpl">
+			<classpath>
+				<pathelement location="${org.openflexo:packaging-tools:jar}"></pathelement>
+			</classpath>
+		</javaresource>
+	</import>
+	
 	<target name="defineProperties">
 		<property environment="env"/>
 		<!-- Remove '-' if any : -SNAPSHOT or -beta will still be identified -->

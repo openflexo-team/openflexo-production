@@ -23,35 +23,4 @@
 			</resource>
 		</resources>
 	</build>
-
-	<dependencies>
-		<!-- <dependency> <groupId>org.openflexo</groupId> <artifactId>flexoant</artifactId> 
-			<version>${project.version}</version> </dependency> -->
-		<dependency>
-			<groupId>org.apache.maven</groupId>
-			<artifactId>maven-ant-tasks</artifactId>
-			<version>2.1.3</version>
-		</dependency>
-		<dependency>
-			<groupId>ant-contrib</groupId>
-			<artifactId>ant-contrib</artifactId>
-			<version>1.0b3</version>
-			<exclusions>
-				<exclusion>
-					<groupId>ant</groupId>
-					<artifactId>ant</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.ant</groupId>
-			<artifactId>ant-jsch</artifactId>
-			<version>1.9.0</version>
-		</dependency>
-		<dependency>
-			<groupId>xerces</groupId>
-			<artifactId>xercesImpl</artifactId>
-			<version>2.7.1</version>
-		</dependency>
-	</dependencies>
 </project>
