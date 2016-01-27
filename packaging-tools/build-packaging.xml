@@ -220,16 +220,23 @@
 				</javaresource>
 			</resources>
 		</copy>
+		<copy tofile="${flexobuild.work.dir}/appbundler-1.0.jar"
+			filtering="false" overwrite="true">
+			<resources>
+				<javaresource name="lib/appbundler-1.0.jar">
+					<classpath>
+						<pathelement location="${org.openflexo:packaging-tools:jar}"></pathelement>
+					</classpath>
+				</javaresource>
+			</resources>
+		</copy>
 		<property name="java.stubfile" value="${flexobuild.work.dir}/JavaApplicationStub" />
 		<chmod perm="a+x" file="${java.stubfile}" />
 		<property name="relative_res_path"
 			value="${qualified_and_versioned_app_name}.app/Contents/Resources" />
 		<!-- jarbundler is no more compatible with Java 1.7, we use bundleapp instead -->
-		<taskdef name="bundleapp" classname="com.oracle.appbundler.AppBundlerTask">
-			<classpath>
-				<url url="jar:file:${org.openflexo:packaging-tools:jar}!/lib/appbundler-1.0.jar" />
-			</classpath>
-		</taskdef>
+		<taskdef name="bundleapp" classname="com.oracle.appbundler.AppBundlerTask"
+			classpath="${flexobuild.work.dir}/appbundler-1.0.jar" />
 		<!--<taskdef name="jarbundler" classpath="lib/jarbundler-1.9.jar" classname="net.sourceforge.jarbundler.JarBundler" 
 			/> -->
 		<mkdir dir="${mac.app.dir.versioned}" />
@@ -297,8 +304,14 @@
 
 	<target name="packageLinux">
 		<property name="start.script.file" value="${dist.dir}/start.sh" />
-		<copy file="Linux/start.sh.tpl" tofile="${start.script.file}"
-			filtering="true" overwrite="true">
+		<copy tofile="${start.script.file}" filtering="true" overwrite="true">
+			<resources>
+				<javaresource name="Linux/start.sh.tpl">
+					<classpath>
+						<pathelement location="${org.openflexo:packaging-tools:jar}"></pathelement>
+					</classpath>
+				</javaresource>
+			</resources>
 			<filterset>
 				<filtersfile file="${build.properties}" />
 			</filterset>

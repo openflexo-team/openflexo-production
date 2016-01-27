@@ -12,7 +12,7 @@ OS name: "linux", version: "3.19.0-49-generic", arch: "amd64", family: "unix"
 [INFO] Scanning for projects...
 [DEBUG] Using connector WagonRepositoryConnector with priority 0 for https://maven.openflexo.org/artifactory/openflexo-deps/
 Downloading: https://maven.openflexo.org/artifactory/openflexo-deps/org/openflexo/openflexo-production/0.4-SNAPSHOT/maven-metadata.xml
-597/597 B               Downloaded: https://maven.openflexo.org/artifactory/openflexo-deps/org/openflexo/openflexo-production/0.4-SNAPSHOT/maven-metadata.xml (597 B at 1.5 KB/sec)
+597/597 B               Downloaded: https://maven.openflexo.org/artifactory/openflexo-deps/org/openflexo/openflexo-production/0.4-SNAPSHOT/maven-metadata.xml (597 B at 1.4 KB/sec)
 [DEBUG] Writing resolution tracking file /home/xtof/.m2/repository/org/openflexo/openflexo-production/0.4-SNAPSHOT/resolver-status.properties
 [DEBUG] org.apache.maven.wagon:wagon-ssh:jar:2.8:
 [DEBUG]    com.jcraft:jsch:jar:0.1.50:compile
@@ -118,7 +118,7 @@ Downloading: https://maven.openflexo.org/artifactory/openflexo-deps/org/openflex
 [WARNING] 
 [DEBUG] === REACTOR BUILD PLAN ================================================
 [DEBUG] Project: org.openflexo:packaging-tests:pom:0.0.1-SNAPSHOT
-[DEBUG] Tasks:   [clean, package]
+[DEBUG] Tasks:   [package]
 [DEBUG] Style:   Regular
 [DEBUG] =======================================================================
 [INFO]                                                                         
@@ -138,33 +138,12 @@ Downloading: https://maven.openflexo.org/artifactory/openflexo-deps/org/openflex
 [DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
 [DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
 [DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
-[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
-[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
-[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
-[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
-[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
-[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
 [DEBUG] === PROJECT BUILD PLAN ================================================
 [DEBUG] Project:       org.openflexo:packaging-tests:0.0.1-SNAPSHOT
 [DEBUG] Dependencies (collect): []
 [DEBUG] Dependencies (resolve): [runtime, test]
 [DEBUG] Repositories (dependencies): [openflexo (https://maven.openflexo.org/artifactory/openflexo-deps/, releases+snapshots), central (https://repo.maven.apache.org/maven2, releases)]
 [DEBUG] Repositories (plugins)     : [central (https://repo.maven.apache.org/maven2, releases)]
-[DEBUG] -----------------------------------------------------------------------
-[DEBUG] Goal:          org.apache.maven.plugins:maven-clean-plugin:2.4.1:clean (default-clean)
-[DEBUG] Style:         Regular
-[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
-<configuration>
-  <directory default-value="${project.build.directory}"/>
-  <excludeDefaultDirectories default-value="false">${clean.excludeDefaultDirectories}</excludeDefaultDirectories>
-  <failOnError default-value="true">${maven.clean.failOnError}</failOnError>
-  <followSymLinks default-value="false">${clean.followSymLinks}</followSymLinks>
-  <outputDirectory default-value="${project.build.outputDirectory}"/>
-  <reportDirectory default-value="${project.reporting.outputDirectory}"/>
-  <skip default-value="false">${clean.skip}</skip>
-  <testOutputDirectory default-value="${project.build.testOutputDirectory}"/>
-  <verbose>${clean.verbose}</verbose>
-</configuration>
 [DEBUG] -----------------------------------------------------------------------
 [DEBUG] Goal:          org.jacoco:jacoco-maven-plugin:0.7.4.201502262128:prepare-agent (JacocoAgentPreparation)
 [DEBUG] Style:         Regular
@@ -231,62 +210,10 @@ Downloading: https://maven.openflexo.org/artifactory/openflexo-deps/org/openflex
 [DEBUG] Failure to find org.openflexo:packaging-tools:0.4-SNAPSHOT/maven-metadata.xml in https://maven.openflexo.org/artifactory/openflexo-deps/ was cached in the local repository, resolution will not be reattempted until the update interval of openflexo has elapsed or updates are forced
 [DEBUG] Using connector WagonRepositoryConnector with priority 0 for https://maven.openflexo.org/artifactory/openflexo-deps/
 Downloading: https://maven.openflexo.org/artifactory/openflexo-deps/org/openflexo/openflexo-root-pom/0.4-SNAPSHOT/maven-metadata.xml
-592/592 B               Downloaded: https://maven.openflexo.org/artifactory/openflexo-deps/org/openflexo/openflexo-root-pom/0.4-SNAPSHOT/maven-metadata.xml (592 B at 4.3 KB/sec)
+592/592 B               Downloaded: https://maven.openflexo.org/artifactory/openflexo-deps/org/openflexo/openflexo-root-pom/0.4-SNAPSHOT/maven-metadata.xml (592 B at 4.1 KB/sec)
 [DEBUG] Writing resolution tracking file /home/xtof/.m2/repository/org/openflexo/openflexo-root-pom/0.4-SNAPSHOT/resolver-status.properties
 [DEBUG] org.openflexo:packaging-tests:pom:0.0.1-SNAPSHOT
 [DEBUG]    org.openflexo:packaging-tools:jar:0.4-SNAPSHOT:compile
-[INFO] 
-[INFO] --- maven-clean-plugin:2.4.1:clean (default-clean) @ packaging-tests ---
-[DEBUG] org.apache.maven.plugins:maven-clean-plugin:jar:2.4.1:
-[DEBUG]    org.apache.maven:maven-plugin-api:jar:2.0.6:compile
-[DEBUG]    org.codehaus.plexus:plexus-utils:jar:2.0.5:compile
-[DEBUG] Created new class realm plugin>org.apache.maven.plugins:maven-clean-plugin:2.4.1
-[DEBUG] Importing foreign packages into class realm plugin>org.apache.maven.plugins:maven-clean-plugin:2.4.1
-[DEBUG]   Imported:  < project>org.openflexo:packaging-tests:0.0.1-SNAPSHOT
-[DEBUG] Populating class realm plugin>org.apache.maven.plugins:maven-clean-plugin:2.4.1
-[DEBUG]   Included: org.apache.maven.plugins:maven-clean-plugin:jar:2.4.1
-[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:2.0.5
-[DEBUG]   Excluded: org.apache.maven:maven-plugin-api:jar:2.0.6
-[DEBUG] Configuring mojo org.apache.maven.plugins:maven-clean-plugin:2.4.1:clean from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-clean-plugin:2.4.1, parent: sun.misc.Launcher$AppClassLoader@4554617c]
-[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-clean-plugin:2.4.1:clean' with basic configurator -->
-[DEBUG]   (f) directory = /u02/SourceCode/openflexo-production/packaging-tests/target
-[DEBUG]   (f) excludeDefaultDirectories = false
-[DEBUG]   (f) failOnError = true
-[DEBUG]   (f) followSymLinks = false
-[DEBUG]   (f) outputDirectory = /u02/SourceCode/openflexo-production/packaging-tests/target/classes
-[DEBUG]   (f) reportDirectory = /u02/SourceCode/openflexo-production/packaging-tests/target/site
-[DEBUG]   (f) skip = false
-[DEBUG]   (f) testOutputDirectory = /u02/SourceCode/openflexo-production/packaging-tests/target/test-classes
-[DEBUG] -- end configuration --
-[INFO] Deleting /u02/SourceCode/openflexo-production/packaging-tests/target
-[INFO] Deleting file /u02/SourceCode/openflexo-production/packaging-tests/target/antrun/build-main.xml
-[INFO] Deleting directory /u02/SourceCode/openflexo-production/packaging-tests/target/antrun
-[INFO] Deleting file /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/build.properties
-[INFO] Deleting file /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/flexoinstaller.nsi
-[INFO] Deleting file /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/JavaApplicationStub
-[INFO] Deleting file /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/dist/lib/flexo-0.0.1-SNAPSHOT.jar
-[INFO] Deleting directory /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/dist/lib
-[INFO] Deleting file /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/dist/OpenFlexo  0.0.1SNAPSHOT.exe
-[INFO] Deleting file /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/dist/Config/Flexo.properties
-[INFO] Deleting directory /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/dist/Config
-[INFO] Deleting directory /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/dist
-[INFO] Deleting file /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/flexolauncher.nsi
-[INFO] Deleting file /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/version/bin/org/openflexo/ApplicationVersion.class
-[INFO] Deleting directory /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/version/bin/org/openflexo
-[INFO] Deleting directory /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/version/bin/org
-[INFO] Deleting directory /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/version/bin
-[INFO] Deleting file /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/version/src/org/openflexo/ApplicationVersion.java
-[INFO] Deleting directory /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/version/src/org/openflexo
-[INFO] Deleting directory /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/version/src/org
-[INFO] Deleting directory /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/version/src
-[INFO] Deleting directory /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/version
-[INFO] Deleting file /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/pom.xml
-[INFO] Deleting directory /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild
-[INFO] Deleting file /u02/SourceCode/openflexo-production/packaging-tests/target/OpenFlexo  0.0.1SNAPSHOT Setup.exe
-[INFO] Deleting directory /u02/SourceCode/openflexo-production/packaging-tests/target
-[DEBUG] Skipping non-existing directory /u02/SourceCode/openflexo-production/packaging-tests/target/classes
-[DEBUG] Skipping non-existing directory /u02/SourceCode/openflexo-production/packaging-tests/target/test-classes
-[DEBUG] Skipping non-existing directory /u02/SourceCode/openflexo-production/packaging-tests/target/site
 [INFO] 
 [INFO] --- jacoco-maven-plugin:0.7.4.201502262128:prepare-agent (JacocoAgentPreparation) @ packaging-tests ---
 [DEBUG] org.jacoco:jacoco-maven-plugin:jar:0.7.4.201502262128:
@@ -533,7 +460,7 @@ Setting project property: project.build.sourceEncoding -> UTF-8
 Setting project property: openflexo-production.logo -> https://media.openflexo.org/images/openflexo-production_logo64x64.png
 Setting project property: source.encoding -> UTF-8
 Setting project property: junit.version -> 4.10
-Setting project property: main.class -> org.openflexo.Flexo
+Setting project property: main.class -> org.openflexo.TestApplication
 Setting project property: javadoc.version -> 2.10.1
 Setting project property: organization.name -> Openflexo
 Setting project property: changes.componentfilter -> AND component=packaging-tests
@@ -605,7 +532,7 @@ Setting project property: java.home -> /usr/lib/jvm/java-8-openjdk-amd64/jre
 Setting project property: java.class.version -> 52.0
 Setting project property: jxr.report.version -> 2.5
 Setting project property: sun.io.unicode.encoding -> UnicodeLittle
-Setting project property: main.class -> org.openflexo.Flexo
+Setting project property: main.class -> org.openflexo.TestApplication
 Setting project property: openflexo-production.logo -> https://media.openflexo.org/images/openflexo-production_logo64x64.png
 Setting project property: compiler.target -> 1.7
 Setting project property: project.build.outputDirectory -> /u02/SourceCode/openflexo-production/packaging-tests/target/classes
@@ -672,7 +599,7 @@ Setting project property: guava.version -> 18.0
 Setting project property: junit.version -> 4.10
 Setting project property: project.packaging -> pom
 Setting project property: java.class.path -> /usr/share/maven/boot/plexus-classworlds-2.x.jar
-Setting project property: sun.java.command -> org.codehaus.plexus.classworlds.launcher.Launcher -X -e -Pinstaller clean package
+Setting project property: sun.java.command -> org.codehaus.plexus.classworlds.launcher.Launcher -X -e -Pinstaller package
 Setting project property: java.vendor.url.bug -> http://bugreport.sun.com/bugreport/
 Setting project property: project.build.testOutputDirectory -> /u02/SourceCode/openflexo-production/packaging-tests/target/test-classes
 Setting project property: changes.version -> 2.11
@@ -1006,9 +933,9 @@ Setting project property: flexobuild.work.dir -> /u02/SourceCode/openflexo-produ
 Setting project property: artifact.dir -> /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/checkedout-artifact
 Setting project property: dist.dir -> /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/dist
 Setting project property: mac.app.dir -> /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/mac_apps
-Setting project property: build.id -> 2016-01-27.1305
+Setting project property: build.id -> 2016-01-27.1331
 Setting project property: DSTAMP -> 20160127
-Setting project property: TSTAMP -> 1305
+Setting project property: TSTAMP -> 1331
 Setting project property: TODAY -> January 27 2016
 Property "env.GIT_COMMIT" has not been set
 Setting project property: commit.id -> ${env.GIT_COMMIT}
@@ -1023,7 +950,7 @@ Setting project property: default.logging.level -> SEVERE
 Setting project property: versionType -> Tests
 Setting project property: vm.args -> -Xmx512M -XX:MaxPermSize=128M
 Setting project property: logCount -> 0
-Setting project property: productSuffix -> 
+Setting project property: productSuffix -> TestApplication
 Setting project property: icon_mac_name -> IconOpenflexo.icns
 Setting project property: allowsDocSubmission -> false
 Setting project property: userType -> developer_release
@@ -1052,7 +979,7 @@ Setting project property: javahelp.version -> 2.0.05
 Setting project property: env.DEFAULTS_PATH -> /usr/share/gconf/ubuntu.default.path
 Setting project property: env.WINDOWID -> 27262991
 Setting project property: commit.id -> ${env.GIT_COMMIT}
-Setting project property: build.id -> 2016-01-27.1305
+Setting project property: build.id -> 2016-01-27.1331
 Setting project property: wizard.setup.icon -> Openflexo.ico
 Setting project property: env.GNOME_KEYRING_CONTROL -> 
 Setting project property: env.IM_CONFIG_PHASE -> 1
@@ -1068,7 +995,7 @@ Setting project property: allowsDocSubmission -> false
 Setting project property: java.class.version -> 52.0
 Setting project property: env.LC_TELEPHONE -> fr_FR.UTF-8
 Setting project property: jxr.report.version -> 2.5
-Setting project property: main.class -> org.openflexo.Flexo
+Setting project property: main.class -> org.openflexo.TestApplication
 Setting project property: openflexo-production.logo -> https://media.openflexo.org/images/openflexo-production_logo64x64.png
 Setting project property: env.JOB -> unity-settings-daemon
 Setting project property: project.build.outputDirectory -> /u02/SourceCode/openflexo-production/packaging-tests/target/classes
@@ -1140,7 +1067,7 @@ Setting project property: artifact.dir -> /u02/SourceCode/openflexo-production/p
 Setting project property: env.LANGUAGE -> fr_FR:fr:en
 Setting project property: env.DISPLAY -> :0
 Setting project property: env.XTERM_SHELL -> /bin/bash
-Setting project property: TSTAMP -> 1305
+Setting project property: TSTAMP -> 1331
 Setting project property: sun.cpu.endian -> little
 Setting project property: jersey.version -> 1.17.1
 Setting project property: env.GPG_AGENT_INFO -> /run/user/1000/keyring/gpg:0:1
@@ -1156,7 +1083,7 @@ Setting project property: argLine -> -javaagent:/home/xtof/.m2/repository/org/ja
 Setting project property: env.LESSOPEN -> | /usr/bin/lesspipe %s
 Setting project property: logCount -> 0
 Setting project property: mac.app.dir -> /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/mac_apps
-Setting project property: productSuffix -> 
+Setting project property: productSuffix -> TestApplication
 Setting project property: wagonssh.version -> 2.8
 Setting project property: env.JAVA_HOME -> /usr/lib/jvm/java-8-openjdk-amd64
 Setting project property: env.QT_QPA_PLATFORMTHEME -> appmenu-qt5
@@ -1234,7 +1161,7 @@ Setting project property: env.SSH_AUTH_SOCK -> /run/user/1000/keyring/ssh
 Setting project property: env.LC_NUMERIC -> fr_FR.UTF-8
 Setting project property: java.class.path -> /usr/share/maven/boot/plexus-classworlds-2.x.jar
 Setting project property: env.LC_MEASUREMENT -> fr_FR.UTF-8
-Setting project property: sun.java.command -> org.codehaus.plexus.classworlds.launcher.Launcher -X -e -Pinstaller clean package
+Setting project property: sun.java.command -> org.codehaus.plexus.classworlds.launcher.Launcher -X -e -Pinstaller package
 Setting project property: java.vendor.url.bug -> http://bugreport.sun.com/bugreport/
 Setting project property: env.XDG_CONFIG_DIRS -> /etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg:/usr/share/kubuntu-default-settings/kf5-settings
 Setting project property: versionType -> Tests
@@ -1448,7 +1375,7 @@ Setting project property: javahelp.version -> 2.0.05
 Setting project property: env.DEFAULTS_PATH -> /usr/share/gconf/ubuntu.default.path
 Setting project property: env.WINDOWID -> 27262991
 Setting project property: commit.id -> ${env.GIT_COMMIT}
-Setting project property: build.id -> 2016-01-27.1305
+Setting project property: build.id -> 2016-01-27.1331
 Setting project property: wizard.setup.icon -> Openflexo.ico
 Setting project property: env.GNOME_KEYRING_CONTROL -> 
 Setting project property: env.IM_CONFIG_PHASE -> 1
@@ -1464,7 +1391,7 @@ Setting project property: allowsDocSubmission -> false
 Setting project property: java.class.version -> 52.0
 Setting project property: env.LC_TELEPHONE -> fr_FR.UTF-8
 Setting project property: jxr.report.version -> 2.5
-Setting project property: main.class -> org.openflexo.Flexo
+Setting project property: main.class -> org.openflexo.TestApplication
 Setting project property: openflexo-production.logo -> https://media.openflexo.org/images/openflexo-production_logo64x64.png
 Setting project property: env.JOB -> unity-settings-daemon
 Setting project property: project.build.outputDirectory -> /u02/SourceCode/openflexo-production/packaging-tests/target/classes
@@ -1536,7 +1463,7 @@ Setting project property: artifact.dir -> /u02/SourceCode/openflexo-production/p
 Setting project property: env.LANGUAGE -> fr_FR:fr:en
 Setting project property: env.DISPLAY -> :0
 Setting project property: env.XTERM_SHELL -> /bin/bash
-Setting project property: TSTAMP -> 1305
+Setting project property: TSTAMP -> 1331
 Setting project property: sun.cpu.endian -> little
 Setting project property: jersey.version -> 1.17.1
 Setting project property: env.GPG_AGENT_INFO -> /run/user/1000/keyring/gpg:0:1
@@ -1552,7 +1479,7 @@ Setting project property: argLine -> -javaagent:/home/xtof/.m2/repository/org/ja
 Setting project property: env.LESSOPEN -> | /usr/bin/lesspipe %s
 Setting project property: logCount -> 0
 Setting project property: mac.app.dir -> /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/mac_apps
-Setting project property: productSuffix -> 
+Setting project property: productSuffix -> TestApplication
 Setting project property: wagonssh.version -> 2.8
 Setting project property: env.JAVA_HOME -> /usr/lib/jvm/java-8-openjdk-amd64
 Setting project property: env.QT_QPA_PLATFORMTHEME -> appmenu-qt5
@@ -1630,7 +1557,7 @@ Setting project property: env.SSH_AUTH_SOCK -> /run/user/1000/keyring/ssh
 Setting project property: env.LC_NUMERIC -> fr_FR.UTF-8
 Setting project property: java.class.path -> /usr/share/maven/boot/plexus-classworlds-2.x.jar
 Setting project property: env.LC_MEASUREMENT -> fr_FR.UTF-8
-Setting project property: sun.java.command -> org.codehaus.plexus.classworlds.launcher.Launcher -X -e -Pinstaller clean package
+Setting project property: sun.java.command -> org.codehaus.plexus.classworlds.launcher.Launcher -X -e -Pinstaller package
 Setting project property: java.vendor.url.bug -> http://bugreport.sun.com/bugreport/
 Setting project property: env.XDG_CONFIG_DIRS -> /etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg:/usr/share/kubuntu-default-settings/kf5-settings
 Setting project property: versionType -> Tests
@@ -1828,11 +1755,11 @@ cleanTempDir:
     [mkdir] Created dir: /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild
     [mkdir] Created dir: /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/dist
   [antcall] Exiting /u02/SourceCode/openflexo-production/packaging-tests/build-packaging.xml.
-Setting project property: qualified_app_name -> OpenFlexo 
-Setting project property: qualified_and_versioned_app_name -> OpenFlexo  0.0.1SNAPSHOT
+Setting project property: qualified_app_name -> OpenFlexo TestApplication
+Setting project property: qualified_and_versioned_app_name -> OpenFlexo TestApplication 0.0.1SNAPSHOT
 Setting project property: volume_name -> Openflexo-0.0.1SNAPSHOT
 Setting project property: mac.app.dir.versioned -> /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/mac_apps/Tests
-Setting project property: package_name -> OpenFlexo  0.0.1SNAPSHOT Setup
+Setting project property: package_name -> OpenFlexo TestApplication 0.0.1SNAPSHOT Setup
 Setting project property: program.args -> -userType developer_release
 Setting ro project property: ant.file -> /u02/SourceCode/openflexo-production/packaging-tests/build-packaging.xml
 Setting ro project property: ant.project.invoked-targets -> createPackage
@@ -1847,7 +1774,7 @@ Setting ro project property: ant.file.maven-antrun- -> /u02/SourceCode/openflexo
 Setting project property: java.ext.dirs -> /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext:/usr/java/packages/lib/ext
 Setting project property: env.TERM -> xterm
 Setting project property: maven.type -> zip
-Setting project property: main.class -> org.openflexo.Flexo
+Setting project property: main.class -> org.openflexo.TestApplication
 Setting project property: artifact.dir -> /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/checkedout-artifact
 Setting project property: jsr305.version -> 2.0.1
 Setting project property: junit.version -> 4.10
@@ -1928,7 +1855,7 @@ Setting project property: surefire.reportplugin.version -> 2.18.1
 Setting project property: env.DISPLAY -> :0
 Setting project property: env.LC_NUMERIC -> fr_FR.UTF-8
 Setting project property: env.LESSCLOSE -> /usr/bin/lesspipe %s %s
-Setting project property: sun.java.command -> org.codehaus.plexus.classworlds.launcher.Launcher -X -e -Pinstaller clean package
+Setting project property: sun.java.command -> org.codehaus.plexus.classworlds.launcher.Launcher -X -e -Pinstaller package
 Setting project property: DSTAMP -> 20160127
 Setting project property: env.GIO_LAUNCHED_DESKTOP_FILE_PID -> 4092
 Setting project property: env.JOB -> unity-settings-daemon
@@ -1951,7 +1878,7 @@ Setting project property: java.library.path -> /usr/java/packages/lib/amd64:/usr
 Setting project property: env.DBUS_SESSION_BUS_ADDRESS -> unix:abstract=/tmp/dbus-QUQhlZIxNH
 Setting project property: env.XDG_SEAT -> seat0
 Setting project property: program.args -> -userType developer_release
-Setting project property: build.id -> 2016-01-27.1305
+Setting project property: build.id -> 2016-01-27.1331
 Setting project property: env.LC_NAME -> fr_FR.UTF-8
 Setting project property: volume_name -> Openflexo-0.0.1SNAPSHOT
 Setting project property: java.vm.version -> 25.45-b02
@@ -1986,13 +1913,13 @@ Setting project property: env.XDG_DATA_DIRS -> /usr/share/ubuntu:/usr/share/gnom
 Setting project property: env.LC_TIME -> fr_FR.UTF-8
 Setting project property: org.openflexo:packaging-tools:jar -> /home/xtof/.m2/repository/org/openflexo/packaging-tools/0.4-SNAPSHOT/packaging-tools-0.4-SNAPSHOT.jar
 Setting project property: env.XDG_RUNTIME_DIR -> /run/user/1000
-Setting project property: productSuffix -> 
+Setting project property: productSuffix -> TestApplication
 Setting project property: java.runtime.version -> 1.8.0_45-internal-b14
 Setting project property: allowsDocSubmission -> false
 Setting project property: project.description -> This pom aims at capitalizing production configuration items for all openflexo productions
 Setting project property: wizard.setup.icon -> Openflexo.ico
 Setting project property: maven.artifact.id -> packaging-tests
-Setting project property: package_name -> OpenFlexo  0.0.1SNAPSHOT Setup
+Setting project property: package_name -> OpenFlexo TestApplication 0.0.1SNAPSHOT Setup
 Setting project property: guice.disable.misplaced.annotation.check -> true
 Setting project property: sun.cpu.isalist -> 
 Setting project property: project.build.sourceDirectory -> /u02/SourceCode/openflexo-production/packaging-tests/src/main/java
@@ -2005,7 +1932,7 @@ Setting project property: env.XDG_SEAT_PATH -> /org/freedesktop/DisplayManager/S
 Setting project property: env.UPSTART_INSTANCE -> 
 Setting project property: env.GTK_IM_MODULE -> ibus
 Setting project property: user.timezone -> Europe/Paris
-Setting project property: TSTAMP -> 1305
+Setting project property: TSTAMP -> 1331
 Setting project property: env._ -> /usr/bin/mvn
 Setting project property: env.LC_PAPER -> fr_FR.UTF-8
 Setting project property: java.endorsed.dirs -> /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/endorsed
@@ -2020,7 +1947,7 @@ Setting project property: file.encoding.pkg -> sun.io
 Setting project property: user.home -> /home/xtof
 Setting project property: java.vm.info -> mixed mode
 Setting project property: userType -> developer_release
-Setting project property: qualified_and_versioned_app_name -> OpenFlexo  0.0.1SNAPSHOT
+Setting project property: qualified_and_versioned_app_name -> OpenFlexo TestApplication 0.0.1SNAPSHOT
 Setting project property: organization.logo -> https://media.openflexo.org/images/OpenFlexo_Logo.png
 Setting project property: env.GDM_LANG -> fr_FR
 Setting project property: sun.arch.data.model -> 64
@@ -2058,7 +1985,7 @@ Setting project property: env.LC_IDENTIFICATION -> fr_FR.UTF-8
 Setting project property: java.io.tmpdir -> /tmp
 Setting project property: openflexo-production.logo -> https://media.openflexo.org/images/openflexo-production_logo64x64.png
 Setting project property: env.XDG_VTNR -> 7
-Setting project property: qualified_app_name -> OpenFlexo 
+Setting project property: qualified_app_name -> OpenFlexo TestApplication
 Setting project property: user.country -> FR
 Setting project property: jersey.version -> 1.17.1
 Setting project property: maven.project.dependencies.versions -> 0.4-SNAPSHOT:
@@ -2303,9 +2230,9 @@ not part of the command.
 [artifact:mvn] [INFO] ------------------------------------------------------------------------
 [artifact:mvn] [INFO] BUILD FAILURE
 [artifact:mvn] [INFO] ------------------------------------------------------------------------
-[artifact:mvn] [INFO] Total time: 1.748s
-[artifact:mvn] [INFO] Finished at: Wed Jan 27 13:05:05 CET 2016
-[artifact:mvn] [INFO] Final Memory: 13M/285M
+[artifact:mvn] [INFO] Total time: 1.686s
+[artifact:mvn] [INFO] Finished at: Wed Jan 27 13:31:27 CET 2016
+[artifact:mvn] [INFO] Final Memory: 14M/298M
 [artifact:mvn] [INFO] ------------------------------------------------------------------------
 [artifact:mvn] [ERROR] Failed to execute goal org.apache.maven.plugins:maven-dependency-plugin:2.7:unpack (default-cli) on project dummy-packaging-tests: Unable to find artifact. Could not find artifact org.openflexo.packaging:packaging-tests:zip:packaging:0.0.1-SNAPSHOT in openflexo (https://maven.openflexo.org/artifactory/openflexo-deps/)
 [artifact:mvn] [ERROR] 
@@ -2343,7 +2270,7 @@ Setting ro project property: ant.file.maven-antrun- -> /u02/SourceCode/openflexo
 Setting project property: java.ext.dirs -> /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext:/usr/java/packages/lib/ext
 Setting project property: env.TERM -> xterm
 Setting project property: maven.type -> zip
-Setting project property: main.class -> org.openflexo.Flexo
+Setting project property: main.class -> org.openflexo.TestApplication
 Setting project property: artifact.dir -> /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/checkedout-artifact
 Setting project property: jsr305.version -> 2.0.1
 Setting project property: junit.version -> 4.10
@@ -2424,7 +2351,7 @@ Setting project property: surefire.reportplugin.version -> 2.18.1
 Setting project property: env.DISPLAY -> :0
 Setting project property: env.LC_NUMERIC -> fr_FR.UTF-8
 Setting project property: env.LESSCLOSE -> /usr/bin/lesspipe %s %s
-Setting project property: sun.java.command -> org.codehaus.plexus.classworlds.launcher.Launcher -X -e -Pinstaller clean package
+Setting project property: sun.java.command -> org.codehaus.plexus.classworlds.launcher.Launcher -X -e -Pinstaller package
 Setting project property: DSTAMP -> 20160127
 Setting project property: env.GIO_LAUNCHED_DESKTOP_FILE_PID -> 4092
 Setting project property: env.JOB -> unity-settings-daemon
@@ -2447,7 +2374,7 @@ Setting project property: java.library.path -> /usr/java/packages/lib/amd64:/usr
 Setting project property: env.DBUS_SESSION_BUS_ADDRESS -> unix:abstract=/tmp/dbus-QUQhlZIxNH
 Setting project property: env.XDG_SEAT -> seat0
 Setting project property: program.args -> -userType developer_release
-Setting project property: build.id -> 2016-01-27.1305
+Setting project property: build.id -> 2016-01-27.1331
 Setting project property: env.LC_NAME -> fr_FR.UTF-8
 Setting project property: volume_name -> Openflexo-0.0.1SNAPSHOT
 Setting project property: java.vm.version -> 25.45-b02
@@ -2482,13 +2409,13 @@ Setting project property: env.XDG_DATA_DIRS -> /usr/share/ubuntu:/usr/share/gnom
 Setting project property: env.LC_TIME -> fr_FR.UTF-8
 Setting project property: org.openflexo:packaging-tools:jar -> /home/xtof/.m2/repository/org/openflexo/packaging-tools/0.4-SNAPSHOT/packaging-tools-0.4-SNAPSHOT.jar
 Setting project property: env.XDG_RUNTIME_DIR -> /run/user/1000
-Setting project property: productSuffix -> 
+Setting project property: productSuffix -> TestApplication
 Setting project property: java.runtime.version -> 1.8.0_45-internal-b14
 Setting project property: allowsDocSubmission -> false
 Setting project property: project.description -> This pom aims at capitalizing production configuration items for all openflexo productions
 Setting project property: wizard.setup.icon -> Openflexo.ico
 Setting project property: maven.artifact.id -> packaging-tests
-Setting project property: package_name -> OpenFlexo  0.0.1SNAPSHOT Setup
+Setting project property: package_name -> OpenFlexo TestApplication 0.0.1SNAPSHOT Setup
 Setting project property: guice.disable.misplaced.annotation.check -> true
 Setting project property: sun.cpu.isalist -> 
 Setting project property: project.build.sourceDirectory -> /u02/SourceCode/openflexo-production/packaging-tests/src/main/java
@@ -2501,7 +2428,7 @@ Setting project property: env.XDG_SEAT_PATH -> /org/freedesktop/DisplayManager/S
 Setting project property: env.UPSTART_INSTANCE -> 
 Setting project property: env.GTK_IM_MODULE -> ibus
 Setting project property: user.timezone -> Europe/Paris
-Setting project property: TSTAMP -> 1305
+Setting project property: TSTAMP -> 1331
 Setting project property: env._ -> /usr/bin/mvn
 Setting project property: env.LC_PAPER -> fr_FR.UTF-8
 Setting project property: java.endorsed.dirs -> /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/endorsed
@@ -2516,7 +2443,7 @@ Setting project property: file.encoding.pkg -> sun.io
 Setting project property: user.home -> /home/xtof
 Setting project property: java.vm.info -> mixed mode
 Setting project property: userType -> developer_release
-Setting project property: qualified_and_versioned_app_name -> OpenFlexo  0.0.1SNAPSHOT
+Setting project property: qualified_and_versioned_app_name -> OpenFlexo TestApplication 0.0.1SNAPSHOT
 Setting project property: organization.logo -> https://media.openflexo.org/images/OpenFlexo_Logo.png
 Setting project property: env.GDM_LANG -> fr_FR
 Setting project property: sun.arch.data.model -> 64
@@ -2554,7 +2481,7 @@ Setting project property: env.LC_IDENTIFICATION -> fr_FR.UTF-8
 Setting project property: java.io.tmpdir -> /tmp
 Setting project property: openflexo-production.logo -> https://media.openflexo.org/images/openflexo-production_logo64x64.png
 Setting project property: env.XDG_VTNR -> 7
-Setting project property: qualified_app_name -> OpenFlexo 
+Setting project property: qualified_app_name -> OpenFlexo TestApplication
 Setting project property: user.country -> FR
 Setting project property: jersey.version -> 1.17.1
 Setting project property: maven.project.dependencies.versions -> 0.4-SNAPSHOT:
@@ -2739,7 +2666,7 @@ generateApplicationVersion:
 Reading filters from /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/build.properties
 ResourceStream for ApplicationVersion.java.tpl loaded from ant loader
 Replacing: @flexo_version@ -> 0.0.1SNAPSHOT
-Replacing: @build.id@ -> 2016-01-27.1305
+Replacing: @build.id@ -> 2016-01-27.1331
 Replacing: @commit.id@ -> ${env.GIT_COMMIT}
     [javac] jar:file:/home/xtof/.m2/repository/org/openflexo/packaging-tools/0.4-SNAPSHOT/packaging-tools-0.4-SNAPSHOT.jar!/build-packaging.xml:118: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
 fileset: Setup scanner in dir /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/version/src with patternSet{ includes: [] excludes: [] }
@@ -2806,7 +2733,7 @@ Setting ro project property: ant.file.maven-antrun- -> /u02/SourceCode/openflexo
 Setting project property: java.ext.dirs -> /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext:/usr/java/packages/lib/ext
 Setting project property: env.TERM -> xterm
 Setting project property: maven.type -> zip
-Setting project property: main.class -> org.openflexo.Flexo
+Setting project property: main.class -> org.openflexo.TestApplication
 Setting project property: artifact.dir -> /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/checkedout-artifact
 Setting project property: jsr305.version -> 2.0.1
 Setting project property: junit.version -> 4.10
@@ -2887,7 +2814,7 @@ Setting project property: surefire.reportplugin.version -> 2.18.1
 Setting project property: env.DISPLAY -> :0
 Setting project property: env.LC_NUMERIC -> fr_FR.UTF-8
 Setting project property: env.LESSCLOSE -> /usr/bin/lesspipe %s %s
-Setting project property: sun.java.command -> org.codehaus.plexus.classworlds.launcher.Launcher -X -e -Pinstaller clean package
+Setting project property: sun.java.command -> org.codehaus.plexus.classworlds.launcher.Launcher -X -e -Pinstaller package
 Setting project property: DSTAMP -> 20160127
 Setting project property: env.GIO_LAUNCHED_DESKTOP_FILE_PID -> 4092
 Setting project property: env.JOB -> unity-settings-daemon
@@ -2910,7 +2837,7 @@ Setting project property: java.library.path -> /usr/java/packages/lib/amd64:/usr
 Setting project property: env.DBUS_SESSION_BUS_ADDRESS -> unix:abstract=/tmp/dbus-QUQhlZIxNH
 Setting project property: env.XDG_SEAT -> seat0
 Setting project property: program.args -> -userType developer_release
-Setting project property: build.id -> 2016-01-27.1305
+Setting project property: build.id -> 2016-01-27.1331
 Setting project property: env.LC_NAME -> fr_FR.UTF-8
 Setting project property: volume_name -> Openflexo-0.0.1SNAPSHOT
 Setting project property: java.vm.version -> 25.45-b02
@@ -2945,13 +2872,13 @@ Setting project property: env.XDG_DATA_DIRS -> /usr/share/ubuntu:/usr/share/gnom
 Setting project property: env.LC_TIME -> fr_FR.UTF-8
 Setting project property: org.openflexo:packaging-tools:jar -> /home/xtof/.m2/repository/org/openflexo/packaging-tools/0.4-SNAPSHOT/packaging-tools-0.4-SNAPSHOT.jar
 Setting project property: env.XDG_RUNTIME_DIR -> /run/user/1000
-Setting project property: productSuffix -> 
+Setting project property: productSuffix -> TestApplication
 Setting project property: java.runtime.version -> 1.8.0_45-internal-b14
 Setting project property: allowsDocSubmission -> false
 Setting project property: project.description -> This pom aims at capitalizing production configuration items for all openflexo productions
 Setting project property: wizard.setup.icon -> Openflexo.ico
 Setting project property: maven.artifact.id -> packaging-tests
-Setting project property: package_name -> OpenFlexo  0.0.1SNAPSHOT Setup
+Setting project property: package_name -> OpenFlexo TestApplication 0.0.1SNAPSHOT Setup
 Setting project property: guice.disable.misplaced.annotation.check -> true
 Setting project property: sun.cpu.isalist -> 
 Setting project property: project.build.sourceDirectory -> /u02/SourceCode/openflexo-production/packaging-tests/src/main/java
@@ -2964,7 +2891,7 @@ Setting project property: env.XDG_SEAT_PATH -> /org/freedesktop/DisplayManager/S
 Setting project property: env.UPSTART_INSTANCE -> 
 Setting project property: env.GTK_IM_MODULE -> ibus
 Setting project property: user.timezone -> Europe/Paris
-Setting project property: TSTAMP -> 1305
+Setting project property: TSTAMP -> 1331
 Setting project property: env._ -> /usr/bin/mvn
 Setting project property: env.LC_PAPER -> fr_FR.UTF-8
 Setting project property: java.endorsed.dirs -> /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/endorsed
@@ -2979,7 +2906,7 @@ Setting project property: file.encoding.pkg -> sun.io
 Setting project property: user.home -> /home/xtof
 Setting project property: java.vm.info -> mixed mode
 Setting project property: userType -> developer_release
-Setting project property: qualified_and_versioned_app_name -> OpenFlexo  0.0.1SNAPSHOT
+Setting project property: qualified_and_versioned_app_name -> OpenFlexo TestApplication 0.0.1SNAPSHOT
 Setting project property: organization.logo -> https://media.openflexo.org/images/OpenFlexo_Logo.png
 Setting project property: env.GDM_LANG -> fr_FR
 Setting project property: sun.arch.data.model -> 64
@@ -3017,7 +2944,7 @@ Setting project property: env.LC_IDENTIFICATION -> fr_FR.UTF-8
 Setting project property: java.io.tmpdir -> /tmp
 Setting project property: openflexo-production.logo -> https://media.openflexo.org/images/openflexo-production_logo64x64.png
 Setting project property: env.XDG_VTNR -> 7
-Setting project property: qualified_app_name -> OpenFlexo 
+Setting project property: qualified_app_name -> OpenFlexo TestApplication
 Setting project property: user.country -> FR
 Setting project property: jersey.version -> 1.17.1
 Setting project property: maven.project.dependencies.versions -> 0.4-SNAPSHOT:
@@ -3212,7 +3139,7 @@ Setting ro project property: ant.file.maven-antrun- -> /u02/SourceCode/openflexo
 Setting project property: java.ext.dirs -> /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext:/usr/java/packages/lib/ext
 Setting project property: env.TERM -> xterm
 Setting project property: maven.type -> zip
-Setting project property: main.class -> org.openflexo.Flexo
+Setting project property: main.class -> org.openflexo.TestApplication
 Setting project property: artifact.dir -> /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/checkedout-artifact
 Setting project property: jsr305.version -> 2.0.1
 Setting project property: junit.version -> 4.10
@@ -3293,7 +3220,7 @@ Setting project property: surefire.reportplugin.version -> 2.18.1
 Setting project property: env.DISPLAY -> :0
 Setting project property: env.LC_NUMERIC -> fr_FR.UTF-8
 Setting project property: env.LESSCLOSE -> /usr/bin/lesspipe %s %s
-Setting project property: sun.java.command -> org.codehaus.plexus.classworlds.launcher.Launcher -X -e -Pinstaller clean package
+Setting project property: sun.java.command -> org.codehaus.plexus.classworlds.launcher.Launcher -X -e -Pinstaller package
 Setting project property: DSTAMP -> 20160127
 Setting project property: env.GIO_LAUNCHED_DESKTOP_FILE_PID -> 4092
 Setting project property: env.JOB -> unity-settings-daemon
@@ -3316,7 +3243,7 @@ Setting project property: java.library.path -> /usr/java/packages/lib/amd64:/usr
 Setting project property: env.DBUS_SESSION_BUS_ADDRESS -> unix:abstract=/tmp/dbus-QUQhlZIxNH
 Setting project property: env.XDG_SEAT -> seat0
 Setting project property: program.args -> -userType developer_release
-Setting project property: build.id -> 2016-01-27.1305
+Setting project property: build.id -> 2016-01-27.1331
 Setting project property: env.LC_NAME -> fr_FR.UTF-8
 Setting project property: volume_name -> Openflexo-0.0.1SNAPSHOT
 Setting project property: java.vm.version -> 25.45-b02
@@ -3351,13 +3278,13 @@ Setting project property: env.XDG_DATA_DIRS -> /usr/share/ubuntu:/usr/share/gnom
 Setting project property: env.LC_TIME -> fr_FR.UTF-8
 Setting project property: org.openflexo:packaging-tools:jar -> /home/xtof/.m2/repository/org/openflexo/packaging-tools/0.4-SNAPSHOT/packaging-tools-0.4-SNAPSHOT.jar
 Setting project property: env.XDG_RUNTIME_DIR -> /run/user/1000
-Setting project property: productSuffix -> 
+Setting project property: productSuffix -> TestApplication
 Setting project property: java.runtime.version -> 1.8.0_45-internal-b14
 Setting project property: allowsDocSubmission -> false
 Setting project property: project.description -> This pom aims at capitalizing production configuration items for all openflexo productions
 Setting project property: wizard.setup.icon -> Openflexo.ico
 Setting project property: maven.artifact.id -> packaging-tests
-Setting project property: package_name -> OpenFlexo  0.0.1SNAPSHOT Setup
+Setting project property: package_name -> OpenFlexo TestApplication 0.0.1SNAPSHOT Setup
 Setting project property: guice.disable.misplaced.annotation.check -> true
 Setting project property: sun.cpu.isalist -> 
 Setting project property: project.build.sourceDirectory -> /u02/SourceCode/openflexo-production/packaging-tests/src/main/java
@@ -3370,7 +3297,7 @@ Setting project property: env.XDG_SEAT_PATH -> /org/freedesktop/DisplayManager/S
 Setting project property: env.UPSTART_INSTANCE -> 
 Setting project property: env.GTK_IM_MODULE -> ibus
 Setting project property: user.timezone -> Europe/Paris
-Setting project property: TSTAMP -> 1305
+Setting project property: TSTAMP -> 1331
 Setting project property: env._ -> /usr/bin/mvn
 Setting project property: env.LC_PAPER -> fr_FR.UTF-8
 Setting project property: java.endorsed.dirs -> /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/endorsed
@@ -3385,7 +3312,7 @@ Setting project property: file.encoding.pkg -> sun.io
 Setting project property: user.home -> /home/xtof
 Setting project property: java.vm.info -> mixed mode
 Setting project property: userType -> developer_release
-Setting project property: qualified_and_versioned_app_name -> OpenFlexo  0.0.1SNAPSHOT
+Setting project property: qualified_and_versioned_app_name -> OpenFlexo TestApplication 0.0.1SNAPSHOT
 Setting project property: organization.logo -> https://media.openflexo.org/images/OpenFlexo_Logo.png
 Setting project property: env.GDM_LANG -> fr_FR
 Setting project property: sun.arch.data.model -> 64
@@ -3423,7 +3350,7 @@ Setting project property: env.LC_IDENTIFICATION -> fr_FR.UTF-8
 Setting project property: java.io.tmpdir -> /tmp
 Setting project property: openflexo-production.logo -> https://media.openflexo.org/images/openflexo-production_logo64x64.png
 Setting project property: env.XDG_VTNR -> 7
-Setting project property: qualified_app_name -> OpenFlexo 
+Setting project property: qualified_app_name -> OpenFlexo TestApplication
 Setting project property: user.country -> FR
 Setting project property: jersey.version -> 1.17.1
 Setting project property: maven.project.dependencies.versions -> 0.4-SNAPSHOT:
@@ -3614,7 +3541,7 @@ Setting ro project property: ant.file.maven-antrun- -> /u02/SourceCode/openflexo
 Setting project property: java.ext.dirs -> /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext:/usr/java/packages/lib/ext
 Setting project property: env.TERM -> xterm
 Setting project property: maven.type -> zip
-Setting project property: main.class -> org.openflexo.Flexo
+Setting project property: main.class -> org.openflexo.TestApplication
 Setting project property: artifact.dir -> /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/checkedout-artifact
 Setting project property: jsr305.version -> 2.0.1
 Setting project property: junit.version -> 4.10
@@ -3695,7 +3622,7 @@ Setting project property: surefire.reportplugin.version -> 2.18.1
 Setting project property: env.DISPLAY -> :0
 Setting project property: env.LC_NUMERIC -> fr_FR.UTF-8
 Setting project property: env.LESSCLOSE -> /usr/bin/lesspipe %s %s
-Setting project property: sun.java.command -> org.codehaus.plexus.classworlds.launcher.Launcher -X -e -Pinstaller clean package
+Setting project property: sun.java.command -> org.codehaus.plexus.classworlds.launcher.Launcher -X -e -Pinstaller package
 Setting project property: DSTAMP -> 20160127
 Setting project property: env.GIO_LAUNCHED_DESKTOP_FILE_PID -> 4092
 Setting project property: env.JOB -> unity-settings-daemon
@@ -3718,7 +3645,7 @@ Setting project property: java.library.path -> /usr/java/packages/lib/amd64:/usr
 Setting project property: env.DBUS_SESSION_BUS_ADDRESS -> unix:abstract=/tmp/dbus-QUQhlZIxNH
 Setting project property: env.XDG_SEAT -> seat0
 Setting project property: program.args -> -userType developer_release
-Setting project property: build.id -> 2016-01-27.1305
+Setting project property: build.id -> 2016-01-27.1331
 Setting project property: env.LC_NAME -> fr_FR.UTF-8
 Setting project property: volume_name -> Openflexo-0.0.1SNAPSHOT
 Setting project property: java.vm.version -> 25.45-b02
@@ -3753,13 +3680,13 @@ Setting project property: env.XDG_DATA_DIRS -> /usr/share/ubuntu:/usr/share/gnom
 Setting project property: env.LC_TIME -> fr_FR.UTF-8
 Setting project property: org.openflexo:packaging-tools:jar -> /home/xtof/.m2/repository/org/openflexo/packaging-tools/0.4-SNAPSHOT/packaging-tools-0.4-SNAPSHOT.jar
 Setting project property: env.XDG_RUNTIME_DIR -> /run/user/1000
-Setting project property: productSuffix -> 
+Setting project property: productSuffix -> TestApplication
 Setting project property: java.runtime.version -> 1.8.0_45-internal-b14
 Setting project property: allowsDocSubmission -> false
 Setting project property: project.description -> This pom aims at capitalizing production configuration items for all openflexo productions
 Setting project property: wizard.setup.icon -> Openflexo.ico
 Setting project property: maven.artifact.id -> packaging-tests
-Setting project property: package_name -> OpenFlexo  0.0.1SNAPSHOT Setup
+Setting project property: package_name -> OpenFlexo TestApplication 0.0.1SNAPSHOT Setup
 Setting project property: guice.disable.misplaced.annotation.check -> true
 Setting project property: sun.cpu.isalist -> 
 Setting project property: project.build.sourceDirectory -> /u02/SourceCode/openflexo-production/packaging-tests/src/main/java
@@ -3772,7 +3699,7 @@ Setting project property: env.XDG_SEAT_PATH -> /org/freedesktop/DisplayManager/S
 Setting project property: env.UPSTART_INSTANCE -> 
 Setting project property: env.GTK_IM_MODULE -> ibus
 Setting project property: user.timezone -> Europe/Paris
-Setting project property: TSTAMP -> 1305
+Setting project property: TSTAMP -> 1331
 Setting project property: env._ -> /usr/bin/mvn
 Setting project property: env.LC_PAPER -> fr_FR.UTF-8
 Setting project property: java.endorsed.dirs -> /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/endorsed
@@ -3787,7 +3714,7 @@ Setting project property: file.encoding.pkg -> sun.io
 Setting project property: user.home -> /home/xtof
 Setting project property: java.vm.info -> mixed mode
 Setting project property: userType -> developer_release
-Setting project property: qualified_and_versioned_app_name -> OpenFlexo  0.0.1SNAPSHOT
+Setting project property: qualified_and_versioned_app_name -> OpenFlexo TestApplication 0.0.1SNAPSHOT
 Setting project property: organization.logo -> https://media.openflexo.org/images/OpenFlexo_Logo.png
 Setting project property: env.GDM_LANG -> fr_FR
 Setting project property: sun.arch.data.model -> 64
@@ -3825,7 +3752,7 @@ Setting project property: env.LC_IDENTIFICATION -> fr_FR.UTF-8
 Setting project property: java.io.tmpdir -> /tmp
 Setting project property: openflexo-production.logo -> https://media.openflexo.org/images/openflexo-production_logo64x64.png
 Setting project property: env.XDG_VTNR -> 7
-Setting project property: qualified_app_name -> OpenFlexo 
+Setting project property: qualified_app_name -> OpenFlexo TestApplication
 Setting project property: user.country -> FR
 Setting project property: jersey.version -> 1.17.1
 Setting project property: maven.project.dependencies.versions -> 0.4-SNAPSHOT:
@@ -4012,14 +3939,14 @@ Replacing: @product.name@ -> OpenFlexo
 Replacing: @icons.dir@ -> /u02/SourceCode/openflexo-production/packaging-tests/src/main/resources/Icons
 Replacing: @wizard.setup.icon@ -> Openflexo.ico
 Replacing: @dist.dir@ -> /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/dist
-Replacing: @qualified_and_versioned_app_name@ -> OpenFlexo  0.0.1SNAPSHOT
+Replacing: @qualified_and_versioned_app_name@ -> OpenFlexo TestApplication 0.0.1SNAPSHOT
 Replacing: @product.name@ -> OpenFlexo
 Replacing: @product.name@ -> OpenFlexo
 Replacing: @organization.name@ -> Openflexo
 Replacing: @organization.name@ -> Openflexo
 Replacing: @organization.name@ -> Openflexo
 Replacing: @product.name@ -> OpenFlexo
-Replacing: @main.class@ -> org.openflexo.Flexo
+Replacing: @main.class@ -> org.openflexo.TestApplication
 Replacing: @vm.args@ -> -Xmx512M -XX:MaxPermSize=128M
 Replacing: @program.args@ -> -userType developer_release
      [exec] Current OS is Linux
@@ -4055,7 +3982,7 @@ Setting ro project property: ant.file.maven-antrun- -> /u02/SourceCode/openflexo
 Setting project property: java.ext.dirs -> /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext:/usr/java/packages/lib/ext
 Setting project property: env.TERM -> xterm
 Setting project property: maven.type -> zip
-Setting project property: main.class -> org.openflexo.Flexo
+Setting project property: main.class -> org.openflexo.TestApplication
 Setting project property: artifact.dir -> /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/checkedout-artifact
 Setting project property: jsr305.version -> 2.0.1
 Setting project property: junit.version -> 4.10
@@ -4136,7 +4063,7 @@ Setting project property: surefire.reportplugin.version -> 2.18.1
 Setting project property: env.DISPLAY -> :0
 Setting project property: env.LC_NUMERIC -> fr_FR.UTF-8
 Setting project property: env.LESSCLOSE -> /usr/bin/lesspipe %s %s
-Setting project property: sun.java.command -> org.codehaus.plexus.classworlds.launcher.Launcher -X -e -Pinstaller clean package
+Setting project property: sun.java.command -> org.codehaus.plexus.classworlds.launcher.Launcher -X -e -Pinstaller package
 Setting project property: DSTAMP -> 20160127
 Setting project property: env.GIO_LAUNCHED_DESKTOP_FILE_PID -> 4092
 Setting project property: env.JOB -> unity-settings-daemon
@@ -4159,7 +4086,7 @@ Setting project property: java.library.path -> /usr/java/packages/lib/amd64:/usr
 Setting project property: env.DBUS_SESSION_BUS_ADDRESS -> unix:abstract=/tmp/dbus-QUQhlZIxNH
 Setting project property: env.XDG_SEAT -> seat0
 Setting project property: program.args -> -userType developer_release
-Setting project property: build.id -> 2016-01-27.1305
+Setting project property: build.id -> 2016-01-27.1331
 Setting project property: env.LC_NAME -> fr_FR.UTF-8
 Setting project property: volume_name -> Openflexo-0.0.1SNAPSHOT
 Setting project property: java.vm.version -> 25.45-b02
@@ -4194,13 +4121,13 @@ Setting project property: env.XDG_DATA_DIRS -> /usr/share/ubuntu:/usr/share/gnom
 Setting project property: env.LC_TIME -> fr_FR.UTF-8
 Setting project property: org.openflexo:packaging-tools:jar -> /home/xtof/.m2/repository/org/openflexo/packaging-tools/0.4-SNAPSHOT/packaging-tools-0.4-SNAPSHOT.jar
 Setting project property: env.XDG_RUNTIME_DIR -> /run/user/1000
-Setting project property: productSuffix -> 
+Setting project property: productSuffix -> TestApplication
 Setting project property: java.runtime.version -> 1.8.0_45-internal-b14
 Setting project property: allowsDocSubmission -> false
 Setting project property: project.description -> This pom aims at capitalizing production configuration items for all openflexo productions
 Setting project property: wizard.setup.icon -> Openflexo.ico
 Setting project property: maven.artifact.id -> packaging-tests
-Setting project property: package_name -> OpenFlexo  0.0.1SNAPSHOT Setup
+Setting project property: package_name -> OpenFlexo TestApplication 0.0.1SNAPSHOT Setup
 Setting project property: guice.disable.misplaced.annotation.check -> true
 Setting project property: sun.cpu.isalist -> 
 Setting project property: project.build.sourceDirectory -> /u02/SourceCode/openflexo-production/packaging-tests/src/main/java
@@ -4213,7 +4140,7 @@ Setting project property: env.XDG_SEAT_PATH -> /org/freedesktop/DisplayManager/S
 Setting project property: env.UPSTART_INSTANCE -> 
 Setting project property: env.GTK_IM_MODULE -> ibus
 Setting project property: user.timezone -> Europe/Paris
-Setting project property: TSTAMP -> 1305
+Setting project property: TSTAMP -> 1331
 Setting project property: env._ -> /usr/bin/mvn
 Setting project property: env.LC_PAPER -> fr_FR.UTF-8
 Setting project property: java.endorsed.dirs -> /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/endorsed
@@ -4228,7 +4155,7 @@ Setting project property: file.encoding.pkg -> sun.io
 Setting project property: user.home -> /home/xtof
 Setting project property: java.vm.info -> mixed mode
 Setting project property: userType -> developer_release
-Setting project property: qualified_and_versioned_app_name -> OpenFlexo  0.0.1SNAPSHOT
+Setting project property: qualified_and_versioned_app_name -> OpenFlexo TestApplication 0.0.1SNAPSHOT
 Setting project property: organization.logo -> https://media.openflexo.org/images/OpenFlexo_Logo.png
 Setting project property: env.GDM_LANG -> fr_FR
 Setting project property: sun.arch.data.model -> 64
@@ -4266,7 +4193,7 @@ Setting project property: env.LC_IDENTIFICATION -> fr_FR.UTF-8
 Setting project property: java.io.tmpdir -> /tmp
 Setting project property: openflexo-production.logo -> https://media.openflexo.org/images/openflexo-production_logo64x64.png
 Setting project property: env.XDG_VTNR -> 7
-Setting project property: qualified_app_name -> OpenFlexo 
+Setting project property: qualified_app_name -> OpenFlexo TestApplication
 Setting project property: user.country -> FR
 Setting project property: jersey.version -> 1.17.1
 Setting project property: maven.project.dependencies.versions -> 0.4-SNAPSHOT:
@@ -4454,19 +4381,19 @@ Replacing: @flexo_version@ -> 0.0.1SNAPSHOT
 Replacing: @organization.name@ -> Openflexo
 Replacing: @organization.url@ -> http://www.openflexo.org
 Replacing: @product.name@ -> OpenFlexo
-Replacing: @productSuffix@ -> 
+Replacing: @productSuffix@ -> TestApplication
 Replacing: @icons.dir@ -> /u02/SourceCode/openflexo-production/packaging-tests/src/main/resources/Icons
 Replacing: @wizard.setup.icon@ -> Openflexo.ico
 Replacing: @product.name@ -> OpenFlexo
-Replacing: @productSuffix@ -> 
+Replacing: @productSuffix@ -> TestApplication
 Replacing: @license.dir@ -> /u02/SourceCode/openflexo-production/packaging-tests/src/main/resources/License
 Replacing: @versionType@ -> Tests
 Replacing: @project.build.directory@ -> /u02/SourceCode/openflexo-production/packaging-tests/target
 Replacing: @product.name@ -> OpenFlexo
-Replacing: @productSuffix@ -> 
+Replacing: @productSuffix@ -> TestApplication
 Replacing: @flexo_version@ -> 0.0.1SNAPSHOT
 Replacing: @product.name@ -> OpenFlexo
-Replacing: @productSuffix@ -> 
+Replacing: @productSuffix@ -> TestApplication
 Replacing: @normalized_version@ -> 0.0.1
 Replacing: @product.name@ -> OpenFlexo
 Replacing: @organization.name@ -> Openflexo
@@ -4485,7 +4412,7 @@ Setting ro project property: ant.file.maven-antrun- -> /u02/SourceCode/openflexo
 Setting project property: java.ext.dirs -> /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext:/usr/java/packages/lib/ext
 Setting project property: env.TERM -> xterm
 Setting project property: maven.type -> zip
-Setting project property: main.class -> org.openflexo.Flexo
+Setting project property: main.class -> org.openflexo.TestApplication
 Setting project property: artifact.dir -> /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/checkedout-artifact
 Setting project property: jsr305.version -> 2.0.1
 Setting project property: junit.version -> 4.10
@@ -4566,7 +4493,7 @@ Setting project property: surefire.reportplugin.version -> 2.18.1
 Setting project property: env.DISPLAY -> :0
 Setting project property: env.LC_NUMERIC -> fr_FR.UTF-8
 Setting project property: env.LESSCLOSE -> /usr/bin/lesspipe %s %s
-Setting project property: sun.java.command -> org.codehaus.plexus.classworlds.launcher.Launcher -X -e -Pinstaller clean package
+Setting project property: sun.java.command -> org.codehaus.plexus.classworlds.launcher.Launcher -X -e -Pinstaller package
 Setting project property: DSTAMP -> 20160127
 Setting project property: env.GIO_LAUNCHED_DESKTOP_FILE_PID -> 4092
 Setting project property: env.JOB -> unity-settings-daemon
@@ -4589,7 +4516,7 @@ Setting project property: java.library.path -> /usr/java/packages/lib/amd64:/usr
 Setting project property: env.DBUS_SESSION_BUS_ADDRESS -> unix:abstract=/tmp/dbus-QUQhlZIxNH
 Setting project property: env.XDG_SEAT -> seat0
 Setting project property: program.args -> -userType developer_release
-Setting project property: build.id -> 2016-01-27.1305
+Setting project property: build.id -> 2016-01-27.1331
 Setting project property: env.LC_NAME -> fr_FR.UTF-8
 Setting project property: volume_name -> Openflexo-0.0.1SNAPSHOT
 Setting project property: java.vm.version -> 25.45-b02
@@ -4624,13 +4551,13 @@ Setting project property: env.XDG_DATA_DIRS -> /usr/share/ubuntu:/usr/share/gnom
 Setting project property: env.LC_TIME -> fr_FR.UTF-8
 Setting project property: org.openflexo:packaging-tools:jar -> /home/xtof/.m2/repository/org/openflexo/packaging-tools/0.4-SNAPSHOT/packaging-tools-0.4-SNAPSHOT.jar
 Setting project property: env.XDG_RUNTIME_DIR -> /run/user/1000
-Setting project property: productSuffix -> 
+Setting project property: productSuffix -> TestApplication
 Setting project property: java.runtime.version -> 1.8.0_45-internal-b14
 Setting project property: allowsDocSubmission -> false
 Setting project property: project.description -> This pom aims at capitalizing production configuration items for all openflexo productions
 Setting project property: wizard.setup.icon -> Openflexo.ico
 Setting project property: maven.artifact.id -> packaging-tests
-Setting project property: package_name -> OpenFlexo  0.0.1SNAPSHOT Setup
+Setting project property: package_name -> OpenFlexo TestApplication 0.0.1SNAPSHOT Setup
 Setting project property: guice.disable.misplaced.annotation.check -> true
 Setting project property: sun.cpu.isalist -> 
 Setting project property: project.build.sourceDirectory -> /u02/SourceCode/openflexo-production/packaging-tests/src/main/java
@@ -4643,7 +4570,7 @@ Setting project property: env.XDG_SEAT_PATH -> /org/freedesktop/DisplayManager/S
 Setting project property: env.UPSTART_INSTANCE -> 
 Setting project property: env.GTK_IM_MODULE -> ibus
 Setting project property: user.timezone -> Europe/Paris
-Setting project property: TSTAMP -> 1305
+Setting project property: TSTAMP -> 1331
 Setting project property: env._ -> /usr/bin/mvn
 Setting project property: env.LC_PAPER -> fr_FR.UTF-8
 Setting project property: java.endorsed.dirs -> /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/endorsed
@@ -4658,7 +4585,7 @@ Setting project property: file.encoding.pkg -> sun.io
 Setting project property: user.home -> /home/xtof
 Setting project property: java.vm.info -> mixed mode
 Setting project property: userType -> developer_release
-Setting project property: qualified_and_versioned_app_name -> OpenFlexo  0.0.1SNAPSHOT
+Setting project property: qualified_and_versioned_app_name -> OpenFlexo TestApplication 0.0.1SNAPSHOT
 Setting project property: organization.logo -> https://media.openflexo.org/images/OpenFlexo_Logo.png
 Setting project property: env.GDM_LANG -> fr_FR
 Setting project property: sun.arch.data.model -> 64
@@ -4696,7 +4623,7 @@ Setting project property: env.LC_IDENTIFICATION -> fr_FR.UTF-8
 Setting project property: java.io.tmpdir -> /tmp
 Setting project property: openflexo-production.logo -> https://media.openflexo.org/images/openflexo-production_logo64x64.png
 Setting project property: env.XDG_VTNR -> 7
-Setting project property: qualified_app_name -> OpenFlexo 
+Setting project property: qualified_app_name -> OpenFlexo TestApplication
 Setting project property: user.country -> FR
 Setting project property: jersey.version -> 1.17.1
 Setting project property: maven.project.dependencies.versions -> 0.4-SNAPSHOT:
@@ -4902,7 +4829,7 @@ Setting ro project property: ant.file.maven-antrun- -> /u02/SourceCode/openflexo
 Setting project property: java.ext.dirs -> /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext:/usr/java/packages/lib/ext
 Setting project property: env.TERM -> xterm
 Setting project property: maven.type -> zip
-Setting project property: main.class -> org.openflexo.Flexo
+Setting project property: main.class -> org.openflexo.TestApplication
 Setting project property: artifact.dir -> /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/checkedout-artifact
 Setting project property: jsr305.version -> 2.0.1
 Setting project property: junit.version -> 4.10
@@ -4983,7 +4910,7 @@ Setting project property: surefire.reportplugin.version -> 2.18.1
 Setting project property: env.DISPLAY -> :0
 Setting project property: env.LC_NUMERIC -> fr_FR.UTF-8
 Setting project property: env.LESSCLOSE -> /usr/bin/lesspipe %s %s
-Setting project property: sun.java.command -> org.codehaus.plexus.classworlds.launcher.Launcher -X -e -Pinstaller clean package
+Setting project property: sun.java.command -> org.codehaus.plexus.classworlds.launcher.Launcher -X -e -Pinstaller package
 Setting project property: DSTAMP -> 20160127
 Setting project property: env.GIO_LAUNCHED_DESKTOP_FILE_PID -> 4092
 Setting project property: env.JOB -> unity-settings-daemon
@@ -5006,7 +4933,7 @@ Setting project property: java.library.path -> /usr/java/packages/lib/amd64:/usr
 Setting project property: env.DBUS_SESSION_BUS_ADDRESS -> unix:abstract=/tmp/dbus-QUQhlZIxNH
 Setting project property: env.XDG_SEAT -> seat0
 Setting project property: program.args -> -userType developer_release
-Setting project property: build.id -> 2016-01-27.1305
+Setting project property: build.id -> 2016-01-27.1331
 Setting project property: env.LC_NAME -> fr_FR.UTF-8
 Setting project property: volume_name -> Openflexo-0.0.1SNAPSHOT
 Setting project property: java.vm.version -> 25.45-b02
@@ -5041,13 +4968,13 @@ Setting project property: env.XDG_DATA_DIRS -> /usr/share/ubuntu:/usr/share/gnom
 Setting project property: env.LC_TIME -> fr_FR.UTF-8
 Setting project property: org.openflexo:packaging-tools:jar -> /home/xtof/.m2/repository/org/openflexo/packaging-tools/0.4-SNAPSHOT/packaging-tools-0.4-SNAPSHOT.jar
 Setting project property: env.XDG_RUNTIME_DIR -> /run/user/1000
-Setting project property: productSuffix -> 
+Setting project property: productSuffix -> TestApplication
 Setting project property: java.runtime.version -> 1.8.0_45-internal-b14
 Setting project property: allowsDocSubmission -> false
 Setting project property: project.description -> This pom aims at capitalizing production configuration items for all openflexo productions
 Setting project property: wizard.setup.icon -> Openflexo.ico
 Setting project property: maven.artifact.id -> packaging-tests
-Setting project property: package_name -> OpenFlexo  0.0.1SNAPSHOT Setup
+Setting project property: package_name -> OpenFlexo TestApplication 0.0.1SNAPSHOT Setup
 Setting project property: guice.disable.misplaced.annotation.check -> true
 Setting project property: sun.cpu.isalist -> 
 Setting project property: project.build.sourceDirectory -> /u02/SourceCode/openflexo-production/packaging-tests/src/main/java
@@ -5060,7 +4987,7 @@ Setting project property: env.XDG_SEAT_PATH -> /org/freedesktop/DisplayManager/S
 Setting project property: env.UPSTART_INSTANCE -> 
 Setting project property: env.GTK_IM_MODULE -> ibus
 Setting project property: user.timezone -> Europe/Paris
-Setting project property: TSTAMP -> 1305
+Setting project property: TSTAMP -> 1331
 Setting project property: env._ -> /usr/bin/mvn
 Setting project property: env.LC_PAPER -> fr_FR.UTF-8
 Setting project property: java.endorsed.dirs -> /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/endorsed
@@ -5075,7 +5002,7 @@ Setting project property: file.encoding.pkg -> sun.io
 Setting project property: user.home -> /home/xtof
 Setting project property: java.vm.info -> mixed mode
 Setting project property: userType -> developer_release
-Setting project property: qualified_and_versioned_app_name -> OpenFlexo  0.0.1SNAPSHOT
+Setting project property: qualified_and_versioned_app_name -> OpenFlexo TestApplication 0.0.1SNAPSHOT
 Setting project property: organization.logo -> https://media.openflexo.org/images/OpenFlexo_Logo.png
 Setting project property: env.GDM_LANG -> fr_FR
 Setting project property: sun.arch.data.model -> 64
@@ -5113,7 +5040,7 @@ Setting project property: env.LC_IDENTIFICATION -> fr_FR.UTF-8
 Setting project property: java.io.tmpdir -> /tmp
 Setting project property: openflexo-production.logo -> https://media.openflexo.org/images/openflexo-production_logo64x64.png
 Setting project property: env.XDG_VTNR -> 7
-Setting project property: qualified_app_name -> OpenFlexo 
+Setting project property: qualified_app_name -> OpenFlexo TestApplication
 Setting project property: user.country -> FR
 Setting project property: jersey.version -> 1.17.1
 Setting project property: maven.project.dependencies.versions -> 0.4-SNAPSHOT:
@@ -5294,6 +5221,9 @@ packageMacOSX:
      [copy] Copying 1 resource to /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild
      [copy] Copying MacOS/JavaApplicationStub to /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/JavaApplicationStub
 ResourceStream for MacOS/JavaApplicationStub loaded from ant loader
+     [copy] Copying 1 resource to /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild
+     [copy] Copying lib/appbundler-1.0.jar to /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/appbundler-1.0.jar
+ResourceStream for lib/appbundler-1.0.jar loaded from ant loader
 Setting project property: java.stubfile -> /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/JavaApplicationStub
 FileSet: Setup scanner in dir /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild with patternSet{ includes: [JavaApplicationStub] excludes: [] }
     [chmod] Executing 'chmod' with arguments:
@@ -5309,152 +5239,1354 @@ Execute:Java13CommandLauncher: Executing 'chmod' with arguments:
 The ' characters around the executable and arguments are
 not part of the command.
     [chmod] Applied chmod to 1 file and 0 directories.
-Setting project property: relative_res_path -> OpenFlexo  0.0.1SNAPSHOT.app/Contents/Resources
+Setting project property: relative_res_path -> OpenFlexo TestApplication 0.0.1SNAPSHOT.app/Contents/Resources
+Finding class com.oracle.appbundler.AppBundlerTask
+Loaded from /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/appbundler-1.0.jar com/oracle/appbundler/AppBundlerTask.class
+Class org.apache.tools.ant.Task loaded from parent loader (parentFirst)
+Class com.oracle.appbundler.AppBundlerTask loaded from ant loader (parentFirst)
+Class java.lang.Throwable loaded from parent loader (parentFirst)
+Class org.apache.tools.ant.BuildException loaded from parent loader (parentFirst)
+Class java.io.OutputStream loaded from parent loader (parentFirst)
+Class java.io.FileOutputStream loaded from parent loader (parentFirst)
+Class java.io.BufferedOutputStream loaded from parent loader (parentFirst)
+Class javax.xml.stream.XMLStreamException loaded from parent loader (parentFirst)
+Class java.io.Writer loaded from parent loader (parentFirst)
+Class java.io.FileWriter loaded from parent loader (parentFirst)
+Class java.io.BufferedWriter loaded from parent loader (parentFirst)
+Class java.io.IOException loaded from parent loader (parentFirst)
+Class java.lang.IllegalStateException loaded from parent loader (parentFirst)
+ +Datatype bundleapp com.oracle.appbundler.AppBundlerTask
+    [mkdir] Created dir: /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/mac_apps/Tests
+Setting project property: current.year -> 2016
+Override ignored for property "DSTAMP"
+Override ignored for property "TSTAMP"
+Override ignored for property "TODAY"
+Class java.util.ArrayList loaded from parent loader (parentFirst)
+Class java.lang.String loaded from parent loader (parentFirst)
+Class java.io.File loaded from parent loader (parentFirst)
+Class org.apache.tools.ant.types.FileSet loaded from parent loader (parentFirst)
+Finding class com.oracle.appbundler.Option
+Loaded from /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/appbundler-1.0.jar com/oracle/appbundler/Option.class
+Class java.lang.Object loaded from parent loader (parentFirst)
+Class com.oracle.appbundler.Option loaded from ant loader (parentFirst)
+Finding class com.oracle.appbundler.Argument
+Loaded from /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/appbundler-1.0.jar com/oracle/appbundler/Argument.class
+Class com.oracle.appbundler.Argument loaded from ant loader (parentFirst)
+Class java.lang.System loaded from parent loader (parentFirst)
+Class java.lang.StringBuilder loaded from parent loader (parentFirst)
+Class java.io.PrintStream loaded from parent loader (parentFirst)
+Creating app bundle: OpenFlexo TestApplication 0.0.1SNAPSHOT
+Class java.nio.file.LinkOption loaded from parent loader (parentFirst)
+Class java.nio.file.Files loaded from parent loader (parentFirst)
+Class javax.xml.stream.XMLOutputFactory loaded from parent loader (parentFirst)
+Class javax.xml.stream.XMLStreamWriter loaded from parent loader (parentFirst)
+Class java.util.Iterator loaded from parent loader (parentFirst)
+Class java.lang.Class loaded from parent loader (parentFirst)
+Resource com/oracle/appbundler/JavaAppLauncher loaded from ant loader
+Class java.net.URL loaded from parent loader (parentFirst)
+Class java.nio.file.CopyOption loaded from parent loader (parentFirst)
+Class java.nio.file.StandardCopyOption loaded from parent loader (parentFirst)
+Class java.io.InputStream loaded from parent loader (parentFirst)
+ResourceStream for com/oracle/appbundler/res.zip loaded from ant loader
+Class java.util.zip.ZipInputStream loaded from parent loader (parentFirst)
+Class java.util.zip.ZipEntry loaded from parent loader (parentFirst)
+fileset: Setup scanner in dir /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/dist with patternSet{ includes: [**/*.jar] excludes: [] }
+Class org.apache.tools.ant.DirectoryScanner loaded from parent loader (parentFirst)
+fileset: Setup scanner in dir /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/dist with patternSet{ includes: [] excludes: [lib/*, deps/*, *.exe, *.sh] }
+     [copy] Config/Flexo.properties added as Config/Flexo.properties doesn't exist.
+     [copy]  omitted as /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/mac_apps/Tests/OpenFlexo TestApplication 0.0.1SNAPSHOT.app/Contents/Resources is up to date.
+     [copy] Config added as Config doesn't exist.
+     [copy] lib added as lib doesn't exist.
+     [copy] Copying 1 file to /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/mac_apps/Tests/OpenFlexo TestApplication 0.0.1SNAPSHOT.app/Contents/Resources
+     [copy] Copying /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/dist/Config/Flexo.properties to /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/mac_apps/Tests/OpenFlexo TestApplication 0.0.1SNAPSHOT.app/Contents/Resources/Config/Flexo.properties
+     [copy] Copied 2 empty directories to 1 empty directory under /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/mac_apps/Tests/OpenFlexo TestApplication 0.0.1SNAPSHOT.app/Contents/Resources
+Setting ro project property: ant.file -> /u02/SourceCode/openflexo-production/packaging-tests/build-packaging.xml
+Setting ro project property: ant.project.invoked-targets -> packageMacOSX
+Setting ro project property: ant.file.type.project -> file
+Setting ro project property: ant.file.packaging-tools -> jar:file:/home/xtof/.m2/repository/org/openflexo/packaging-tools/0.4-SNAPSHOT/packaging-tools-0.4-SNAPSHOT.jar!/build-packaging.xml
+Setting ro project property: ant.project.default-target -> package
+Setting ro project property: ant.file.project -> /u02/SourceCode/openflexo-production/packaging-tests/build-packaging.xml
+Setting ro project property: ant.file.type.packaging-tools -> url
+Setting ro project property: ant.project.name -> project
+Setting ro project property: ant.file.type.maven-antrun- -> file
+Setting ro project property: ant.file.maven-antrun- -> /u02/SourceCode/openflexo-production/packaging-tests/target/antrun/build-main.xml
+Setting project property: mac.app.dir -> /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/mac_apps
+Setting project property: env.PATH -> /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+Setting project property: env.GNOME_DESKTOP_SESSION_ID -> this-is-deprecated
+Setting project property: openflexo-production.logo -> https://media.openflexo.org/images/openflexo-production_logo64x64.png
+Setting project property: user.name -> xtof
+Setting project property: javahelp.version -> 2.0.05
+Setting project property: maven.artifact.id -> packaging-tests
+Setting project property: env.SHELL -> /bin/bash
+Setting project property: settings.localRepository -> /home/xtof/.m2/repository
+Setting project property: sun.java.command -> org.codehaus.plexus.classworlds.launcher.Launcher -X -e -Pinstaller package
+Setting project property: env.SESSIONTYPE -> gnome-session
+Setting project property: sun.java.launcher -> SUN_STANDARD
+Setting project property: compiler.target -> 1.7
+Setting project property: env.COMPIZ_BIN_PATH -> /usr/bin/
+Setting project property: env.PAM_KWALLET_LOGIN -> /tmp//xtof.socket
+Setting project property: java.runtime.name -> OpenJDK Runtime Environment
+Setting project property: env.UPSTART_SESSION -> unix:abstract=/com/ubuntu/upstart-session/1000/3111
+Setting project property: os.version -> 3.19.0-49-generic
+Setting project property: guice.disable.misplaced.annotation.check -> true
+Setting project property: env.XDG_SESSION_ID -> c2
+Setting project property: env.OLDPWD -> /u02/SourceCode/openflexo-production/packaging-tests
+Setting project property: default.logging.level -> SEVERE
+Setting project property: surefire.reportplugin.version -> 2.18.1
+Setting project property: project.build.sourceEncoding -> UTF-8
+Setting project property: build.properties -> /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/build.properties
+Setting project property: env.XTERM_SHELL -> /bin/bash
+Setting project property: wizard.setup.icon -> Openflexo.ico
+Setting project property: commit.id -> ${env.GIT_COMMIT}
+Setting project property: java.vm.name -> OpenJDK 64-Bit Server VM
+Setting project property: sun.jnu.encoding -> UTF-8
+Setting project property: changes.componentfilter -> AND component=packaging-tests
+Setting project property: path.separator -> :
+Setting project property: localRepository ->        id: local
+      url: file:///home/xtof/.m2/repository/
+   layout: none
+Setting project property: env.KDEDIRS -> /usr/share/kubuntu-active-default-settings/:/usr/share/plasma-active-default-settings/:/usr/share/kubuntu-default-settings/kde4-profile/default/
+Setting project property: java.vm.specification.vendor -> Oracle Corporation
+Setting project property: env.USER -> xtof
+Setting project property: env.LC_TELEPHONE -> fr_FR.UTF-8
+Setting project property: user.timezone -> Europe/Paris
+Setting project property: env.GTK_MODULES -> canberra-gtk-module:canberra-gtk-module:overlay-scrollbar:unity-gtk-module
+Setting project property: maven.type -> zip
+Setting project property: project.artifactId -> packaging-tests
+Setting project property: sun.boot.class.path -> /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/resources.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jsse.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jce.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/charsets.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jfr.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/classes
+Setting project property: flexo_version -> 0.0.1SNAPSHOT
+Setting project property: user.country -> FR
+Setting project property: env.LANGUAGE -> fr_FR:fr:en
+Setting project property: env.INSTANCE -> 
+Setting project property: sun.os.patch.level -> unknown
+Setting project property: env.UPSTART_JOB -> unity7
+Setting project property: mac.app.dir.versioned -> /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/mac_apps/Tests
+Setting project property: env.LC_PAPER -> fr_FR.UTF-8
+Setting project property: dist.dir -> /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/dist
+Setting project property: versionType -> Tests
+Setting project property: ant.version -> 1.9.0
+Setting project property: org.openflexo:packaging-tools:jar -> /home/xtof/.m2/repository/org/openflexo/packaging-tools/0.4-SNAPSHOT/packaging-tools-0.4-SNAPSHOT.jar
+Setting project property: icons.dir -> /u02/SourceCode/openflexo-production/packaging-tests/src/main/resources/Icons
+Setting project property: user.dir -> /u02/SourceCode/openflexo-production/packaging-tests
+Setting project property: java.vm.vendor -> Oracle Corporation
+Setting project property: file.encoding.pkg -> sun.io
+Setting project property: env.HOME -> /home/xtof
+Setting project property: mavensite.version -> 3.4
+Setting project property: env.HISTCONTROL -> ignoreboth
+Setting project property: sun.arch.data.model -> 64
+Setting project property: env.JAVA_HOME -> /usr/lib/jvm/java-8-openjdk-amd64
+Setting project property: license.dir -> /u02/SourceCode/openflexo-production/packaging-tests/src/main/resources/License
+Setting project property: toolsconfig.version -> 0.4-SNAPSHOT
+Setting project property: jersey.version -> 1.17.1
+Setting project property: maven.project.dependencies.versions -> 0.4-SNAPSHOT:
+Setting project property: artifact.dir -> /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/checkedout-artifact
+Setting project property: findbugs.version -> 2.5.2
+Setting project property: compiler.source -> 1.7
+Setting project property: keepLogTrace -> false
+Setting project property: resources.dir -> /u02/SourceCode/openflexo-production/packaging-tests/src/main/resources
+Setting project property: volume_name -> Openflexo-0.0.1SNAPSHOT
+Setting project property: java.version -> 1.8.0_45-internal
+Setting project property: project.build.testSourceDirectory -> /u02/SourceCode/openflexo-production/packaging-tests/src/test/java
+Setting project property: env.LOGNAME -> xtof
+Setting project property: env.XDG_SESSION_PATH -> /org/freedesktop/DisplayManager/Session0
+Setting project property: sun.desktop -> gnome
+Setting project property: env.XDG_CURRENT_DESKTOP -> Unity
+Setting project property: env.XDG_SEAT -> seat0
+Setting project property: env.UPSTART_EVENTS -> xsession started
+Setting project property: env.MANDATORY_PATH -> /usr/share/gconf/ubuntu.mandatory.path
+Setting project property: env.SSH_AUTH_SOCK -> /run/user/1000/keyring/ssh
+Setting project property: env.DEFAULTS_PATH -> /usr/share/gconf/ubuntu.default.path
+Setting project property: env.XMODIFIERS -> @im=ibus
+Setting project property: env.LANG -> fr_FR.UTF-8
+Setting project property: env.GPG_AGENT_INFO -> /run/user/1000/keyring/gpg:0:1
+Setting project property: line.separator -> 
+Setting project property: user.language -> fr
+Setting project property: argLine -> -javaagent:/home/xtof/.m2/repository/org/jacoco/org.jacoco.agent/0.7.4.201502262128/org.jacoco.agent-0.7.4.201502262128-runtime.jar=destfile=/u02/SourceCode/openflexo-production/packaging-tests/target/jacoco.exec,excludes=**/test/*
+Setting project property: os.arch -> amd64
+Setting project property: java.awt.printerjob -> sun.print.PSPrinterJob
+Setting project property: env.QT_IM_MODULE -> ibus
+Setting project property: project.description -> This pom aims at capitalizing production configuration items for all openflexo productions
+Setting project property: env.XDG_RUNTIME_DIR -> /run/user/1000
+Setting project property: java.vm.specification.name -> Java Virtual Machine Specification
+Setting project property: java.vendor.url -> http://java.oracle.com/
+Setting project property: allowsDocSubmission -> false
+Setting project property: java.vendor -> Oracle Corporation
+Setting project property: env.XDG_GREETER_DATA_DIR -> /var/lib/lightdm-data/xtof
+Setting project property: env.LC_ADDRESS -> fr_FR.UTF-8
+Setting project property: java.vm.version -> 25.45-b02
+Setting project property: source.encoding -> UTF-8
+Setting project property: java.specification.vendor -> Oracle Corporation
+Setting project property: maven.dependency.org.openflexo.packaging-tools.jar.path -> /home/xtof/.m2/repository/org/openflexo/packaging-tools/0.4-SNAPSHOT/packaging-tools-0.4-SNAPSHOT.jar
+Setting project property: package_name -> OpenFlexo TestApplication 0.0.1SNAPSHOT Setup
+Setting project property: env.GTK_IM_MODULE -> ibus
+Setting project property: project.info.version -> 2.8
+Setting project property: java.stubfile -> /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/JavaApplicationStub
+Setting project property: java.class.version -> 52.0
+Setting project property: product.name -> OpenFlexo
+Setting project property: maven.classifier -> packaging
+Setting project property: env.XDG_SESSION_DESKTOP -> ubuntu
+Setting project property: resource.encoding -> UTF-8
+Setting project property: jsr305.version -> 2.0.1
+Setting project property: current.year -> 2016
+Setting project property: env.LC_NAME -> fr_FR.UTF-8
+Setting project property: java.endorsed.dirs -> /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/endorsed
+Setting project property: env.QT4_IM_MODULE -> ibus
+Setting project property: junit.version -> 4.10
+Setting project property: env.GNOME_KEYRING_CONTROL -> 
+Setting project property: main.class -> org.openflexo.TestApplication
+Setting project property: DSTAMP -> 20160127
+Setting project property: env.LC_MONETARY -> fr_FR.UTF-8
+Setting project property: env.CLUTTER_IM_MODULE -> xim
+Setting project property: program.args -> -userType developer_release
+Setting project property: awt.toolkit -> sun.awt.X11.XToolkit
+Setting project property: project.build.outputDirectory -> /u02/SourceCode/openflexo-production/packaging-tests/target/classes
+Setting project property: jxr.report.version -> 2.5
+Setting project property: env.XDG_SEAT_PATH -> /org/freedesktop/DisplayManager/Seat0
+Setting project property: wagonssh.version -> 2.8
+Setting project property: env.LESSCLOSE -> /usr/bin/lesspipe %s %s
+Setting project property: java.class.path -> /usr/share/maven/boot/plexus-classworlds-2.x.jar
+Setting project property: env.GDM_LANG -> fr_FR
+Setting project property: env.LESSOPEN -> | /usr/bin/lesspipe %s
+Setting project property: ant.core.lib -> /home/xtof/.m2/repository/org/apache/ant/ant/1.8.2/ant-1.8.2.jar
+Setting project property: securerandom.source -> file:/dev/./urandom
+Setting project property: env.COMPIZ_CONFIG_PROFILE -> ubuntu
+Setting project property: env.XDG_DATA_DIRS -> /usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/
+Setting project property: file.separator -> /
+Setting project property: checkstyle.version -> 2.12
+Setting project property: project.version -> 0.0.1-SNAPSHOT
+Setting project property: changes.version -> 2.11
+Setting project property: java.vendor.url.bug -> http://bugreport.sun.com/bugreport/
+Setting project property: build.id -> 2016-01-27.1331
+Setting project property: organization.name -> Openflexo
+Setting project property: env.DBUS_SESSION_BUS_ADDRESS -> unix:abstract=/tmp/dbus-QUQhlZIxNH
+Setting project property: icon_mac_name -> IconOpenflexo.icns
+Setting project property: file.encoding -> UTF-8
+Setting project property: maven.group.id -> org.openflexo.packaging
+Setting project property: apache.commons-lang.version -> 3.1
+Setting project property: env.IM_CONFIG_PHASE -> 1
+Setting project property: env.GIO_LAUNCHED_DESKTOP_FILE_PID -> 4092
+Setting project property: env.SESSION -> ubuntu
+Setting project property: javadoc.version -> 2.10.1
+Setting project property: classworlds.conf -> /usr/share/maven/bin/m2.conf
+Setting project property: jacoco.version -> 0.7.4.201502262128
+Setting project property: project.packaging -> pom
+Setting project property: java.specification.name -> Java Platform API Specification
+Setting project property: env.XDG_SESSION_TYPE -> x11
+Setting project property: env.GNOME_KEYRING_PID -> 
+Setting project property: java.ext.dirs -> /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext:/usr/java/packages/lib/ext
+Setting project property: userType -> developer_release
+Setting project property: env.GIO_LAUNCHED_DESKTOP_FILE -> /usr/share/applications/debian-xterm.desktop
+Setting project property: sun.cpu.isalist -> 
+Setting project property: organization.url -> http://www.openflexo.org
+Setting project property: TSTAMP -> 1331
+Setting project property: vm.args -> -Xmx512M -XX:MaxPermSize=128M
+Setting project property: user.home -> /home/xtof
+Setting project property: os.name -> Linux
+Setting project property: env.XDG_VTNR -> 7
+Setting project property: env.SHLVL -> 1
+Setting project property: env.LS_COLORS -> rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:
+Setting project property: env.DESKTOP_SESSION -> ubuntu
+Setting project property: env.LC_NUMERIC -> fr_FR.UTF-8
+Setting project property: java.awt.graphicsenv -> sun.awt.X11GraphicsEnvironment
+Setting project property: qualified_app_name -> OpenFlexo TestApplication
+Setting project property: java.library.path -> /usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+Setting project property: env.XTERM_LOCALE -> fr_FR.UTF-8
+Setting project property: java.home -> /usr/lib/jvm/java-8-openjdk-amd64/jre
+Setting project property: organization.logo -> https://media.openflexo.org/images/OpenFlexo_Logo.png
+Setting project property: env.WINDOWID -> 27262991
+Setting project property: project.name -> Packaging :: Build Test Installers
+Setting project property: env.LC_IDENTIFICATION -> fr_FR.UTF-8
+Setting project property: guava.version -> 18.0
+Setting project property: env.QT_QPA_PLATFORMTHEME -> appmenu-qt5
+Setting project property: env.XTERM_VERSION -> XTerm(312)
+Setting project property: env._ -> /usr/bin/mvn
+Setting project property: project.build.sourceDirectory -> /u02/SourceCode/openflexo-production/packaging-tests/src/main/java
+Setting project property: sun.boot.library.path -> /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64
+Setting project property: project.build.directory -> /u02/SourceCode/openflexo-production/packaging-tests/target
+Setting project property: env.TERM -> xterm
+Setting project property: logCount -> 0
+Setting project property: productSuffix -> TestApplication
+Setting project property: sun.io.unicode.encoding -> UnicodeLittle
+Setting project property: env.DISPLAY -> :0
+Setting project property: env.XDG_CONFIG_DIRS -> /etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg:/usr/share/kubuntu-default-settings/kf5-settings
+Setting project property: env.PWD -> /u02/SourceCode/openflexo-production/packaging-tests
+Setting project property: project.groupId -> org.openflexo
+Setting project property: env.LC_MEASUREMENT -> fr_FR.UTF-8
+Setting project property: java.runtime.version -> 1.8.0_45-internal-b14
+Setting project property: env.JOB -> unity-settings-daemon
+Setting project property: java.vm.info -> mixed mode
+Setting project property: java.specification.version -> 1.8
+Setting project property: maven.home -> /usr/share/maven
+Setting project property: TODAY -> January 27 2016
+Setting project property: java.vm.specification.version -> 1.8
+Setting project property: env.LC_TIME -> fr_FR.UTF-8
+Setting project property: env.UPSTART_INSTANCE -> 
+Setting project property: project.build.testOutputDirectory -> /u02/SourceCode/openflexo-production/packaging-tests/target/test-classes
+Setting project property: qualified_and_versioned_app_name -> OpenFlexo TestApplication 0.0.1SNAPSHOT
+Setting project property: relative_res_path -> OpenFlexo TestApplication 0.0.1SNAPSHOT.app/Contents/Resources
+Setting project property: env.XAUTHORITY -> /home/xtof/.Xauthority
+Setting project property: java.io.tmpdir -> /tmp
+Setting project property: sun.cpu.endian -> little
+Setting project property: sun.management.compiler -> HotSpot 64-Bit Tiered Compilers
+Setting project property: normalized_version -> 0.0.1
+Setting project property: flexobuild.work.dir -> /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild
+Setting project property: env.GDMSESSION -> ubuntu
+Project base dir set to: /u02/SourceCode/openflexo-production/packaging-tests
+  [antcall] calling target(s) [osx-packaging] in build file /u02/SourceCode/openflexo-production/packaging-tests/build-packaging.xml
+Setting ro project property: ant.file -> /u02/SourceCode/openflexo-production/packaging-tests/build-packaging.xml
+Adding reference: ant.projectHelper
+Adding reference: ant.parsing.context
+Adding reference: ant.targets
+parsing buildfile /u02/SourceCode/openflexo-production/packaging-tests/build-packaging.xml with URI = file:/u02/SourceCode/openflexo-production/packaging-tests/build-packaging.xml
+Setting ro project property: ant.project.name -> project
+Adding reference: project
+Setting ro project property: ant.project.default-target -> package
+Setting ro project property: ant.file.project -> /u02/SourceCode/openflexo-production/packaging-tests/build-packaging.xml
+Setting ro project property: ant.file.type.project -> file
+Project base dir set to: /u02/SourceCode/openflexo-production/packaging-tests
+ +Target: 
+ +Target: package
+Adding reference: ant.LocalProperties
+Class net.sf.antcontrib.property.PropertyCopy loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.platform.ShellScriptTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.property.PathToFileSet loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.RunTargetTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.antserver.client.ClientTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.property.RegexTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.Assert loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.math.MathTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.TryCatchTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.antserver.server.ServerTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.AntCallBack loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.walls.CompileWithWalls loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.OutOfDate loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.platform.OsFamily loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.perf.StopWatchTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.Throw loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.antclipse.ClassPathTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.property.URLEncodeTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.TimestampSelector loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.ForEach loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.IfTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.property.PropertySelector loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.property.SortList loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.AntFetch loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.net.PostTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.process.ForgetTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.process.Limit loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.Switch loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.Relentless loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.property.Variable loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.inifile.IniFileTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.design.VerifyDesign loaded from parent loader (parentFirst)
+parsing buildfile jar:file:/home/xtof/.m2/repository/org/apache/maven/maven-ant-tasks/2.1.3/maven-ant-tasks-2.1.3.jar!/org/apache/maven/artifact/ant/antlib.xml with URI = jar:file:/home/xtof/.m2/repository/org/apache/maven/maven-ant-tasks/2.1.3/maven-ant-tasks-2.1.3.jar!/org/apache/maven/artifact/ant/antlib.xml from a zip file
+Class org.apache.maven.artifact.ant.DependenciesTask loaded from parent loader (parentFirst)
+Class org.apache.maven.artifact.ant.InstallTask loaded from parent loader (parentFirst)
+Class org.apache.maven.artifact.ant.DeployTask loaded from parent loader (parentFirst)
+Class org.apache.maven.artifact.ant.InstallWagonProviderTask loaded from parent loader (parentFirst)
+Class org.apache.maven.artifact.ant.Mvn loaded from parent loader (parentFirst)
+Class org.apache.maven.artifact.ant.WritePomTask loaded from parent loader (parentFirst)
+Class org.apache.maven.artifact.ant.LocalRepository loaded from parent loader (parentFirst)
+Class org.apache.maven.artifact.ant.RemoteRepository loaded from parent loader (parentFirst)
+Class org.apache.maven.artifact.ant.Authentication loaded from parent loader (parentFirst)
+Class org.apache.maven.artifact.ant.Proxy loaded from parent loader (parentFirst)
+Class org.apache.maven.artifact.ant.Pom loaded from parent loader (parentFirst)
+   +Task: property
+Override ignored for property "resources.dir"
+Override ignored for property "icons.dir"
+Override ignored for property "license.dir"
+Importing file build-packaging.xml from /u02/SourceCode/openflexo-production/packaging-tests/build-packaging.xml
+ResourceStream for build-packaging.xml loaded from ant loader
+Overriding previous definition of reference to ant.projectHelper
+Adding reference: ant.projectHelper
+Resource build-packaging.xml loaded from ant loader
+parsing buildfile jar:file:/home/xtof/.m2/repository/org/openflexo/packaging-tools/0.4-SNAPSHOT/packaging-tools-0.4-SNAPSHOT.jar!/build-packaging.xml with URI = jar:file:/home/xtof/.m2/repository/org/openflexo/packaging-tools/0.4-SNAPSHOT/packaging-tools-0.4-SNAPSHOT.jar!/build-packaging.xml from a zip file
+Setting ro project property: ant.file.packaging-tools -> jar:file:/home/xtof/.m2/repository/org/openflexo/packaging-tools/0.4-SNAPSHOT/packaging-tools-0.4-SNAPSHOT.jar!/build-packaging.xml
+Setting ro project property: ant.file.type.packaging-tools -> url
+ +Target: defineProperties
+ +Target: packaging-tools.defineProperties
+ +Target: deploy
+ +Target: packaging-tools.deploy
+ +Target: createPackage
+ +Target: packaging-tools.createPackage
+ +Target: cleanTempDir
+ +Target: packaging-tools.cleanTempDir
+ +Target: checkoutArtifact
+ +Target: packaging-tools.checkoutArtifact
+ +Target: generateApplicationVersion
+ +Target: packaging-tools.generateApplicationVersion
+ +Target: generateFlexoProperties
+ +Target: packaging-tools.generateFlexoProperties
+ +Target: generateHelp
+ +Target: packaging-tools.generateHelp
+ +Target: packageWindows
+ +Target: packaging-tools.packageWindows
+ +Target: windowsPackaging
+ +Target: packaging-tools.windowsPackaging
+ +Target: generateInstallerScript
+ +Target: packaging-tools.generateInstallerScript
+ +Target: generateFlexoLauncher
+ +Target: packaging-tools.generateFlexoLauncher
+ +Target: packageMacOSX
+ +Target: packaging-tools.packageMacOSX
+ +Target: osx-packaging
+ +Target: packaging-tools.osx-packaging
+ +Target: packageLinux
+ +Target: packaging-tools.packageLinux
+ +Target: linux-packaging
+ +Target: packaging-tools.linux-packaging
+ +Target: copyPackagesOnServer
+ +Target: packaging-tools.copyPackagesOnServer
+ +Target: copyOnServerWindowsRelease
+ +Target: packaging-tools.copyOnServerWindowsRelease
+ +Target: copyOnServerMacRelease
+ +Target: packaging-tools.copyOnServerMacRelease
+ +Target: copyOnServerLinuxRelease
+ +Target: packaging-tools.copyOnServerLinuxRelease
+ +Target: copyOnServerWindowsNightly
+ +Target: packaging-tools.copyOnServerWindowsNightly
+ +Target: copyOnServerMacNightly
+ +Target: packaging-tools.copyOnServerMacNightly
+ +Target: copyOnServerLinuxNightly
+ +Target: packaging-tools.copyOnServerLinuxNightly
+ +Target: createRemoteFolder
+ +Target: packaging-tools.createRemoteFolder
+Class net.sf.antcontrib.property.PropertyCopy loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.platform.ShellScriptTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.property.PathToFileSet loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.RunTargetTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.antserver.client.ClientTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.property.RegexTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.Assert loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.math.MathTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.TryCatchTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.antserver.server.ServerTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.AntCallBack loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.walls.CompileWithWalls loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.OutOfDate loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.platform.OsFamily loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.perf.StopWatchTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.Throw loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.antclipse.ClassPathTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.property.URLEncodeTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.TimestampSelector loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.ForEach loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.IfTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.property.PropertySelector loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.property.SortList loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.AntFetch loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.net.PostTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.process.ForgetTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.process.Limit loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.Switch loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.Relentless loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.property.Variable loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.inifile.IniFileTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.design.VerifyDesign loaded from parent loader (parentFirst)
+parsing buildfile jar:file:/home/xtof/.m2/repository/org/apache/maven/maven-ant-tasks/2.1.3/maven-ant-tasks-2.1.3.jar!/org/apache/maven/artifact/ant/antlib.xml with URI = jar:file:/home/xtof/.m2/repository/org/apache/maven/maven-ant-tasks/2.1.3/maven-ant-tasks-2.1.3.jar!/org/apache/maven/artifact/ant/antlib.xml from a zip file
+Class org.apache.maven.artifact.ant.DependenciesTask loaded from parent loader (parentFirst)
+Class org.apache.maven.artifact.ant.InstallTask loaded from parent loader (parentFirst)
+Class org.apache.maven.artifact.ant.DeployTask loaded from parent loader (parentFirst)
+Class org.apache.maven.artifact.ant.InstallWagonProviderTask loaded from parent loader (parentFirst)
+Class org.apache.maven.artifact.ant.Mvn loaded from parent loader (parentFirst)
+Class org.apache.maven.artifact.ant.WritePomTask loaded from parent loader (parentFirst)
+Class org.apache.maven.artifact.ant.LocalRepository loaded from parent loader (parentFirst)
+Class org.apache.maven.artifact.ant.RemoteRepository loaded from parent loader (parentFirst)
+Class org.apache.maven.artifact.ant.Authentication loaded from parent loader (parentFirst)
+Class org.apache.maven.artifact.ant.Proxy loaded from parent loader (parentFirst)
+Class org.apache.maven.artifact.ant.Pom loaded from parent loader (parentFirst)
+Overriding previous definition of reference to ant.projectHelper
+Adding reference: ant.projectHelper
+Build sequence for target(s) `osx-packaging' is [osx-packaging]
+Complete build sequence is [osx-packaging, generateInstallerScript, generateApplicationVersion, packaging-tools.linux-packaging, copyOnServerWindowsRelease, packageWindows, packaging-tools.cleanTempDir, packaging-tools.defineProperties, packaging-tools.createRemoteFolder, checkoutArtifact, copyOnServerMacRelease, packaging-tools.packageMacOSX, defineProperties, package, generateHelp, packaging-tools.copyPackagesOnServer, generateFlexoProperties, windowsPackaging, packaging-tools.createPackage, generateFlexoLauncher, copyOnServerLinuxNightly, packaging-tools.copyOnServerLinuxRelease, packaging-tools.copyOnServerMacNightly, packaging-tools.copyOnServerWindowsNightly, packageMacOSX, packaging-tools.packageLinux, packaging-tools.packageWindows, cleanTempDir, createPackage, packaging-tools.osx-packaging, copyOnServerWindowsNightly, packaging-tools.generateInstallerScript, copyPackagesOnServer, copyOnServerMacNightly, packaging-tools.generateApplicationVersion, copyOnServerLinuxRelease, packaging-tools.copyOnServerMacRelease, packaging-tools.checkoutArtifact, packaging-tools.windowsPackaging, createRemoteFolder, packaging-tools.copyOnServerLinuxNightly, packaging-tools.generateHelp, linux-packaging, packaging-tools.copyOnServerWindowsRelease, packaging-tools.generateFlexoLauncher, deploy, packageLinux, packaging-tools.generateFlexoProperties, packaging-tools.deploy, ]
+  [antcall] Entering /u02/SourceCode/openflexo-production/packaging-tests/build-packaging.xml...
+Setting ro project property: ant.project.invoked-targets -> osx-packaging
+Build sequence for target(s) `osx-packaging' is [osx-packaging]
+Complete build sequence is [osx-packaging, generateInstallerScript, generateApplicationVersion, packaging-tools.linux-packaging, copyOnServerWindowsRelease, packageWindows, packaging-tools.cleanTempDir, packaging-tools.defineProperties, packaging-tools.createRemoteFolder, checkoutArtifact, copyOnServerMacRelease, packaging-tools.packageMacOSX, defineProperties, package, generateHelp, packaging-tools.copyPackagesOnServer, generateFlexoProperties, windowsPackaging, packaging-tools.createPackage, generateFlexoLauncher, copyOnServerLinuxNightly, packaging-tools.copyOnServerLinuxRelease, packaging-tools.copyOnServerMacNightly, packaging-tools.copyOnServerWindowsNightly, packageMacOSX, packaging-tools.packageLinux, packaging-tools.packageWindows, cleanTempDir, createPackage, packaging-tools.osx-packaging, copyOnServerWindowsNightly, packaging-tools.generateInstallerScript, copyPackagesOnServer, copyOnServerMacNightly, packaging-tools.generateApplicationVersion, copyOnServerLinuxRelease, packaging-tools.copyOnServerMacRelease, packaging-tools.checkoutArtifact, packaging-tools.windowsPackaging, createRemoteFolder, packaging-tools.copyOnServerLinuxNightly, packaging-tools.generateHelp, linux-packaging, packaging-tools.copyOnServerWindowsRelease, packaging-tools.generateFlexoLauncher, deploy, packageLinux, packaging-tools.generateFlexoProperties, packaging-tools.deploy, ]
+
+osx-packaging:
+     [exec] Current OS is Linux
+     [exec] Executing 'genisoimage' with arguments:
+     [exec] '-D'
+     [exec] '-quiet'
+     [exec] '-V'
+     [exec] 'Openflexo-0.0.1SNAPSHOT'
+     [exec] '-A'
+     [exec] 'OpenFlexo TestApplication 0.0.1SNAPSHOT'
+     [exec] '-p'
+     [exec] 'Openflexo'
+     [exec] '-r'
+     [exec] '-apple'
+     [exec] '-o'
+     [exec] '/u02/SourceCode/openflexo-production/packaging-tests/target/OpenFlexo TestApplication 0.0.1SNAPSHOT.dmg'
+     [exec] '/u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/mac_apps/Tests'
+     [exec] 
+     [exec] The ' characters around the executable and arguments are
+     [exec] not part of the command.
+Execute:Java13CommandLauncher: Executing 'genisoimage' with arguments:
+'-D'
+'-quiet'
+'-V'
+'Openflexo-0.0.1SNAPSHOT'
+'-A'
+'OpenFlexo TestApplication 0.0.1SNAPSHOT'
+'-p'
+'Openflexo'
+'-r'
+'-apple'
+'-o'
+'/u02/SourceCode/openflexo-production/packaging-tests/target/OpenFlexo TestApplication 0.0.1SNAPSHOT.dmg'
+'/u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/mac_apps/Tests'
+
+The ' characters around the executable and arguments are
+not part of the command.
+  [antcall] Exiting /u02/SourceCode/openflexo-production/packaging-tests/build-packaging.xml.
+  [antcall] Exiting /u02/SourceCode/openflexo-production/packaging-tests/build-packaging.xml.
+Setting ro project property: ant.file -> /u02/SourceCode/openflexo-production/packaging-tests/build-packaging.xml
+Setting ro project property: ant.project.invoked-targets -> createPackage
+Setting ro project property: ant.file.type.project -> file
+Setting ro project property: ant.file.packaging-tools -> jar:file:/home/xtof/.m2/repository/org/openflexo/packaging-tools/0.4-SNAPSHOT/packaging-tools-0.4-SNAPSHOT.jar!/build-packaging.xml
+Setting ro project property: ant.project.default-target -> package
+Setting ro project property: ant.file.project -> /u02/SourceCode/openflexo-production/packaging-tests/build-packaging.xml
+Setting ro project property: ant.file.type.packaging-tools -> url
+Setting ro project property: ant.project.name -> project
+Setting ro project property: ant.file.type.maven-antrun- -> file
+Setting ro project property: ant.file.maven-antrun- -> /u02/SourceCode/openflexo-production/packaging-tests/target/antrun/build-main.xml
+Setting project property: java.ext.dirs -> /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext:/usr/java/packages/lib/ext
+Setting project property: env.TERM -> xterm
+Setting project property: maven.type -> zip
+Setting project property: main.class -> org.openflexo.TestApplication
+Setting project property: artifact.dir -> /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/checkedout-artifact
+Setting project property: jsr305.version -> 2.0.1
+Setting project property: junit.version -> 4.10
+Setting project property: env.QT_IM_MODULE -> ibus
+Setting project property: findbugs.version -> 2.5.2
+Setting project property: mac.app.dir -> /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/mac_apps
+Setting project property: wagonssh.version -> 2.8
+Setting project property: env.USER -> xtof
+Setting project property: env.LESSOPEN -> | /usr/bin/lesspipe %s
+Setting project property: env.HISTCONTROL -> ignoreboth
+Setting project property: java.vm.specification.version -> 1.8
+Setting project property: env.QT4_IM_MODULE -> ibus
+Setting project property: env.CLUTTER_IM_MODULE -> xim
+Setting project property: java.specification.vendor -> Oracle Corporation
+Setting project property: java.vm.name -> OpenJDK 64-Bit Server VM
+Setting project property: project.groupId -> org.openflexo
+Setting project property: user.dir -> /u02/SourceCode/openflexo-production/packaging-tests
+Setting project property: default.logging.level -> SEVERE
+Setting project property: java.awt.graphicsenv -> sun.awt.X11GraphicsEnvironment
+Setting project property: flexo_version -> 0.0.1SNAPSHOT
+Setting project property: env.OLDPWD -> /u02/SourceCode/openflexo-production/packaging-tests
+Setting project property: java.vendor.url -> http://java.oracle.com/
+Setting project property: env.GNOME_KEYRING_PID -> 
+Setting project property: project.build.testSourceDirectory -> /u02/SourceCode/openflexo-production/packaging-tests/src/test/java
+Setting project property: argLine -> -javaagent:/home/xtof/.m2/repository/org/jacoco/org.jacoco.agent/0.7.4.201502262128/org.jacoco.agent-0.7.4.201502262128-runtime.jar=destfile=/u02/SourceCode/openflexo-production/packaging-tests/target/jacoco.exec,excludes=**/test/*
+Setting project property: classworlds.conf -> /usr/share/maven/bin/m2.conf
+Setting project property: project.build.directory -> /u02/SourceCode/openflexo-production/packaging-tests/target
+Setting project property: sun.boot.class.path -> /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/resources.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jsse.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jce.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/charsets.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jfr.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/classes
+Setting project property: java.vendor -> Oracle Corporation
+Setting project property: logCount -> 0
+Setting project property: env.XDG_CURRENT_DESKTOP -> Unity
+Setting project property: license.dir -> /u02/SourceCode/openflexo-production/packaging-tests/src/main/resources/License
+Setting project property: env.SESSIONTYPE -> gnome-session
+Setting project property: env.GDMSESSION -> ubuntu
+Setting project property: changes.version -> 2.11
+Setting project property: java.home -> /usr/lib/jvm/java-8-openjdk-amd64/jre
+Setting project property: toolsconfig.version -> 0.4-SNAPSHOT
+Setting project property: env.INSTANCE -> 
+Setting project property: env.LOGNAME -> xtof
+Setting project property: java.version -> 1.8.0_45-internal
+Setting project property: env.PAM_KWALLET_LOGIN -> /tmp//xtof.socket
+Setting project property: env.DESKTOP_SESSION -> ubuntu
+Setting project property: flexobuild.work.dir -> /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild
+Setting project property: env.LC_ADDRESS -> fr_FR.UTF-8
+Setting project property: versionType -> Tests
+Setting project property: java.runtime.name -> OpenJDK Runtime Environment
+Setting project property: env.PWD -> /u02/SourceCode/openflexo-production/packaging-tests
+Setting project property: env.XDG_SESSION_PATH -> /org/freedesktop/DisplayManager/Session0
+Setting project property: maven.home -> /usr/share/maven
+Setting project property: commit.id -> ${env.GIT_COMMIT}
+Setting project property: jacoco.version -> 0.7.4.201502262128
+Setting project property: env.KDEDIRS -> /usr/share/kubuntu-active-default-settings/:/usr/share/plasma-active-default-settings/:/usr/share/kubuntu-default-settings/kde4-profile/default/
+Setting project property: env.HOME -> /home/xtof
+Setting project property: java.class.version -> 52.0
+Setting project property: organization.name -> Openflexo
+Setting project property: ant.core.lib -> /home/xtof/.m2/repository/org/apache/ant/ant/1.8.2/ant-1.8.2.jar
+Setting project property: env.LC_TELEPHONE -> fr_FR.UTF-8
+Setting project property: resources.dir -> /u02/SourceCode/openflexo-production/packaging-tests/src/main/resources
+Setting project property: env.XDG_SESSION_ID -> c2
+Setting project property: javadoc.version -> 2.10.1
+Setting project property: maven.group.id -> org.openflexo.packaging
+Setting project property: build.properties -> /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/build.properties
+Setting project property: user.name -> xtof
+Setting project property: env.XDG_GREETER_DATA_DIR -> /var/lib/lightdm-data/xtof
+Setting project property: dist.dir -> /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/dist
+Setting project property: project.info.version -> 2.8
+Setting project property: sun.desktop -> gnome
+Setting project property: securerandom.source -> file:/dev/./urandom
+Setting project property: env.SHLVL -> 1
+Setting project property: env.UPSTART_EVENTS -> xsession started
+Setting project property: java.vm.vendor -> Oracle Corporation
+Setting project property: env.COMPIZ_BIN_PATH -> /usr/bin/
+Setting project property: env.LANG -> fr_FR.UTF-8
+Setting project property: apache.commons-lang.version -> 3.1
+Setting project property: env.UPSTART_SESSION -> unix:abstract=/com/ubuntu/upstart-session/1000/3111
+Setting project property: env.WINDOWID -> 27262991
+Setting project property: surefire.reportplugin.version -> 2.18.1
+Setting project property: env.DISPLAY -> :0
+Setting project property: env.LC_NUMERIC -> fr_FR.UTF-8
+Setting project property: env.LESSCLOSE -> /usr/bin/lesspipe %s %s
+Setting project property: sun.java.command -> org.codehaus.plexus.classworlds.launcher.Launcher -X -e -Pinstaller package
+Setting project property: DSTAMP -> 20160127
+Setting project property: env.GIO_LAUNCHED_DESKTOP_FILE_PID -> 4092
+Setting project property: env.JOB -> unity-settings-daemon
+Setting project property: env.COMPIZ_CONFIG_PROFILE -> ubuntu
+Setting project property: sun.jnu.encoding -> UTF-8
+Setting project property: compiler.target -> 1.7
+Setting project property: env.LS_COLORS -> rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:
+Setting project property: keepLogTrace -> false
+Setting project property: localRepository ->        id: local
+      url: file:///home/xtof/.m2/repository/
+   layout: none
+Setting project property: resource.encoding -> UTF-8
+Setting project property: project.build.outputDirectory -> /u02/SourceCode/openflexo-production/packaging-tests/target/classes
+Setting project property: env.SESSION -> ubuntu
+Setting project property: os.name -> Linux
+Setting project property: env.XMODIFIERS -> @im=ibus
+Setting project property: env.LC_MONETARY -> fr_FR.UTF-8
+Setting project property: sun.java.launcher -> SUN_STANDARD
+Setting project property: java.library.path -> /usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+Setting project property: env.DBUS_SESSION_BUS_ADDRESS -> unix:abstract=/tmp/dbus-QUQhlZIxNH
+Setting project property: env.XDG_SEAT -> seat0
+Setting project property: program.args -> -userType developer_release
+Setting project property: build.id -> 2016-01-27.1331
+Setting project property: env.LC_NAME -> fr_FR.UTF-8
+Setting project property: volume_name -> Openflexo-0.0.1SNAPSHOT
+Setting project property: java.vm.version -> 25.45-b02
+Setting project property: checkstyle.version -> 2.12
+Setting project property: line.separator -> 
+Setting project property: sun.io.unicode.encoding -> UnicodeLittle
+Setting project property: source.encoding -> UTF-8
+Setting project property: vm.args -> -Xmx512M -XX:MaxPermSize=128M
+Setting project property: file.separator -> /
+Setting project property: sun.boot.library.path -> /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64
+Setting project property: project.artifactId -> packaging-tests
+Setting project property: product.name -> OpenFlexo
+Setting project property: env.GIO_LAUNCHED_DESKTOP_FILE -> /usr/share/applications/debian-xterm.desktop
+Setting project property: env.XDG_SESSION_DESKTOP -> ubuntu
+Setting project property: javahelp.version -> 2.0.05
+Setting project property: env.UPSTART_JOB -> unity7
+Setting project property: os.arch -> amd64
+Setting project property: env.XDG_SESSION_TYPE -> x11
+Setting project property: project.name -> Packaging :: Build Test Installers
+Setting project property: env.XDG_CONFIG_DIRS -> /etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg:/usr/share/kubuntu-default-settings/kf5-settings
+Setting project property: mavensite.version -> 3.4
+Setting project property: maven.dependency.org.openflexo.packaging-tools.jar.path -> /home/xtof/.m2/repository/org/openflexo/packaging-tools/0.4-SNAPSHOT/packaging-tools-0.4-SNAPSHOT.jar
+Setting project property: env.IM_CONFIG_PHASE -> 1
+Setting project property: env.GNOME_DESKTOP_SESSION_ID -> this-is-deprecated
+Setting project property: TODAY -> January 27 2016
+Setting project property: env.PATH -> /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+Setting project property: java.vendor.url.bug -> http://bugreport.sun.com/bugreport/
+Setting project property: icons.dir -> /u02/SourceCode/openflexo-production/packaging-tests/src/main/resources/Icons
+Setting project property: env.QT_QPA_PLATFORMTHEME -> appmenu-qt5
+Setting project property: os.version -> 3.19.0-49-generic
+Setting project property: env.XDG_DATA_DIRS -> /usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/
+Setting project property: env.LC_TIME -> fr_FR.UTF-8
+Setting project property: org.openflexo:packaging-tools:jar -> /home/xtof/.m2/repository/org/openflexo/packaging-tools/0.4-SNAPSHOT/packaging-tools-0.4-SNAPSHOT.jar
+Setting project property: env.XDG_RUNTIME_DIR -> /run/user/1000
+Setting project property: productSuffix -> TestApplication
+Setting project property: java.runtime.version -> 1.8.0_45-internal-b14
+Setting project property: allowsDocSubmission -> false
+Setting project property: project.description -> This pom aims at capitalizing production configuration items for all openflexo productions
+Setting project property: wizard.setup.icon -> Openflexo.ico
+Setting project property: maven.artifact.id -> packaging-tests
+Setting project property: package_name -> OpenFlexo TestApplication 0.0.1SNAPSHOT Setup
+Setting project property: guice.disable.misplaced.annotation.check -> true
+Setting project property: sun.cpu.isalist -> 
+Setting project property: project.build.sourceDirectory -> /u02/SourceCode/openflexo-production/packaging-tests/src/main/java
+Setting project property: env.GTK_MODULES -> canberra-gtk-module:canberra-gtk-module:overlay-scrollbar:unity-gtk-module
+Setting project property: file.encoding -> UTF-8
+Setting project property: env.GPG_AGENT_INFO -> /run/user/1000/keyring/gpg:0:1
+Setting project property: env.SSH_AUTH_SOCK -> /run/user/1000/keyring/ssh
+Setting project property: sun.cpu.endian -> little
+Setting project property: env.XDG_SEAT_PATH -> /org/freedesktop/DisplayManager/Seat0
+Setting project property: env.UPSTART_INSTANCE -> 
+Setting project property: env.GTK_IM_MODULE -> ibus
+Setting project property: user.timezone -> Europe/Paris
+Setting project property: TSTAMP -> 1331
+Setting project property: env._ -> /usr/bin/mvn
+Setting project property: env.LC_PAPER -> fr_FR.UTF-8
+Setting project property: java.endorsed.dirs -> /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/endorsed
+Setting project property: java.specification.name -> Java Platform API Specification
+Setting project property: env.DEFAULTS_PATH -> /usr/share/gconf/ubuntu.default.path
+Setting project property: guava.version -> 18.0
+Setting project property: sun.management.compiler -> HotSpot 64-Bit Tiered Compilers
+Setting project property: env.SHELL -> /bin/bash
+Setting project property: path.separator -> :
+Setting project property: project.version -> 0.0.1-SNAPSHOT
+Setting project property: file.encoding.pkg -> sun.io
+Setting project property: user.home -> /home/xtof
+Setting project property: java.vm.info -> mixed mode
+Setting project property: userType -> developer_release
+Setting project property: qualified_and_versioned_app_name -> OpenFlexo TestApplication 0.0.1SNAPSHOT
+Setting project property: organization.logo -> https://media.openflexo.org/images/OpenFlexo_Logo.png
+Setting project property: env.GDM_LANG -> fr_FR
+Setting project property: sun.arch.data.model -> 64
+Setting project property: project.packaging -> pom
+Setting project property: env.XTERM_VERSION -> XTerm(312)
+Setting project property: java.class.path -> /usr/share/maven/boot/plexus-classworlds-2.x.jar
+Setting project property: project.build.testOutputDirectory -> /u02/SourceCode/openflexo-production/packaging-tests/target/test-classes
+Setting project property: env.GNOME_KEYRING_CONTROL -> 
+Setting project property: env.MANDATORY_PATH -> /usr/share/gconf/ubuntu.mandatory.path
+Setting project property: project.build.sourceEncoding -> UTF-8
+Setting project property: settings.localRepository -> /home/xtof/.m2/repository
+Setting project property: ant.version -> 1.9.0
+Setting project property: java.specification.version -> 1.8
+Setting project property: java.vm.specification.name -> Java Virtual Machine Specification
+Setting project property: env.XAUTHORITY -> /home/xtof/.Xauthority
+Setting project property: env.XTERM_SHELL -> /bin/bash
+Setting project property: env.JAVA_HOME -> /usr/lib/jvm/java-8-openjdk-amd64
+Setting project property: icon_mac_name -> IconOpenflexo.icns
+Setting project property: normalized_version -> 0.0.1
+Setting project property: java.vm.specification.vendor -> Oracle Corporation
+Setting project property: env.XTERM_LOCALE -> fr_FR.UTF-8
+Setting project property: env.LC_MEASUREMENT -> fr_FR.UTF-8
+Setting project property: user.language -> fr
+Setting project property: changes.componentfilter -> AND component=packaging-tests
+Setting project property: env.LANGUAGE -> fr_FR:fr:en
+Setting project property: java.awt.printerjob -> sun.print.PSPrinterJob
+Setting project property: organization.url -> http://www.openflexo.org
+Setting project property: compiler.source -> 1.7
+Setting project property: jxr.report.version -> 2.5
+Setting project property: maven.classifier -> packaging
+Setting project property: mac.app.dir.versioned -> /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/mac_apps/Tests
+Setting project property: awt.toolkit -> sun.awt.X11.XToolkit
+Setting project property: sun.os.patch.level -> unknown
+Setting project property: env.LC_IDENTIFICATION -> fr_FR.UTF-8
+Setting project property: java.io.tmpdir -> /tmp
+Setting project property: openflexo-production.logo -> https://media.openflexo.org/images/openflexo-production_logo64x64.png
+Setting project property: env.XDG_VTNR -> 7
+Setting project property: qualified_app_name -> OpenFlexo TestApplication
+Setting project property: user.country -> FR
+Setting project property: jersey.version -> 1.17.1
+Setting project property: maven.project.dependencies.versions -> 0.4-SNAPSHOT:
+Project base dir set to: /u02/SourceCode/openflexo-production/packaging-tests
+  [antcall] calling target(s) [packageLinux] in build file /u02/SourceCode/openflexo-production/packaging-tests/build-packaging.xml
+Setting ro project property: ant.file -> /u02/SourceCode/openflexo-production/packaging-tests/build-packaging.xml
+Adding reference: ant.projectHelper
+Adding reference: ant.parsing.context
+Adding reference: ant.targets
+parsing buildfile /u02/SourceCode/openflexo-production/packaging-tests/build-packaging.xml with URI = file:/u02/SourceCode/openflexo-production/packaging-tests/build-packaging.xml
+Setting ro project property: ant.project.name -> project
+Adding reference: project
+Setting ro project property: ant.project.default-target -> package
+Setting ro project property: ant.file.project -> /u02/SourceCode/openflexo-production/packaging-tests/build-packaging.xml
+Setting ro project property: ant.file.type.project -> file
+Project base dir set to: /u02/SourceCode/openflexo-production/packaging-tests
+ +Target: 
+ +Target: package
+Adding reference: ant.LocalProperties
+Class net.sf.antcontrib.property.PropertyCopy loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.platform.ShellScriptTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.property.PathToFileSet loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.RunTargetTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.antserver.client.ClientTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.property.RegexTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.Assert loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.math.MathTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.TryCatchTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.antserver.server.ServerTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.AntCallBack loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.walls.CompileWithWalls loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.OutOfDate loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.platform.OsFamily loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.perf.StopWatchTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.Throw loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.antclipse.ClassPathTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.property.URLEncodeTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.TimestampSelector loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.ForEach loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.IfTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.property.PropertySelector loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.property.SortList loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.AntFetch loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.net.PostTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.process.ForgetTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.process.Limit loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.Switch loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.Relentless loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.property.Variable loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.inifile.IniFileTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.design.VerifyDesign loaded from parent loader (parentFirst)
+parsing buildfile jar:file:/home/xtof/.m2/repository/org/apache/maven/maven-ant-tasks/2.1.3/maven-ant-tasks-2.1.3.jar!/org/apache/maven/artifact/ant/antlib.xml with URI = jar:file:/home/xtof/.m2/repository/org/apache/maven/maven-ant-tasks/2.1.3/maven-ant-tasks-2.1.3.jar!/org/apache/maven/artifact/ant/antlib.xml from a zip file
+Class org.apache.maven.artifact.ant.DependenciesTask loaded from parent loader (parentFirst)
+Class org.apache.maven.artifact.ant.InstallTask loaded from parent loader (parentFirst)
+Class org.apache.maven.artifact.ant.DeployTask loaded from parent loader (parentFirst)
+Class org.apache.maven.artifact.ant.InstallWagonProviderTask loaded from parent loader (parentFirst)
+Class org.apache.maven.artifact.ant.Mvn loaded from parent loader (parentFirst)
+Class org.apache.maven.artifact.ant.WritePomTask loaded from parent loader (parentFirst)
+Class org.apache.maven.artifact.ant.LocalRepository loaded from parent loader (parentFirst)
+Class org.apache.maven.artifact.ant.RemoteRepository loaded from parent loader (parentFirst)
+Class org.apache.maven.artifact.ant.Authentication loaded from parent loader (parentFirst)
+Class org.apache.maven.artifact.ant.Proxy loaded from parent loader (parentFirst)
+Class org.apache.maven.artifact.ant.Pom loaded from parent loader (parentFirst)
+   +Task: property
+Override ignored for property "resources.dir"
+Override ignored for property "icons.dir"
+Override ignored for property "license.dir"
+Importing file build-packaging.xml from /u02/SourceCode/openflexo-production/packaging-tests/build-packaging.xml
+ResourceStream for build-packaging.xml loaded from ant loader
+Overriding previous definition of reference to ant.projectHelper
+Adding reference: ant.projectHelper
+Resource build-packaging.xml loaded from ant loader
+parsing buildfile jar:file:/home/xtof/.m2/repository/org/openflexo/packaging-tools/0.4-SNAPSHOT/packaging-tools-0.4-SNAPSHOT.jar!/build-packaging.xml with URI = jar:file:/home/xtof/.m2/repository/org/openflexo/packaging-tools/0.4-SNAPSHOT/packaging-tools-0.4-SNAPSHOT.jar!/build-packaging.xml from a zip file
+Setting ro project property: ant.file.packaging-tools -> jar:file:/home/xtof/.m2/repository/org/openflexo/packaging-tools/0.4-SNAPSHOT/packaging-tools-0.4-SNAPSHOT.jar!/build-packaging.xml
+Setting ro project property: ant.file.type.packaging-tools -> url
+ +Target: defineProperties
+ +Target: packaging-tools.defineProperties
+ +Target: deploy
+ +Target: packaging-tools.deploy
+ +Target: createPackage
+ +Target: packaging-tools.createPackage
+ +Target: cleanTempDir
+ +Target: packaging-tools.cleanTempDir
+ +Target: checkoutArtifact
+ +Target: packaging-tools.checkoutArtifact
+ +Target: generateApplicationVersion
+ +Target: packaging-tools.generateApplicationVersion
+ +Target: generateFlexoProperties
+ +Target: packaging-tools.generateFlexoProperties
+ +Target: generateHelp
+ +Target: packaging-tools.generateHelp
+ +Target: packageWindows
+ +Target: packaging-tools.packageWindows
+ +Target: windowsPackaging
+ +Target: packaging-tools.windowsPackaging
+ +Target: generateInstallerScript
+ +Target: packaging-tools.generateInstallerScript
+ +Target: generateFlexoLauncher
+ +Target: packaging-tools.generateFlexoLauncher
+ +Target: packageMacOSX
+ +Target: packaging-tools.packageMacOSX
+ +Target: osx-packaging
+ +Target: packaging-tools.osx-packaging
+ +Target: packageLinux
+ +Target: packaging-tools.packageLinux
+ +Target: linux-packaging
+ +Target: packaging-tools.linux-packaging
+ +Target: copyPackagesOnServer
+ +Target: packaging-tools.copyPackagesOnServer
+ +Target: copyOnServerWindowsRelease
+ +Target: packaging-tools.copyOnServerWindowsRelease
+ +Target: copyOnServerMacRelease
+ +Target: packaging-tools.copyOnServerMacRelease
+ +Target: copyOnServerLinuxRelease
+ +Target: packaging-tools.copyOnServerLinuxRelease
+ +Target: copyOnServerWindowsNightly
+ +Target: packaging-tools.copyOnServerWindowsNightly
+ +Target: copyOnServerMacNightly
+ +Target: packaging-tools.copyOnServerMacNightly
+ +Target: copyOnServerLinuxNightly
+ +Target: packaging-tools.copyOnServerLinuxNightly
+ +Target: createRemoteFolder
+ +Target: packaging-tools.createRemoteFolder
+Class net.sf.antcontrib.property.PropertyCopy loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.platform.ShellScriptTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.property.PathToFileSet loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.RunTargetTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.antserver.client.ClientTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.property.RegexTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.Assert loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.math.MathTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.TryCatchTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.antserver.server.ServerTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.AntCallBack loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.walls.CompileWithWalls loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.OutOfDate loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.platform.OsFamily loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.perf.StopWatchTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.Throw loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.antclipse.ClassPathTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.property.URLEncodeTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.TimestampSelector loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.ForEach loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.IfTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.property.PropertySelector loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.property.SortList loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.AntFetch loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.net.PostTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.process.ForgetTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.process.Limit loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.Switch loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.Relentless loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.property.Variable loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.inifile.IniFileTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.design.VerifyDesign loaded from parent loader (parentFirst)
+parsing buildfile jar:file:/home/xtof/.m2/repository/org/apache/maven/maven-ant-tasks/2.1.3/maven-ant-tasks-2.1.3.jar!/org/apache/maven/artifact/ant/antlib.xml with URI = jar:file:/home/xtof/.m2/repository/org/apache/maven/maven-ant-tasks/2.1.3/maven-ant-tasks-2.1.3.jar!/org/apache/maven/artifact/ant/antlib.xml from a zip file
+Class org.apache.maven.artifact.ant.DependenciesTask loaded from parent loader (parentFirst)
+Class org.apache.maven.artifact.ant.InstallTask loaded from parent loader (parentFirst)
+Class org.apache.maven.artifact.ant.DeployTask loaded from parent loader (parentFirst)
+Class org.apache.maven.artifact.ant.InstallWagonProviderTask loaded from parent loader (parentFirst)
+Class org.apache.maven.artifact.ant.Mvn loaded from parent loader (parentFirst)
+Class org.apache.maven.artifact.ant.WritePomTask loaded from parent loader (parentFirst)
+Class org.apache.maven.artifact.ant.LocalRepository loaded from parent loader (parentFirst)
+Class org.apache.maven.artifact.ant.RemoteRepository loaded from parent loader (parentFirst)
+Class org.apache.maven.artifact.ant.Authentication loaded from parent loader (parentFirst)
+Class org.apache.maven.artifact.ant.Proxy loaded from parent loader (parentFirst)
+Class org.apache.maven.artifact.ant.Pom loaded from parent loader (parentFirst)
+Overriding previous definition of reference to ant.projectHelper
+Adding reference: ant.projectHelper
+Build sequence for target(s) `packageLinux' is [packageLinux]
+Complete build sequence is [packageLinux, generateInstallerScript, generateApplicationVersion, packaging-tools.linux-packaging, copyOnServerWindowsRelease, packageWindows, packaging-tools.cleanTempDir, packaging-tools.defineProperties, packaging-tools.createRemoteFolder, checkoutArtifact, copyOnServerMacRelease, packaging-tools.packageMacOSX, defineProperties, package, generateHelp, packaging-tools.copyPackagesOnServer, generateFlexoProperties, windowsPackaging, packaging-tools.createPackage, generateFlexoLauncher, copyOnServerLinuxNightly, packaging-tools.copyOnServerLinuxRelease, packaging-tools.copyOnServerMacNightly, packaging-tools.copyOnServerWindowsNightly, packageMacOSX, packaging-tools.packageLinux, packaging-tools.packageWindows, cleanTempDir, createPackage, packaging-tools.osx-packaging, copyOnServerWindowsNightly, packaging-tools.generateInstallerScript, copyPackagesOnServer, copyOnServerMacNightly, packaging-tools.generateApplicationVersion, copyOnServerLinuxRelease, packaging-tools.copyOnServerMacRelease, packaging-tools.checkoutArtifact, packaging-tools.windowsPackaging, createRemoteFolder, packaging-tools.copyOnServerLinuxNightly, osx-packaging, packaging-tools.generateHelp, linux-packaging, packaging-tools.copyOnServerWindowsRelease, packaging-tools.generateFlexoLauncher, deploy, packaging-tools.generateFlexoProperties, packaging-tools.deploy, ]
+  [antcall] Entering /u02/SourceCode/openflexo-production/packaging-tests/build-packaging.xml...
+Setting ro project property: ant.project.invoked-targets -> packageLinux
+Build sequence for target(s) `packageLinux' is [packageLinux]
+Complete build sequence is [packageLinux, generateInstallerScript, generateApplicationVersion, packaging-tools.linux-packaging, copyOnServerWindowsRelease, packageWindows, packaging-tools.cleanTempDir, packaging-tools.defineProperties, packaging-tools.createRemoteFolder, checkoutArtifact, copyOnServerMacRelease, packaging-tools.packageMacOSX, defineProperties, package, generateHelp, packaging-tools.copyPackagesOnServer, generateFlexoProperties, windowsPackaging, packaging-tools.createPackage, generateFlexoLauncher, copyOnServerLinuxNightly, packaging-tools.copyOnServerLinuxRelease, packaging-tools.copyOnServerMacNightly, packaging-tools.copyOnServerWindowsNightly, packageMacOSX, packaging-tools.packageLinux, packaging-tools.packageWindows, cleanTempDir, createPackage, packaging-tools.osx-packaging, copyOnServerWindowsNightly, packaging-tools.generateInstallerScript, copyPackagesOnServer, copyOnServerMacNightly, packaging-tools.generateApplicationVersion, copyOnServerLinuxRelease, packaging-tools.copyOnServerMacRelease, packaging-tools.checkoutArtifact, packaging-tools.windowsPackaging, createRemoteFolder, packaging-tools.copyOnServerLinuxNightly, osx-packaging, packaging-tools.generateHelp, linux-packaging, packaging-tools.copyOnServerWindowsRelease, packaging-tools.generateFlexoLauncher, deploy, packaging-tools.generateFlexoProperties, packaging-tools.deploy, ]
+
+packageLinux:
+Setting project property: start.script.file -> /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/dist/start.sh
+     [copy] Copying 1 resource to /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/dist
+     [copy] Copying Linux/start.sh.tpl to /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/dist/start.sh
+Reading filters from /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/build.properties
+ResourceStream for Linux/start.sh.tpl loaded from ant loader
+Replacing: @vm.args@ -> -Xmx512M -XX:MaxPermSize=128M
+Replacing: @main.class@ -> org.openflexo.TestApplication
+Replacing: @userType@ -> developer_release
+FileSet: Setup scanner in dir /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/dist with patternSet{ includes: [start.sh] excludes: [] }
+    [chmod] Executing 'chmod' with arguments:
+    [chmod] '755'
+    [chmod] '/u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/dist/start.sh'
+    [chmod] 
+    [chmod] The ' characters around the executable and arguments are
+    [chmod] not part of the command.
+Execute:Java13CommandLauncher: Executing 'chmod' with arguments:
+'755'
+'/u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/dist/start.sh'
+
+The ' characters around the executable and arguments are
+not part of the command.
+    [chmod] Applied chmod to 1 file and 0 directories.
+Setting ro project property: ant.file -> /u02/SourceCode/openflexo-production/packaging-tests/build-packaging.xml
+Setting ro project property: ant.project.invoked-targets -> packageLinux
+Setting ro project property: ant.file.type.project -> file
+Setting ro project property: ant.file.packaging-tools -> jar:file:/home/xtof/.m2/repository/org/openflexo/packaging-tools/0.4-SNAPSHOT/packaging-tools-0.4-SNAPSHOT.jar!/build-packaging.xml
+Setting ro project property: ant.project.default-target -> package
+Setting ro project property: ant.file.project -> /u02/SourceCode/openflexo-production/packaging-tests/build-packaging.xml
+Setting ro project property: ant.file.type.packaging-tools -> url
+Setting ro project property: ant.project.name -> project
+Setting ro project property: ant.file.type.maven-antrun- -> file
+Setting ro project property: ant.file.maven-antrun- -> /u02/SourceCode/openflexo-production/packaging-tests/target/antrun/build-main.xml
+Setting project property: maven.dependency.org.openflexo.packaging-tools.jar.path -> /home/xtof/.m2/repository/org/openflexo/packaging-tools/0.4-SNAPSHOT/packaging-tools-0.4-SNAPSHOT.jar
+Setting project property: env.CLUTTER_IM_MODULE -> xim
+Setting project property: TSTAMP -> 1331
+Setting project property: env.UPSTART_SESSION -> unix:abstract=/com/ubuntu/upstart-session/1000/3111
+Setting project property: icon_mac_name -> IconOpenflexo.icns
+Setting project property: project.info.version -> 2.8
+Setting project property: java.class.path -> /usr/share/maven/boot/plexus-classworlds-2.x.jar
+Setting project property: java.vendor.url.bug -> http://bugreport.sun.com/bugreport/
+Setting project property: sun.cpu.endian -> little
+Setting project property: project.description -> This pom aims at capitalizing production configuration items for all openflexo productions
+Setting project property: awt.toolkit -> sun.awt.X11.XToolkit
+Setting project property: env.UPSTART_INSTANCE -> 
+Setting project property: env.WINDOWID -> 27262991
+Setting project property: dist.dir -> /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/dist
+Setting project property: env.LOGNAME -> xtof
+Setting project property: organization.name -> Openflexo
+Setting project property: userType -> developer_release
+Setting project property: env.GTK_MODULES -> canberra-gtk-module:canberra-gtk-module:overlay-scrollbar:unity-gtk-module
+Setting project property: java.vm.info -> mixed mode
+Setting project property: env.MANDATORY_PATH -> /usr/share/gconf/ubuntu.mandatory.path
+Setting project property: env.JAVA_HOME -> /usr/lib/jvm/java-8-openjdk-amd64
+Setting project property: java.home -> /usr/lib/jvm/java-8-openjdk-amd64/jre
+Setting project property: java.vendor.url -> http://java.oracle.com/
+Setting project property: mac.app.dir -> /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/mac_apps
+Setting project property: DSTAMP -> 20160127
+Setting project property: guava.version -> 18.0
+Setting project property: build.properties -> /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/build.properties
+Setting project property: line.separator -> 
+Setting project property: jxr.report.version -> 2.5
+Setting project property: env.LC_TELEPHONE -> fr_FR.UTF-8
+Setting project property: allowsDocSubmission -> false
+Setting project property: ant.core.lib -> /home/xtof/.m2/repository/org/apache/ant/ant/1.8.2/ant-1.8.2.jar
+Setting project property: sun.java.launcher -> SUN_STANDARD
+Setting project property: settings.localRepository -> /home/xtof/.m2/repository
+Setting project property: file.encoding.pkg -> sun.io
+Setting project property: env.XDG_RUNTIME_DIR -> /run/user/1000
+Setting project property: project.artifactId -> packaging-tests
+Setting project property: env.XDG_DATA_DIRS -> /usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/
+Setting project property: env.LS_COLORS -> rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:
+Setting project property: wagonssh.version -> 2.8
+Setting project property: env.INSTANCE -> 
+Setting project property: project.name -> Packaging :: Build Test Installers
+Setting project property: changes.componentfilter -> AND component=packaging-tests
+Setting project property: source.encoding -> UTF-8
+Setting project property: organization.logo -> https://media.openflexo.org/images/OpenFlexo_Logo.png
+Setting project property: env.LESSOPEN -> | /usr/bin/lesspipe %s
+Setting project property: openflexo-production.logo -> https://media.openflexo.org/images/openflexo-production_logo64x64.png
+Setting project property: file.separator -> /
+Setting project property: resources.dir -> /u02/SourceCode/openflexo-production/packaging-tests/src/main/resources
+Setting project property: logCount -> 0
+Setting project property: project.build.sourceDirectory -> /u02/SourceCode/openflexo-production/packaging-tests/src/main/java
+Setting project property: javadoc.version -> 2.10.1
+Setting project property: env.XDG_SESSION_ID -> c2
+Setting project property: env.GNOME_KEYRING_PID -> 
+Setting project property: product.name -> OpenFlexo
+Setting project property: java.vm.vendor -> Oracle Corporation
+Setting project property: env.LC_PAPER -> fr_FR.UTF-8
+Setting project property: env.XDG_SESSION_PATH -> /org/freedesktop/DisplayManager/Session0
+Setting project property: maven.group.id -> org.openflexo.packaging
+Setting project property: maven.classifier -> packaging
+Setting project property: env.LESSCLOSE -> /usr/bin/lesspipe %s %s
+Setting project property: javahelp.version -> 2.0.05
+Setting project property: project.build.outputDirectory -> /u02/SourceCode/openflexo-production/packaging-tests/target/classes
+Setting project property: maven.home -> /usr/share/maven
+Setting project property: icons.dir -> /u02/SourceCode/openflexo-production/packaging-tests/src/main/resources/Icons
+Setting project property: env.PAM_KWALLET_LOGIN -> /tmp//xtof.socket
+Setting project property: main.class -> org.openflexo.TestApplication
+Setting project property: env.GNOME_DESKTOP_SESSION_ID -> this-is-deprecated
+Setting project property: env.COMPIZ_BIN_PATH -> /usr/bin/
+Setting project property: java.io.tmpdir -> /tmp
+Setting project property: checkstyle.version -> 2.12
+Setting project property: env.SHELL -> /bin/bash
+Setting project property: env.UPSTART_JOB -> unity7
+Setting project property: license.dir -> /u02/SourceCode/openflexo-production/packaging-tests/src/main/resources/License
+Setting project property: user.dir -> /u02/SourceCode/openflexo-production/packaging-tests
+Setting project property: file.encoding -> UTF-8
+Setting project property: project.build.directory -> /u02/SourceCode/openflexo-production/packaging-tests/target
+Setting project property: sun.boot.class.path -> /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/resources.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jsse.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jce.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/charsets.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jfr.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/classes
+Setting project property: java.specification.version -> 1.8
+Setting project property: env.QT_IM_MODULE -> ibus
+Setting project property: versionType -> Tests
+Setting project property: env.DESKTOP_SESSION -> ubuntu
+Setting project property: keepLogTrace -> false
+Setting project property: java.ext.dirs -> /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext:/usr/java/packages/lib/ext
+Setting project property: project.build.testSourceDirectory -> /u02/SourceCode/openflexo-production/packaging-tests/src/test/java
+Setting project property: java.version -> 1.8.0_45-internal
+Setting project property: package_name -> OpenFlexo TestApplication 0.0.1SNAPSHOT Setup
+Setting project property: securerandom.source -> file:/dev/./urandom
+Setting project property: env.XDG_SEAT -> seat0
+Setting project property: env.XAUTHORITY -> /home/xtof/.Xauthority
+Setting project property: os.arch -> amd64
+Setting project property: project.version -> 0.0.1-SNAPSHOT
+Setting project property: project.build.testOutputDirectory -> /u02/SourceCode/openflexo-production/packaging-tests/target/test-classes
+Setting project property: env.DEFAULTS_PATH -> /usr/share/gconf/ubuntu.default.path
+Setting project property: sun.jnu.encoding -> UTF-8
+Setting project property: env.XTERM_LOCALE -> fr_FR.UTF-8
+Setting project property: env.LC_ADDRESS -> fr_FR.UTF-8
+Setting project property: env.XDG_CONFIG_DIRS -> /etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg:/usr/share/kubuntu-default-settings/kf5-settings
+Setting project property: qualified_app_name -> OpenFlexo TestApplication
+Setting project property: resource.encoding -> UTF-8
+Setting project property: java.vendor -> Oracle Corporation
+Setting project property: argLine -> -javaagent:/home/xtof/.m2/repository/org/jacoco/org.jacoco.agent/0.7.4.201502262128/org.jacoco.agent-0.7.4.201502262128-runtime.jar=destfile=/u02/SourceCode/openflexo-production/packaging-tests/target/jacoco.exec,excludes=**/test/*
+Setting project property: env.COMPIZ_CONFIG_PROFILE -> ubuntu
+Setting project property: env.HOME -> /home/xtof
+Setting project property: env.GPG_AGENT_INFO -> /run/user/1000/keyring/gpg:0:1
+Setting project property: env.GDM_LANG -> fr_FR
+Setting project property: junit.version -> 4.10
+Setting project property: findbugs.version -> 2.5.2
+Setting project property: env._ -> /usr/bin/mvn
+Setting project property: toolsconfig.version -> 0.4-SNAPSHOT
+Setting project property: project.packaging -> pom
+Setting project property: user.home -> /home/xtof
+Setting project property: user.country -> FR
+Setting project property: user.language -> fr
+Setting project property: jsr305.version -> 2.0.1
+Setting project property: normalized_version -> 0.0.1
+Setting project property: vm.args -> -Xmx512M -XX:MaxPermSize=128M
+Setting project property: wizard.setup.icon -> Openflexo.ico
+Setting project property: env.SESSION -> ubuntu
+Setting project property: env.XDG_SEAT_PATH -> /org/freedesktop/DisplayManager/Seat0
+Setting project property: env.GTK_IM_MODULE -> ibus
+Setting project property: project.groupId -> org.openflexo
+Setting project property: classworlds.conf -> /usr/share/maven/bin/m2.conf
+Setting project property: changes.version -> 2.11
+Setting project property: project.build.sourceEncoding -> UTF-8
+Setting project property: env.TERM -> xterm
+Setting project property: maven.type -> zip
+Setting project property: env.XDG_CURRENT_DESKTOP -> Unity
+Setting project property: env.LANGUAGE -> fr_FR:fr:en
+Setting project property: sun.arch.data.model -> 64
+Setting project property: maven.artifact.id -> packaging-tests
+Setting project property: env.OLDPWD -> /u02/SourceCode/openflexo-production/packaging-tests
+Setting project property: env.LANG -> fr_FR.UTF-8
+Setting project property: java.vm.specification.name -> Java Virtual Machine Specification
+Setting project property: java.library.path -> /usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+Setting project property: user.name -> xtof
+Setting project property: java.awt.graphicsenv -> sun.awt.X11GraphicsEnvironment
+Setting project property: env.XDG_SESSION_DESKTOP -> ubuntu
+Setting project property: env.GNOME_KEYRING_CONTROL -> 
+Setting project property: sun.desktop -> gnome
+Setting project property: java.runtime.version -> 1.8.0_45-internal-b14
+Setting project property: productSuffix -> TestApplication
+Setting project property: java.runtime.name -> OpenJDK Runtime Environment
+Setting project property: flexobuild.work.dir -> /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild
+Setting project property: build.id -> 2016-01-27.1331
+Setting project property: guice.disable.misplaced.annotation.check -> true
+Setting project property: jersey.version -> 1.17.1
+Setting project property: sun.io.unicode.encoding -> UnicodeLittle
+Setting project property: artifact.dir -> /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/checkedout-artifact
+Setting project property: env.GDMSESSION -> ubuntu
+Setting project property: env.LC_TIME -> fr_FR.UTF-8
+Setting project property: sun.management.compiler -> HotSpot 64-Bit Tiered Compilers
+Setting project property: java.class.version -> 52.0
+Setting project property: java.vm.name -> OpenJDK 64-Bit Server VM
+Setting project property: env.LC_IDENTIFICATION -> fr_FR.UTF-8
+Setting project property: env.DBUS_SESSION_BUS_ADDRESS -> unix:abstract=/tmp/dbus-QUQhlZIxNH
+Setting project property: surefire.reportplugin.version -> 2.18.1
+Setting project property: env.LC_NUMERIC -> fr_FR.UTF-8
+Setting project property: TODAY -> January 27 2016
+Setting project property: env.GIO_LAUNCHED_DESKTOP_FILE_PID -> 4092
+Setting project property: env.LC_NAME -> fr_FR.UTF-8
+Setting project property: default.logging.level -> SEVERE
+Setting project property: localRepository ->        id: local
+      url: file:///home/xtof/.m2/repository/
+   layout: none
+Setting project property: flexo_version -> 0.0.1SNAPSHOT
+Setting project property: sun.java.command -> org.codehaus.plexus.classworlds.launcher.Launcher -X -e -Pinstaller package
+Setting project property: java.awt.printerjob -> sun.print.PSPrinterJob
+Setting project property: java.specification.vendor -> Oracle Corporation
+Setting project property: os.name -> Linux
+Setting project property: compiler.target -> 1.7
+Setting project property: env.IM_CONFIG_PHASE -> 1
+Setting project property: env.LC_MONETARY -> fr_FR.UTF-8
+Setting project property: env.SSH_AUTH_SOCK -> /run/user/1000/keyring/ssh
+Setting project property: apache.commons-lang.version -> 3.1
+Setting project property: ant.version -> 1.9.0
+Setting project property: env.HISTCONTROL -> ignoreboth
+Setting project property: env.SESSIONTYPE -> gnome-session
+Setting project property: path.separator -> :
+Setting project property: java.vm.version -> 25.45-b02
+Setting project property: env.XTERM_SHELL -> /bin/bash
+Setting project property: sun.cpu.isalist -> 
+Setting project property: os.version -> 3.19.0-49-generic
+Setting project property: env.PWD -> /u02/SourceCode/openflexo-production/packaging-tests
+Setting project property: env.UPSTART_EVENTS -> xsession started
+Setting project property: organization.url -> http://www.openflexo.org
+Setting project property: env.GIO_LAUNCHED_DESKTOP_FILE -> /usr/share/applications/debian-xterm.desktop
+Setting project property: env.XTERM_VERSION -> XTerm(312)
+Setting project property: java.vm.specification.version -> 1.8
+Setting project property: env.QT_QPA_PLATFORMTHEME -> appmenu-qt5
+Setting project property: env.KDEDIRS -> /usr/share/kubuntu-active-default-settings/:/usr/share/plasma-active-default-settings/:/usr/share/kubuntu-default-settings/kde4-profile/default/
+Setting project property: env.XDG_VTNR -> 7
+Setting project property: env.XDG_GREETER_DATA_DIR -> /var/lib/lightdm-data/xtof
+Setting project property: sun.boot.library.path -> /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64
+Setting project property: env.LC_MEASUREMENT -> fr_FR.UTF-8
+Setting project property: java.specification.name -> Java Platform API Specification
+Setting project property: mavensite.version -> 3.4
+Setting project property: org.openflexo:packaging-tools:jar -> /home/xtof/.m2/repository/org/openflexo/packaging-tools/0.4-SNAPSHOT/packaging-tools-0.4-SNAPSHOT.jar
+Setting project property: compiler.source -> 1.7
+Setting project property: env.DISPLAY -> :0
+Setting project property: program.args -> -userType developer_release
+Setting project property: volume_name -> Openflexo-0.0.1SNAPSHOT
+Setting project property: start.script.file -> /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/dist/start.sh
+Setting project property: java.vm.specification.vendor -> Oracle Corporation
+Setting project property: env.SHLVL -> 1
+Setting project property: commit.id -> ${env.GIT_COMMIT}
+Setting project property: user.timezone -> Europe/Paris
+Setting project property: env.XMODIFIERS -> @im=ibus
+Setting project property: env.QT4_IM_MODULE -> ibus
+Setting project property: jacoco.version -> 0.7.4.201502262128
+Setting project property: mac.app.dir.versioned -> /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/mac_apps/Tests
+Setting project property: java.endorsed.dirs -> /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/endorsed
+Setting project property: maven.project.dependencies.versions -> 0.4-SNAPSHOT:
+Setting project property: env.XDG_SESSION_TYPE -> x11
+Setting project property: env.USER -> xtof
+Setting project property: env.PATH -> /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+Setting project property: env.JOB -> unity-settings-daemon
+Setting project property: qualified_and_versioned_app_name -> OpenFlexo TestApplication 0.0.1SNAPSHOT
+Setting project property: sun.os.patch.level -> unknown
+Project base dir set to: /u02/SourceCode/openflexo-production/packaging-tests
+  [antcall] calling target(s) [linux-packaging] in build file /u02/SourceCode/openflexo-production/packaging-tests/build-packaging.xml
+Setting ro project property: ant.file -> /u02/SourceCode/openflexo-production/packaging-tests/build-packaging.xml
+Adding reference: ant.projectHelper
+Adding reference: ant.parsing.context
+Adding reference: ant.targets
+parsing buildfile /u02/SourceCode/openflexo-production/packaging-tests/build-packaging.xml with URI = file:/u02/SourceCode/openflexo-production/packaging-tests/build-packaging.xml
+Setting ro project property: ant.project.name -> project
+Adding reference: project
+Setting ro project property: ant.project.default-target -> package
+Setting ro project property: ant.file.project -> /u02/SourceCode/openflexo-production/packaging-tests/build-packaging.xml
+Setting ro project property: ant.file.type.project -> file
+Project base dir set to: /u02/SourceCode/openflexo-production/packaging-tests
+ +Target: 
+ +Target: package
+Adding reference: ant.LocalProperties
+Class net.sf.antcontrib.property.PropertyCopy loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.platform.ShellScriptTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.property.PathToFileSet loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.RunTargetTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.antserver.client.ClientTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.property.RegexTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.Assert loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.math.MathTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.TryCatchTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.antserver.server.ServerTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.AntCallBack loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.walls.CompileWithWalls loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.OutOfDate loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.platform.OsFamily loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.perf.StopWatchTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.Throw loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.antclipse.ClassPathTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.property.URLEncodeTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.TimestampSelector loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.ForEach loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.IfTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.property.PropertySelector loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.property.SortList loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.AntFetch loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.net.PostTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.process.ForgetTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.process.Limit loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.Switch loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.Relentless loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.property.Variable loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.inifile.IniFileTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.design.VerifyDesign loaded from parent loader (parentFirst)
+parsing buildfile jar:file:/home/xtof/.m2/repository/org/apache/maven/maven-ant-tasks/2.1.3/maven-ant-tasks-2.1.3.jar!/org/apache/maven/artifact/ant/antlib.xml with URI = jar:file:/home/xtof/.m2/repository/org/apache/maven/maven-ant-tasks/2.1.3/maven-ant-tasks-2.1.3.jar!/org/apache/maven/artifact/ant/antlib.xml from a zip file
+Class org.apache.maven.artifact.ant.DependenciesTask loaded from parent loader (parentFirst)
+Class org.apache.maven.artifact.ant.InstallTask loaded from parent loader (parentFirst)
+Class org.apache.maven.artifact.ant.DeployTask loaded from parent loader (parentFirst)
+Class org.apache.maven.artifact.ant.InstallWagonProviderTask loaded from parent loader (parentFirst)
+Class org.apache.maven.artifact.ant.Mvn loaded from parent loader (parentFirst)
+Class org.apache.maven.artifact.ant.WritePomTask loaded from parent loader (parentFirst)
+Class org.apache.maven.artifact.ant.LocalRepository loaded from parent loader (parentFirst)
+Class org.apache.maven.artifact.ant.RemoteRepository loaded from parent loader (parentFirst)
+Class org.apache.maven.artifact.ant.Authentication loaded from parent loader (parentFirst)
+Class org.apache.maven.artifact.ant.Proxy loaded from parent loader (parentFirst)
+Class org.apache.maven.artifact.ant.Pom loaded from parent loader (parentFirst)
+   +Task: property
+Override ignored for property "resources.dir"
+Override ignored for property "icons.dir"
+Override ignored for property "license.dir"
+Importing file build-packaging.xml from /u02/SourceCode/openflexo-production/packaging-tests/build-packaging.xml
+ResourceStream for build-packaging.xml loaded from ant loader
+Overriding previous definition of reference to ant.projectHelper
+Adding reference: ant.projectHelper
+Resource build-packaging.xml loaded from ant loader
+parsing buildfile jar:file:/home/xtof/.m2/repository/org/openflexo/packaging-tools/0.4-SNAPSHOT/packaging-tools-0.4-SNAPSHOT.jar!/build-packaging.xml with URI = jar:file:/home/xtof/.m2/repository/org/openflexo/packaging-tools/0.4-SNAPSHOT/packaging-tools-0.4-SNAPSHOT.jar!/build-packaging.xml from a zip file
+Setting ro project property: ant.file.packaging-tools -> jar:file:/home/xtof/.m2/repository/org/openflexo/packaging-tools/0.4-SNAPSHOT/packaging-tools-0.4-SNAPSHOT.jar!/build-packaging.xml
+Setting ro project property: ant.file.type.packaging-tools -> url
+ +Target: defineProperties
+ +Target: packaging-tools.defineProperties
+ +Target: deploy
+ +Target: packaging-tools.deploy
+ +Target: createPackage
+ +Target: packaging-tools.createPackage
+ +Target: cleanTempDir
+ +Target: packaging-tools.cleanTempDir
+ +Target: checkoutArtifact
+ +Target: packaging-tools.checkoutArtifact
+ +Target: generateApplicationVersion
+ +Target: packaging-tools.generateApplicationVersion
+ +Target: generateFlexoProperties
+ +Target: packaging-tools.generateFlexoProperties
+ +Target: generateHelp
+ +Target: packaging-tools.generateHelp
+ +Target: packageWindows
+ +Target: packaging-tools.packageWindows
+ +Target: windowsPackaging
+ +Target: packaging-tools.windowsPackaging
+ +Target: generateInstallerScript
+ +Target: packaging-tools.generateInstallerScript
+ +Target: generateFlexoLauncher
+ +Target: packaging-tools.generateFlexoLauncher
+ +Target: packageMacOSX
+ +Target: packaging-tools.packageMacOSX
+ +Target: osx-packaging
+ +Target: packaging-tools.osx-packaging
+ +Target: packageLinux
+ +Target: packaging-tools.packageLinux
+ +Target: linux-packaging
+ +Target: packaging-tools.linux-packaging
+ +Target: copyPackagesOnServer
+ +Target: packaging-tools.copyPackagesOnServer
+ +Target: copyOnServerWindowsRelease
+ +Target: packaging-tools.copyOnServerWindowsRelease
+ +Target: copyOnServerMacRelease
+ +Target: packaging-tools.copyOnServerMacRelease
+ +Target: copyOnServerLinuxRelease
+ +Target: packaging-tools.copyOnServerLinuxRelease
+ +Target: copyOnServerWindowsNightly
+ +Target: packaging-tools.copyOnServerWindowsNightly
+ +Target: copyOnServerMacNightly
+ +Target: packaging-tools.copyOnServerMacNightly
+ +Target: copyOnServerLinuxNightly
+ +Target: packaging-tools.copyOnServerLinuxNightly
+ +Target: createRemoteFolder
+ +Target: packaging-tools.createRemoteFolder
+Class net.sf.antcontrib.property.PropertyCopy loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.platform.ShellScriptTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.property.PathToFileSet loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.RunTargetTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.antserver.client.ClientTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.property.RegexTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.Assert loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.math.MathTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.TryCatchTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.antserver.server.ServerTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.AntCallBack loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.walls.CompileWithWalls loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.OutOfDate loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.platform.OsFamily loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.perf.StopWatchTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.Throw loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.antclipse.ClassPathTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.property.URLEncodeTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.TimestampSelector loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.ForEach loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.IfTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.property.PropertySelector loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.property.SortList loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.AntFetch loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.net.PostTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.process.ForgetTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.process.Limit loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.Switch loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.logic.Relentless loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.property.Variable loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.inifile.IniFileTask loaded from parent loader (parentFirst)
+Class net.sf.antcontrib.design.VerifyDesign loaded from parent loader (parentFirst)
+parsing buildfile jar:file:/home/xtof/.m2/repository/org/apache/maven/maven-ant-tasks/2.1.3/maven-ant-tasks-2.1.3.jar!/org/apache/maven/artifact/ant/antlib.xml with URI = jar:file:/home/xtof/.m2/repository/org/apache/maven/maven-ant-tasks/2.1.3/maven-ant-tasks-2.1.3.jar!/org/apache/maven/artifact/ant/antlib.xml from a zip file
+Class org.apache.maven.artifact.ant.DependenciesTask loaded from parent loader (parentFirst)
+Class org.apache.maven.artifact.ant.InstallTask loaded from parent loader (parentFirst)
+Class org.apache.maven.artifact.ant.DeployTask loaded from parent loader (parentFirst)
+Class org.apache.maven.artifact.ant.InstallWagonProviderTask loaded from parent loader (parentFirst)
+Class org.apache.maven.artifact.ant.Mvn loaded from parent loader (parentFirst)
+Class org.apache.maven.artifact.ant.WritePomTask loaded from parent loader (parentFirst)
+Class org.apache.maven.artifact.ant.LocalRepository loaded from parent loader (parentFirst)
+Class org.apache.maven.artifact.ant.RemoteRepository loaded from parent loader (parentFirst)
+Class org.apache.maven.artifact.ant.Authentication loaded from parent loader (parentFirst)
+Class org.apache.maven.artifact.ant.Proxy loaded from parent loader (parentFirst)
+Class org.apache.maven.artifact.ant.Pom loaded from parent loader (parentFirst)
+Overriding previous definition of reference to ant.projectHelper
+Adding reference: ant.projectHelper
+Build sequence for target(s) `linux-packaging' is [linux-packaging]
+Complete build sequence is [linux-packaging, generateInstallerScript, generateApplicationVersion, packaging-tools.linux-packaging, copyOnServerWindowsRelease, packageWindows, packaging-tools.cleanTempDir, packaging-tools.defineProperties, packaging-tools.createRemoteFolder, checkoutArtifact, copyOnServerMacRelease, packaging-tools.packageMacOSX, defineProperties, package, generateHelp, packaging-tools.copyPackagesOnServer, generateFlexoProperties, windowsPackaging, packaging-tools.createPackage, generateFlexoLauncher, copyOnServerLinuxNightly, packaging-tools.copyOnServerLinuxRelease, packaging-tools.copyOnServerMacNightly, packaging-tools.copyOnServerWindowsNightly, packageMacOSX, packaging-tools.packageLinux, packaging-tools.packageWindows, cleanTempDir, createPackage, packaging-tools.osx-packaging, copyOnServerWindowsNightly, packaging-tools.generateInstallerScript, copyPackagesOnServer, copyOnServerMacNightly, packaging-tools.generateApplicationVersion, copyOnServerLinuxRelease, packaging-tools.copyOnServerMacRelease, packaging-tools.checkoutArtifact, packaging-tools.windowsPackaging, createRemoteFolder, packaging-tools.copyOnServerLinuxNightly, osx-packaging, packaging-tools.generateHelp, packaging-tools.copyOnServerWindowsRelease, packaging-tools.generateFlexoLauncher, deploy, packageLinux, packaging-tools.generateFlexoProperties, packaging-tools.deploy, ]
+  [antcall] Entering /u02/SourceCode/openflexo-production/packaging-tests/build-packaging.xml...
+Setting ro project property: ant.project.invoked-targets -> linux-packaging
+Build sequence for target(s) `linux-packaging' is [linux-packaging]
+Complete build sequence is [linux-packaging, generateInstallerScript, generateApplicationVersion, packaging-tools.linux-packaging, copyOnServerWindowsRelease, packageWindows, packaging-tools.cleanTempDir, packaging-tools.defineProperties, packaging-tools.createRemoteFolder, checkoutArtifact, copyOnServerMacRelease, packaging-tools.packageMacOSX, defineProperties, package, generateHelp, packaging-tools.copyPackagesOnServer, generateFlexoProperties, windowsPackaging, packaging-tools.createPackage, generateFlexoLauncher, copyOnServerLinuxNightly, packaging-tools.copyOnServerLinuxRelease, packaging-tools.copyOnServerMacNightly, packaging-tools.copyOnServerWindowsNightly, packageMacOSX, packaging-tools.packageLinux, packaging-tools.packageWindows, cleanTempDir, createPackage, packaging-tools.osx-packaging, copyOnServerWindowsNightly, packaging-tools.generateInstallerScript, copyPackagesOnServer, copyOnServerMacNightly, packaging-tools.generateApplicationVersion, copyOnServerLinuxRelease, packaging-tools.copyOnServerMacRelease, packaging-tools.checkoutArtifact, packaging-tools.windowsPackaging, createRemoteFolder, packaging-tools.copyOnServerLinuxNightly, osx-packaging, packaging-tools.generateHelp, packaging-tools.copyOnServerWindowsRelease, packaging-tools.generateFlexoLauncher, deploy, packageLinux, packaging-tools.generateFlexoProperties, packaging-tools.deploy, ]
+
+linux-packaging:
+Tar$TarFileSet: Setup scanner in dir /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/dist with patternSet{ includes: [*.sh] excludes: [*.exe] }
+      [tar] start.sh added as OpenFlexo TestApplication 0.0.1SNAPSHOT.tar.gz doesn't exist.
+Tar$TarFileSet: Setup scanner in dir /u02/SourceCode/openflexo-production/packaging-tests/target/flexobuild/dist with patternSet{ includes: [] excludes: [*.exe, *.sh] }
+      [tar]  added as OpenFlexo TestApplication 0.0.1SNAPSHOT.tar.gz doesn't exist.
+      [tar] Config added as OpenFlexo TestApplication 0.0.1SNAPSHOT.tar.gz doesn't exist.
+      [tar] lib added as OpenFlexo TestApplication 0.0.1SNAPSHOT.tar.gz doesn't exist.
+      [tar] Config/Flexo.properties added as OpenFlexo TestApplication 0.0.1SNAPSHOT.tar.gz doesn't exist.
+      [tar] lib/flexo-0.0.1-SNAPSHOT.jar added as OpenFlexo TestApplication 0.0.1SNAPSHOT.tar.gz doesn't exist.
+      [tar] Building tar: /u02/SourceCode/openflexo-production/packaging-tests/target/OpenFlexo TestApplication 0.0.1SNAPSHOT.tar.gz
+  [antcall] Exiting /u02/SourceCode/openflexo-production/packaging-tests/build-packaging.xml.
   [antcall] Exiting /u02/SourceCode/openflexo-production/packaging-tests/build-packaging.xml.
   [antcall] Exiting /u02/SourceCode/openflexo-production/packaging-tests/build-packaging.xml.
       [ant] Exiting /u02/SourceCode/openflexo-production/packaging-tests/build-packaging.xml.
+[INFO] Executed tasks
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time: 9.191s
-[INFO] Finished at: Wed Jan 27 13:05:08 CET 2016
-[INFO] Final Memory: 17M/165M
+[INFO] Total time: 10.230s
+[INFO] Finished at: Wed Jan 27 13:31:32 CET 2016
+[INFO] Final Memory: 18M/166M
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-antrun-plugin:1.7:run (create-package) on project packaging-tests: An Ant BuildException has occured: The following error occurred while executing this line:
-[ERROR] /u02/SourceCode/openflexo-production/packaging-tests/build-packaging.xml:30: The following error occurred while executing this line:
-[ERROR] jar:file:/home/xtof/.m2/repository/org/openflexo/packaging-tools/0.4-SNAPSHOT/packaging-tools-0.4-SNAPSHOT.jar!/build-packaging.xml:66: The following error occurred while executing this line:
-[ERROR] jar:file:/home/xtof/.m2/repository/org/openflexo/packaging-tools/0.4-SNAPSHOT/packaging-tools-0.4-SNAPSHOT.jar!/build-packaging.xml:228: path allows only filesystem resources.
-[ERROR] around Ant part ...<ant inheritRefs="true" antfile="/u02/SourceCode/openflexo-production/packaging-tests/build-packaging.xml" inheritall="true" target="package"/>... @ 4:146 in /u02/SourceCode/openflexo-production/packaging-tests/target/antrun/build-main.xml
-[ERROR] -> [Help 1]
-org.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-antrun-plugin:1.7:run (create-package) on project packaging-tests: An Ant BuildException has occured: The following error occurred while executing this line:
-/u02/SourceCode/openflexo-production/packaging-tests/build-packaging.xml:30: The following error occurred while executing this line:
-jar:file:/home/xtof/.m2/repository/org/openflexo/packaging-tools/0.4-SNAPSHOT/packaging-tools-0.4-SNAPSHOT.jar!/build-packaging.xml:66: The following error occurred while executing this line:
-jar:file:/home/xtof/.m2/repository/org/openflexo/packaging-tools/0.4-SNAPSHOT/packaging-tools-0.4-SNAPSHOT.jar!/build-packaging.xml:228: path allows only filesystem resources.
-around Ant part ...<ant inheritRefs="true" antfile="/u02/SourceCode/openflexo-production/packaging-tests/build-packaging.xml" inheritall="true" target="package"/>... @ 4:146 in /u02/SourceCode/openflexo-production/packaging-tests/target/antrun/build-main.xml
-	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:217)
-	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
-	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
-	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:84)
-	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:59)
-	at org.apache.maven.lifecycle.internal.LifecycleStarter.singleThreadedBuild(LifecycleStarter.java:183)
-	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:161)
-	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:320)
-	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:156)
-	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:537)
-	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:196)
-	at org.apache.maven.cli.MavenCli.main(MavenCli.java:141)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:497)
-	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:289)
-	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:229)
-	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:415)
-	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:356)
-Caused by: org.apache.maven.plugin.MojoExecutionException: An Ant BuildException has occured: The following error occurred while executing this line:
-/u02/SourceCode/openflexo-production/packaging-tests/build-packaging.xml:30: The following error occurred while executing this line:
-jar:file:/home/xtof/.m2/repository/org/openflexo/packaging-tools/0.4-SNAPSHOT/packaging-tools-0.4-SNAPSHOT.jar!/build-packaging.xml:66: The following error occurred while executing this line:
-jar:file:/home/xtof/.m2/repository/org/openflexo/packaging-tools/0.4-SNAPSHOT/packaging-tools-0.4-SNAPSHOT.jar!/build-packaging.xml:228: path allows only filesystem resources.
-around Ant part ...<ant inheritRefs="true" antfile="/u02/SourceCode/openflexo-production/packaging-tests/build-packaging.xml" inheritall="true" target="package"/>... @ 4:146 in /u02/SourceCode/openflexo-production/packaging-tests/target/antrun/build-main.xml
-	at org.apache.maven.plugin.antrun.AntRunMojo.execute(AntRunMojo.java:355)
-	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:101)
-	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:209)
-	... 19 more
-Caused by: /u02/SourceCode/openflexo-production/packaging-tests/target/antrun/build-main.xml:4: The following error occurred while executing this line:
-/u02/SourceCode/openflexo-production/packaging-tests/build-packaging.xml:30: The following error occurred while executing this line:
-jar:file:/home/xtof/.m2/repository/org/openflexo/packaging-tools/0.4-SNAPSHOT/packaging-tools-0.4-SNAPSHOT.jar!/build-packaging.xml:66: The following error occurred while executing this line:
-jar:file:/home/xtof/.m2/repository/org/openflexo/packaging-tools/0.4-SNAPSHOT/packaging-tools-0.4-SNAPSHOT.jar!/build-packaging.xml:228: path allows only filesystem resources.
-	at org.apache.tools.ant.ProjectHelper.addLocationToBuildException(ProjectHelper.java:551)
-	at org.apache.tools.ant.taskdefs.Ant.execute(Ant.java:444)
-	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:291)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:497)
-	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
-	at org.apache.tools.ant.Task.perform(Task.java:348)
-	at org.apache.tools.ant.Target.execute(Target.java:390)
-	at org.apache.tools.ant.Target.performTasks(Target.java:411)
-	at org.apache.tools.ant.Project.executeSortedTargets(Project.java:1399)
-	at org.apache.tools.ant.Project.executeTarget(Project.java:1368)
-	at org.apache.maven.plugin.antrun.AntRunMojo.execute(AntRunMojo.java:327)
-	... 21 more
-Caused by: /u02/SourceCode/openflexo-production/packaging-tests/build-packaging.xml:30: The following error occurred while executing this line:
-jar:file:/home/xtof/.m2/repository/org/openflexo/packaging-tools/0.4-SNAPSHOT/packaging-tools-0.4-SNAPSHOT.jar!/build-packaging.xml:66: The following error occurred while executing this line:
-jar:file:/home/xtof/.m2/repository/org/openflexo/packaging-tools/0.4-SNAPSHOT/packaging-tools-0.4-SNAPSHOT.jar!/build-packaging.xml:228: path allows only filesystem resources.
-	at org.apache.tools.ant.ProjectHelper.addLocationToBuildException(ProjectHelper.java:551)
-	at org.apache.tools.ant.taskdefs.Ant.execute(Ant.java:444)
-	at org.apache.tools.ant.taskdefs.CallTarget.execute(CallTarget.java:105)
-	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:291)
-	at sun.reflect.GeneratedMethodAccessor10.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:497)
-	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
-	at org.apache.tools.ant.Task.perform(Task.java:348)
-	at org.apache.tools.ant.Target.execute(Target.java:390)
-	at org.apache.tools.ant.Target.performTasks(Target.java:411)
-	at org.apache.tools.ant.Project.executeSortedTargets(Project.java:1399)
-	at org.apache.tools.ant.helper.SingleCheckExecutor.executeTargets(SingleCheckExecutor.java:38)
-	at org.apache.tools.ant.Project.executeTargets(Project.java:1251)
-	at org.apache.tools.ant.taskdefs.Ant.execute(Ant.java:442)
-	... 33 more
-Caused by: jar:file:/home/xtof/.m2/repository/org/openflexo/packaging-tools/0.4-SNAPSHOT/packaging-tools-0.4-SNAPSHOT.jar!/build-packaging.xml:66: The following error occurred while executing this line:
-jar:file:/home/xtof/.m2/repository/org/openflexo/packaging-tools/0.4-SNAPSHOT/packaging-tools-0.4-SNAPSHOT.jar!/build-packaging.xml:228: path allows only filesystem resources.
-	at org.apache.tools.ant.ProjectHelper.addLocationToBuildException(ProjectHelper.java:551)
-	at org.apache.tools.ant.taskdefs.Ant.execute(Ant.java:444)
-	at org.apache.tools.ant.taskdefs.CallTarget.execute(CallTarget.java:105)
-	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:291)
-	at sun.reflect.GeneratedMethodAccessor10.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:497)
-	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
-	at org.apache.tools.ant.Task.perform(Task.java:348)
-	at org.apache.tools.ant.Target.execute(Target.java:390)
-	at org.apache.tools.ant.Target.performTasks(Target.java:411)
-	at org.apache.tools.ant.Project.executeSortedTargets(Project.java:1399)
-	at org.apache.tools.ant.helper.SingleCheckExecutor.executeTargets(SingleCheckExecutor.java:38)
-	at org.apache.tools.ant.Project.executeTargets(Project.java:1251)
-	at org.apache.tools.ant.taskdefs.Ant.execute(Ant.java:442)
-	... 46 more
-Caused by: jar:file:/home/xtof/.m2/repository/org/openflexo/packaging-tools/0.4-SNAPSHOT/packaging-tools-0.4-SNAPSHOT.jar!/build-packaging.xml:228: path allows only filesystem resources.
-	at org.apache.tools.ant.types.Path.assertFilesystemOnly(Path.java:735)
-	at org.apache.tools.ant.types.Path.isFilesystemOnly(Path.java:723)
-	at org.apache.tools.ant.types.resources.BaseResourceCollectionContainer.isFilesystemOnly(BaseResourceCollectionContainer.java:169)
-	at org.apache.tools.ant.types.Path.assertFilesystemOnly(Path.java:734)
-	at org.apache.tools.ant.types.Path.list(Path.java:378)
-	at org.apache.tools.ant.types.Path.addExisting(Path.java:331)
-	at org.apache.tools.ant.types.Path.addExisting(Path.java:319)
-	at org.apache.tools.ant.types.Path.concatSpecialPath(Path.java:572)
-	at org.apache.tools.ant.types.Path.concatSystemClasspath(Path.java:532)
-	at org.apache.tools.ant.AntClassLoader.setClassPath(AntClassLoader.java:351)
-	at org.apache.tools.ant.AntClassLoader.<init>(AntClassLoader.java:265)
-	at org.apache.tools.ant.AntClassLoader.<init>(AntClassLoader.java:286)
-	at org.apache.tools.ant.loader.AntClassLoader5.<init>(AntClassLoader5.java:51)
-	at sun.reflect.GeneratedConstructorAccessor22.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
-	at org.apache.tools.ant.util.ReflectUtil.newInstance(ReflectUtil.java:49)
-	at org.apache.tools.ant.AntClassLoader.newAntClassLoader(AntClassLoader.java:1551)
-	at org.apache.tools.ant.Project.createClassLoader(Project.java:339)
-	at org.apache.tools.ant.util.ClasspathUtils.getUniqueClassLoaderForPath(ClasspathUtils.java:206)
-	at org.apache.tools.ant.util.ClasspathUtils.getClassLoaderForPath(ClasspathUtils.java:183)
-	at org.apache.tools.ant.util.ClasspathUtils$Delegate.getClassLoader(ClasspathUtils.java:411)
-	at org.apache.tools.ant.taskdefs.DefBase.createLoader(DefBase.java:142)
-	at org.apache.tools.ant.taskdefs.Definer.execute(Definer.java:208)
-	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:291)
-	at sun.reflect.GeneratedMethodAccessor10.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:497)
-	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
-	at org.apache.tools.ant.Task.perform(Task.java:348)
-	at org.apache.tools.ant.Target.execute(Target.java:390)
-	at org.apache.tools.ant.Target.performTasks(Target.java:411)
-	at org.apache.tools.ant.Project.executeSortedTargets(Project.java:1399)
-	at org.apache.tools.ant.helper.SingleCheckExecutor.executeTargets(SingleCheckExecutor.java:38)
-	at org.apache.tools.ant.Project.executeTargets(Project.java:1251)
-	at org.apache.tools.ant.taskdefs.Ant.execute(Ant.java:442)
-	... 59 more
-[ERROR] 
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException

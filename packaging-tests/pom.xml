@@ -8,10 +8,9 @@
 		<version>0.4-SNAPSHOT</version>
 	</parent>
 	<properties>
-		<main.class>org.openflexo.Flexo</main.class>
+		<main.class>org.openflexo.TestApplication</main.class>
 	</properties>
 	<artifactId>packaging-tests</artifactId>
-	<packaging>pom</packaging>
 	<name>Packaging :: Build Test Installers</name>
 	<dependencies>
 		<dependency>
