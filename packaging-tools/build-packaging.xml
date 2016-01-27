@@ -45,8 +45,6 @@
 		<antcall target="copyPackagesOnServer" />
 	</target>
 
-	<!-- <target name="packageFreemodelling"> <loadproperties srcfile="freemodelling.properties" 
-		/> <antcall target="createPackage" /> </target> -->
 
 	<target name="createPackage">
 		<antcall target="cleanTempDir" />
