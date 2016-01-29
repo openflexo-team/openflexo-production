@@ -252,8 +252,8 @@
 			<option value="-Dapple.laf.useScreenMenuBar=true" />
 			<option value="-Dapple.awt.antialiasing=true" />
 			<option value="-Dapple.awt.antialiasedtext=true" />
-			<option value="-Xmx512M" />
-			<option value="-XX:MaxPermSize=128M" />
+			<option value="-Xmx2G" />
+			<option value="-XX:MaxPermSize=512M" />
 			<argument value="-userType ${userType}" />
 		</bundleapp>
 		<!--<jarbundler stubfile="${java.stubfile}" dir="${mac.app.dir.versioned}" 
