@@ -21,8 +21,10 @@ VIProductVersion "1.0.0.1"
  
 ; Definitions for Java 7.0
 !define JRE_VERSION "1.7"
-!define JRE_URL "http://javadl.sun.com/webapps/download/AutoDL?BundleId=104766"
- 
+;!define JRE_URL "http://javadl.sun.com/webapps/download/AutoDL?BundleId=104766"
+; java 1.8
+!define JRE_URL "http://javadl.sun.com/webapps/download/AutoDL?BundleId=79063" 
+; Java 7-25
 !define JAVAEXE "javaw.exe"
  
 RequestExecutionLevel user
