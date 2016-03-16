@@ -8,37 +8,6 @@
 	</parent>
 	<artifactId>packaging-tools</artifactId>
 	<description>This pom aims at capitalizing packaging tools for Openflexo</description>
-	<scm>
-		<connection>scm:git:ssh://git@github.com/openflexo-team/openflexo-production.git</connection>
-		<url>https://github.com/openflexo-team/openflexo-production</url>
-		<tag>0.4</tag>
-	</scm>
-	<issueManagement>
-		<system>JIRA</system>
-		<url>https://bugs.openflexo.org/browse/Openflexo_Production</url>
-	</issueManagement>
-	<ciManagement>
-		<system>Jenkins</system>
-		<url>https://jenkins.openflexo.org/</url>
-	</ciManagement>
-	<organization>
-		<name>Openflexo</name>
-		<url>https://www.openflexo.org</url>
-	</organization>
-	<!-- ************ Properties ********************* -->
-	<properties>
-		<organization.name>Openflexo</organization.name>
-		<organization.url>http://www.openflexo.org</organization.url>
-		<organization.logo>https://media.openflexo.org/images/OpenFlexo_Logo.png</organization.logo>
-		<openflexo-production.logo>https://media.openflexo.org/images/openflexo-production_logo64x64.png</openflexo-production.logo>
-		<!-- need this so that sonar run properly. don't know what the difference 
-			with source.encoding. todo : investigate difference between source.encoding 
-			and project.build.sourceEncoding -->
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<product.name>OpenFlexo</product.name>
-		<resource.encoding>UTF-8</resource.encoding>
-		<source.encoding>UTF-8</source.encoding>
-	</properties>
 	<build>
 		<resources>
 			<resource>
@@ -55,4 +24,51 @@
 			</resource>
 		</resources>
 	</build>
+
+	<!-- ***************** Profiles -->
+	<profiles>
+		<profile>
+			<id>snapshot-profile</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<!-- ************ Places where to upload files for component Maven site -->
+			<distributionManagement>
+				<site>
+					<id>openflexo-production.website</id>
+					<url>scp://server-one.openflexo.org/home/www/sites/packaging-tools/SNAPSHOT/</url>
+				</site>
+			</distributionManagement>
+		</profile>
+		<profile>
+			<id>RC-profile</id>
+			<activation>
+				<property>
+					<name>performRC</name>
+				</property>
+			</activation>
+			<!-- ************ Places where to upload files for component Maven site -->
+			<distributionManagement>
+				<site>
+					<id>openflexo-production.website</id>
+					<url>scp://server-one.openflexo.org/home/www/sites/packaging-tools/SNAPSHOT/</url>
+				</site>
+			</distributionManagement>
+		</profile>
+		<profile>
+			<id>release-profile</id>
+			<activation>
+				<property>
+					<name>performRelease</name>
+				</property>
+			</activation>
+			<!-- ************ Places where to upload files for component Maven site -->
+			<distributionManagement>
+				<site>
+					<id>openflexo-production.website</id>
+					<url>scp://server-one.openflexo.org/home/www/sites/packaging-tools/${project.version}/</url>
+				</site>
+			</distributionManagement>
+		</profile>
+	</profiles>
 </project>
