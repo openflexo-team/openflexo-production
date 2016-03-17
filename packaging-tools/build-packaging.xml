@@ -219,20 +219,6 @@
 	</target>
 
 	<target name="generateFlexoLauncher">
-		<copy tofile="${flexobuild.work.dir}/flexolauncher.nsi"
-			filtering="true" overwrite="true">
-			<resources>
-				<javaresource name="Windows/flexolauncher.nsi.tpl">
-					<classpath>
-						<pathelement location="${org.openflexo:packaging-tools:jar}"></pathelement>
-					</classpath>
-				</javaresource>
-			</resources>
-
-			<filterset>
-				<filtersfile file="${build.properties}" />
-			</filterset>
-		</copy>
 		<copy tofile="${flexobuild.work.dir}/pom.xml" filtering="true"
 			overwrite="true">
 			<resources>
@@ -246,21 +232,10 @@
 				<filtersfile file="${build.properties}" />
 			</filterset>
 		</copy>
-<!--
-		<exec executable="makensis" failonerror="true">
-			<arg value="-V2" />
-			<arg value="${flexobuild.work.dir}/flexolauncher.nsi" />
-		</exec> -->
       		<maven basedir="${flexobuild.work.dir}"
              		options=""
              		goal="package"
             		resultproperty="maven.build.result"/>
-		<!--<artifact:mvn mavenhome="${maven.home}" pom="${flexobuild.work.dir}/pom.xml"
-			fork="true">
-			<localrepository id="local" path="${settings.localRepository}" />
-			<arg value="-Dmaven.multiModuleProjectDirectory=false" />
-			<arg value="package" />
-		</artifact:mvn> -->
 	</target>
 
 	<target name="packageMacOSX">
