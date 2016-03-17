@@ -83,12 +83,12 @@
               <maxHeapPercent>80</maxHeapPercent>
        </jre>
        <versionInfo>
-              <fileVersion>${project.version}</fileVersion>
-              <txtFileVersion>${project.version}</txtFileVersion>
+              <fileVersion>@4d_version@</fileVersion>
+              <txtFileVersion>@4d_version@</txtFileVersion>
               <fileDescription>@productDescription@</fileDescription>
               <copyright>@Copyright@</copyright>
-              <productVersion>${project.version}</productVersion>
-              <txtProductVersion>${project.version}</txtProductVersion>
+              <productVersion>@4d_version@</productVersion>
+              <txtProductVersion>@4d_version@</txtProductVersion>
               <productName>@maven.artifact.id@</productName>
               <internalName>@maven.artifact.id@</internalName>
               <originalFilename>${project.artifactId}-${project.version}.exe</originalFilename>

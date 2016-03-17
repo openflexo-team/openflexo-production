@@ -41,6 +41,9 @@
 		<!-- Set a 3 digit version in normalized_version -->
 		<propertyregex property="normalized_version" input="${flexo_version}"
 			regexp="([0-9]+)\.([0-9]+)\.([0-9]+)" select="\0" defaultvalue="${flexo_version}.0" />
+		<!-- Set a 4 digit version in 4d_version -->
+		<propertyregex property="4d_version" input="${normalized_version}"
+			regexp="([0-9]+)\.([0-9]+)\.([0-9]+)\.([0-9]+)" select="\0" defaultvalue="${normalized_version}.0" />
 		<!-- ./target -->
 		<property name="flexobuild.work.dir" value="${project.build.directory}/flexobuild" />
 		<!-- ./target/flexobuild -->
