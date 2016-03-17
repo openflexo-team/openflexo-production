@@ -2,8 +2,35 @@
 	xmlns:artifact="antlib:org.apache.maven.artifact.ant">
 
 	<taskdef resource="net/sf/antcontrib/antcontrib.properties" />
+
 	<typedef resource="org/apache/maven/artifact/ant/antlib.xml"
 		uri="antlib:org.apache.maven.artifact.ant" />
+
+	  <macrodef name="maven">
+	    <attribute name="options" default="" />
+	    <attribute name="goal" />
+	    <attribute name="basedir" />
+	    <attribute name="resultproperty" default="maven.result" />
+	    <element name="args" implicit="true" optional="true" />
+	    <sequential>
+	      <java classname="org.codehaus.classworlds.Launcher" fork="true"
+		    dir="@{basedir}" resultproperty="@{resultproperty}">
+		<jvmarg value="-Xmx512m"/>
+		<classpath>
+		  <fileset dir="${maven.home}/boot">
+		    <include name="*.jar" />
+		  </fileset>
+		  <fileset dir="${maven.home}/lib">
+		    <include name="*.jar" />
+		  </fileset>
+		</classpath>
+		<sysproperty key="classworlds.conf" value="${maven.home}/bin/m2.conf" />
+		<sysproperty key="maven.home" value="${maven.home}" />
+		<sysproperty key="maven.multiModuleProjectDirectory" value="false" />
+		<arg line="--batch-mode @{options} @{goal}" />
+	      </java>
+	    </sequential>
+	  </macrodef>
 
 
 	<target name="defineProperties">
@@ -85,12 +112,18 @@
 				<filtersfile file="${build.properties}" />
 			</filterset>
 		</copy>
-		<artifact:mvn mavenhome="${maven.home}" pom="${flexobuild.work.dir}/pom.xml"
+      		<maven basedir="${flexobuild.work.dir}"
+             		options=""
+             		goal="dependency:unpack"
+            		resultproperty="maven.build.result"/>
+
+<!--		<artifact:mvn mavenhome="${maven.home}" pom="${flexobuild.work.dir}/pom.xml"
 			fork="true">
 			<localrepository id="local" path="${settings.localRepository}" />
+			<arg value="-Dmaven.multiModuleProjectDirectory=false" />
 			<arg value="-B" />
 			<arg value="dependency:unpack" />
-		</artifact:mvn>
+		</artifact:mvn> -->
 		<antcall target="generateApplicationVersion" />
 	</target>
 
@@ -200,10 +233,10 @@
 				<filtersfile file="${build.properties}" />
 			</filterset>
 		</copy>
-		<copy tofile="${flexobuild.work.dir}/launch4j.xml" filtering="true"
+		<copy tofile="${flexobuild.work.dir}/pom.xml" filtering="true"
 			overwrite="true">
 			<resources>
-				<javaresource name="Windows/launch4j.xml.tpl">
+				<javaresource name="Windows/pom_launch4j.xml.tpl">
 					<classpath>
 						<pathelement location="${org.openflexo:packaging-tools:jar}"></pathelement>
 					</classpath>
@@ -213,10 +246,21 @@
 				<filtersfile file="${build.properties}" />
 			</filterset>
 		</copy>
+<!--
 		<exec executable="makensis" failonerror="true">
 			<arg value="-V2" />
 			<arg value="${flexobuild.work.dir}/flexolauncher.nsi" />
-		</exec>
+		</exec> -->
+      		<maven basedir="${flexobuild.work.dir}"
+             		options=""
+             		goal="package"
+            		resultproperty="maven.build.result"/>
+		<!--<artifact:mvn mavenhome="${maven.home}" pom="${flexobuild.work.dir}/pom.xml"
+			fork="true">
+			<localrepository id="local" path="${settings.localRepository}" />
+			<arg value="-Dmaven.multiModuleProjectDirectory=false" />
+			<arg value="package" />
+		</artifact:mvn> -->
 	</target>
 
 	<target name="packageMacOSX">
