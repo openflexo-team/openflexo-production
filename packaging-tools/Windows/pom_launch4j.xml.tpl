@@ -51,15 +51,15 @@
             </goals>
             <configuration>
                 
-       <dontWrapJar>false</dontWrapJar>
+       <dontWrapJar>true</dontWrapJar>
        <headerType>console</headerType>
        <outfile>dist/${project.artifactId}-${project.version}.exe</outfile>
        <classPath>
               <!-- <addDependencies>false</addDependencies>
                 <preCp>anything</preCp> -->
        	      <mainClass>@main.class@</mainClass>
-              <jarLocation>lib/</jarLocation>
-              <jarLocation>deps/</jarLocation>
+              <cp>%EXEDIR%/lib/</jarLocation>
+              <cp>%EXEDIR%/deps/</jarLocation>
        </classPath>
        <errTitle>Openflexo - Application Error</errTitle>
        <cmdLine>-userType @userType@</cmdLine>
@@ -76,7 +76,6 @@
               <bundledJre64Bit>false</bundledJre64Bit>
               <bundledJreAsFallback>false</bundledJreAsFallback>
               <minVersion>1.7.0</minVersion>
-              <maxVersion>1.8.0</maxVersion>
               <jdkPreference>preferJre</jdkPreference>
               <runtimeBits>64/32</runtimeBits>
               <initialHeapPercent>80</initialHeapPercent>
@@ -84,11 +83,11 @@
        </jre>
        <versionInfo>
               <fileVersion>@4d_version@</fileVersion>
-              <txtFileVersion>@4d_version@</txtFileVersion>
+              <txtFileVersion>${project.version}</txtFileVersion>
               <fileDescription>@productDescription@</fileDescription>
               <copyright>@Copyright@</copyright>
               <productVersion>@4d_version@</productVersion>
-              <txtProductVersion>@4d_version@</txtProductVersion>
+              <txtProductVersion>${project.version}</txtProductVersion>
               <productName>@maven.artifact.id@</productName>
               <internalName>@maven.artifact.id@</internalName>
               <originalFilename>${project.artifactId}-${project.version}.exe</originalFilename>
