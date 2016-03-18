@@ -28,8 +28,7 @@ SetCompressor lzma
 !define MUI_LANGDLL_REGISTRY_KEY ${REGKEY}
 !define MUI_LANGDLL_REGISTRY_VALUENAME InstallerLanguage
 
-!define BUSINESS_VERSION "@productSuffix@"
-!define PRODUCT_NAME "$(^Name) ${BUSINESS_VERSION} ${VERSION}"
+!define PRODUCT_NAME "$(^Name) @productSuffix@ ${VERSION}"
 !define EXE_FILE "${PRODUCT_NAME}.exe"
 Icon "@icons.dir@\@wizard.setup.icon@"
 
