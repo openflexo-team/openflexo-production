@@ -42,7 +42,7 @@
                                    <jar>lib/${project.artifactId}-${project.version}.jar</jar>
                                    <dontWrapJar>true</dontWrapJar>
                                    <headerType>gui</headerType>
-                                   <outfile>dist/${product.name} @productSuffix@  @flexo_version@.exe</outfile>
+                                   <outfile>dist/@product.name@ @productSuffix@  @flexo_version@.exe</outfile>
                                    <classPath>
                                         <mainClass>@main.class@</mainClass>
                                         <addDependencies>true</addDependencies>
