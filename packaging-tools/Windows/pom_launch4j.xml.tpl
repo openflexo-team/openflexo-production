@@ -59,7 +59,10 @@
                                    <stayAlive>false</stayAlive>
                                    <restartOnCrash>false</restartOnCrash>
                                    <manifest/>
-                                   <icon>@icons.dir@\@wizard.setup.icon@</icon>
+                                   <icon>@icons.dir@/@wizard.setup.icon@</icon>
+				  <splash>
+				    <file>@icons.dir@/@launcher.splash@</file>
+				  </splash>
                                    <jre>
                                         <path/>
                                         <bundledJre64Bit>false</bundledJre64Bit>
