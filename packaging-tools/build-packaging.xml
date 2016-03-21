@@ -120,13 +120,6 @@
              		goal="dependency:unpack"
             		resultproperty="maven.build.result"/>
 
-<!--		<artifact:mvn mavenhome="${maven.home}" pom="${flexobuild.work.dir}/pom.xml"
-			fork="true">
-			<localrepository id="local" path="${settings.localRepository}" />
-			<arg value="-Dmaven.multiModuleProjectDirectory=false" />
-			<arg value="-B" />
-			<arg value="dependency:unpack" />
-		</artifact:mvn> -->
 		<antcall target="generateApplicationVersion" />
 	</target>
 
@@ -291,19 +284,6 @@
 			<option value="-XX:MaxPermSize=512M" />
 			<argument value="-userType ${userType}" />
 		</bundleapp>
-		<!--<jarbundler stubfile="${java.stubfile}" dir="${mac.app.dir.versioned}" 
-			name="${qualified_and_versioned_app_name}" mainclass="${main.class}" bundleid="${project.groupId}" 
-			signature="FLXO" version="${flexo_version}" jvmversion="1.7+" shortname="${product.name}" 
-			icon="${icons.dir}/${icon_mac_name}" arguments="${program.args}" infostring="${product.name} 
-			${flexo_version}, (c) ${organization.name} ${current.year}" vmoptions="${vm.args}"> 
-			<javaproperty name="apple.awt.antialiasing" value="true" /> <javaproperty 
-			name="apple.awt.antialiasedtext" value="true" /> <javaproperty name="apple.laf.useScreenMenuBar" 
-			value="true" /> <jarfileset dir="${dist.dir}/lib"> <include name="*.jar" 
-			/> </jarfileset> <jarfileset dir="${dist.dir}/deps"> <include name="*.jar" 
-			/> </jarfileset> <documenttype name="OpenFlexo document" extensions="prj" 
-			iconFile="${icons.dir}/FlexoDocument.icns" bundle="true" role="Editor" /> 
-			<documenttype name="OpenFlexo palette" extensions="iepalette" iconFile="${icons.dir}/FlexoDocument2.icns" 
-			bundle="true" role="Editor" /> </jarbundler> -->
 		<copy todir="${mac.app.dir.versioned}/${relative_res_path}">
 			<fileset dir="${dist.dir}">
 				<exclude name="lib/*" />

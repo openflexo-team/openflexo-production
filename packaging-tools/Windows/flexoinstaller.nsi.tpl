@@ -64,7 +64,7 @@ Var StartMenuGroup
 
 # Installer attributes
 OutFile "@project.build.directory@\@product.name@ @productSuffix@ @flexo_version@ Setup.exe"
-InstallDir "$PROGRAMFILES\@product.name@\@productSuffix@\${VERSION}"
+InstallDir "$PROGRAMFILES\Openflexo\@product.name@ @productSuffix@\${VERSION}"
 CRCCheck on
 XPStyle on
 ShowInstDetails show
