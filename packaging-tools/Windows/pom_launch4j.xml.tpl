@@ -61,7 +61,10 @@
                                    <manifest/>
                                    <icon>@icons.dir@/@wizard.setup.icon@</icon>
 				  <splash>
-				    <file>@icons.dir@/@launcher.splash@</file>
+				     <file>@icons.dir@/@launcher.splash@</file>
+    				     <waitForWindow>true</waitForWindow>
+    				     <timeout>10</timeout>
+    				     <timeoutErr>true</timeoutErr>
 				  </splash>
                                    <jre>
                                         <path/>
