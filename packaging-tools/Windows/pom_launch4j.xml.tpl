@@ -59,13 +59,13 @@
                                    <stayAlive>false</stayAlive>
                                    <restartOnCrash>false</restartOnCrash>
                                    <manifest/>
-                                   <icon>@icons.dir@/@wizard.setup.icon@</icon><!-- TO BE DEBUGGED 
+                                   <icon>@icons.dir@/@wizard.setup.icon@</icon>
 				  <splash>
 				     <file>@icons.dir@/@launcher.splash@</file>
     				     <waitForWindow>true</waitForWindow>
-    				     <timeout>10</timeout>
-    				     <timeoutErr>true</timeoutErr>
-				  </splash> -->
+    				     <timeout>20</timeout>
+    				     <timeoutErr>false</timeoutErr>
+				  </splash> 
                                    <jre>
                                         <path/>
                                         <bundledJre64Bit>false</bundledJre64Bit>
