@@ -2,8 +2,36 @@
 	xmlns:artifact="antlib:org.apache.maven.artifact.ant">
 
 	<taskdef resource="net/sf/antcontrib/antcontrib.properties" />
+
 	<typedef resource="org/apache/maven/artifact/ant/antlib.xml"
 		uri="antlib:org.apache.maven.artifact.ant" />
+
+	  <macrodef name="maven">
+	    <attribute name="options" default="" />
+	    <attribute name="goal" />
+	    <attribute name="basedir" />
+	    <attribute name="resultproperty" default="maven.result" />
+	    <element name="args" implicit="true" optional="true" />
+	    <sequential>
+	      <java classname="org.codehaus.classworlds.Launcher" fork="true"
+		    dir="@{basedir}" resultproperty="@{resultproperty}">
+		<jvmarg value="-Xmx512m"/>
+		<classpath>
+		  <fileset dir="${maven.home}/boot">
+		    <include name="*.jar" />
+		  </fileset>
+		  <fileset dir="${maven.home}/lib">
+		    <include name="*.jar" />
+		  </fileset>
+		</classpath>
+		<sysproperty key="classworlds.conf" value="${maven.home}/bin/m2.conf" />
+		<sysproperty key="maven.home" value="${maven.home}" />
+		<sysproperty key="maven.repo.local" value="${maven.repo.local}" />
+		<sysproperty key="maven.multiModuleProjectDirectory" value="false" />
+		<arg line="--batch-mode @{options} @{goal}" />
+	      </java>
+	    </sequential>
+	  </macrodef>
 
 
 	<target name="defineProperties">
@@ -14,6 +42,9 @@
 		<!-- Set a 3 digit version in normalized_version -->
 		<propertyregex property="normalized_version" input="${flexo_version}"
 			regexp="([0-9]+)\.([0-9]+)\.([0-9]+)" select="\0" defaultvalue="${flexo_version}.0" />
+		<!-- Set a 4 digit version in 4d_version -->
+		<propertyregex property="4d_version" input="${normalized_version}"
+			regexp="([0-9]+)\.([0-9]+)\.([0-9]+)\.([0-9]+)" select="\0" defaultvalue="${normalized_version}.0" />
 		<!-- ./target -->
 		<property name="flexobuild.work.dir" value="${project.build.directory}/flexobuild" />
 		<!-- ./target/flexobuild -->
@@ -85,12 +116,11 @@
 				<filtersfile file="${build.properties}" />
 			</filterset>
 		</copy>
-		<artifact:mvn mavenhome="${maven.home}" pom="${flexobuild.work.dir}/pom.xml"
-			fork="true">
-			<localrepository id="local" path="${settings.localRepository}" />
-			<arg value="-B" />
-			<arg value="dependency:unpack" />
-		</artifact:mvn>
+      		<maven basedir="${flexobuild.work.dir}"
+             		options=""
+             		goal="dependency:unpack"
+            		resultproperty="maven.build.result"/>
+
 		<antcall target="generateApplicationVersion" />
 	</target>
 
@@ -186,24 +216,23 @@
 	</target>
 
 	<target name="generateFlexoLauncher">
-		<copy tofile="${flexobuild.work.dir}/flexolauncher.nsi"
-			filtering="true" overwrite="true">
+		<copy tofile="${flexobuild.work.dir}/pom.xml" filtering="true"
+			overwrite="true">
 			<resources>
-				<javaresource name="Windows/flexolauncher.nsi.tpl">
+				<javaresource name="Windows/pom_launch4j.xml.tpl">
 					<classpath>
 						<pathelement location="${org.openflexo:packaging-tools:jar}"></pathelement>
 					</classpath>
 				</javaresource>
 			</resources>
-
 			<filterset>
 				<filtersfile file="${build.properties}" />
 			</filterset>
 		</copy>
-		<exec executable="makensis" failonerror="true">
-			<arg value="-V2" />
-			<arg value="${flexobuild.work.dir}/flexolauncher.nsi" />
-		</exec>
+      		<maven basedir="${flexobuild.work.dir}"
+             		options=""
+             		goal="package"
+            		resultproperty="maven.build.result"/>
 	</target>
 
 	<target name="packageMacOSX">
@@ -256,19 +285,6 @@
 			<option value="-XX:MaxPermSize=512M" />
 			<argument value="-userType ${userType}" />
 		</bundleapp>
-		<!--<jarbundler stubfile="${java.stubfile}" dir="${mac.app.dir.versioned}" 
-			name="${qualified_and_versioned_app_name}" mainclass="${main.class}" bundleid="${project.groupId}" 
-			signature="FLXO" version="${flexo_version}" jvmversion="1.7+" shortname="${product.name}" 
-			icon="${icons.dir}/${icon_mac_name}" arguments="${program.args}" infostring="${product.name} 
-			${flexo_version}, (c) ${organization.name} ${current.year}" vmoptions="${vm.args}"> 
-			<javaproperty name="apple.awt.antialiasing" value="true" /> <javaproperty 
-			name="apple.awt.antialiasedtext" value="true" /> <javaproperty name="apple.laf.useScreenMenuBar" 
-			value="true" /> <jarfileset dir="${dist.dir}/lib"> <include name="*.jar" 
-			/> </jarfileset> <jarfileset dir="${dist.dir}/deps"> <include name="*.jar" 
-			/> </jarfileset> <documenttype name="OpenFlexo document" extensions="prj" 
-			iconFile="${icons.dir}/FlexoDocument.icns" bundle="true" role="Editor" /> 
-			<documenttype name="OpenFlexo palette" extensions="iepalette" iconFile="${icons.dir}/FlexoDocument2.icns" 
-			bundle="true" role="Editor" /> </jarbundler> -->
 		<copy todir="${mac.app.dir.versioned}/${relative_res_path}">
 			<fileset dir="${dist.dir}">
 				<exclude name="lib/*" />

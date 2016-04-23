@@ -28,8 +28,7 @@ SetCompressor lzma
 !define MUI_LANGDLL_REGISTRY_KEY ${REGKEY}
 !define MUI_LANGDLL_REGISTRY_VALUENAME InstallerLanguage
 
-!define BUSINESS_VERSION "@productSuffix@"
-!define PRODUCT_NAME "$(^Name) ${BUSINESS_VERSION} ${VERSION}"
+!define PRODUCT_NAME "$(^Name) @productSuffix@ ${VERSION}"
 !define EXE_FILE "${PRODUCT_NAME}.exe"
 Icon "@icons.dir@\@wizard.setup.icon@"
 
@@ -65,7 +64,7 @@ Var StartMenuGroup
 
 # Installer attributes
 OutFile "@project.build.directory@\@product.name@ @productSuffix@ @flexo_version@ Setup.exe"
-InstallDir "$PROGRAMFILES\@product.name@\@productSuffix@\${VERSION}"
+InstallDir "$PROGRAMFILES\Openflexo\@product.name@ @productSuffix@\${VERSION}"
 CRCCheck on
 XPStyle on
 ShowInstDetails show
