@@ -7,6 +7,7 @@
 		<version>0.4-SNAPSHOT</version>
 	</parent>
 	<artifactId>packaging-tools</artifactId>
+	<name>Packaging :: Tools</name>
 	<description>This pom aims at capitalizing packaging tools for Openflexo</description>
 	<build>
 		<resources>

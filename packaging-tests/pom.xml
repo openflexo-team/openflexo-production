@@ -12,11 +12,13 @@
 	</properties>
 	<artifactId>packaging-tests</artifactId>
 	<name>Packaging :: Build Test Installers</name>
+	<description>This project aims at provide a test-bed for packaging-tools</description>
+	<version>0.0.1-SNAPSHOT</version>
 	<dependencies>
 		<dependency>
 			<groupId>org.openflexo</groupId>
 			<artifactId>packaging-tools</artifactId>
-			<version>0.4-SNAPSHOT</version>
+			<version>${project.parent.version}</version>
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
@@ -25,5 +27,4 @@
 			<version>1.2</version>
 		</dependency>
 	</dependencies>
-	<version>0.0.1-SNAPSHOT</version>
 </project>
