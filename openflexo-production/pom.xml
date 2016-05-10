@@ -279,6 +279,23 @@
 						AND sorter/order=ASC ${changes.componentfilter}</filter>
 				</configuration>
 			</plugin>
+                        <plugin>
+                               <groupId>org.apache.maven.plugins</groupId>
+                               <artifactId>maven-javadoc-plugin</artifactId>
+                               <version>${javadoc.version}</version>
+                               <executions>
+                                       <execution>
+                                               <id>aggregate</id>
+                                               <goals>
+                                                       <goal>aggregate</goal>
+                                               </goals>
+                                               <phase>site</phase>
+                                               <configuration>
+                                               </configuration>
+                                       </execution>
+                               </executions>
+                        </plugin>
+			
 		</plugins>
 	</build>
 	<!--******************* Global dependencies -->
