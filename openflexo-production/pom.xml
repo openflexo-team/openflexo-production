@@ -445,6 +445,51 @@
 	</reporting>
 	<!-- ***************** Profiles -->
 	<profiles>
+
+		<!-- ***************** Those profiles need to be customized for every component -->
+		<profile>
+			<id>snapshot-profile</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<!-- ************ Places where to upload files for component Maven site -->
+			<distributionManagement>
+				<site>
+					<id>openflexo-production.website</id>
+					<url>scp://server-one.openflexo.org/home/www/sites/openflexo-production/SNAPSHOT/openflexo-production/</url>
+				</site>
+			</distributionManagement>
+		</profile>
+		<profile>
+			<id>RC-profile</id>
+			<activation>
+				<property>
+					<name>performRC</name>
+				</property>
+			</activation>
+			<!-- ************ Places where to upload files for component Maven site -->
+			<distributionManagement>
+				<site>
+					<id>openflexo-production.website</id>
+					<url>scp://server-one.openflexo.org/home/www/sites/openflexo-production/SNAPSHOT/openflexo-production/</url>
+				</site>
+			</distributionManagement>
+		</profile>
+		<profile>
+			<id>release-profile</id>
+			<activation>
+				<property>
+					<name>performRelease</name>
+				</property>
+			</activation>
+			<!-- ************ Places where to upload files for component Maven site -->
+			<distributionManagement>
+				<site>
+					<id>openflexo-production.website</id>
+					<url>scp://server-one.openflexo.org/home/www/sites/openflexo-production/${project.version}/openflexo-production/</url>
+				</site>
+			</distributionManagement>
+		</profile>
 		<!-- ***************** A Profile only used in Eclipse -->
 		<profile>
 			<id>only-eclipse</id>
@@ -502,49 +547,6 @@
 					</plugins>
 				</pluginManagement>
 			</build>
-		</profile>
-		<profile>
-			<id>snapshot-profile</id>
-			<activation>
-				<activeByDefault>true</activeByDefault>
-			</activation>
-			<!-- ************ Places where to upload files for component Maven site -->
-			<distributionManagement>
-				<site>
-					<id>openflexo-production.website</id>
-					<url>scp://server-one.openflexo.org/home/www/sites/openflexo-production/SNAPSHOT/openflexo-production/</url>
-				</site>
-			</distributionManagement>
-		</profile>
-		<profile>
-			<id>RC-profile</id>
-			<activation>
-				<property>
-					<name>performRC</name>
-				</property>
-			</activation>
-			<!-- ************ Places where to upload files for component Maven site -->
-			<distributionManagement>
-				<site>
-					<id>openflexo-production.website</id>
-					<url>scp://server-one.openflexo.org/home/www/sites/openflexo-production/openflexo-production/SNAPSHOT/openflexo-production/</url>
-				</site>
-			</distributionManagement>
-		</profile>
-		<profile>
-			<id>release-profile</id>
-			<activation>
-				<property>
-					<name>performRelease</name>
-				</property>
-			</activation>
-			<!-- ************ Places where to upload files for component Maven site -->
-			<distributionManagement>
-				<site>
-					<id>openflexo-production.website</id>
-					<url>scp://server-one.openflexo.org/home/www/sites/openflexo-production/openflexo-production/${project.version}/</url>
-				</site>
-			</distributionManagement>
 		</profile>
 		<profile>
 			<id>build-installers</id>

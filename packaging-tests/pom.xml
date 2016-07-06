@@ -27,4 +27,49 @@
 			<version>1.2</version>
 		</dependency>
 	</dependencies>
+	<profiles>
+		<profile>
+			<id>snapshot-profile</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<!-- ************ Places where to upload files for component Maven site -->
+			<distributionManagement>
+				<site>
+					<id>openflexo-production.website</id>
+					<url>scp://server-one.openflexo.org/home/www/sites/openflexo-production/SNAPSHOT/packaging-tests/</url>
+				</site>
+			</distributionManagement>
+		</profile>
+		<profile>
+			<id>RC-profile</id>
+			<activation>
+				<property>
+					<name>performRC</name>
+				</property>
+			</activation>
+			<!-- ************ Places where to upload files for component Maven site -->
+			<distributionManagement>
+				<site>
+					<id>openflexo-production.website</id>
+					<url>scp://server-one.openflexo.org/home/www/sites/openflexo-production/SNAPSHOT/packaging-tests/</url>
+				</site>
+			</distributionManagement>
+		</profile>
+		<profile>
+			<id>release-profile</id>
+			<activation>
+				<property>
+					<name>performRelease</name>
+				</property>
+			</activation>
+			<!-- ************ Places where to upload files for component Maven site -->
+			<distributionManagement>
+				<site>
+					<id>openflexo-production.website</id>
+					<url>scp://server-one.openflexo.org/home/www/sites/openflexo-production/${project.version}/packaging-tests/</url>
+				</site>
+			</distributionManagement>
+		</profile>
+	</profiles>
 </project>

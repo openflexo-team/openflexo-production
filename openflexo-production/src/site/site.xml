@@ -29,9 +29,16 @@
 	</custom>
 	
   <body>
-    <links>
-      <item name="Openflexo" href="http://www.openflexo.org"/>
-    </links>
+
+ <menu name=""
+			img="https://developers.openflexo.org/images/components/openflexo-production/openflexo-production_64x64.png">
+ </menu>
+  
+  <menu name="Links" >
+      <item name="Openflexo main site" href="http://www.openflexo.org"/>
+      <item name="Openflexo-Production" href="https://openflexo-production.openflexo.org/"/>
+  </menu>
+
 <!--
     <menu name="Usage">
       <item name="Usage simple" href="usage.html" />

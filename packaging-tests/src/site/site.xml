@@ -4,15 +4,16 @@
   xsi:schemaLocation="http://maven.apache.org/DECORATION/1.0.0 http://maven.apache.org/xsd/decoration-1.0.0.xsd">
    
   <bannerLeft>
-	<name>Openflexo-Production</name>
+	<name>Openflexo-Tools-Configuration</name>
 	<src>${openflexo-production.logo}</src>
-	<href>https://openflexo-production.openflexo.org/</href>
+	<href>https://openflexo.org/tiki/Openflexo-Production</href>
   </bannerLeft> 
   <bannerRight>
     <name>Openflexo</name>
     <src>${organization.logo}</src>
-    <href>https://www.openflexo.org/</href>
+    <href>http://openflexo.org/</href>
   </bannerRight>
+
   <skin>
     <groupId>org.openflexo</groupId>
     <artifactId>openflexo-skin</artifactId>
@@ -28,16 +29,11 @@
 		</openflexo-skin>
 	</custom>
 
-  <body>
-  
- <menu name=""
-			img="https://developers.openflexo.org/images/components/openflexo-production/openflexo-production_64x64.png">
- </menu>
-  
-  <menu name="Links" >
-      <item name="Openflexo main site" href="http://www.openflexo.org"/>
-  </menu>
 
+  <body>
+    <links>
+      <item name="Openflexo" href="http://www.openflexo.org"/>
+    </links>
 <!--
     <menu name="Usage">
       <item name="Usage simple" href="usage.html" />
@@ -58,9 +54,17 @@
       <item name="TODO" 		href="todo.html" />
     </menu>	
 -->
+  
+ <menu name=""
+			img="https://developers.openflexo.org/images/components/openflexo-production/openflexo-production_64x64.png">
+ </menu>
+  
+  <menu name="Links" >
+      <item name="Openflexo main site" href="http://www.openflexo.org"/>
+      <item name="Openflexo-Production" href="https://openflexo-production.openflexo.org/"/>
+  </menu>
 
  <!--   <menu ref="parent" /> -->
-    <menu ref="modules" />
     <menu ref="reports" />
 <!--    <menu ref="plugins" /> -->
   </body>
