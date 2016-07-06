@@ -8,7 +8,7 @@
 	</parent>
 	<artifactId>packaging-tools</artifactId>
 	<name>Packaging :: Tools</name>
-	<description>This pom aims at capitalizing packaging tools for Openflexo</description>
+	<description>This project aims at capitalizing packaging tools for Openflexo. It contains all the utilities and configuration files needed to build a software distribution for multiple platforms.</description>
 	<build>
 		<resources>
 			<resource>

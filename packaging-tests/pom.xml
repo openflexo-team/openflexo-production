@@ -12,7 +12,7 @@
 	</properties>
 	<artifactId>packaging-tests</artifactId>
 	<name>Packaging :: Build Test Installers</name>
-	<description>This project aims at provide a test-bed for packaging-tools</description>
+	<description>This project is a way to test packaging tools used to create software distribution for Openflexo.</description>
 	<version>0.0.1-SNAPSHOT</version>
 	<dependencies>
 		<dependency>
