@@ -53,7 +53,7 @@ Locations and names of sub-directory may change but must be specified in _build-
 	* _Icons/SplashPanel.bmp_:  (72x72 ppp en 128 couleurs indexs 580x300 pixels max)
 * __License__ sub-directory:
 	* must contain a rtf file containing License text that will be displayed during installation (Windows installer)
-	* naming schema must be  _<license subdir name>\<version Type>\License.rtf_, e.g. _License/Tests/License.rtf_
+	* naming schema must be  _&lt;license subdir name&gt;\&lt;version Type&gt;\License.rtf_, e.g. _License/Tests/License.rtf_
 	* _version type_ is specified in _packaging.properties_ file
 
 ## Step by step: configure a project to build a software distribution
