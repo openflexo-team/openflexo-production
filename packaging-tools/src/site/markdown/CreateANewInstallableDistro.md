@@ -14,6 +14,21 @@ It is possible to create either:
 * a pure _distribution project_ that does not contain any additional resource or source file (e.g., look at the projects in _/openflexo-packaging/packages_), 
 * to configure any _standard project_ , containing some source code to be compiled and packaged as a jar, so that it can be distribute as a set of installable packages (one per platform).
 
+## Naming scheme of distribution packages
+
+Installable packages of Openflexo software use the following name scheme: __${product.name} ${productSuffix} ${flexo_version}__
+with following extension:
+
+* Linux: _.tar.gz_
+* MacOs: _.dmg_
+* Windows: _Setup.exe_
+
+Naming elements come from the configuration files:
+
+* __product.name__ is defined in _pom.xml_, and might be inherited from parent pom
+* __productSuffix__ is defined in _packaging.properties_
+* __flexo_____version__ is computed in  _build___packaging.xml_ using _project.version_ from _pom.xml_ in order to be compatible with file naming scheme of each platform (e.g. _1.8.0.18-SNAPHSOT_ will be translated to _1.8.0SNAPSHOT_)
+
 ## Requirements
 
 ### Before you start:
@@ -27,6 +42,7 @@ It is possible to create either:
 
 All the files listed here must be present in your project before you start the customization of the distribution building process.
 Samples can be found in the __packaging-tests__ project of the __openflexo-production__ Github repository [here](https://github.com/openflexo-team/openflexo-production).
+
 You can copy any missing file from __packaging-tests__ to your own project before customizing them.
 
 #### Files that drive the build & packaging process
@@ -77,24 +93,29 @@ Edit the _pom.xml_ file to add a dependency:
 		</dependency> 
 ```
 
-### 2.
+### 3. Update properties in pom.xml
 
-## Configuration files
+_pom.xml_ 
 
-### packaging.properties
-* prout
-	* versionType=Tests
-	* productSuffix=TestApplication
-	* productDescription=A test application
-	* Copyright=Openflexo
-	* icon_mac_name=IconOpenflexo.icns
-	* userType=developer_release
-	* allowsDocSubmission=false
-	* logCount=0
-	* keepLogTrace=false
-	* default.logging.level=SEVERE
-	* maven.artifact.id=packaging-tests
-	* maven.group.id=org.openflexo
-	* wizard.setup.icon=Openflexo.ico
-	* launcher.splash=SplashPanel.bmp
-	* vm.args=-Xmx512M -XX:MaxPermSize=128M
+### 3. Update packaging.properties
+
+* _versionType=Tests_, MacOS specific parameter to name the directory where distribution is build (TODO: should be deprecated)
+* _productSuffix=TestApplication_ 
+* _productDescription=A test application_
+* _Copyright=Openflexo_
+* _icon_mac_name=IconOpenflexo.icns_
+* _userType=developer_release_
+* _allowsDocSubmission=false_
+* _logCount=0_
+* _keepLogTrace=false_
+* _default.logging.level=SEVERE_
+* _maven.artifact.id=packaging-tests_
+* _maven.group.id=org.openflexo_, group id of the maven artifact (jar) to be packaged in the distribution, with all its dependencies
+* _wizard.setup.icon=Openflexo.ico_, icon of the Windows installer without path
+* _launcher.splash=SplashPanel.bmp_, name of the image used for SplashPanel of the windows launcher (without path,see requirements)
+* _vm.args=-Xmx512M -XX:MaxPermSize=128M_,  __(deprecated)__
+
+
+
+### 4.  
+

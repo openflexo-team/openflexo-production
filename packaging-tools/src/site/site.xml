@@ -42,8 +42,7 @@
   </menu>  
 
   <menu name="HowTos" >
-      <item name="Create new instalelr" href="CreateANewInstallableDistro.md"/>
-      <item name="Openflexo-Production" href="https://openflexo-production.openflexo.org/"/>
+      <item name="Create new installer" href="CreateANewInstallableDistro.html"/>
   </menu>
 
 
