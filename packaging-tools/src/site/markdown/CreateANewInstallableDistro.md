@@ -38,6 +38,11 @@ Naming elements come from the configuration files:
 3. if you want to make to distribution available on the download server, you must know the name and path of the directory where your files will be deployed, and ensure that it exists on the download server
 
 
+Also, to be able to test your configuration, you will probably need to be able to use _Maven_ on the command line. 
+Required versions are:
+* Maven: 3.x
+* JdK: 1.7.xx
+
 ### Files needed in the project 
 
 All the files listed here must be present in your project before you start the customization of the distribution building process.
@@ -76,7 +81,7 @@ Locations and names of sub-directory may change but must be specified in _build-
 
 ### 1. Ensure your project meets the requirements
 
-As documented in this document....
+As documented earlier....
 
 ### 2. Add dependency to __packaging tools__
 
@@ -95,27 +100,71 @@ Edit the _pom.xml_ file to add a dependency:
 
 ### 3. Update properties in pom.xml
 
-_pom.xml_ 
+As in the following example, all the following properties need to be set in _pom.xml_ file.
 
-### 3. Update packaging.properties
+One of the most important is the __main.class__ property as it is needed to build the programs and scripts that will enable users
+to use the application packaged in the distribution.
+
+``` xml
+
+	<artifactId>packaging-tests</artifactId> <!-- name of the artifact to be packaged, will be also set in packaging.properties -->
+
+	<name>Packaging :: Build Test Installers</name>
+	<description>This project is a way to test packaging tools used to create software distribution for Openflexo.</description>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<properties>
+		<main.class>org.openflexo.TestApplication</main.class> <!-- main class of the application -->
+	</properties>
+
+```
+### 4. Update parameters in build-packaging.properties
+
+Depending on your configuration, you might need to tweak some of the parameters in _ant_ config file.
+
+Most of the time, if you did not chose to put Icons and License files in another place than the default one, the only
+thing you'll have to change is the deployment directory: i.e., the place where the packages for the distribution will
+be uploaded if they have been successfully built.
+
+```xml
+
+	<!-- ./target/../Icons -->
+	<property name="icons.dir" value="${resources.dir}/Icons" />
+	<!-- ./target/../License -->
+	<property name="license.dir" value="${resources.dir}/License" />
+	<!-- deployment dir for packagings -->
+		<property name="deployment.root.folder" value="~/downloads/somedirectory" />
+
+```
+
+### 5. Update packaging.properties
+
+__Note__: deprecated parameters are still needed as we need to do some cleaning in tooling to not rely on them anymore
 
 * _versionType=Tests_, MacOS specific parameter to name the directory where distribution is build (TODO: should be deprecated)
-* _productSuffix=TestApplication_ 
-* _productDescription=A test application_
-* _Copyright=Openflexo_
-* _icon_mac_name=IconOpenflexo.icns_
-* _userType=developer_release_
-* _allowsDocSubmission=false_
+* _productSuffix=TestApplication_, used to name the package (see naming scheme)
+* _productDescription=A test application_, description used by the installer
+* _Copyright=Openflexo_, Copyright specified on Installer screen
+* _icon_mac_name=IconOpenflexo.icns_, icon for MacOS distribution
+* _userType=developer___release_, kind of user __(deprecated)__
+* _allowsDocSubmission=false_, __(deprecated)__
 * _logCount=0_
 * _keepLogTrace=false_
-* _default.logging.level=SEVERE_
-* _maven.artifact.id=packaging-tests_
-* _maven.group.id=org.openflexo_, group id of the maven artifact (jar) to be packaged in the distribution, with all its dependencies
+* _default.logging.level=SEVERE_, default log-level
+* _maven.artifact.id=packaging-tests_, maven artifact to be packaged, should be the same as the one specified in _pom.xml_
+* _maven.group.id=org.openflexo_, group_id of the maven artifact (jar) to be packaged in the distribution, with all its dependencies
 * _wizard.setup.icon=Openflexo.ico_, icon of the Windows installer without path
 * _launcher.splash=SplashPanel.bmp_, name of the image used for SplashPanel of the windows launcher (without path,see requirements)
 * _vm.args=-Xmx512M -XX:MaxPermSize=128M_,  __(deprecated)__
 
 
 
-### 4.  
+### 6. Test and validate
+
+
+To test your configuration you can use the following maven target:
+__mvn -Pbuild-installers package__
+  
+To deploy the built package on the download server: 
+__mvn -Pbuild-installers deploy__
 
