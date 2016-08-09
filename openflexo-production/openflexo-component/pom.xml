@@ -3,7 +3,7 @@
 	<parent>
 		<groupId>org.openflexo</groupId>
 		<artifactId>openflexo-production</artifactId>
-		<version>0.4-SNAPSHOT</version>
+		<version>0.4-RC1</version>
 	</parent>
 	<!-- ************ Component identity and specific information -->
 	<modelVersion>4.0.0</modelVersion>
@@ -11,7 +11,7 @@
 	<name>Openflexo-Component</name>
 	<description>Parent pom for any component defined in Openflexo Infrastructure</description>
 	<scm>
-		<tag>0.4</tag>
+		<tag>Openflexo-Root-Pom-0.4-RC1</tag>
 	</scm>
 	<packaging>pom</packaging>
 	<url>https://openflexo-production.openflexo.org/</url>

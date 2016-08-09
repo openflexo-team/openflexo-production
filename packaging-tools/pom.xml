@@ -3,7 +3,7 @@
 	<parent>
 		<groupId>org.openflexo</groupId>
 		<artifactId>openflexo-root-pom</artifactId>
-		<version>0.4-SNAPSHOT</version>
+		<version>0.4-RC1</version>
 	</parent>
 	<artifactId>packaging-tools</artifactId>
 	<name>Packaging :: Tools</name>
