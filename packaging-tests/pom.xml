@@ -13,7 +13,6 @@
 	<artifactId>packaging-tests</artifactId>
 	<name>Packaging :: Build Test Installers</name>
 	<description>This project is a way to test packaging tools used to create software distribution for Openflexo.</description>
-	<version>0.4-SNAPSHOT</version>
 	<dependencies>
 		<dependency>
 			<groupId>org.openflexo</groupId>
