@@ -39,6 +39,10 @@
       <item name="Openflexo-Production" href="https://openflexo-production.openflexo.org/"/>
   </menu>
 
+  <menu name="HowTos" >
+      <item name="Production process" href="ProductionProcess.html"/>
+  </menu>
+
 <!--
     <menu name="Usage">
       <item name="Usage simple" href="usage.html" />
