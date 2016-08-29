@@ -89,7 +89,7 @@ Edit the _pom.xml_ file to add a dependency:
 
 ```xml
 		
-		<!-- PACKAGING DEPENDENCIES -->
+		<!-- PACKAGINGï¿½DEPENDENCIES -->
 		<dependency>
 			<groupId>org.openflexo</groupId>
 			<artifactId>packaging-tools</artifactId>
@@ -114,11 +114,13 @@ to use the application packaged in the distribution.
 	<version>0.0.1-SNAPSHOT</version>
 
 	<properties>
+		<packagingtools.version>0.4-SNAPSHOT</packagingtools.version>
+		<product.name>Your product name</product.name>
 		<main.class>org.openflexo.TestApplication</main.class> <!-- main class of the application -->
 	</properties>
 
 ```
-### 4. Update parameters in build-packaging.properties
+### 4. Update parameters in build-packaging.xml
 
 Depending on your configuration, you might need to tweak some of the parameters in _ant_ config file.
 
