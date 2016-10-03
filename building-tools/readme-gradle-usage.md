@@ -6,7 +6,8 @@
 
 3. install git
 
-4. install pride [https://github.com/prezi/pride](https://github.com/prezi/pride)
+4. install pride [https://github.com/prezi/pride](https://github.com/prezi/pride). 
+Pride handles multiple git repositories as gradle modules, helping the management of the openflexo modules.
 
 # Usage
 
@@ -14,16 +15,19 @@
 	- create a directory to contain the pride
 	- go into that directory
 	- pride init
-	- configure the pride (`pride config repo.base.url https://github.com/openflexo-team`) if you have the right you can also use `git@github.com:openflexo-team`
+	- configure pride (`pride config repo.base.url https://github.com/openflexo-team`) if you have the right you can also use `git@github.com:openflexo-team`
 	
-2. add the pride elements
+2. add the pride elements 
 	- `pride add XX`
 	- `cd XX`
 	- `git checkout gradle-migration`
 	- `cd ..`
 	- `pride reinit -D`
 	
-3. do it for all need element
+3. do it for all needed element, for instance:
+    - `pride gradle build`: build all projects in pride using the `build` gradle target.
+    - `pride update`: pull changes for all projects in pride
+
 
 # Creating a gradle branch
 
