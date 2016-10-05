@@ -85,7 +85,6 @@
 			replace="_" global="true"/> -->
 		<property name="mac.app.dir.versioned" value="${mac.app.dir}/${versionType}" />
 		<property name="package_name" value="${qualified_and_versioned_app_name} Setup" />
-		<property name="program.args" value="-userType ${userType}" />
 		<echoproperties destfile="${build.properties}" />
 		<antcall target="checkoutArtifact" />
 		<antcall target="generateFlexoProperties" />
@@ -283,7 +282,6 @@
 			<option value="-Dapple.awt.antialiasedtext=true" />
 			<option value="-Xmx2G" />
 			<option value="-XX:MaxPermSize=512M" />
-			<argument value="-userType ${userType}" />
 		</bundleapp>
 		<copy todir="${mac.app.dir.versioned}/${relative_res_path}">
 			<fileset dir="${dist.dir}">
