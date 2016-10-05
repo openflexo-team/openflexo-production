@@ -281,7 +281,6 @@
 			<option value="-Dapple.awt.antialiasing=true" />
 			<option value="-Dapple.awt.antialiasedtext=true" />
 			<option value="-Xmx2G" />
-			<option value="-XX:MaxPermSize=512M" />
 		</bundleapp>
 		<copy todir="${mac.app.dir.versioned}/${relative_res_path}">
 			<fileset dir="${dist.dir}">
