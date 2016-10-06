@@ -40,6 +40,7 @@
                               </goals>
                               <configuration>
                                    <jar>lib/${project.artifactId}-${project.version}.jar</jar>
+                                   <cmdLine>@program.args@</cmdLine>
                                    <dontWrapJar>true</dontWrapJar>
                                    <headerType>gui</headerType>
                                    <outfile>dist/@product.name@ @productSuffix@ @flexo_version@.exe</outfile>
@@ -72,8 +73,7 @@
                                         <minVersion>1.7.0</minVersion>
                                         <jdkPreference>preferJre</jdkPreference>
                                         <runtimeBits>64/32</runtimeBits>
-                                        <initialHeapPercent>80</initialHeapPercent>
-                                        <maxHeapPercent>80</maxHeapPercent>
+                                        <opt>@vm.args@</opt>
                                    </jre>
                                    <versionInfo>
                                         <fileVersion>@4d_version@</fileVersion>
@@ -97,6 +97,7 @@
                               </goals>
                               <configuration>
                                    <jar>lib/${project.artifactId}-${project.version}.jar</jar>
+                                   <cmdLine>@program.args@</cmdLine>
                                    <dontWrapJar>true</dontWrapJar>
                                    <headerType>console</headerType>
                                    <outfile>dist/@product.name@ @productSuffix@ @flexo_version@ - Console.exe</outfile>
@@ -123,8 +124,7 @@
                                         <minVersion>1.7.0</minVersion>
                                         <jdkPreference>preferJre</jdkPreference>
                                         <runtimeBits>64/32</runtimeBits>
-                                        <initialHeapPercent>80</initialHeapPercent>
-                                        <maxHeapPercent>80</maxHeapPercent>
+                                        <opt>@vm.args@</opt>
                                    </jre>
                                    <versionInfo>
                                         <fileVersion>@4d_version@</fileVersion>
