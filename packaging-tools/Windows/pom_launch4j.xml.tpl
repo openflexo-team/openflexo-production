@@ -73,7 +73,7 @@
                                         <minVersion>1.7.0</minVersion>
                                         <jdkPreference>preferJre</jdkPreference>
                                         <runtimeBits>64/32</runtimeBits>
-                                        <opt>@vm.args@</opt>
+                                        <opts>@vm.args@</opts>
                                    </jre>
                                    <versionInfo>
                                         <fileVersion>@4d_version@</fileVersion>
@@ -124,7 +124,7 @@
                                         <minVersion>1.7.0</minVersion>
                                         <jdkPreference>preferJre</jdkPreference>
                                         <runtimeBits>64/32</runtimeBits>
-                                        <opt>@vm.args@</opt>
+                                        <opts>@vm.args@</opts>
                                    </jre>
                                    <versionInfo>
                                         <fileVersion>@4d_version@</fileVersion>
