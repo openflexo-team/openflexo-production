@@ -239,9 +239,6 @@
 	</target>
 
 	<target name="packageMacOSX">
-		<!-- tokenized vm.args for plist generation -->
-		<propertyregex property="plist_vm_args" input="${vm.args}"
-			regexp="( )" replace="&lt;string>&lt;/string>"  defaultvalue="${vm.args}" />
 		<copy tofile="${flexobuild.work.dir}/JavaApplicationStub"
 			filtering="false" overwrite="true">
 			<resources>
@@ -287,7 +284,7 @@
 			<option value="-Dapple.laf.useScreenMenuBar=true" />
 			<option value="-Dapple.awt.antialiasing=true" />
 			<option value="-Dapple.awt.antialiasedtext=true" />
-			<option value="${plist_vm_args}" />
+			<option value="${vm.args}" />
 			<argument value="${program.args}" />
 		</bundleapp>
 		<copy todir="${mac.app.dir.versioned}/${relative_res_path}">
