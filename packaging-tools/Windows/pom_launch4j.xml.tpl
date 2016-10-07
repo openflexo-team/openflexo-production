@@ -131,9 +131,11 @@
                                         <jdkPreference>preferJre</jdkPreference>
                                         <runtimeBits>64/32</runtimeBits>
                                         <opts>
-                                        <opt>
-                                        @vm.args@
-                                        </opt>
+                                        	<opt>@vm.arg0@</opt>
+                                        	<opt>@vm.arg1@</opt>
+                                        	<opt>@vm.arg2@</opt>
+                                        	<opt>@vm.arg3@</opt>
+                                        	<opt>@vm.arg4@</opt>
                                         </opts>
                                    </jre>
                                    <versionInfo>
