@@ -74,11 +74,7 @@
                                         <jdkPreference>preferJre</jdkPreference>
                                         <runtimeBits>64/32</runtimeBits>
                                         <opts>
-                                        	<opt>@vm.arg0@</opt>
-                                        	<opt>@vm.arg1@</opt>
-                                        	<opt>@vm.arg2@</opt>
-                                        	<opt>@vm.arg3@</opt>
-                                        	<opt>@vm.arg4@</opt>
+                                        	<opt>@vm.arg0@ @vm.arg1@ @vm.arg2@ @vm.arg3@ @vm.arg4@</opt>
                                         </opts>
                                    </jre>
                                    <versionInfo>
@@ -131,11 +127,7 @@
                                         <jdkPreference>preferJre</jdkPreference>
                                         <runtimeBits>64/32</runtimeBits>
                                         <opts>
-                                        	<opt>@vm.arg0@</opt>
-                                        	<opt>@vm.arg1@</opt>
-                                        	<opt>@vm.arg2@</opt>
-                                        	<opt>@vm.arg3@</opt>
-                                        	<opt>@vm.arg4@</opt>
+                                        	<opt>@vm.arg0@ @vm.arg1@ @vm.arg2@ @vm.arg3@ @vm.arg4@</opt>
                                         </opts>
                                    </jre>
                                    <versionInfo>
