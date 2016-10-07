@@ -284,7 +284,11 @@
 			<option value="-Dapple.laf.useScreenMenuBar=true" />
 			<option value="-Dapple.awt.antialiasing=true" />
 			<option value="-Dapple.awt.antialiasedtext=true" />
-			<option value="${vm.args}" />
+			<option value="${vm.arg0}" />
+			<option value="${vm.arg1}" />
+			<option value="${vm.arg2}" />
+			<option value="${vm.arg3}" />
+			<option value="${vm.arg4}" />
 			<argument value="${program.args}" />
 		</bundleapp>
 		<copy todir="${mac.app.dir.versioned}/${relative_res_path}">
