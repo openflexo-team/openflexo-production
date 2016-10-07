@@ -57,6 +57,9 @@
 		<property name="dist.dir" value="${flexobuild.work.dir}/dist" />
 		<!-- ./target/flexobuild/build -->
 		<property name="mac.app.dir" value="${flexobuild.work.dir}/mac_apps" />
+		<!-- tokenized vm.args for plist generation -->
+		<propertyregex property="plist_vm_args" input="${vm.args}"
+			regexp=" " replace="&lt;string>&lt;/string>"  defaultvalue="" />
 		<tstamp>
 			<format property="build.id" pattern="yyyy-MM-dd.HHmm" />
 		</tstamp>
@@ -284,7 +287,7 @@
 			<option value="-Dapple.laf.useScreenMenuBar=true" />
 			<option value="-Dapple.awt.antialiasing=true" />
 			<option value="-Dapple.awt.antialiasedtext=true" />
-			<option value="${vm.args}" />
+			<option value="${plist_vm_args}" />
 			<argument value="${program.args}" />
 		</bundleapp>
 		<copy todir="${mac.app.dir.versioned}/${relative_res_path}">
