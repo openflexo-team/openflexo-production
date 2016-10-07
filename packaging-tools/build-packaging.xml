@@ -59,9 +59,9 @@
 		<property name="mac.app.dir" value="${flexobuild.work.dir}/mac_apps" />
 		<!-- tokenized vm.args for plist generation -->
 		<propertyregex property="plist_vm_args" input="${vm.args}"
-			regexp="([ ]*)" replace="&lt;string>&lt;/string>"  defaultvalue="${vm.args}" />
+			regexp="([ ]+)" replace="&lt;string>&lt;/string>"  defaultvalue="${vm.args}" />
 		<propertyregex property="plist2_vm_args" input="${vm.args}"
-			regexp="(-X)*" replace="&lt;string>&lt;/string>"  defaultvalue="${vm.args}" />
+			regexp="(-*)" replace="&lt;string>&lt;/string>"  defaultvalue="${vm.args}" />
 		<tstamp>
 			<format property="build.id" pattern="yyyy-MM-dd.HHmm" />
 		</tstamp>
