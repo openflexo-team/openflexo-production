@@ -242,8 +242,6 @@
 		<!-- tokenized vm.args for plist generation -->
 		<propertyregex property="plist_vm_args" input="${vm.args}"
 			regexp="( )" replace="&lt;string>&lt;/string>"  defaultvalue="${vm.args}" />
-		<propertyregex property="plist2_vm_args" input="${vm.args}"
-			regexp="(-*)" replace="&lt;string>&lt;/string>"  defaultvalue="${vm.args}" />
 		<copy tofile="${flexobuild.work.dir}/JavaApplicationStub"
 			filtering="false" overwrite="true">
 			<resources>
