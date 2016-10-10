@@ -272,6 +272,16 @@
 		<tstamp>
 			<format property="current.year" pattern="yyyy" />
 		</tstamp>
+		<if><equals arg1="${vm.arg0}" arg2="" /> <then><property name="vm.carg0" value="-Xmx1g" /> </then>
+							<else><property name="vm.carg0" value="${vm.arg0}" /></else></if>
+		<if><equals arg1="${vm.arg1}" arg2="" /> <then><property name="vm.carg1" value="${vm.carg0}" /> </then>
+							<else><property name="vm.carg1" value="${vm.arg1}" /></else></if>
+		<if><equals arg1="${vm.arg2}" arg2="" /> <then><property name="vm.carg2" value="${vm.carg0}" /> </then>
+							<else><property name="vm.carg2" value="${vm.arg2}" /></else></if>
+		<if><equals arg1="${vm.arg3}" arg2="" /> <then><property name="vm.carg3" value="${vm.carg0}" /> </then>
+							<else><property name="vm.carg3" value="${vm.arg3}" /></else></if>
+		<if><equals arg1="${vm.arg4}" arg2="" /> <then><property name="vm.carg4" value="${vm.carg0}" /> </then>
+							<else><property name="vm.carg4" value="${vm.arg4}" /></else></if>
 		<bundleapp outputdirectory="${mac.app.dir.versioned}"
 			name="${qualified_and_versioned_app_name}" displayname="${product.name}"
 			identifier="${product.name}" shortversion="${flexo_version}"
@@ -284,11 +294,11 @@
 			<option value="-Dapple.laf.useScreenMenuBar=true" />
 			<option value="-Dapple.awt.antialiasing=true" />
 			<option value="-Dapple.awt.antialiasedtext=true" />
-			<option value="${vm.arg0}" />
-			<option value="${vm.arg1}" />
-			<option value="${vm.arg2}" />
-			<option value="${vm.arg3}" />
-			<option value="${vm.arg4}" />
+			<option value="${vm.carg0}" />
+			<option value="${vm.carg1}" />
+			<option value="${vm.carg2}" />
+			<option value="${vm.carg3}" />
+			<option value="${vm.carg4}" />
 			<argument value="${program.args}" />
 		</bundleapp>
 		<copy todir="${mac.app.dir.versioned}/${relative_res_path}">
