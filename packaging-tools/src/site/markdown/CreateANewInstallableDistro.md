@@ -148,8 +148,6 @@ __Note__: deprecated parameters are still needed as we need to do some cleaning 
 * _productDescription=A test application_, description used by the installer
 * _Copyright=Openflexo_, Copyright specified on Installer screen
 * _icon_mac_name=IconOpenflexo.icns_, icon for MacOS distribution
-* _userType=developer___release_, kind of user __(deprecated)__
-* _allowsDocSubmission=false_, __(deprecated)__
 * _logCount=0_
 * _keepLogTrace=false_
 * _default.logging.level=SEVERE_, default log-level
@@ -157,7 +155,6 @@ __Note__: deprecated parameters are still needed as we need to do some cleaning 
 * _maven.group.id=org.openflexo_, group_id of the maven artifact (jar) to be packaged in the distribution, with all its dependencies
 * _wizard.setup.icon=Openflexo.ico_, icon of the Windows installer without path
 * _launcher.splash=SplashPanel.bmp_, name of the image used for SplashPanel of the windows launcher (without path,see requirements)
-* _vm.args=-Xmx512M -XX:MaxPermSize=128M_,  __(deprecated)__
 
 
 

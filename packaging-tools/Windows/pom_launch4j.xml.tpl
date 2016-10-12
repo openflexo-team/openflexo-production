@@ -29,7 +29,7 @@
                <plugin>
                     <groupId>com.akathist.maven.plugins.launch4j</groupId>
                     <artifactId>launch4j-maven-plugin</artifactId>
-                    <version>1.7.8</version>
+                    <version>1.7.12</version>
                     <executions>
                          <!-- GUI exe -->
                          <execution>
@@ -40,6 +40,7 @@
                               </goals>
                               <configuration>
                                    <jar>lib/${project.artifactId}-${project.version}.jar</jar>
+                                   <cmdLine>@program.args@</cmdLine>
                                    <dontWrapJar>true</dontWrapJar>
                                    <headerType>gui</headerType>
                                    <outfile>dist/@product.name@ @productSuffix@ @flexo_version@.exe</outfile>
@@ -72,8 +73,9 @@
                                         <minVersion>1.7.0</minVersion>
                                         <jdkPreference>preferJre</jdkPreference>
                                         <runtimeBits>64/32</runtimeBits>
-                                        <initialHeapPercent>80</initialHeapPercent>
-                                        <maxHeapPercent>80</maxHeapPercent>
+                                        <opts>
+                                        	<opt>@vm.arg0@ @vm.arg1@ @vm.arg2@ @vm.arg3@ @vm.arg4@</opt>
+                                        </opts>
                                    </jre>
                                    <versionInfo>
                                         <fileVersion>@4d_version@</fileVersion>
@@ -97,6 +99,7 @@
                               </goals>
                               <configuration>
                                    <jar>lib/${project.artifactId}-${project.version}.jar</jar>
+                                   <cmdLine>@program.args@</cmdLine>
                                    <dontWrapJar>true</dontWrapJar>
                                    <headerType>console</headerType>
                                    <outfile>dist/@product.name@ @productSuffix@ @flexo_version@ - Console.exe</outfile>
@@ -123,8 +126,9 @@
                                         <minVersion>1.7.0</minVersion>
                                         <jdkPreference>preferJre</jdkPreference>
                                         <runtimeBits>64/32</runtimeBits>
-                                        <initialHeapPercent>80</initialHeapPercent>
-                                        <maxHeapPercent>80</maxHeapPercent>
+                                        <opts>
+                                        	<opt>@vm.arg0@ @vm.arg1@ @vm.arg2@ @vm.arg3@ @vm.arg4@</opt>
+                                        </opts>
                                    </jre>
                                    <versionInfo>
                                         <fileVersion>@4d_version@</fileVersion>
