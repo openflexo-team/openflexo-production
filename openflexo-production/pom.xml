@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<!-- ************ Component identity and specific information -->
 	<groupId>org.openflexo</groupId>
-	<version>0.4-RC2</version>
+	<version>0.4-SNAPSHOT</version>
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>openflexo-production</artifactId>
 	<name>Openflexo-Production</name>
@@ -16,7 +16,7 @@
 	<scm>
 		<connection>scm:git:ssh://git@github.com/openflexo-team/openflexo-production.git</connection>
 		<url>https://github.com/openflexo-team/openflexo-production</url>
-		<tag>Openflexo-Root-Pom-0.4-RC2</tag>
+		<tag>0.4</tag>
 	</scm>
 	<issueManagement>
 		<system>JIRA</system>
