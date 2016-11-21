@@ -5,7 +5,7 @@
 -->
        <groupId>org.openflexo</groupId>
        <artifactId>tools-configuration</artifactId>
-       <version>0.4-RC2</version>
+       <version>0.4-SNAPSHOT</version>
       <name>Tools_Configuration</name>
        <description>This pom aims at providing tools configuration file for Openflexo Production Process</description>
        <scm>
