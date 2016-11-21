@@ -78,4 +78,8 @@
 			</distributionManagement>
 		</profile>
 	</profiles>
+
+  <scm>
+    <tag>Openflexo-Root-Pom-0.4-RC2</tag>
+  </scm>
 </project>

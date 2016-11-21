@@ -11,7 +11,7 @@
 	<name>Openflexo-Component</name>
 	<description>Parent pom for any component defined in Openflexo Infrastructure</description>
 	<scm>
-		<tag>0.4</tag>
+		<tag>Openflexo-Root-Pom-0.4-RC2</tag>
 	</scm>
 	<packaging>pom</packaging>
 	<url>https://openflexo-production.openflexo.org/</url>
