@@ -5,21 +5,21 @@
 ## Versioning scheme and components lifecycle
 
 We use the following versioning schemes:
-*	*major.minor.revision-qualifier*
-*     *major.minor-qualification*
+ -	*major.minor.revision-qualifier*
+ -  *major.minor-qualification*
 
 qualifier might be:
-* -SNAPSHOT for everyday development releases
-* -RCx for release candidates built at the beginning of a QA cycle.
+ - -SNAPSHOT for everyday development releases
+ - -RCx for release candidates built at the beginning of a QA cycle.
 
 Releases are built at the end of the QA cycle, when version is considered stable enough 
 
 ## Jobs in jenkins
 
 There are 3 kinds of jobs, mirroring the 3 kind of releases:
-* `-SNAPSHOT`, continuous build, triggered on VersionControl change
-* `-Release Candidate`, manual jobs
-* `releases`, manual jobs
+ - `-SNAPSHOT`, continuous build, triggered on VersionControl change
+ - `-Release Candidate`, manual jobs
+ - `releases`, manual jobs
 
 All builds have at least one parameter, pointing at the releaseVersion to be produced. 
 This parameter, *releaseVersion*, is used to select the right branch of the source code, and
@@ -32,16 +32,16 @@ It will also produce the artifacts in the [OpenFlexo artifactory](https://maven.
 
 The build of a release candidate is done using the job `Openflexo-Packaging-Release-Candidate` but it relies on all OpenFlexo components to build. 
 It needs the job following in order to be correctly build:
-- `Openflexo-Production-Release-Candidate` that build the git repository `openflexo-production`,
-- `Connie-Release-Candidate` that build the git repository `connie`,
-- `Pamela-Production-Release-Candidate` that build the git repository `pamela`,
-- `Gina-Production-Release-Candidate` that build the git repository `gina`,
-- `Diana-Production-Release-Candidate` that build the git repository `diana`,
-- `Openflexo-Utils-Production-Release-Candidate` that build the git repository `openflexo-utils`,
-- `OpenFlexo-Core-Release-Candidate` that build the git repository `openflexo-core`,
-- `OpenFlexo-Technology-Adapters-Release-Candidate` that build the git repository `openflexo-technology-adapters`,
-- `OpenFlexo-Modules-Release-Candidate` that build the git repository `openflexo-modules`,
-- `OpenFlexo-Packaging-Release-Candidate` that build the git repository `openflexo-packaging`.
+ - `Openflexo-Production-Release-Candidate` that build the git repository `openflexo-production`,
+ - `Connie-Release-Candidate` that build the git repository `connie`,
+ - `Pamela-Production-Release-Candidate` that build the git repository `pamela`,
+ - `Gina-Production-Release-Candidate` that build the git repository `gina`,
+ - `Diana-Production-Release-Candidate` that build the git repository `diana`,
+ - `Openflexo-Utils-Production-Release-Candidate` that build the git repository `openflexo-utils`,
+ - `OpenFlexo-Core-Release-Candidate` that build the git repository `openflexo-core`,
+ - `OpenFlexo-Technology-Adapters-Release-Candidate` that build the git repository `openflexo-technology-adapters`,
+ - `OpenFlexo-Modules-Release-Candidate` that build the git repository `openflexo-modules`,
+ - `OpenFlexo-Packaging-Release-Candidate` that build the git repository `openflexo-packaging`.
 
 For **each of these projects** in order, here are the steps to follow:
 
