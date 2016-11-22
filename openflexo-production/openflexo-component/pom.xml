@@ -8,7 +8,7 @@
 	<!-- ************ Component identity and specific information -->
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>openflexo-component</artifactId>
-  <version>0.4-RC2</version>
+  <version>0.4-SNAPSHOT</version>
 	<name>Openflexo-Component</name>
 	<description>Parent pom for any component defined in Openflexo Infrastructure</description>
 	<scm>
