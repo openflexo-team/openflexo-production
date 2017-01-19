@@ -3,11 +3,11 @@
 	<parent>
 		<groupId>org.openflexo</groupId>
 		<artifactId>openflexo-production</artifactId>
-		<version>0.4-SNAPSHOT</version>
+		<version>0.5-SNAPSHOT</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>openflexo-archetypes</artifactId>
-  <version>0.4-SNAPSHOT</version>
+  <version>0.5-SNAPSHOT</version>
 	<name>Openflexo-Archetypes</name>
 	<packaging>pom</packaging>
 	<build>
@@ -88,7 +88,7 @@
 	<description>Those are the Maven Archetypes one can use to create new components for Openflexo infrastructure</description>
 	<url>https://www.openflexo.org</url>
   <scm>
-    <tag>Openflexo-Root-Pom-0.4</tag>
+    <tag>0.5</tag>
   </scm>
 </project>
 
