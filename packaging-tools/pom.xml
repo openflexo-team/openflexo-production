@@ -3,10 +3,10 @@
 	<parent>
 		<groupId>org.openflexo</groupId>
 		<artifactId>openflexo-root-pom</artifactId>
-		<version>0.4</version>
+		<version>0.4-SNAPSHOT</version>
 	</parent>
 	<artifactId>packaging-tools</artifactId>
-  <version>0.4</version>
+  <version>0.4-SNAPSHOT</version>
 	<name>Packaging :: Tools</name>
 	<description>This project aims at capitalizing packaging tools for Openflexo. It contains all the utilities and configuration files needed to build a software distribution for multiple platforms.</description>
 	<build>
