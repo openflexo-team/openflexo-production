@@ -43,7 +43,6 @@
 		<mavenrelease.version>2.5</mavenrelease.version>
 	        <sitedeploy.dir>/home/www/sites/openflexo-production</sitedeploy.dir>
 	</properties>
-	</properties>
 	<!--******************* LICENSE INFO COMMON TO ALL COMPONENTS -->
 	<licenses>
 		<license>
