@@ -32,7 +32,7 @@
 	</organization>
 	<!-- ************ Global Properties common to all files -->
 	<properties>
-		<ant.version>1.9.0</ant.version>
+		<ant.version>1.10.1</ant.version>
 		<compiler.source>1.7</compiler.source>
 		<compiler.target>1.7</compiler.target>
 		<jersey.version>1.17.1</jersey.version>
