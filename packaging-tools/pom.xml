@@ -44,7 +44,7 @@
 			<distributionManagement>
 				<site>
 					<id>openflexo-production.website</id>
-					<url>scp://server-one.openflexo.org/home/www/sites/openflexo-production/SNAPSHOT/packaging-tools/</url>
+					<url>scp://www.openflexo.org/home/www/sites/openflexo-production/SNAPSHOT/packaging-tools/</url>
 				</site>
 			</distributionManagement>
 		</profile>
@@ -59,7 +59,7 @@
 			<distributionManagement>
 				<site>
 					<id>openflexo-production.website</id>
-					<url>scp://server-one.openflexo.org/home/www/sites/openflexo-production/SNAPSHOT/packaging-tools/</url>
+					<url>scp://www.openflexo.org/home/www/sites/openflexo-production/SNAPSHOT/packaging-tools/</url>
 				</site>
 			</distributionManagement>
 		</profile>
@@ -74,7 +74,7 @@
 			<distributionManagement>
 				<site>
 					<id>openflexo-production.website</id>
-					<url>scp://server-one.openflexo.org/home/www/sites/openflexo-production/${project.version}/packaging-tools/</url>
+					<url>scp://www.openflexo.org/home/www/sites/openflexo-production/${project.version}/packaging-tools/</url>
 				</site>
 			</distributionManagement>
 		</profile>
