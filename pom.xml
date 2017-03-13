@@ -36,7 +36,7 @@
 	<properties>
 		<openflexo-production.logo>https://media.openflexo.org/images/components/openflexo-production_64x64.png</openflexo-production.logo>
 		<!--maven plugins versions -->
-		<wagonssh.version>2.8</wagonssh.version>
+		<wagonssh.version>2.12</wagonssh.version>
 		<!-- reporting tools -->
 		<mavensite.version>3.4</mavensite.version>
 		<project.info.version>2.8</project.info.version>
