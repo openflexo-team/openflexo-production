@@ -60,7 +60,7 @@
 		<!--maven plugins versions -->
 		<wagonssh.version>2.12</wagonssh.version>
 		<!-- reporting tools -->
-		<mavensite.version>3.3</mavensite.version>
+		<mavensite.version>3.4</mavensite.version>
 		<findbugs.version>2.5.2</findbugs.version>
 		<checkstyle.version>2.12</checkstyle.version>
 		<changes.version>2.11</changes.version>
