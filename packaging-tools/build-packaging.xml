@@ -93,7 +93,7 @@
 		<antcall target="checkoutArtifact" />
 		<antcall target="generateFlexoProperties" />
 		<!-- <antcall target="generateHelp" /> -->
-		<!--<antcall target="packageWindows" /> -->
+		<antcall target="packageWindows" />
 		<antcall target="packageMacOSX" />
 		<antcall target="packageLinux" />
 	</target>
@@ -189,20 +189,20 @@
 		</generatehelp>
 	</target>
 
-	<!--<target name="packageWindows">
+	<target name="packageWindows">
 		<antcall target="generateFlexoLauncher" />
 		<antcall target="generateInstallerScript" />
 		<antcall target="windowsPackaging" />
-	</target>-->
+	</target>
 
-	<!--<target name="windowsPackaging">
+	<target name="windowsPackaging">
 		<exec executable="makensis" failonerror="true">
 			<arg value="-V2" />
 			<arg value="${flexobuild.work.dir}/flexoinstaller.nsi" />
 		</exec>
-	</target>-->
+	</target>
 
-	<!--<target name="generateInstallerScript">
+	<target name="generateInstallerScript">
 		<copy tofile="${flexobuild.work.dir}/flexoinstaller.nsi"
 			filtering="true" overwrite="true">
 			<resources>
@@ -216,9 +216,9 @@
 				<filtersfile file="${build.properties}" />
 			</filterset>
 		</copy>
-	</target>-->
+	</target>
 
-	<!--<target name="generateFlexoLauncher">
+	<target name="generateFlexoLauncher">
 		<copy tofile="${flexobuild.work.dir}/pom.xml" filtering="true"
 			overwrite="true">
 			<resources>
@@ -236,7 +236,7 @@
              		options=""
              		goal="package"
             		resultproperty="maven.build.result"/>
-	</target>-->
+	</target>
 
 	<target name="packageMacOSX">
 		<copy tofile="${flexobuild.work.dir}/JavaApplicationStub"
@@ -365,15 +365,15 @@
 	</target>
 
 	<target name="copyPackagesOnServer" if="deploy">
-		<!--<antcall target="copyOnServerWindowsRelease" />-->
+		<antcall target="copyOnServerWindowsRelease" />
 		<antcall target="copyOnServerMacRelease" />
 		<antcall target="copyOnServerLinuxRelease" />
-		<!--<antcall target="copyOnServerWindowsNightly" />-->
+		<antcall target="copyOnServerWindowsNightly" />
 		<antcall target="copyOnServerMacNightly" />
 		<antcall target="copyOnServerLinuxNightly" />
 	</target>
 
-	<!--<target name="copyOnServerWindowsRelease" unless="isNightly">
+	<target name="copyOnServerWindowsRelease" unless="isNightly">
 		<property name="folder"
 			value="${deployment.root.folder}/${flexo_version}/${daily_folder}/Windows" />
 		<antcall target="createRemoteFolder" />
@@ -384,7 +384,7 @@
 				<include name="*.exe" />
 			</fileset>
 		</scp>
-	</target>-->
+	</target>
 
 	<target name="copyOnServerMacRelease" unless="isNightly">
 		<property name="folder"
@@ -412,7 +412,7 @@
 		</scp>
 	</target>
 
-	<!--<target name="copyOnServerWindowsNightly" if="isNightly">
+	<target name="copyOnServerWindowsNightly" if="isNightly">
 		<property name="folder"
 			value="${deployment.root.folder}/${flexo_version}/nightly/Windows" />
 		<antcall target="createRemoteFolder" />
@@ -423,7 +423,7 @@
 				<include name="*.exe" />
 			</fileset>
 		</scp>
-	</target>-->
+	</target>
 
 	<target name="copyOnServerMacNightly" if="isNightly">
 		<property name="folder"
