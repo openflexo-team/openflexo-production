@@ -379,7 +379,7 @@
 		<antcall target="createRemoteFolder" />
 		<scp todir="${deployment.user.name}@${deployment.server.name}:${folder}"
 			trust="true" keyfile="${ssh.private.keyfile}" passphrase="${ssh.passphrase}"
-			failonerror="false">
+			failonerror="true">
 			<fileset dir="${project.build.directory}">
 				<include name="*.exe" />
 			</fileset>
@@ -392,7 +392,7 @@
 		<antcall target="createRemoteFolder" />
 		<scp todir="${deployment.user.name}@${deployment.server.name}:${folder}"
 			trust="true" keyfile="${ssh.private.keyfile}" passphrase="${ssh.passphrase}"
-			failonerror="false">
+			failonerror="true">
 			<fileset dir="${project.build.directory}">
 				<include name="*.dmg" />
 			</fileset>
@@ -405,7 +405,7 @@
 		<antcall target="createRemoteFolder" />
 		<scp todir="${deployment.user.name}@${deployment.server.name}:${folder}"
 			trust="true" keyfile="${ssh.private.keyfile}" passphrase="${ssh.passphrase}"
-			failonerror="false">
+			failonerror="true">
 			<fileset dir="${project.build.directory}">
 				<include name="*.tar.gz" />
 			</fileset>
@@ -418,7 +418,7 @@
 		<antcall target="createRemoteFolder" />
 		<scp todir="${deployment.user.name}@${deployment.server.name}:${folder}"
 			trust="true" keyfile="${ssh.private.keyfile}" passphrase="${ssh.passphrase}"
-			failonerror="false">
+			failonerror="true">
 			<fileset dir="${project.build.directory}">
 				<include name="*.exe" />
 			</fileset>
@@ -431,7 +431,7 @@
 		<antcall target="createRemoteFolder" />
 		<scp todir="${deployment.user.name}@${deployment.server.name}:${folder}"
 			trust="true" keyfile="${ssh.private.keyfile}" passphrase="${ssh.passphrase}"
-			failonerror="false">
+			failonerror="true">
 			<fileset dir="${project.build.directory}">
 				<include name="*.dmg" />
 			</fileset>
@@ -444,7 +444,7 @@
 		<antcall target="createRemoteFolder" />
 		<scp todir="${deployment.user.name}@${deployment.server.name}:${folder}"
 			trust="true" keyfile="${ssh.private.keyfile}" passphrase="${ssh.passphrase}"
-			failonerror="false">
+			failonerror="true">
 			<fileset dir="${project.build.directory}">
 				<include name="*.tar.gz" />
 			</fileset>
