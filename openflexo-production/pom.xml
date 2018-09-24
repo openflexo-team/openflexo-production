@@ -222,7 +222,7 @@
 						<outputEncoding>utf-8</outputEncoding>
 						<!--locales>fr_FR.UTF-8</locales -->
 						<!--templateFile>${basedir}/maven-site.vm</templateFile -->
-						<topSiteURL>scp://server-one.openflexo.org/home/www/sites/</topSiteURL>
+						<topSiteURL>scp://openflexo.org/home/www/sites/</topSiteURL>
 					</configuration>
 				</plugin>
 				<plugin>
@@ -457,7 +457,7 @@
 			<distributionManagement>
 				<site>
 					<id>openflexo-production.website</id>
-					<url>scp://server-one.openflexo.org/home/www/sites/openflexo-production/SNAPSHOT/openflexo-production/</url>
+					<url>scp://openflexo.org/home/www/sites/openflexo-production/SNAPSHOT/openflexo-production/</url>
 				</site>
 			</distributionManagement>
 		</profile>
@@ -472,7 +472,7 @@
 			<distributionManagement>
 				<site>
 					<id>openflexo-production.website</id>
-					<url>scp://server-one.openflexo.org/home/www/sites/openflexo-production/SNAPSHOT/openflexo-production/</url>
+					<url>scp://openflexo.org/home/www/sites/openflexo-production/SNAPSHOT/openflexo-production/</url>
 				</site>
 			</distributionManagement>
 		</profile>
@@ -487,7 +487,7 @@
 			<distributionManagement>
 				<site>
 					<id>openflexo-production.website</id>
-					<url>scp://server-one.openflexo.org/home/www/sites/openflexo-production/${project.version}/openflexo-production/</url>
+					<url>scp://openflexo.org/home/www/sites/openflexo-production/${project.version}/openflexo-production/</url>
 				</site>
 			</distributionManagement>
 		</profile>
