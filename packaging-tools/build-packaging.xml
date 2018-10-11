@@ -203,7 +203,7 @@
 	</target>
 
 	<target name="generateInstallerScript">
-		<copy tofile="${flexobuild.work.dir}/flexoinstaller.nsi"
+		<copy tofile="${flexobuild.work.dir}/flexoinstaller.nsi" failonerror="true"
 			filtering="true" overwrite="true">
 			<resources>
 				<javaresource name="Windows/flexoinstaller.nsi.tpl">
@@ -219,7 +219,7 @@
 	</target>
 
 	<target name="generateFlexoLauncher">
-		<copy tofile="${flexobuild.work.dir}/pom.xml" filtering="true"
+		<copy tofile="${flexobuild.work.dir}/pom.xml" filtering="true" failonerror="true"
 			overwrite="true">
 			<resources>
 				<javaresource name="Windows/pom_launch4j.xml.tpl">
