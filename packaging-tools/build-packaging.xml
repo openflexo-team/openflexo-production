@@ -365,10 +365,10 @@
 	</target>
 
 	<target name="copyPackagesOnServer" if="deploy">
-		<!--<antcall target="copyOnServerWindowsRelease" />-->
+		<antcall target="copyOnServerWindowsRelease" />
 		<antcall target="copyOnServerMacRelease" />
 		<antcall target="copyOnServerLinuxRelease" />
-		<!--<antcall target="copyOnServerWindowsNightly" />-->
+		<antcall target="copyOnServerWindowsNightly" />
 		<antcall target="copyOnServerMacNightly" />
 		<antcall target="copyOnServerLinuxNightly" />
 	</target>
