@@ -93,7 +93,7 @@
 		<antcall target="checkoutArtifact" />
 		<antcall target="generateFlexoProperties" />
 		<!-- <antcall target="generateHelp" /> -->
-		<!--<antcall target="packageWindows" /> -->
+		<antcall target="packageWindows" />
 		<antcall target="packageMacOSX" />
 		<antcall target="packageLinux" />
 	</target>
@@ -192,7 +192,7 @@
 	<target name="packageWindows">
 		<antcall target="generateFlexoLauncher" />
 		<antcall target="generateInstallerScript" />
-		<antcall target="windowsPackaging" />
+		<!--<antcall target="windowsPackaging" />-->
 	</target>
 
 	<target name="windowsPackaging">
