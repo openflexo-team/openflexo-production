@@ -399,7 +399,7 @@
 			trust="true" keyfile="${ssh.private.keyfile}" passphrase="${ssh.passphrase}"
 			failonerror="true">
 			<fileset dir="${project.build.directory}">
-				<include name="*.exe" />
+				<include name="*.zip" />
 			</fileset>
 		</scp>
 	</target>
@@ -438,7 +438,7 @@
 			trust="true" keyfile="${ssh.private.keyfile}" passphrase="${ssh.passphrase}"
 			failonerror="true">
 			<fileset dir="${project.build.directory}">
-				<include name="*.exe" />
+				<include name="*.zip" />
 			</fileset>
 		</scp>
 	</target>
