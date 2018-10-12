@@ -239,18 +239,21 @@
 	</target>
 
 	<target name="windows-packaging">
-		<tar
+		<zip destfile="${project.build.directory}/${product.name} ${productSuffix} ${flexo_version}.zip"
+			basedir="${dist.dir}">
+		</zip>
+		<!--<tar
 			destfile="${project.build.directory}/${product.name} ${productSuffix} ${flexo_version}.tar.gz"
 			compression="gzip" longfile="gnu">
 			<tarfileset mode="755" dir="${dist.dir}">
-				<exclude name="*.exe" />
-				<include name="*.sh" />
+				<include name="*.exe" />
+				<exclude name="*.sh" />
 			</tarfileset>
 			<tarfileset dir="${dist.dir}">
 				<exclude name="*.exe" />
 				<exclude name="*.sh" />
 			</tarfileset>
-		</tar>
+		</tar>-->
 	</target>
 
 	<target name="packageMacOSX">
