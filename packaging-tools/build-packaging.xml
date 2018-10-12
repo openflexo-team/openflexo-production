@@ -192,7 +192,7 @@
 	<target name="packageWindows">
 		<antcall target="generateFlexoLauncher" />
 		<!--<antcall target="generateInstallerScript" />-->
-		<antcall target="windowsPackaging" />
+		<antcall target="windows-packaging" />
 	</target>
 
 	<!--<target name="windowsPackaging">
