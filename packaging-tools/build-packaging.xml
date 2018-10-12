@@ -191,18 +191,18 @@
 
 	<target name="packageWindows">
 		<antcall target="generateFlexoLauncher" />
-		<antcall target="generateInstallerScript" />
-		<!--<antcall target="windowsPackaging" />-->
+		<!--<antcall target="generateInstallerScript" />-->
+		<antcall target="windowsPackaging" />
 	</target>
 
-	<target name="windowsPackaging">
+	<!--<target name="windowsPackaging">
 		<exec executable="makensis" failonerror="true">
 			<arg value="-V2" />
 			<arg value="${flexobuild.work.dir}/flexoinstaller.nsi" />
 		</exec>
-	</target>
+	</target>-->
 
-	<target name="generateInstallerScript">
+	<!--<target name="generateInstallerScript">
 		<copy tofile="${flexobuild.work.dir}/flexoinstaller.nsi" failonerror="true"
 			filtering="true" overwrite="true">
 			<resources>
@@ -216,7 +216,7 @@
 				<filtersfile file="${build.properties}" />
 			</filterset>
 		</copy>
-	</target>
+	</target>-->
 
 	<target name="generateFlexoLauncher">
 		<copy tofile="${flexobuild.work.dir}/pom.xml" filtering="true" failonerror="true"
@@ -236,6 +236,21 @@
              		options=""
              		goal="package"
             		resultproperty="maven.build.result"/>
+	</target>
+
+	<target name="windows-packaging">
+		<tar
+			destfile="${project.build.directory}/${product.name} ${productSuffix} ${flexo_version}.tar.gz"
+			compression="gzip" longfile="gnu">
+			<tarfileset mode="755" dir="${dist.dir}">
+				<exclude name="*.exe" />
+				<include name="*.sh" />
+			</tarfileset>
+			<tarfileset dir="${dist.dir}">
+				<exclude name="*.exe" />
+				<exclude name="*.sh" />
+			</tarfileset>
+		</tar>
 	</target>
 
 	<target name="packageMacOSX">
