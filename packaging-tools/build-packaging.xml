@@ -71,7 +71,7 @@
 		<property name="deployment.root.folder" value="~/downloads/openflexo" />
 		<property name="deployment.user.name" value="${user.name}" />
 		<property name="deployment.server.name" value="downloads.openflexo.org" />
-		<property name="ssh.private.keyfile" value="${user.home}/.ssh/id_dsa" />
+		<property name="ssh.private.keyfile" value="${user.home}/.ssh/id_rsa" />
 		<property name="ssh.passphrase" value="" />
 		<tstamp>
 			<format property="daily_folder" pattern="yyyy-MM-dd" />
@@ -191,19 +191,19 @@
 
 	<target name="packageWindows">
 		<antcall target="generateFlexoLauncher" />
-		<antcall target="generateInstallerScript" />
-		<antcall target="windowsPackaging" />
+		<!--<antcall target="generateInstallerScript" />-->
+		<antcall target="windows-packaging" />
 	</target>
 
-	<target name="windowsPackaging">
+	<!--<target name="windowsPackaging">
 		<exec executable="makensis" failonerror="true">
 			<arg value="-V2" />
 			<arg value="${flexobuild.work.dir}/flexoinstaller.nsi" />
 		</exec>
-	</target>
+	</target>-->
 
-	<target name="generateInstallerScript">
-		<copy tofile="${flexobuild.work.dir}/flexoinstaller.nsi"
+	<!--<target name="generateInstallerScript">
+		<copy tofile="${flexobuild.work.dir}/flexoinstaller.nsi" failonerror="true"
 			filtering="true" overwrite="true">
 			<resources>
 				<javaresource name="Windows/flexoinstaller.nsi.tpl">
@@ -216,10 +216,10 @@
 				<filtersfile file="${build.properties}" />
 			</filterset>
 		</copy>
-	</target>
+	</target>-->
 
 	<target name="generateFlexoLauncher">
-		<copy tofile="${flexobuild.work.dir}/pom.xml" filtering="true"
+		<copy tofile="${flexobuild.work.dir}/pom.xml" filtering="true" failonerror="true"
 			overwrite="true">
 			<resources>
 				<javaresource name="Windows/pom_launch4j.xml.tpl">
@@ -236,6 +236,24 @@
              		options=""
              		goal="package"
             		resultproperty="maven.build.result"/>
+	</target>
+
+	<target name="windows-packaging">
+		<zip destfile="${project.build.directory}/${product.name} ${productSuffix} ${flexo_version}.zip"
+			basedir="${dist.dir}">
+		</zip>
+		<!--<tar
+			destfile="${project.build.directory}/${product.name} ${productSuffix} ${flexo_version}.tar.gz"
+			compression="gzip" longfile="gnu">
+			<tarfileset mode="755" dir="${dist.dir}">
+				<include name="*.exe" />
+				<exclude name="*.sh" />
+			</tarfileset>
+			<tarfileset dir="${dist.dir}">
+				<exclude name="*.exe" />
+				<exclude name="*.sh" />
+			</tarfileset>
+		</tar>-->
 	</target>
 
 	<target name="packageMacOSX">
@@ -379,9 +397,10 @@
 		<antcall target="createRemoteFolder" />
 		<scp todir="${deployment.user.name}@${deployment.server.name}:${folder}"
 			trust="true" keyfile="${ssh.private.keyfile}" passphrase="${ssh.passphrase}"
-			failonerror="false">
+			failonerror="true">
 			<fileset dir="${project.build.directory}">
-				<include name="*.exe" />
+				<exclude name="*-packaging.zip" />
+				<include name="*.zip" />
 			</fileset>
 		</scp>
 	</target>
@@ -392,7 +411,7 @@
 		<antcall target="createRemoteFolder" />
 		<scp todir="${deployment.user.name}@${deployment.server.name}:${folder}"
 			trust="true" keyfile="${ssh.private.keyfile}" passphrase="${ssh.passphrase}"
-			failonerror="false">
+			failonerror="true">
 			<fileset dir="${project.build.directory}">
 				<include name="*.dmg" />
 			</fileset>
@@ -405,7 +424,7 @@
 		<antcall target="createRemoteFolder" />
 		<scp todir="${deployment.user.name}@${deployment.server.name}:${folder}"
 			trust="true" keyfile="${ssh.private.keyfile}" passphrase="${ssh.passphrase}"
-			failonerror="false">
+			failonerror="true">
 			<fileset dir="${project.build.directory}">
 				<include name="*.tar.gz" />
 			</fileset>
@@ -418,9 +437,10 @@
 		<antcall target="createRemoteFolder" />
 		<scp todir="${deployment.user.name}@${deployment.server.name}:${folder}"
 			trust="true" keyfile="${ssh.private.keyfile}" passphrase="${ssh.passphrase}"
-			failonerror="false">
+			failonerror="true">
 			<fileset dir="${project.build.directory}">
-				<include name="*.exe" />
+				<exclude name="*-packaging.zip" />
+				<include name="*.zip" />
 			</fileset>
 		</scp>
 	</target>
@@ -431,7 +451,7 @@
 		<antcall target="createRemoteFolder" />
 		<scp todir="${deployment.user.name}@${deployment.server.name}:${folder}"
 			trust="true" keyfile="${ssh.private.keyfile}" passphrase="${ssh.passphrase}"
-			failonerror="false">
+			failonerror="true">
 			<fileset dir="${project.build.directory}">
 				<include name="*.dmg" />
 			</fileset>
@@ -444,7 +464,7 @@
 		<antcall target="createRemoteFolder" />
 		<scp todir="${deployment.user.name}@${deployment.server.name}:${folder}"
 			trust="true" keyfile="${ssh.private.keyfile}" passphrase="${ssh.passphrase}"
-			failonerror="false">
+			failonerror="true">
 			<fileset dir="${project.build.directory}">
 				<include name="*.tar.gz" />
 			</fileset>

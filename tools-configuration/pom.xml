@@ -135,7 +135,7 @@
                      <distributionManagement>
                             <site>
                                    <id>openflexo-production.website</id>
-                                   <url>scp://server-one.openflexo.org/home/www/sites/openflexo-production/SNAPSHOT/tools-configuration/</url>
+                                   <url>scp://openflexo.org/home/www/sites/openflexo-production/SNAPSHOT/tools-configuration/</url>
                             </site>
                      </distributionManagement>
               </profile>
@@ -152,7 +152,7 @@
                      <distributionManagement>
                             <site>
                                    <id>openflexo-production.website</id>
-                                   <url>scp://server-one.openflexo.org/home/www/sites/openflexo-production/SNAPSHOT/tools-configuration/</url>
+                                   <url>scp://openflexo.org/home/www/sites/openflexo-production/SNAPSHOT/tools-configuration/</url>
                             </site>
                      </distributionManagement>
               </profile>
@@ -169,7 +169,7 @@
                      <distributionManagement>
                             <site>
                                    <id>openflexo-production.website</id>
-                                   <url>scp://server-one.openflexo.org/home/www/sites/openflexo-production/${project.version}/tools-configuration/</url>
+                                   <url>scp://openflexo.org/home/www/sites/openflexo-production/${project.version}/tools-configuration/</url>
                             </site>
                      </distributionManagement>
               </profile>
