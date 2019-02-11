@@ -47,6 +47,18 @@
                         <updatePolicy>always</updatePolicy>
                     </snapshots>
                 </repository>
+                <repository>
+                    <id>openflexo-java10</id>
+                    <name>openflexo java 10 repository</name>
+                    <url>https://maven.openflexo.org/artifactory/openflexo-java10/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                        <updatePolicy>always</updatePolicy>
+                    </snapshots>
+                </repository>
             </repositories>
 
         </profile>
