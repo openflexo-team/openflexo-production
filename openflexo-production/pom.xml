@@ -10,7 +10,6 @@
 	<url>https://openflexo-production.openflexo.org/</url>
 	<modules>
 		<module>openflexo-component</module>
-		<module>openflexo-archetypes</module>
 	</modules>
 	<description>This pom aims at capitalizing production configuration items for all openflexo productions</description>
 	<scm>
