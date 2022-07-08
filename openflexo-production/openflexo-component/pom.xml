@@ -3,12 +3,12 @@
 	<parent>
 		<groupId>org.openflexo</groupId>
 		<artifactId>openflexo-production</artifactId>
-		<version>0.5-SNAPSHOT</version>
+		<version>0.5</version>
 	</parent>
 	<!-- ************ Component identity and specific information -->
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>openflexo-component</artifactId>
-  <version>0.5-SNAPSHOT</version>
+  <version>0.5</version>
 	<name>Openflexo-Component</name>
 	<description>Parent pom for any component defined in Openflexo Infrastructure</description>
 	<scm>
