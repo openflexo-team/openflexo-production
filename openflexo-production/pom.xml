@@ -55,7 +55,7 @@
 		<jsr305.version>2.0.1</jsr305.version>
 		<apache.commons-lang.version>3.1</apache.commons-lang.version>
 		<!-- internal dependencies versions -->
-		<toolsconfig.version>0.4</toolsconfig.version>
+		<toolsconfig.version>0.5</toolsconfig.version>
 		<!--maven plugins versions -->
 		<wagonssh.version>2.12</wagonssh.version>
 		<!-- reporting tools -->
