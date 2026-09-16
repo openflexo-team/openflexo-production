@@ -1,5 +1,11 @@
 # Release process
 
+> **Status: outdated.** This page was written for an earlier production setup and no longer
+> matches it: component versions are now centralised in the `buildconfig` map of
+> `openflexo-buildplugin`, not in each `build.gradle`. It is kept for historical reference.
+> Note also that Maven is deprecated in OpenFlexo: 2.99 is the last distribution whose installers
+> are still built with Maven, and from 3.0 on both the build and the packaging are Gradle only.
+
 Suppose we want to release version X of component C.
 
 1. Ensure snapshot build correctly.
