@@ -1,5 +1,10 @@
 # HowTo: Create a new installable distribution of Openflexo softwares
 
+> **Status: legacy, to be removed.** `packaging-tools` and the Maven profile described here still
+> produce the installers of the 2.99 distribution, the last one packaged this way. Maven is deprecated
+> in OpenFlexo: from 3.0 on the installers are built with Gradle and `jpackage`, and this page will no
+> longer apply. Some details below are already outdated, such as the JDK 1.7 requirement.
+
 Openflexo provides tools to package software distribution including:
 
 * a full set of Openflexo components,

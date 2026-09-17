@@ -1,6 +1,11 @@
 # Production Process for Openflexo Infrastructure
 =========================================
 
+> **Status: obsolete.** This page describes the Maven era of OpenFlexo production: versions edited
+> pom by pom, release candidates and releases built with the Maven release plugin. None of it is used
+> any more. Maven is deprecated in OpenFlexo: components are built and released with Gradle, their
+> versions are centralised in the `buildconfig` map of `openflexo-buildplugin`, and from 3.0 on the
+> packaging is Gradle only as well. Kept for historical reference.
 
 ## Versioning scheme and components lifecycle
 

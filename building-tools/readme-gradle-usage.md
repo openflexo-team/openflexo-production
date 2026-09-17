@@ -1,3 +1,9 @@
+> **Status: obsolete.** This page predates the current development setup. pride is no longer used:
+> cross-repository development goes through the `openflexo-dev` composite build (Gradle
+> `includeBuild`), and Gradle runs through the wrapper of each repository rather than a local
+> installation. Generated parser sources now land in `build/generated-sources/` (task `sableccParser`),
+> not in `target/`. Kept for historical reference.
+
 # Installation
 
 1. install jdk 8 from oracle

@@ -1,3 +1,7 @@
+> **Status: partly outdated.** Maintenance notes from an earlier period. For instance the Gradle
+> wrapper example below targets 6.5, while the repositories now use 7.6.4. Check each command against
+> the current setup before applying it.
+
 # Update master
 ```
 git checkout master
